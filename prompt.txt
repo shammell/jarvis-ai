@@ -1,0 +1,246 @@
+## MISSION: Full Project Reconnaissance
+
+Before writing a single line of code, perform a complete audit of this project.
+I need you to think like a senior staff engineer joining a codebase mid-build.
+Do not assume anything. Read everything. Report with precision.
+
+---
+
+## STEP 1 — Directory Tree
+
+Run this exact command and show me the full output:
+
+```bash
+find . -type f \
+  ! -path "*/node_modules/*" \
+  ! -path "*/.git/*" \
+  ! -path "*/__pycache__/*" \
+  ! -path "*/.next/*" \
+  ! -path "*/dist/*" \
+  ! -path "*/.venv/*" \
+  ! -path "*/venv/*" \
+  | sort
+```
+
+Then show me a clean tree view using:
+
+```bash
+tree -a -I "node_modules|.git|__pycache__|.next|dist|.venv|venv|*.pyc" --dirsfirst
+```
+
+If `tree` is not installed, simulate it from the find output.
+
+---
+
+## STEP 2 — Dependency Audit
+
+Check what is installed vs what is declared:
+
+**Python (if exists):**
+```bash
+cat pyproject.toml 2>/dev/null || cat requirements.txt 2>/dev/null || cat setup.py 2>/dev/null
+pip list --format=freeze 2>/dev/null | head -40
+```
+
+**Node (if exists):**
+```bash
+cat package.json 2>/dev/null
+node --version 2>/dev/null && npm list --depth=0 2>/dev/null
+```
+
+Report:
+- What package manager is being used (pip/uv/poetry/npm/pnpm/bun)
+- Which declared dependencies are NOT installed
+- Any version conflicts or missing lockfiles
+
+---
+
+## STEP 3 — Code Quality Snapshot
+
+Run these silently and report results:
+
+```bash
+# Python checks
+python -m mypy . --ignore-missing-imports --no-error-summary 2>&1 | tail -5
+python -m ruff check . --statistics 2>&1 | tail -10
+python -m pytest --collect-only -q 2>&1 | tail -10
+
+# Node/TS checks
+npx tsc --noEmit 2>&1 | tail -10
+```
+
+Report:
+- mypy: how many errors, which files
+- ruff: how many violations, which categories
+- pytest: how many tests collected, any collection errors
+- TypeScript: how many type errors
+
+---
+
+## STEP 4 — Environment Variables
+
+```bash
+cat .env.example 2>/dev/null || cat .env.template 2>/dev/null
+ls -la .env* 2>/dev/null
+```
+
+Report:
+- Which env vars are declared
+- Which are missing from the actual .env file
+- Which secrets appear hardcoded anywhere (scan with: grep -rn "sk-\|ghp_\|AKIA\|secret.*=.*['\"][a-zA-Z0-9]" --include="*.py" --include="*.ts" .)
+
+---
+
+## STEP 5 — Implemented vs Planned (Gap Analysis)
+
+Cross-reference what exists against this target architecture:
+
+### Expected backend files:
+- [ ] backend/main.py
+- [ ] backend/config.py
+- [ ] backend/agents/base_agent.py
+- [ ] backend/agents/scanner_agent.py
+- [ ] backend/agents/fix_agent.py
+- [ ] backend/agents/test_agent.py
+- [ ] backend/agents/pr_agent.py
+- [ ] backend/schemas/cve.py
+- [ ] backend/schemas/fix.py
+- [ ] backend/schemas/audit.py
+- [ ] backend/services/osv_client.py
+- [ ] backend/services/github_client.py
+- [ ] backend/services/audit_signer.py
+- [ ] backend/routers/webhook.py
+- [ ] backend/routers/scan.py
+- [ ] backend/routers/stream.py
+
+### Expected frontend files:
+- [ ] frontend/app/page.tsx
+- [ ] frontend/app/repos/[id]/page.tsx
+- [ ] frontend/components/CVECard.tsx
+- [ ] frontend/components/LiveFeed.tsx
+- [ ] frontend/components/FixTimeline.tsx
+- [ ] frontend/lib/sse.ts
+- [ ] frontend/lib/api.ts
+
+### Expected infra files:
+- [ ] docker-compose.yml
+- [ ] .github/workflows/ci.yml
+- [ ] tests/test_scanner_agent.py
+- [ ] tests/test_fix_agent.py
+
+For each file that EXISTS, tell me:
+- File size in lines
+- Whether it is a stub/placeholder or has real implementation
+- Whether it has type hints (Python) or proper TypeScript types (TS)
+- Whether it has any TODO/FIXME/HACK/PLACEHOLDER comments
+
+For each file that is MISSING, mark it clearly.
+
+---
+
+## STEP 6 — Critical Code Review
+
+For each file that EXISTS and has real implementation, read the full file and report:
+
+1. What it does (1 sentence)
+2. The biggest bug or design flaw you can see right now
+3. Whether it will work as-is or needs changes before integration
+4. Async correctness — any blocking calls in async functions?
+5. Whether Pydantic schemas are actually enforced or bypassed
+
+Pay special attention to:
+- Any `except:` or `except Exception:` without specific handling
+- Any `any` types in TypeScript
+- Any hardcoded URLs, ports, or credentials
+- Any missing `await` on coroutines
+- Any sync DB calls (psycopg2, sqlite3) inside async routes
+
+---
+
+## STEP 7 — Integration Health Check
+
+Can the system actually run right now? Test it:
+
+```bash
+# Can FastAPI start?
+cd backend && python -c "from main import app; print('FastAPI OK')" 2>&1
+
+# Can imports resolve?
+python -c "
+from agents.base_agent import BaseAgent
+from agents.scanner_agent import ScannerAgent
+from services.osv_client import batch_query_osv
+from schemas.cve import CVEFinding
+print('All imports OK')
+" 2>&1
+
+# Can Next.js build?
+cd frontend && npx next build --dry-run 2>&1 | tail -5
+```
+
+Report whether the system is:
+- RUNNABLE (can start with `uvicorn` / `next dev`)
+- PARTIALLY BROKEN (starts but crashes on first request)
+- SKELETON ONLY (files exist but nothing works)
+- EMPTY (nothing built yet)
+
+---
+
+## STEP 8 — Final Report
+
+After all checks, produce a structured report in this exact format:
+
+```
+═══════════════════════════════════════════
+  JARVIS DEVOPS — PROJECT STATE REPORT
+═══════════════════════════════════════════
+
+BUILD STATUS: [RUNNABLE / PARTIAL / SKELETON / EMPTY]
+
+FILES: X implemented | Y stubs | Z missing
+
+BACKEND COMPLETION: X%
+  ✓ Implemented: [list]
+  ✗ Missing:     [list]
+  ⚠ Broken:      [list]
+
+FRONTEND COMPLETION: X%
+  ✓ Implemented: [list]
+  ✗ Missing:     [list]
+
+DEPENDENCY STATUS:
+  Python: [OK / X packages missing]
+  Node:   [OK / X packages missing]
+  DB:     [connected / not configured]
+
+ENV CONFIG: X of Y vars present
+
+CODE QUALITY:
+  mypy errors:    X
+  ruff violations: X
+  TS errors:       X
+  Test coverage:   X%
+
+CRITICAL ISSUES (fix before anything else):
+  1. [issue]
+  2. [issue]
+  3. [issue]
+
+RECOMMENDED NEXT ACTION:
+  → [single most important thing to do right now]
+
+═══════════════════════════════════════════
+```
+
+---
+
+## AFTER THE REPORT
+
+Once you have produced the full report above, STOP and wait for my instruction.
+
+Do NOT start writing code yet.
+Do NOT suggest fixes yet.
+Do NOT assume what I want next.
+
+Just deliver the report and ask:
+"Which issue do you want me to fix first?"

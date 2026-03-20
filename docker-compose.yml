@@ -1,0 +1,62 @@
+version: '3.8'
+
+services:
+  jarvis:
+    build: .
+    container_name: jarvis-v9-ultra
+    ports:
+      - "8000:8000"    # Main API
+      - "3002:3002"    # WhatsApp Bridge
+      - "50051:50051"  # gRPC
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - WHATSAPP_PORT=3002
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - GRPC_PORT=50051
+      - LOG_LEVEL=info
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./state:/app/state
+      - ./whatsapp_session:/app/whatsapp_session
+      - ./skills:/app/skills
+    depends_on:
+      - redis
+    restart: unless-stopped
+    networks:
+      - jarvis-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: jarvis-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - jarvis-network
+
+  jarvis-autonomous:
+    build: .
+    container_name: jarvis-autonomous
+    command: python jarvis_autonomous.py
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./state:/app/state
+    depends_on:
+      - jarvis
+    restart: unless-stopped
+    networks:
+      - jarvis-network
+
+volumes:
+  redis-data:
+
+networks:
+  jarvis-network:
+    driver: bridge

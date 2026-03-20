@@ -1,0 +1,28 @@
+{
+  "name": "JARVIS v9.0 Baileys Bridge",
+  "version": "9.0.0",
+  "description": "Lightweight WhatsApp bridge using Baileys WebSocket client",
+  "port": 3000,
+  "auth_directory": "./whatsapp_session",
+  "rate_limiting": {
+    "enabled": true,
+    "window_ms": 60000,
+    "max_requests": 30
+  },
+  "features": {
+    "jwt_auth": true,
+    "message_deduplication": true,
+    "auto_reconnect": true,
+    "message_queue": true
+  },
+  "performance": {
+    "expected_ram_mb": 30,
+    "max_queue_size": 1000,
+    "dedup_cache_ttl_ms": 300000
+  },
+  "backend": {
+    "python_url": "http://localhost:8000",
+    "grpc_enabled": false,
+    "grpc_host": "localhost:50051"
+  }
+}

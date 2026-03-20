@@ -1,0 +1,15 @@
+{
+  "documents": [
+    "JARVIS is a powerful AI assistant.",
+    "The memory system uses ColBERT for advanced retrieval.",
+    "System health and performance are continuously monitored.",
+    "Antigravity skills provide extended capabilities.",
+    "This is a seed document to prevent vocabulary errors.",
+    "Hello Jarvis, introduce yourself and tell me what you can do",
+    "Greetings!",
+    "Write me a 3 paragraph essay about artificial intelligence",
+    "Hello,I'mJAIRVIS v9.0, an adaanced AI assistant."
+  ],
+  "model_name": "colbert-ir/colbertv2.0",
+  "colbert_available": false
+}

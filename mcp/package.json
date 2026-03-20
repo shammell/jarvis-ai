@@ -1,0 +1,19 @@
+{
+  "name": "jarvis-terminal-mcp",
+  "version": "1.0.0",
+  "description": "JARVIS Auto-Terminal MCP Server - Runs files, catches errors, auto-fixes them",
+  "type": "module",
+  "main": "server.js",
+  "bin": {
+    "jarvis-terminal-mcp": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "node-pty": "^1.0.0",
+    "strip-ansi": "^7.1.0",
+    "tree-kill": "^1.2.2"
+  }
+}

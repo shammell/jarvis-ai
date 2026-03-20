@@ -1,0 +1,112 @@
+// ==========================================================
+// JARVIS v9.0 - gRPC Service Definitions
+// Protocol Buffers for Python <-> Node.js communication
+// Expected: 10x faster than REST, binary protocol
+// ==========================================================
+
+syntax = "proto3";
+
+package jarvis;
+
+// Main JARVIS service
+service JarvisService {
+  // Process incoming WhatsApp message
+  rpc ProcessMessage(MessageRequest) returns (MessageResponse);
+
+  // Execute agent task
+  rpc ExecuteAgent(AgentRequest) returns (AgentResponse);
+
+  // Memory operations
+  rpc StoreMemory(MemoryRequest) returns (MemoryResponse);
+  rpc RetrieveMemory(MemoryQuery) returns (MemoryResponse);
+
+  // Health check
+  rpc HealthCheck(HealthRequest) returns (HealthResponse);
+
+  // Stream events (for real-time updates)
+  rpc StreamEvents(EventStreamRequest) returns (stream Event);
+}
+
+// Message types
+message MessageRequest {
+  string from = 1;
+  string text = 2;
+  string message_id = 3;
+  int64 timestamp = 4;
+  map<string, string> metadata = 5;
+}
+
+message MessageResponse {
+  bool success = 1;
+  string response_text = 2;
+  string error = 3;
+  int32 processing_time_ms = 4;
+}
+
+// Agent types
+message AgentRequest {
+  string agent_type = 1; // "pm", "dev", "qa", "browser", etc.
+  string task = 2;
+  string context = 3;
+  map<string, string> parameters = 4;
+}
+
+message AgentResponse {
+  bool success = 1;
+  string result = 2;
+  repeated Action actions = 3;
+  string error = 4;
+}
+
+message Action {
+  string tool = 1;
+  map<string, string> args = 2;
+}
+
+// Memory types
+message MemoryRequest {
+  string text = 1;
+  string type = 2; // "goal", "conversation", "knowledge"
+  map<string, string> metadata = 3;
+}
+
+message MemoryQuery {
+  string query = 1;
+  int32 limit = 2;
+  string type = 3;
+}
+
+message MemoryResponse {
+  bool success = 1;
+  repeated MemoryItem items = 2;
+  string error = 3;
+}
+
+message MemoryItem {
+  string text = 1;
+  float score = 2;
+  map<string, string> metadata = 3;
+}
+
+// Health check
+message HealthRequest {
+  string service = 1;
+}
+
+message HealthResponse {
+  bool healthy = 1;
+  string status = 2;
+  map<string, string> metrics = 3;
+}
+
+// Event streaming
+message EventStreamRequest {
+  string client_id = 1;
+}
+
+message Event {
+  string type = 1;
+  string message = 2;
+  int64 timestamp = 3;
+  map<string, string> data = 4;
+}

@@ -1,0 +1,137 @@
+{
+  "nodes": [
+    {
+      "id": "Jarvis",
+      "type": "person",
+      "description": "Virtual assistant",
+      "first_seen": "2026-03-10T09:43:08.124963",
+      "mentions": 1
+    },
+    {
+      "id": "Artificial Intelligence",
+      "type": "concept",
+      "description": "A field of computer science that focuses on creating intelligent machines",
+      "first_seen": "2026-03-10T09:44:52.511107",
+      "mentions": 1
+    },
+    {
+      "id": "Machine Learning",
+      "type": "concept",
+      "description": "A subset of AI that involves training algorithms to learn from data",
+      "first_seen": "2026-03-10T09:44:52.511107",
+      "mentions": 1
+    },
+    {
+      "id": "Deep Learning",
+      "type": "concept",
+      "description": "A type of machine learning that uses neural networks to analyze data",
+      "first_seen": "2026-03-10T09:44:52.511107",
+      "mentions": 1
+    },
+    {
+      "id": "Computer Science",
+      "type": "field",
+      "description": "The study of the theory, design, and implementation of computer systems",
+      "first_seen": "2026-03-10T09:44:52.511107",
+      "mentions": 1
+    },
+    {
+      "id": "Algorithms",
+      "type": "concept",
+      "description": "A set of instructions that are used to solve a problem or perform a task",
+      "first_seen": "2026-03-10T09:44:52.511107",
+      "mentions": 1
+    },
+    {
+      "id": "Data",
+      "type": "concept",
+      "description": "A collection of information that is used to train and test AI models",
+      "first_seen": "2026-03-10T09:44:52.511107",
+      "mentions": 1
+    },
+    {
+      "id": "AI Models",
+      "type": "concept",
+      "description": "Mathematical representations of AI systems that are used to make predictions and decisions",
+      "first_seen": "2026-03-10T09:44:52.511107",
+      "mentions": 1
+    },
+    {
+      "id": "Humans",
+      "type": "person",
+      "description": "The creators and users of AI systems",
+      "first_seen": "2026-03-10T09:44:52.511107",
+      "mentions": 1
+    },
+    {
+      "id": "JAIRVIS v9.0",
+      "type": "project",
+      "description": "an advanced AI assistant",
+      "first_seen": "2026-03-10T09:44:59.064700",
+      "mentions": 1
+    }
+  ],
+  "edges": [
+    {
+      "source": "Artificial Intelligence",
+      "target": "Machine Learning",
+      "type": "related_to",
+      "description": "AI encompasses machine learning as a key subset",
+      "weight": 1
+    },
+    {
+      "source": "Artificial Intelligence",
+      "target": "Computer Science",
+      "type": "related_to",
+      "description": "AI is a field of computer science",
+      "weight": 1
+    },
+    {
+      "source": "Artificial Intelligence",
+      "target": "Algorithms",
+      "type": "uses",
+      "description": "AI systems use algorithms to solve problems",
+      "weight": 1
+    },
+    {
+      "source": "Artificial Intelligence",
+      "target": "Data",
+      "type": "uses",
+      "description": "AI systems use data to train and test models",
+      "weight": 1
+    },
+    {
+      "source": "Artificial Intelligence",
+      "target": "AI Models",
+      "type": "related_to",
+      "description": "AI systems are represented by AI models",
+      "weight": 1
+    },
+    {
+      "source": "Machine Learning",
+      "target": "Deep Learning",
+      "type": "related_to",
+      "description": "Deep learning is a type of machine learning",
+      "weight": 1
+    },
+    {
+      "source": "Humans",
+      "target": "Artificial Intelligence",
+      "type": "uses",
+      "description": "Humans create and use AI systems",
+      "weight": 1
+    }
+  ],
+  "communities": {
+    "Jarvis": 0,
+    "AI Models": 1,
+    "Computer Science": 1,
+    "Algorithms": 1,
+    "Deep Learning": 1,
+    "Humans": 1,
+    "Artificial Intelligence": 1,
+    "Data": 1,
+    "Machine Learning": 1,
+    "JAIRVIS v9.0": 2
+  }
+}

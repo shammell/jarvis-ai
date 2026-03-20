@@ -1,0 +1,188 @@
+{
+  "name": "claude-autonomous",
+  "version": "1.0.0",
+  "description": "Claude's autonomous workflow skill - auto-resume, goal execution, sub-agent coordination",
+  "type": "autonomous",
+  "trigger": "session_start",
+  "auto_execute": true,
+
+  "workflow": {
+    "on_session_start": [
+      {
+        "step": "load_goals",
+        "action": "resume_session",
+        "required": true
+      },
+      {
+        "step": "check_health",
+        "action": "monitor_system",
+        "required": true
+      },
+      {
+        "step": "execute_pending",
+        "action": "auto_execute_goals",
+        "required": false,
+        "condition": "has_pending_goals"
+      },
+      {
+        "step": "generate_suggestions",
+        "action": "proactive_analysis",
+        "required": false
+      }
+    ],
+
+    "on_user_request": [
+      {
+        "step": "analyze_request",
+        "action": "parse_intent",
+        "required": true
+      },
+      {
+        "step": "delegate_if_complex",
+        "action": "check_complexity",
+        "required": true
+      },
+      {
+        "step": "execute_or_delegate",
+        "action": "autonomous_execution",
+        "required": true
+      },
+      {
+        "step": "learn_from_outcome",
+        "action": "record_result",
+        "required": true
+      }
+    ],
+
+    "background_loop": [
+      {
+        "interval": "5_minutes",
+        "action": "check_pending_work"
+      },
+      {
+        "interval": "5_minutes",
+        "action": "take_snapshot"
+      },
+      {
+        "interval": "15_minutes",
+        "action": "generate_suggestions"
+      },
+      {
+        "interval": "30_minutes",
+        "action": "auto_optimize_if_needed"
+      }
+    ]
+  },
+
+  "sub_agents": {
+    "CodeAnalyzer": {
+      "role": "code_analysis",
+      "capabilities": ["bug_detection", "code_review", "pattern_analysis"],
+      "risk_level": 2,
+      "auto_delegate": true
+    },
+    "Optimizer": {
+      "role": "performance",
+      "capabilities": ["bottleneck_detection", "optimization", "profiling"],
+      "risk_level": 3,
+      "auto_delegate": true
+    },
+    "Tester": {
+      "role": "testing",
+      "capabilities": ["test_generation", "test_execution", "validation"],
+      "risk_level": 2,
+      "auto_delegate": true
+    },
+    "Documenter": {
+      "role": "documentation",
+      "capabilities": ["doc_generation", "readme_updates", "api_docs"],
+      "risk_level": 1,
+      "auto_delegate": true
+    },
+    "Debugger": {
+      "role": "debugging",
+      "capabilities": ["error_tracing", "root_cause_analysis", "fix_suggestions"],
+      "risk_level": 3,
+      "auto_delegate": false
+    },
+    "Architect": {
+      "role": "design",
+      "capabilities": ["system_design", "architecture_planning", "tech_decisions"],
+      "risk_level": 5,
+      "auto_delegate": false
+    },
+    "Researcher": {
+      "role": "research",
+      "capabilities": ["codebase_exploration", "information_gathering", "analysis"],
+      "risk_level": 1,
+      "auto_delegate": true
+    }
+  },
+
+  "autonomy_rules": {
+    "risk_thresholds": {
+      "auto_approve": 3,
+      "ask_user": 7,
+      "block": 10
+    },
+    "learning": {
+      "initial_autonomy": 0.3,
+      "success_increment": 0.05,
+      "failure_decrement": 0.1,
+      "target_autonomy": 0.8
+    },
+    "delegation": {
+      "complexity_threshold": 5,
+      "parallel_max": 3,
+      "timeout_seconds": 300
+    }
+  },
+
+  "storage": {
+    "goals": "~/.claude/projects/C--Users-AK/memory/goals.json",
+    "metrics": "~/.claude/projects/C--Users-AK/memory/self_monitor.json",
+    "decisions": "data/autonomous_decision_state.json"
+  },
+
+  "integration": {
+    "main_system": "enhanced_autonomy.py",
+    "startup": "autonomous_startup.py",
+    "launcher": "jarvis_autonomous.py"
+  },
+
+  "commands": {
+    "resume": "await system.resume_session()",
+    "execute_goal": "await system.execute_goal(description, priority)",
+    "get_suggestions": "await system.get_proactive_suggestions()",
+    "check_status": "system.get_system_status()",
+    "delegate": "await swarm.coordinate(tasks)"
+  },
+
+  "examples": [
+    {
+      "scenario": "Session starts",
+      "action": "Auto-load goals, resume work, no user prompt needed"
+    },
+    {
+      "scenario": "User gives complex task",
+      "action": "Delegate to sub-agents, coordinate results, execute autonomously"
+    },
+    {
+      "scenario": "Health drops below 80",
+      "action": "Auto-trigger optimization goal, execute without asking"
+    },
+    {
+      "scenario": "Repetitive pattern detected",
+      "action": "Generate automation suggestion, auto-execute if low-risk"
+    }
+  ],
+
+  "metadata": {
+    "author": "Claude + User",
+    "created": "2026-03-09",
+    "version": "1.0.0",
+    "status": "production",
+    "tested": true,
+    "lines_of_code": 2262
+  }
+}
