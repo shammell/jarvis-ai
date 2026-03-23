@@ -148,9 +148,13 @@ TRACKER = FileTracker()
 # ================= EXECUTOR (VENV AWARE) =================
 class Executor:
     async def shell(self, cmd: str) -> str:
-        # 1. Security Check
-        if any(x in cmd for x in ["rm -rf /", "format C:", "shutdown"]):
-            return "⚠ Blocked: Dangerous command detected."
+        # 1. Security Check: Strict Allowlist
+        from core.security_system import InputValidator
+        allowed_cmds = ["git", "ls", "pip", "python", "mkdir", "cat", "rm", "mv", "cp", "echo", "pwd", "whoami", "uname", "hostname", "date", "uptime", "df", "free", "ps", "top"]
+        validator = InputValidator()
+        if not validator.validate_command(cmd, allowed_cmds):
+            EVENTS.emit(f"🛡 BLOCKED ▶ {cmd}")
+            return "⚠ Blocked: Command not in allowlist or contains unauthorized patterns."
 
         # 2. Venv Injection
         prefix = ""
@@ -159,7 +163,7 @@ class Executor:
                 prefix = "venv_temp\\Scripts\\"
             else:
                 prefix = "venv_temp/bin/"
-        
+
         # Ensure pip/python use the venv
         if cmd.startswith("pip ") or cmd.startswith("python "):
             full_cmd = f"{prefix}{cmd}"
@@ -167,18 +171,22 @@ class Executor:
             full_cmd = cmd # Normal system commands like git, ls
 
         EVENTS.emit(f"🖥 SHELL ▶ {full_cmd}")
-        
+
         # 3. Execution
         kwargs = {}
         if platform.system() == "Windows":
             kwargs["creationflags"] = subprocess.CREATE_NEW_PROCESS_GROUP
         else:
             kwargs["preexec_fn"] = os.setsid
-            
+
         try:
             # SECURITY MITIGATION: Switched to exec instead of shell
             import shlex
             cmd_args = shlex.split(full_cmd)
+            # Fix: Ensure cmd_args is not empty before execution
+            if not cmd_args:
+                 return {"success": False, "error": "Empty command string"}
+
             proc = await asyncio.create_subprocess_exec(
                 *cmd_args,
                 stdout=asyncio.subprocess.PIPE,

@@ -22,8 +22,8 @@ logger = logging.getLogger(__name__)
 T = TypeVar('T')
 E = TypeVar('E')
 
-# Import resilience patterns
-from .resilience_patterns import (
+# Import resilience base classes to avoid circular dependency
+from .resilience_base import (
     CircuitBreaker,
     RetryPolicy,
     Bulkhead,
@@ -31,7 +31,6 @@ from .resilience_patterns import (
     ResourcePool,
     ResilienceManager
 )
-
 
 class ErrorSeverity(Enum):
     """Error severity levels"""
@@ -483,10 +482,11 @@ class ResilientErrorHandler(ErrorHandler):
             return wrapper
         return decorator
 
-    async def _execute_with_resilience(self, func: Callable, *args, **kwargs,
-                                     circuit_breaker: CircuitBreaker = None,
-                                     retry_policy: RetryPolicy = None,
-                                     watchdog: WatchdogTimer = None):
+    async def _execute_with_resilience(self, func: Callable, *args,
+                                     circuit_breaker: 'CircuitBreaker' = None,
+                                     retry_policy: 'RetryPolicy' = None,
+                                     watchdog: 'WatchdogTimer' = None,
+                                     **kwargs):
         """
         Execute a function with resilience patterns
         """
@@ -588,7 +588,7 @@ class ResilientErrorHandler(ErrorHandler):
 
         return any(keyword in error_msg for keyword in retryable_keywords)
 
-    def _calculate_retry_delay(self, retry_policy: RetryPolicy, attempt: int) -> float:
+    def _calculate_retry_delay(self, retry_policy: 'RetryPolicy', attempt: int) -> float:
         """
         Calculate retry delay with exponential backoff and jitter
         """

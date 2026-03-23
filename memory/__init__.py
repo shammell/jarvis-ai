@@ -2,9 +2,8 @@
 JARVIS v9.0 - Memory Package
 """
 
-from memory.memory_controller import MemoryController
-from memory.graph_rag import GraphRAG
-from memory.colbert_retriever import ColBERTRetriever
+# Exports removed from __init__.py to prevent circular dependencies
+# Import from specific modules instead (e.g., from memory.graph_rag import GraphRAG)
 
 __all__ = [
     "MemoryController",

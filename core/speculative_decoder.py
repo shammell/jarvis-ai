@@ -59,17 +59,17 @@ class SpeculativeDecoder:
         messages: List[Dict[str, str]],
         max_tokens: int = 1024,
         temperature: float = 0.1,
-        draft_length: int = 128,
+        draft_length: int = None,
         use_speculative: bool = True
     ) -> Dict[str, Any]:
         """
-        Generate text with speculative decoding
+        Generate text with speculative decoding (Adaptive Batching)
 
         Args:
             messages: Chat messages
             max_tokens: Maximum tokens to generate
             temperature: Sampling temperature
-            draft_length: Number of tokens to draft at once
+            draft_length: Number of tokens to draft at once (None for adaptive)
             use_speculative: If False, use target model directly
 
         Returns:
@@ -100,6 +100,18 @@ class SpeculativeDecoder:
             raise ValueError("Prompt context too large")
 
         max_tokens = max(1, min(int(max_tokens), MAX_SPECULATIVE_TOKENS))
+
+        # Adaptive draft length logic
+        if draft_length is None:
+            # Start with a conservative default or use history
+            current_acceptance = self.get_stats()["acceptance_rate"]
+            if current_acceptance > 0.8:
+                draft_length = 128 # High confidence
+            elif current_acceptance > 0.5:
+                draft_length = 64  # Medium confidence
+            else:
+                draft_length = 32  # Low confidence/No history
+
         draft_length = max(1, min(int(draft_length), MAX_DRAFT_LENGTH))
         temperature = max(MIN_TEMPERATURE, min(float(temperature), MAX_TEMPERATURE))
 

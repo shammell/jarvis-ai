@@ -111,8 +111,12 @@ Text: {safe_text}"""
         Add text to knowledge graph
         - Extracts entities and relationships
         - Updates graph structure
+        - Applies temporal decay to existing edges
         """
         logger.info(f"📊 Adding to graph: {text[:50]}...")
+
+        # Apply temporal decay before adding new data
+        self._apply_temporal_decay()
 
         # Extract entities and relationships
         extracted = self.extract_entities_and_relationships(text)
@@ -140,6 +144,7 @@ Text: {safe_text}"""
                 self.graph.nodes[name]["mentions"] = self.graph.nodes[name].get("mentions", 0) + 1
 
         # Add relationships as edges
+        now_iso = datetime.now().isoformat()
         for rel in extracted.get("relationships", []):
             source = str(rel.get("source", ""))[:MAX_ENTITY_NAME_CHARS]
             target = str(rel.get("target", ""))[:MAX_ENTITY_NAME_CHARS]
@@ -153,21 +158,52 @@ Text: {safe_text}"""
 
             if source in self.graph and target in self.graph:
                 if self.graph.has_edge(source, target):
-                    # Increment weight
+                    # Increment weight and update timestamp
                     self.graph[source][target]["weight"] += 1
+                    self.graph[source][target]["last_seen"] = now_iso
                 else:
                     self.graph.add_edge(
                         source,
                         target,
                         type=rel_type,
                         description=rel_desc,
-                        weight=1
+                        weight=1.0,
+                        last_seen=now_iso
                     )
 
         # Update communities
         self._detect_communities()
 
         logger.info(f"✅ Graph updated: {self.graph.number_of_nodes()} nodes, {self.graph.number_of_edges()} edges")
+
+    def _apply_temporal_decay(self):
+        """
+        Apply temporal decay to edge weights
+        Edges older than decay_half_life lose half their weight
+        """
+        import math
+        now = datetime.now()
+        decay_half_life_days = 30  # Configurable half-life
+
+        for u, v, data in list(self.graph.edges(data=True)):
+            last_seen_str = data.get("last_seen")
+            if not last_seen_str:
+                continue
+
+            try:
+                last_seen = datetime.fromisoformat(last_seen_str)
+                days_passed = (now - last_seen).total_seconds() / (24 * 3600)
+
+                # Exponential decay formula: W = W0 * (0.5 ^ (t / T_half))
+                decay_factor = math.pow(0.5, days_passed / decay_half_life_days)
+                data["weight"] = data.get("weight", 1.0) * decay_factor
+
+                # Prune weak edges (optional)
+                if data["weight"] < 0.1:
+                    self.graph.remove_edge(u, v)
+                    logger.debug(f"✂️ Pruned weak edge: {u} -> {v}")
+            except Exception as e:
+                logger.error(f"❌ Error applying decay to edge {u}->{v}: {e}")
 
     def _detect_communities(self):
         """Detect communities using Louvain algorithm"""

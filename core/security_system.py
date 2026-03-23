@@ -825,6 +825,27 @@ class InputValidator:
 
         return True
 
+    def validate_command(self, cmd: str, allowlist: List[str]) -> bool:
+        """
+        Validate a command against an allowlist and check for injection patterns.
+        """
+        if not self.validate_input(cmd, 'command'):
+            return False
+
+        import shlex
+        try:
+            parts = shlex.split(cmd)
+            if not parts:
+                return False
+            base_cmd = parts[0]
+            # Handle Windows paths if necessary
+            if base_cmd.endswith('.exe'):
+                base_cmd = base_cmd[:-4]
+
+            return base_cmd in allowlist
+        except Exception:
+            return False
+
     def validate_file_path(self, file_path: str) -> bool:
         """Validate file paths to prevent directory traversal"""
         if not isinstance(file_path, str):
