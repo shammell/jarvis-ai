@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(timeout 60)",
+      "Bash(find . -name \"*.py\" -exec grep -l \"validate\\\\|sanitize\\\\|escape\\\\|injection\\\\|SQL\" {})",
+      "Bash(find . -name \"*.py\" -exec grep -l \"security\\\\|vulnerability\\\\|exploit\\\\|attack\" {})",
+      "Bash(find . -name \"*.py\" -exec grep -l \"def \" {})",
+      "Bash(find . -name \"*.js\" -exec grep -l \"import\\\\|require\" {})",
+      "Bash(ls:*)",
+      "Bash(dir:*)",
+      "Bash(node --check \"C:/Users/AK/jarvis_project/grpc_service/node_client.js\")",
+      "Bash(node --check \"C:/Users/AK/jarvis_project/whatsapp/baileys_bridge.js\")"
+    ]
+  }
+}

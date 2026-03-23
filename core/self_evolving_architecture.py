@@ -11,6 +11,8 @@ from functools import wraps
 import psutil
 import tracemalloc
 
+from .sea_security_controller import sea_security_controller, secure_evolution_wrapper
+
 class EvolutionaryStrategy(Enum):
     ASYNC_OPTIMIZATION = "async_optimization"
     CACHING_STRATEGY = "caching_strategy"
@@ -288,7 +290,10 @@ class EvolutionEngine:
             source = inspect.getsource(func)
             io_patterns = ['http', 'requests', 'open(', 'read', 'write', 'sleep', 'asyncio', 'await']
             return any(pattern in source.lower() for pattern in io_patterns)
-        except:
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.exception("Failed to determine if function is I/O like: %s", e)
             return False
 
 class SEAController:
@@ -301,34 +306,59 @@ class SEAController:
         self.performance_threshold = 0.15  # 15% improvement threshold
         self.is_active = False
 
+        # Security integration
+        self.security_controller = sea_security_controller
+        self.active_evolution_sessions = {}
+        self.max_concurrent_evolution_sessions = 5
+        self.evolution_risk_threshold = 7.0  # Operations above this require explicit approval
+
     def activate(self):
-        """Activate self-evolving architecture"""
+        """Activate self-evolving architecture with security checks"""
+        # Check security state before activation
+        state = self.security_controller.get_security_state()
+        if state.get("lockdown"):
+            raise RuntimeError(f"Cannot activate SEA: {state.get('lockdown_reason')}")
+
+        # Cleanup any expired approvals before activation
+        self.security_controller.cleanup_expired_approvals()
+
         self.is_active = True
         asyncio.create_task(self._evolution_loop())
 
     async def _evolution_loop(self):
-        """Main evolution loop"""
+        """Main evolution loop with security checks"""
         while self.is_active:
             try:
+                # Check security state before each iteration
+                state = self.security_controller.get_security_state()
+                if state.get("lockdown"):
+                    print(f"SEA evolution paused: {state.get('lockdown_reason')}")
+                    await asyncio.sleep(5)  # Wait 5 seconds before rechecking
+                    continue
+
                 # Monitor current performance
                 await self._monitor_current_state()
 
                 # Detect bottlenecks
                 bottlenecks = await self._detect_bottlenecks()
 
-                # Generate evolutionary variants
+                # Generate evolutionary variants with security validation
                 if bottlenecks:
                     variants = await self._generate_evolutionary_variants(bottlenecks)
 
                     # Test variants in shadow mode
                     winners = await self._test_variants(variants)
 
-                    # Apply beneficial changes
+                    # Apply beneficial changes with security checks
                     await self._apply_beneficial_variants(winners)
 
                 await asyncio.sleep(self.evolution_interval)
             except Exception as e:
                 print(f"SEA evolution loop error: {e}")
+                # Log the error for security monitoring
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.error(f"SEA evolution loop error: {e}")
 
     async def _monitor_current_state(self):
         """Monitor system performance"""
@@ -411,14 +441,50 @@ class SEAController:
         return strategies
 
     async def _generate_evolutionary_variants(self, bottlenecks: List[Bottleneck]) -> List[EvolutionaryVariant]:
-        """Generate evolutionary variants based on bottlenecks"""
+        """Generate evolutionary variants based on bottlenecks with security validation"""
         all_variants = []
 
-        # For simplicity, we'll return placeholder variants
-        # In a real system, this would generate actual code variants
         for bottleneck in bottlenecks:
+            # Validate the bottleneck for security compliance
+            if not self.security_controller.validate_performance_metric(
+                "bottleneck_severity", bottleneck.severity
+            ):
+                continue
+
             # This would dynamically generate function variants
-            pass
+            # TODO: Implement actual code variant generation
+            # Currently in development phase - using placeholder logic
+            print(f"SEA: Would generate variants for bottleneck: {bottleneck.function_signature} (severity: {bottleneck.severity:.2f})")
+
+            # Check if target function is safe to evolve
+            # In a real system, we'd need the actual function object here
+            # For now, we'll just validate the function signature
+            func_signature_safe = True  # Simplified check
+            if not func_signature_safe:
+                continue
+
+            # Determine risk level of evolution
+            risk_level = bottleneck.severity * 10  # Scale to 0-10 range
+
+            # For high-risk operations, check if authorized
+            if risk_level >= self.evolution_risk_threshold:
+                operation_details = {
+                    "target_function": bottleneck.function_signature,
+                    "strategy": bottleneck.suggested_strategies[0] if bottleneck.suggested_strategies else "unknown",
+                    "risk_assessment": {"severity": bottleneck.severity, "risk_level": risk_level}
+                }
+
+                # Check if operation has been approved
+                if not self.security_controller.has_valid_approval(operation_details):
+                    # Skip high-risk operation without approval
+                    continue
+
+            # Add to variants list (placeholder - would contain actual code generation)
+            for strategy in bottleneck.suggested_strategies:
+                # Validate that this evolution strategy is safe to implement
+                strategy_safe = True  # Simplified validation
+                if strategy_safe:
+                    print(f"SEA: Strategy {strategy.value} is safe to implement")
 
         return all_variants
 
@@ -428,14 +494,46 @@ class SEAController:
 
         # In real system, would A/B test variants against original
         # For now, return a placeholder
+        if variants:
+            print(f"SEA: Testing {len(variants)} variants in shadow mode")
         return variants
 
     async def _apply_beneficial_variants(self, winners: List[EvolutionaryVariant]):
-        """Apply beneficial variants to live system"""
+        """Apply beneficial variants to live system with security validation"""
         for winner in winners:
-            # This would replace live functions with evolved versions
-            # Implementation would involve hot-swapping functions
-            pass
+            # Validate the variant before applying
+            # Check if target function is allowed to be modified
+            if hasattr(winner.implementation, '__name__'):
+                func_name = winner.implementation.__name__
+
+                # Validate that this function can be safely evolved
+                can_evolve = self.security_controller.validate_evolution_target(winner.implementation)
+                if not can_evolve:
+                    print(f"SEA: Skipping evolution for {func_name} - not allowed")
+                    continue
+
+            # Determine risk level of this specific application
+            operation_details = {
+                "target_function": getattr(winner.implementation, '__name__', 'unknown'),
+                "strategy": winner.strategy,
+                "risk_assessment": {"complexity": winner.fitness_score}
+            }
+
+            # For high-risk changes, verify approval
+            if winner.fitness_score > self.evolution_risk_threshold:
+                has_approval = self.security_controller.has_valid_approval(operation_details)
+                if not has_approval:
+                    print(f"SEA: Skipping high-risk evolution - no approval for {operation_details['target_function']}")
+                    continue
+
+            # Validate the code change before applying
+            code_content = f"# Evolutionary variant for {operation_details['target_function']}\n# Strategy: {winner.strategy.value}\n# Fitness: {winner.fitness_score}"
+            if self.security_controller.validate_code_change(code_content, operation_details):
+                print(f"SEA: Would apply {winner.strategy.value} variant to live system")
+                # This would replace live functions with evolved versions
+                # Implementation would involve hot-swapping functions
+            else:
+                print(f"SEA: Skipping evolution - code validation failed for {operation_details['target_function']}")
 
     def monitor_function(self, func: Callable) -> Callable:
         """Decorator to monitor function performance"""

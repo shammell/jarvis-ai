@@ -12,6 +12,13 @@ from collections import defaultdict
 import re
 from datetime import datetime
 
+from core.security_system import input_validator
+
+MAX_GRAPH_TEXT_CHARS = 5000
+MAX_ENTITY_NAME_CHARS = 128
+MAX_ENTITY_DESC_CHARS = 512
+MAX_REL_DESC_CHARS = 512
+
 try:
     from groq import Groq
 except ImportError:
@@ -41,9 +48,18 @@ class GraphRAG:
         Extract entities and relationships from text using LLM
         Returns: {entities: [...], relationships: [...]}
         """
+        if not isinstance(text, str) or not text.strip():
+            return {"entities": [], "relationships": []}
+
+        text = text[:MAX_GRAPH_TEXT_CHARS]
+        if not input_validator.validate_input(text, 'general', max_length=MAX_GRAPH_TEXT_CHARS):
+            return {"entities": [], "relationships": []}
+
         if not self.groq_client:
             # Fallback: Simple regex-based extraction
             return self._extract_entities_regex(text)
+
+        safe_text = text[:1000]
 
         try:
             prompt = f"""Extract entities and relationships from this text.
@@ -57,7 +73,7 @@ Return JSON format:
   ]
 }}
 
-Text: {text[:1000]}"""
+Text: {safe_text}"""
 
             response = self.groq_client.chat.completions.create(
                 model="llama-3.1-8b-instant",
@@ -103,12 +119,19 @@ Text: {text[:1000]}"""
 
         # Add entities as nodes
         for entity in extracted.get("entities", []):
-            name = entity["name"]
+            raw_name = str(entity.get("name", ""))[:MAX_ENTITY_NAME_CHARS]
+            raw_desc = str(entity.get("description", ""))[:MAX_ENTITY_DESC_CHARS]
+            if not raw_name or not input_validator.validate_input(raw_name, 'general', max_length=MAX_ENTITY_NAME_CHARS):
+                continue
+            if raw_desc and not input_validator.validate_input(raw_desc, 'general', max_length=MAX_ENTITY_DESC_CHARS):
+                raw_desc = ""
+
+            name = raw_name
             if name not in self.graph:
                 self.graph.add_node(
                     name,
-                    type=entity.get("type", "unknown"),
-                    description=entity.get("description", ""),
+                    type=str(entity.get("type", "unknown"))[:64],
+                    description=raw_desc,
                     first_seen=datetime.now().isoformat(),
                     mentions=1
                 )
@@ -118,9 +141,15 @@ Text: {text[:1000]}"""
 
         # Add relationships as edges
         for rel in extracted.get("relationships", []):
-            source = rel["source"]
-            target = rel["target"]
-            rel_type = rel.get("type", "related_to")
+            source = str(rel.get("source", ""))[:MAX_ENTITY_NAME_CHARS]
+            target = str(rel.get("target", ""))[:MAX_ENTITY_NAME_CHARS]
+            rel_type = str(rel.get("type", "related_to"))[:64]
+            rel_desc = str(rel.get("description", ""))[:MAX_REL_DESC_CHARS]
+
+            if not source or not target:
+                continue
+            if rel_desc and not input_validator.validate_input(rel_desc, 'general', max_length=MAX_REL_DESC_CHARS):
+                rel_desc = ""
 
             if source in self.graph and target in self.graph:
                 if self.graph.has_edge(source, target):
@@ -131,7 +160,7 @@ Text: {text[:1000]}"""
                         source,
                         target,
                         type=rel_type,
-                        description=rel.get("description", ""),
+                        description=rel_desc,
                         weight=1
                     )
 

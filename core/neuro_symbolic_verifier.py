@@ -208,41 +208,25 @@ class NeuroSymbolicVerifier:
             }
 
         try:
-            # Create Z3 solver
             solver = self.z3.Solver()
-
-            # Parse and add constraints
-            # This is simplified - real implementation would parse complex logic
-
-            # Check satisfiability
-            result = solver.check()
-
-            is_satisfiable = (result == self.z3.sat)
-
-            verification = {
-                "statement": statement,
-                "is_satisfiable": is_satisfiable,
-                "result": str(result),
-                "verified": True,
-                "timestamp": datetime.now().isoformat()
-            }
-
-            self.verification_history.append(verification)
-
-            logger.info(f"✅ Logic verified: {statement} -> {result}")
-
+            # Parse simple numeric constraints from statement string
+            # e.g. "x > 5 and x < 10"
+            import re
+            # Extract variable assignments or inequalities
+            # For now: log that full NL parsing is not yet implemented
+            # and return a structured "not_implemented" response
+            logger.warning(
+                "Z3 NL constraint parsing not yet implemented for: %s", statement
+            )
             return {
                 "success": True,
-                "verification": verification
+                "verified": False,
+                "note": "Natural language to Z3 constraint parsing is pending implementation",
+                "statement": statement
             }
-
         except Exception as e:
-            logger.error(f"❌ Logic verification failed: {e}")
-            return {
-                "success": False,
-                "error": str(e),
-                "verified": False
-            }
+            logger.error("Logic verification failed: %s", e)
+            return {"success": False, "error": str(e), "verified": False}
 
     async def verify_code_correctness(
         self,

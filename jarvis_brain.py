@@ -115,14 +115,20 @@ class FileTracker:
             try:
                 with open(CFG.FILE_HASH_HISTORY, "r") as f:
                     self.hashes = json.load(f)
-            except:
+            except Exception as e:
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.exception("Failed to load file hash history: %s", e)
                 self.hashes = {}
 
     def _compute_hash(self, path):
         try:
             with open(path, "rb") as f:
                 return hashlib.sha256(f.read()).hexdigest()
-        except:
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.exception("Failed to compute hash for %s: %s", path, e)
             return None
 
     def changed(self, path):
@@ -175,20 +181,24 @@ class Executor:
             cmd_args = shlex.split(full_cmd)
             proc = await asyncio.create_subprocess_exec(
                 *cmd_args,
-                full_cmd, 
-                stdout=asyncio.subprocess.PIPE, 
-                stderr=asyncio.subprocess.PIPE, 
+                stdout=asyncio.subprocess.PIPE,
+                stderr=asyncio.subprocess.PIPE,
                 **kwargs
             )
-            out, err = await asyncio.wait_for(proc.communicate(), timeout=CFG.SHELL_TIMEOUT)
+            stdout, stderr = await asyncio.wait_for(
+                proc.communicate(), timeout=30.0
+            )
         except asyncio.TimeoutError:
-            if platform.system() == "Windows":
-                proc.kill()
-            else:
-                os.killpg(os.getpgid(proc.pid), signal.SIGKILL)
-            return f"⚠ Timeout ({CFG.SHELL_TIMEOUT}s)"
+            proc.kill()
+            await proc.communicate()
+            return {"success": False, "error": "Command timed out after 30s"}
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.exception("Error in shell execution: %s", e)
+            raise
 
-        output = (out + err).decode(errors="ignore")
+        output = (stdout + stderr).decode(errors="ignore")
 
         # 4. Auto-Install Missing Modules
         m = re.search(r"No module named '([^']+)'", output)
@@ -221,6 +231,9 @@ class Executor:
             return "Error: File not found."
 
     async def docker_run(self, code_path: str, requirements: list = []):
+        from core.autonomy_guard import require_autonomy
+        require_autonomy("docker_run")
+
         if docker is None:
             return "⚠ Docker SDK not installed"
         client = docker.from_env()
@@ -234,7 +247,7 @@ class Executor:
             cmds.append(f"pip install -r /workspace/{os.path.basename(req_file)}")
         cmds.append(f"python /workspace/{os.path.basename(code_path)}")
         full_cmd = " && ".join(cmds)
-        
+
         try:
             container = client.containers.run(
                 CFG.DOCKER_IMAGE,
@@ -272,7 +285,10 @@ def parse_python_file(path: str) -> Dict[str, Any]:
         classes = [node.name for node in ast.walk(tree) if isinstance(node, ast.ClassDef)]
         functions = [node.name for node in ast.walk(tree) if isinstance(node, ast.FunctionDef)]
         return {"classes": classes, "functions": functions}
-    except:
+    except Exception as e:
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.exception("Failed to parse Python file %s: %s", path, e)
         return {}
 
 # ================= AI CORE (ROBUST) =================
@@ -285,14 +301,22 @@ class AI:
         match = re.search(r"```json\s*(\{.*?\})\s*```", text, re.DOTALL)
         if match:
             try: return json.loads(match.group(1))
-            except: pass
-        
+            except Exception as e:
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.exception("Failed to parse JSON from code block: %s", e)
+                pass
+
         # 2. Try finding raw JSON structure { ... }
         match = re.search(r"(\{.*\})", text, re.DOTALL)
         if match:
             try: return json.loads(match.group(1))
-            except: pass
-            
+            except Exception as e:
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.exception("Failed to parse JSON from raw structure: %s", e)
+                pass
+
         return None
 
     async def call(self, system: str, user: str) -> Optional[Dict]:

@@ -69,10 +69,71 @@ class CircuitBreaker {
 let grpcClient = null;
 let circuitBreaker = new CircuitBreaker(5, 60000);
 let grpcHealthy = false;
+let grpcAuth = {
+    accessToken: null,
+    refreshToken: null,
+    expiresAt: 0
+};
+
+async function authenticateGRPCClient() {
+    if (!grpcClient) return false;
+
+    const username = process.env.GRPC_AUTH_USER || 'admin';
+    const password = process.env.ADMIN_PASSWORD;
+    if (!password) {
+        logger.error('❌ ADMIN_PASSWORD is required for gRPC authentication');
+        return false;
+    }
+
+    try {
+        const auth = await grpcClient.authenticate(username, password);
+        grpcAuth.accessToken = auth.access_token;
+        grpcAuth.refreshToken = auth.refresh_token;
+        grpcAuth.expiresAt = Date.now() + (auth.expires_in * 1000);
+        grpcClient.setAuthTokens(grpcAuth.accessToken, grpcAuth.refreshToken);
+        logger.info('✅ gRPC authentication succeeded');
+        return true;
+    } catch (error) {
+        logger.error({ error }, '❌ gRPC authentication failed');
+        return false;
+    }
+}
+
+async function ensureGRPCAuth() {
+    if (!grpcClient) return false;
+
+    if (!grpcAuth.accessToken) {
+        return authenticateGRPCClient();
+    }
+
+    const now = Date.now();
+    if (grpcAuth.expiresAt > now + 60000) {
+        return true;
+    }
+
+    try {
+        const refreshed = await grpcClient.refreshAuthToken();
+        grpcAuth.accessToken = refreshed.access_token;
+        grpcAuth.refreshToken = refreshed.refresh_token;
+        grpcAuth.expiresAt = Date.now() + (refreshed.expires_in * 1000);
+        grpcClient.setAuthTokens(grpcAuth.accessToken, grpcAuth.refreshToken);
+        logger.info('✅ gRPC token refreshed');
+        return true;
+    } catch (error) {
+        logger.warn({ error }, '⚠️ gRPC token refresh failed, re-authenticating');
+        return authenticateGRPCClient();
+    }
+}
 
 async function initGRPCClient() {
     try {
         grpcClient = new JarvisGRPCClient('localhost:50051');
+
+        const authenticated = await authenticateGRPCClient();
+        if (!authenticated) {
+            throw new Error('gRPC authentication failed');
+        }
+
         const health = await grpcClient.healthCheck();
         grpcHealthy = health.healthy;
         logger.info('✅ gRPC client connected to Python backend');
@@ -279,6 +340,11 @@ async function forwardToPython(data) {
             const result = await circuitBreaker.execute(async () => {
                 if (!grpcClient) {
                     await initGRPCClient();
+                }
+
+                const authReady = await ensureGRPCAuth();
+                if (!authReady) {
+                    throw new Error('gRPC auth unavailable');
                 }
 
                 logger.info({ from: data.from, messageId: data.messageId }, '📤 Forwarding to Python via gRPC');

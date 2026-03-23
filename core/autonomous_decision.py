@@ -10,6 +10,15 @@ from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 import json
 import statistics
+import os
+import hashlib
+import hmac
+
+from core.security_system import input_validator, security_manager, Permission
+
+MAX_ACTION_CHARS = 5000
+MAX_CONTEXT_FIELDS = 100
+MAX_CONTEXT_VALUE_CHARS = 5000
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +41,127 @@ class AutonomousDecision:
         }
         self.autonomy_level = 0.3  # Start at 30% autonomy
         self.learning_rate = 0.05  # How fast to increase autonomy
+
+        # Immutable security configuration
+        self._security_signing_key = os.getenv("AUTONOMY_SECURITY_KEY") or os.getenv("JWT_SECRET") or "jarvis-autonomy-default"
+        self._immutable_security_config = {
+            "min_auto_approve": 0.5,
+            "max_auto_approve": 3.5,
+            "ask_user_threshold": 7.0,
+            "block_threshold": 10.0,
+            "max_autonomy_level": 0.8,
+            "min_autonomy_level": 0.0,
+            "approval_required_keywords": ["delete", "transaction", "payment", "privilege", "root", "system"]
+        }
+        self._security_signature = self._sign_security_config(self._immutable_security_config)
+
+        # Human-in-the-loop approval cache for high-risk actions
+        self._approved_actions = {}
+        self._approval_ttl_seconds = int(os.getenv("AUTONOMY_APPROVAL_TTL", "1800"))
+
+        # Emergency lock state
+        self._security_lockdown = False
+        self._security_lock_reason = None
+        self._tamper_events = []
+
+        # Concurrency guard for decision pipeline
+        self._decision_lock = None
+
+        self._validate_security_baseline()
+        self._enforce_security_bounds()
+
+        logger.info("🔐 Autonomous security boundaries initialized")
+
+    def _sign_security_config(self, config: Dict[str, Any]) -> str:
+        payload = json.dumps(config, sort_keys=True).encode("utf-8")
+        return hmac.new(self._security_signing_key.encode("utf-8"), payload, hashlib.sha256).hexdigest()
+
+    def _validate_security_baseline(self):
+        computed = self._sign_security_config(self._immutable_security_config)
+        if computed != self._security_signature:
+            self._security_lockdown = True
+            self._security_lock_reason = "immutable_security_config_tampered"
+            self._tamper_events.append({"timestamp": datetime.now().isoformat(), "reason": self._security_lock_reason})
+            logger.critical("🚨 Autonomous security config tampering detected; entering lockdown")
+
+    def _enforce_security_bounds(self):
+        self.risk_thresholds["auto_approve"] = max(
+            self._immutable_security_config["min_auto_approve"],
+            min(self.risk_thresholds["auto_approve"], self._immutable_security_config["max_auto_approve"])
+        )
+        self.risk_thresholds["ask_user"] = self._immutable_security_config["ask_user_threshold"]
+        self.risk_thresholds["block"] = self._immutable_security_config["block_threshold"]
+        self.autonomy_level = max(
+            self._immutable_security_config["min_autonomy_level"],
+            min(self.autonomy_level, self._immutable_security_config["max_autonomy_level"])
+        )
+
+    def set_security_lockdown(self, enabled: bool, reason: str = "manual"):
+        self._security_lockdown = enabled
+        self._security_lock_reason = reason if enabled else None
+        logger.warning(f"🔒 Autonomous lockdown set to {enabled}: {reason}")
+
+    def approve_high_risk_action(self, action: str, approver: str, auth_token: str) -> bool:
+        if not security_manager.check_permission(auth_token, Permission.ACCESS_AUTONOMOUS):
+            return False
+        action_hash = hashlib.sha256(action.encode("utf-8")).hexdigest()
+        self._approved_actions[action_hash] = {
+            "approver": approver,
+            "timestamp": datetime.now().isoformat()
+        }
+        return True
+
+    def _has_valid_high_risk_approval(self, action: str) -> bool:
+        action_hash = hashlib.sha256(action.encode("utf-8")).hexdigest()
+        entry = self._approved_actions.get(action_hash)
+        if not entry:
+            return False
+        age = (datetime.now() - datetime.fromisoformat(entry["timestamp"])).total_seconds()
+        if age > self._approval_ttl_seconds:
+            del self._approved_actions[action_hash]
+            return False
+        return True
+
+    def _requires_high_risk_approval(self, action: str, context: Dict[str, Any], adjusted_risk: float) -> bool:
+        action_lower = action.lower()
+        if adjusted_risk >= self.risk_thresholds["ask_user"]:
+            return True
+        if any(k in action_lower for k in self._immutable_security_config["approval_required_keywords"]):
+            return True
+        if context.get("affects_production") or context.get("irreversible"):
+            return True
+        return False
+
+    def get_security_state(self) -> Dict[str, Any]:
+        return {
+            "lockdown": self._security_lockdown,
+            "lock_reason": self._security_lock_reason,
+            "tamper_events": self._tamper_events[-20:],
+            "approved_actions": len(self._approved_actions),
+            "security_signature": self._security_signature,
+        }
+
+    def validate_autonomous_action(self, action: str, context: Dict[str, Any]) -> Dict[str, Any]:
+        if not isinstance(action, str) or not action.strip():
+            return {"valid": False, "reason": "empty_action"}
+        if not input_validator.validate_input(action[:MAX_ACTION_CHARS], 'general', max_length=MAX_ACTION_CHARS):
+            return {"valid": False, "reason": "malicious_action_content"}
+        if not isinstance(context, dict):
+            return {"valid": False, "reason": "invalid_context_type"}
+        return {"valid": True, "reason": "ok"}
+
+    def _check_lockdown(self) -> Optional[Dict[str, Any]]:
+        if self._security_lockdown:
+            return {
+                "decision": "block",
+                "risk_score": 10.0,
+                "reasoning": f"Autonomous lockdown active: {self._security_lock_reason}",
+                "auto_approved": False,
+                "confidence": 0.0,
+                "timestamp": datetime.now().isoformat()
+            }
+        return None
+
 
         # Risk factors
         self.risk_factors = {
@@ -71,10 +201,52 @@ class AutonomousDecision:
                 "auto_approved": bool
             }
         """
+        if not isinstance(action, str) or not action.strip():
+            return {
+                "decision": "block",
+                "risk_score": 10.0,
+                "reasoning": "Invalid action input",
+                "auto_approved": False,
+                "confidence": 0.0,
+                "timestamp": datetime.now().isoformat()
+            }
+
+        action = action[:MAX_ACTION_CHARS]
+        context = context if isinstance(context, dict) else {}
+
+        if not input_validator.validate_input(action, 'general', max_length=MAX_ACTION_CHARS):
+            return {
+                "decision": "block",
+                "risk_score": 10.0,
+                "reasoning": "Malicious or invalid action content detected",
+                "auto_approved": False,
+                "confidence": 0.0,
+                "timestamp": datetime.now().isoformat()
+            }
+
+        safe_context = {}
+        for idx, (k, v) in enumerate(context.items()):
+            if idx >= MAX_CONTEXT_FIELDS:
+                break
+            key = str(k)[:128]
+            if isinstance(v, str):
+                val = v[:MAX_CONTEXT_VALUE_CHARS]
+                if not input_validator.validate_input(val, 'general', max_length=MAX_CONTEXT_VALUE_CHARS):
+                    continue
+                safe_context[key] = val
+            else:
+                safe_context[key] = v
+
+        self._validate_security_baseline()
+        lockdown = self._check_lockdown()
+        if lockdown:
+            return lockdown
+
+        self._enforce_security_bounds()
         logger.info(f"🤔 Evaluating decision: {action[:50]}...")
 
         # Calculate risk score
-        risk_score = self._calculate_risk(action, context)
+        risk_score = self._calculate_risk(action, safe_context)
 
         # Adjust risk based on confidence
         adjusted_risk = risk_score * (1 - confidence * 0.5)  # High confidence reduces risk
@@ -82,8 +254,19 @@ class AutonomousDecision:
         # Adjust risk based on autonomy level
         effective_threshold = self.risk_thresholds["auto_approve"] * (1 + self.autonomy_level)
 
+        high_risk_requires_approval = self._requires_high_risk_approval(action, safe_context, adjusted_risk)
+
         # Make decision
-        if adjusted_risk <= effective_threshold:
+        if high_risk_requires_approval and not self._has_valid_high_risk_approval(action):
+            if adjusted_risk >= self.risk_thresholds["block"]:
+                decision = "block"
+                auto_approved = False
+                reasoning = f"High risk ({adjusted_risk:.1f}) - blocked until explicit approval"
+            else:
+                decision = "ask_user"
+                auto_approved = False
+                reasoning = f"High-risk action requires explicit approval ({adjusted_risk:.1f})"
+        elif adjusted_risk <= effective_threshold:
             decision = "approve"
             auto_approved = True
             reasoning = f"Low risk ({adjusted_risk:.1f}) and high confidence ({confidence:.2f})"
@@ -97,6 +280,25 @@ class AutonomousDecision:
             decision = "block"
             auto_approved = False
             reasoning = f"High risk ({adjusted_risk:.1f}) - action blocked for safety"
+
+        if high_risk_requires_approval and decision == "approve" and not self._has_valid_high_risk_approval(action):
+            decision = "ask_user"
+            auto_approved = False
+            reasoning = "Approval required for privileged autonomous action"
+
+        validation = self.validate_autonomous_action(action, safe_context)
+        if not validation["valid"]:
+            decision = "block"
+            auto_approved = False
+            adjusted_risk = 10.0
+            reasoning = f"Action validation failed: {validation['reason']}"
+
+        safe_context["approval_required"] = high_risk_requires_approval
+        safe_context["validated"] = validation["valid"]
+        safe_context["validation_reason"] = validation["reason"]
+
+        context = safe_context
+
 
         result = {
             "decision": decision,
@@ -208,6 +410,10 @@ class AutonomousDecision:
                 if factor_name.replace("_", " ") in action_lower:
                     self.risk_factors[factor_name] = min(10.0, factor_value * 1.1)
                     logger.info(f"⚠️ Risk factor '{factor_name}' increased to {self.risk_factors[factor_name]:.1f}")
+
+        # Re-apply immutable security bounds after learning
+        self._enforce_security_bounds()
+        self._validate_security_baseline()
 
     def get_autonomy_report(self) -> Dict[str, Any]:
         """Get autonomy statistics and report"""

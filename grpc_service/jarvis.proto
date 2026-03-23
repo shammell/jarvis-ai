@@ -10,6 +10,11 @@ package jarvis;
 
 // Main JARVIS service
 service JarvisService {
+  // Authentication
+  rpc Authenticate(AuthRequest) returns (AuthResponse);
+  rpc RefreshToken(RefreshTokenRequest) returns (AuthResponse);
+  rpc ValidateToken(TokenRequest) returns (TokenValidationResponse);
+
   // Process incoming WhatsApp message
   rpc ProcessMessage(MessageRequest) returns (MessageResponse);
 
@@ -34,6 +39,7 @@ message MessageRequest {
   string message_id = 3;
   int64 timestamp = 4;
   map<string, string> metadata = 5;
+  string auth_token = 6; // Authentication token
 }
 
 message MessageResponse {
@@ -49,6 +55,7 @@ message AgentRequest {
   string task = 2;
   string context = 3;
   map<string, string> parameters = 4;
+  string auth_token = 5; // Authentication token
 }
 
 message AgentResponse {
@@ -68,12 +75,14 @@ message MemoryRequest {
   string text = 1;
   string type = 2; // "goal", "conversation", "knowledge"
   map<string, string> metadata = 3;
+  string auth_token = 4; // Authentication token
 }
 
 message MemoryQuery {
   string query = 1;
   int32 limit = 2;
   string type = 3;
+  string auth_token = 4; // Authentication token
 }
 
 message MemoryResponse {
@@ -91,6 +100,7 @@ message MemoryItem {
 // Health check
 message HealthRequest {
   string service = 1;
+  string auth_token = 2; // Authentication token
 }
 
 message HealthResponse {
@@ -102,6 +112,7 @@ message HealthResponse {
 // Event streaming
 message EventStreamRequest {
   string client_id = 1;
+  string auth_token = 2; // Authentication token
 }
 
 message Event {
@@ -109,4 +120,48 @@ message Event {
   string message = 2;
   int64 timestamp = 3;
   map<string, string> data = 4;
+}
+
+// Authentication messages
+message AuthRequest {
+  string username = 1;
+  string password = 2;
+  string grant_type = 3; // "password" or "refresh_token"
+  string refresh_token = 4; // For refresh token requests
+}
+
+message AuthResponse {
+  bool success = 1;
+  string access_token = 2;
+  string refresh_token = 3;
+  int32 expires_in = 4;
+  string token_type = 5;
+  string error = 6;
+  User user_info = 7;
+}
+
+message RefreshTokenRequest {
+  string refresh_token = 1;
+}
+
+message TokenRequest {
+  string token = 1;
+}
+
+message TokenValidationResponse {
+  bool valid = 1;
+  string user_id = 2;
+  string role = 3;
+  int64 expires_at = 4;
+  repeated string permissions = 5;
+  string error = 6;
+}
+
+message User {
+  string id = 1;
+  string username = 2;
+  string role = 3;
+  repeated string permissions = 4;
+  int64 created_at = 5;
+  int64 last_login = 6;
 }

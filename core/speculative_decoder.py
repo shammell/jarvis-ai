@@ -9,6 +9,15 @@ from typing import List, Dict, Any, Optional
 import time
 import os
 
+from core.security_system import input_validator
+
+MAX_MESSAGE_CHARS = 10000
+MAX_TOTAL_CONTEXT_CHARS = 50000
+MAX_SPECULATIVE_TOKENS = 4096
+MAX_DRAFT_LENGTH = 512
+MAX_TEMPERATURE = 1.5
+MIN_TEMPERATURE = 0.0
+
 try:
     from groq import Groq
 except ImportError:
@@ -66,9 +75,35 @@ class SpeculativeDecoder:
         Returns:
             {text: str, tokens: int, time_ms: int, accepted_ratio: float}
         """
+        from core.llm_exceptions import LLMClientUnavailableError
         if not self.client:
-            logger.error("❌ Groq client not initialized")
-            return {"text": "", "tokens": 0, "time_ms": 0, "accepted_ratio": 0.0}
+            raise LLMClientUnavailableError("Groq client not initialized. Set GROQ_API_KEY.")
+
+        if not isinstance(messages, list) or not messages:
+            raise ValueError("messages must be a non-empty list")
+
+        sanitized_messages = []
+        total_chars = 0
+        for m in messages:
+            if not isinstance(m, dict):
+                continue
+            role = m.get("role", "user")
+            content = str(m.get("content", ""))[:MAX_MESSAGE_CHARS]
+            if not input_validator.validate_input(content, 'general', max_length=MAX_MESSAGE_CHARS):
+                raise ValueError("Invalid prompt content detected")
+            total_chars += len(content)
+            sanitized_messages.append({"role": role, "content": content})
+
+        if not sanitized_messages:
+            raise ValueError("No valid messages after sanitization")
+        if total_chars > MAX_TOTAL_CONTEXT_CHARS:
+            raise ValueError("Prompt context too large")
+
+        max_tokens = max(1, min(int(max_tokens), MAX_SPECULATIVE_TOKENS))
+        draft_length = max(1, min(int(draft_length), MAX_DRAFT_LENGTH))
+        temperature = max(MIN_TEMPERATURE, min(float(temperature), MAX_TEMPERATURE))
+
+        messages = sanitized_messages
 
         self.stats["total_calls"] += 1
         start_time = time.time()

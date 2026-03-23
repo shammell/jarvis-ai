@@ -27,7 +27,42 @@ class JarvisGRPCClient {
             grpc.credentials.createInsecure()
         );
         this.host = host;
+        this.authToken = null;
+        this.refreshToken = null;
         console.log(`🔌 gRPC Client connected to ${host}`);
+    }
+
+    setAuthTokens(accessToken, refreshToken = null) {
+        this.authToken = accessToken;
+        if (refreshToken) this.refreshToken = refreshToken;
+    }
+
+    async authenticate(username, password) {
+        return new Promise((resolve, reject) => {
+            this.client.Authenticate({ username, password, grant_type: 'password' }, (error, response) => {
+                if (error) return reject(error);
+                if (!response.success) return reject(new Error(response.error || 'Authentication failed'));
+                this.setAuthTokens(response.access_token, response.refresh_token);
+                resolve(response);
+            });
+        });
+    }
+
+    async refreshAuthToken() {
+        return new Promise((resolve, reject) => {
+            if (!this.refreshToken) return reject(new Error('No refresh token set'));
+            this.client.RefreshToken({ refresh_token: this.refreshToken }, (error, response) => {
+                if (error) return reject(error);
+                if (!response.success) return reject(new Error(response.error || 'Token refresh failed'));
+                this.setAuthTokens(response.access_token, response.refresh_token);
+                resolve(response);
+            });
+        });
+    }
+
+    ensureAuthToken() {
+        if (!this.authToken) throw new Error('Authentication token required. Call authenticate() first.');
+        return this.authToken;
     }
 
     /**
@@ -40,7 +75,8 @@ class JarvisGRPCClient {
                 text,
                 message_id: messageId,
                 timestamp: Date.now(),
-                metadata: {}
+                metadata: {},
+                auth_token: this.ensureAuthToken()
             };
 
             this.client.ProcessMessage(request, (error, response) => {
@@ -64,7 +100,8 @@ class JarvisGRPCClient {
                 agent_type: agentType,
                 task,
                 context,
-                parameters
+                parameters,
+                auth_token: this.ensureAuthToken()
             };
 
             this.client.ExecuteAgent(request, (error, response) => {
@@ -86,7 +123,8 @@ class JarvisGRPCClient {
             const request = {
                 text,
                 type,
-                metadata
+                metadata,
+                auth_token: this.ensureAuthToken()
             };
 
             this.client.StoreMemory(request, (error, response) => {
@@ -108,7 +146,8 @@ class JarvisGRPCClient {
             const request = {
                 query,
                 limit,
-                type
+                type,
+                auth_token: this.ensureAuthToken()
             };
 
             this.client.RetrieveMemory(request, (error, response) => {
@@ -127,7 +166,7 @@ class JarvisGRPCClient {
      */
     async healthCheck() {
         return new Promise((resolve, reject) => {
-            const request = { service: 'jarvis' };
+            const request = { service: 'jarvis', auth_token: this.ensureAuthToken() };
 
             this.client.HealthCheck(request, (error, response) => {
                 if (error) {
@@ -144,7 +183,7 @@ class JarvisGRPCClient {
      * Stream events (for real-time updates)
      */
     streamEvents(clientId, onEvent) {
-        const request = { client_id: clientId };
+        const request = { client_id: clientId, auth_token: this.ensureAuthToken() };
         const call = this.client.StreamEvents(request);
 
         call.on('data', (event) => {

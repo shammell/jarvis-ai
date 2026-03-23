@@ -17,6 +17,7 @@ from core.proactive_agent import ProactiveAgent
 from core.hyper_automation import HyperAutomation
 from core.skill_loader import SkillLoader
 from core.self_evolving_architecture import SEAController
+from core.security_system import security_manager, Permission, input_validator
 
 logging.basicConfig(
     level=logging.INFO,
@@ -83,7 +84,9 @@ class EnhancedAutonomySystem:
         self,
         goal_description: str,
         priority: GoalPriority = GoalPriority.MEDIUM,
-        context: Dict[str, Any] = None
+        context: Dict[str, Any] = None,
+        auth_token: str = None,
+        requester: str = "system"
     ) -> Dict[str, Any]:
         """
         Execute a high-level goal autonomously
@@ -96,13 +99,102 @@ class EnhancedAutonomySystem:
         Returns:
             Execution result
         """
+        if not isinstance(goal_description, str) or not goal_description.strip():
+            return {
+                "success": False,
+                "error": "invalid_goal_description"
+            }
+
+        goal_description = goal_description[:5000]
+        if not input_validator.validate_input(goal_description, 'general', max_length=5000):
+            return {
+                "success": False,
+                "error": "invalid_goal_content"
+            }
+
+        context = context if isinstance(context, dict) else {}
+
+        # Authorization for autonomous execution
+        if auth_token:
+            if not security_manager.check_permission(auth_token, Permission.ACCESS_AUTONOMOUS):
+                return {
+                    "success": False,
+                    "error": "permission_denied",
+                    "reason": "ACCESS_AUTONOMOUS required"
+                }
+
         logger.info(f"🎯 Starting goal execution: {goal_description}")
 
         # Create goal
         goal_id = self.goal_manager.create_goal(
             goal_description,
             priority=priority,
-            context=context
+            context={**context, "requester": requester}
+        )
+
+        # Require explicit high-risk approval for critical priorities
+        if priority == GoalPriority.CRITICAL:
+            approved = self.autonomous_decision.approve_high_risk_action(
+                goal_description,
+                approver=requester,
+                auth_token=auth_token or ""
+            ) if auth_token else False
+            if not approved:
+                self.goal_manager.complete_goal(goal_id, success=False)
+                return {
+                    "success": False,
+                    "goal_id": goal_id,
+                    "error": "critical_goal_requires_approval"
+                }
+
+        # Validate autonomous action
+        action_validation = self.autonomous_decision.validate_autonomous_action(goal_description, context)
+        if not action_validation.get("valid"):
+            self.goal_manager.complete_goal(goal_id, success=False)
+            return {
+                "success": False,
+                "goal_id": goal_id,
+                "error": f"autonomous_action_validation_failed:{action_validation.get('reason')}"
+            }
+
+        # Evaluate decision with security checks
+        decision = self.autonomous_decision.evaluate_decision(
+            action=goal_description,
+            context=context,
+            confidence=0.8
+        )
+
+        # Check security state before proceeding
+        security_state = self.autonomous_decision.get_security_state()
+        if security_state.get("lockdown"):
+            self.goal_manager.complete_goal(goal_id, success=False)
+            return {
+                "success": False,
+                "goal_id": goal_id,
+                "error": "security_lockdown_active",
+                "reason": security_state.get("lock_reason")
+            }
+
+        if decision.get("decision") == "block":
+            self.goal_manager.complete_goal(goal_id, success=False)
+            return {
+                "success": False,
+                "goal_id": goal_id,
+                "error": "autonomous_action_blocked",
+                "reason": decision.get("reasoning")
+            }
+
+        # Log security event
+        security_manager.log_security_event(
+            "autonomous_goal_execution_started",
+            requester,
+            {
+                "goal_id": goal_id,
+                "priority": priority.value,
+                "decision": decision.get("decision"),
+                "risk_score": decision.get("risk_score", 0.0),
+                "auto_approved": decision.get("auto_approved", False)
+            }
         )
 
         # Record start
@@ -112,7 +204,7 @@ class EnhancedAutonomySystem:
             # Execute goal
             result = await self.executor.execute_goal(
                 goal_description,
-                context=context
+                context={**context, "auth_token": auth_token, "requester": requester}
             )
 
             # Update goal progress
@@ -148,6 +240,17 @@ class EnhancedAutonomySystem:
             # Log task for automation detection
             self.hyper_automation.log_task(goal_description, context)
 
+            security_manager.log_security_event(
+                "autonomous_goal_execution_completed",
+                requester,
+                {
+                    "goal_id": goal_id,
+                    "success": result["success"],
+                    "completed_tasks": result.get("completed_tasks", 0),
+                    "failed_tasks": result.get("failed_tasks", 0)
+                }
+            )
+
             logger.info(f"✅ Goal execution complete: {goal_id}")
 
             return {
@@ -171,11 +274,21 @@ class EnhancedAutonomySystem:
                 error=str(e)
             )
 
+            security_manager.log_security_event(
+                "autonomous_goal_execution_failed",
+                requester,
+                {
+                    "goal_id": goal_id,
+                    "error": str(e)
+                }
+            )
+
             return {
                 "success": False,
                 "goal_id": goal_id,
                 "error": str(e)
             }
+
 
     async def resume_session(self) -> Dict[str, Any]:
         """

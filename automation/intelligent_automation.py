@@ -71,7 +71,10 @@ class IntelligentAutomation:
                                 'title': title,
                                 'pid': pid
                             })
-                    except:
+                    except Exception as e:
+                        import logging
+                        logger = logging.getLogger(__name__)
+                        logger.exception("Failed to get window information: %s", e)
                         pass
             return True
 
@@ -98,7 +101,11 @@ class IntelligentAutomation:
             # Verify
             active = win32gui.GetForegroundWindow()
             return active == chrome_window['hwnd']
-        except:
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.exception("Failed to switch to Chrome window: %s", e)
+            return False
             return False
 
     def take_screenshot(self) -> np.ndarray:

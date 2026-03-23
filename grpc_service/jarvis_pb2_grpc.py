@@ -35,6 +35,21 @@ class JarvisServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
+        self.Authenticate = channel.unary_unary(
+                '/jarvis.JarvisService/Authenticate',
+                request_serializer=jarvis__pb2.AuthRequest.SerializeToString,
+                response_deserializer=jarvis__pb2.AuthResponse.FromString,
+                _registered_method=True)
+        self.RefreshToken = channel.unary_unary(
+                '/jarvis.JarvisService/RefreshToken',
+                request_serializer=jarvis__pb2.RefreshTokenRequest.SerializeToString,
+                response_deserializer=jarvis__pb2.AuthResponse.FromString,
+                _registered_method=True)
+        self.ValidateToken = channel.unary_unary(
+                '/jarvis.JarvisService/ValidateToken',
+                request_serializer=jarvis__pb2.TokenRequest.SerializeToString,
+                response_deserializer=jarvis__pb2.TokenValidationResponse.FromString,
+                _registered_method=True)
         self.ProcessMessage = channel.unary_unary(
                 '/jarvis.JarvisService/ProcessMessage',
                 request_serializer=jarvis__pb2.MessageRequest.SerializeToString,
@@ -70,6 +85,25 @@ class JarvisServiceStub(object):
 class JarvisServiceServicer(object):
     """Main JARVIS service
     """
+
+    def Authenticate(self, request, context):
+        """Authentication
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def RefreshToken(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def ValidateToken(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
     def ProcessMessage(self, request, context):
         """Process incoming WhatsApp message
@@ -115,6 +149,21 @@ class JarvisServiceServicer(object):
 
 def add_JarvisServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
+            'Authenticate': grpc.unary_unary_rpc_method_handler(
+                    servicer.Authenticate,
+                    request_deserializer=jarvis__pb2.AuthRequest.FromString,
+                    response_serializer=jarvis__pb2.AuthResponse.SerializeToString,
+            ),
+            'RefreshToken': grpc.unary_unary_rpc_method_handler(
+                    servicer.RefreshToken,
+                    request_deserializer=jarvis__pb2.RefreshTokenRequest.FromString,
+                    response_serializer=jarvis__pb2.AuthResponse.SerializeToString,
+            ),
+            'ValidateToken': grpc.unary_unary_rpc_method_handler(
+                    servicer.ValidateToken,
+                    request_deserializer=jarvis__pb2.TokenRequest.FromString,
+                    response_serializer=jarvis__pb2.TokenValidationResponse.SerializeToString,
+            ),
             'ProcessMessage': grpc.unary_unary_rpc_method_handler(
                     servicer.ProcessMessage,
                     request_deserializer=jarvis__pb2.MessageRequest.FromString,
@@ -156,6 +205,87 @@ def add_JarvisServiceServicer_to_server(servicer, server):
 class JarvisService(object):
     """Main JARVIS service
     """
+
+    @staticmethod
+    def Authenticate(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/jarvis.JarvisService/Authenticate',
+            jarvis__pb2.AuthRequest.SerializeToString,
+            jarvis__pb2.AuthResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def RefreshToken(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/jarvis.JarvisService/RefreshToken',
+            jarvis__pb2.RefreshTokenRequest.SerializeToString,
+            jarvis__pb2.AuthResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ValidateToken(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/jarvis.JarvisService/ValidateToken',
+            jarvis__pb2.TokenRequest.SerializeToString,
+            jarvis__pb2.TokenValidationResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def ProcessMessage(request,
