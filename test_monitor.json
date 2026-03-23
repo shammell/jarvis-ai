@@ -1,0 +1,422 @@
+{
+  "metrics": {
+    "task_success_rate": [
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:24:07.525576",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:24:07.631428",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 0.0,
+        "timestamp": "2026-03-24T03:24:07.748250",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:24:07.865118",
+        "context": {
+          "action_type": "computation"
+        }
+      },
+      {
+        "value": 0.0,
+        "timestamp": "2026-03-24T03:24:07.984878",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:24:08.102559",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:24:08.219287",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:24:08.338423",
+        "context": {
+          "action_type": "computation"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:53:23.033726",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:53:23.152508",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 0.0,
+        "timestamp": "2026-03-24T03:53:23.276370",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:53:23.417465",
+        "context": {
+          "action_type": "computation"
+        }
+      },
+      {
+        "value": 0.0,
+        "timestamp": "2026-03-24T03:53:23.556404",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:53:23.697430",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:53:23.837561",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 1.0,
+        "timestamp": "2026-03-24T03:53:23.987348",
+        "context": {
+          "action_type": "computation"
+        }
+      }
+    ],
+    "response_time": [
+      {
+        "value": 0.1,
+        "timestamp": "2026-03-24T03:24:07.528602",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 0.2,
+        "timestamp": "2026-03-24T03:24:07.632475",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 1.5,
+        "timestamp": "2026-03-24T03:24:07.750745",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 0.5,
+        "timestamp": "2026-03-24T03:24:07.866165",
+        "context": {
+          "action_type": "computation"
+        }
+      },
+      {
+        "value": 2.0,
+        "timestamp": "2026-03-24T03:24:07.990722",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 0.1,
+        "timestamp": "2026-03-24T03:24:08.107261",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 0.8,
+        "timestamp": "2026-03-24T03:24:08.225230",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 0.6,
+        "timestamp": "2026-03-24T03:24:08.342836",
+        "context": {
+          "action_type": "computation"
+        }
+      },
+      {
+        "value": 0.1,
+        "timestamp": "2026-03-24T03:53:23.040719",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 0.2,
+        "timestamp": "2026-03-24T03:53:23.160524",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 1.5,
+        "timestamp": "2026-03-24T03:53:23.291647",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 0.5,
+        "timestamp": "2026-03-24T03:53:23.428651",
+        "context": {
+          "action_type": "computation"
+        }
+      },
+      {
+        "value": 2.0,
+        "timestamp": "2026-03-24T03:53:23.565591",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 0.1,
+        "timestamp": "2026-03-24T03:53:23.709347",
+        "context": {
+          "action_type": "file_operation"
+        }
+      },
+      {
+        "value": 0.8,
+        "timestamp": "2026-03-24T03:53:23.850235",
+        "context": {
+          "action_type": "network"
+        }
+      },
+      {
+        "value": 0.6,
+        "timestamp": "2026-03-24T03:53:23.999669",
+        "context": {
+          "action_type": "computation"
+        }
+      }
+    ]
+  },
+  "action_history": [
+    {
+      "action": "Read file",
+      "action_type": "file_operation",
+      "success": true,
+      "duration": 0.1,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:24:07.524561"
+    },
+    {
+      "action": "Write file",
+      "action_type": "file_operation",
+      "success": true,
+      "duration": 0.2,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:24:07.631428"
+    },
+    {
+      "action": "API call",
+      "action_type": "network",
+      "success": false,
+      "duration": 1.5,
+      "context": {},
+      "error": "Connection timeout",
+      "timestamp": "2026-03-24T03:24:07.748250"
+    },
+    {
+      "action": "Process data",
+      "action_type": "computation",
+      "success": true,
+      "duration": 0.5,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:24:07.865118"
+    },
+    {
+      "action": "API call",
+      "action_type": "network",
+      "success": false,
+      "duration": 2.0,
+      "context": {},
+      "error": "Connection timeout",
+      "timestamp": "2026-03-24T03:24:07.984645"
+    },
+    {
+      "action": "Read file",
+      "action_type": "file_operation",
+      "success": true,
+      "duration": 0.1,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:24:08.102559"
+    },
+    {
+      "action": "API call",
+      "action_type": "network",
+      "success": true,
+      "duration": 0.8,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:24:08.219287"
+    },
+    {
+      "action": "Process data",
+      "action_type": "computation",
+      "success": true,
+      "duration": 0.6,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:24:08.338423"
+    },
+    {
+      "action": "Read file",
+      "action_type": "file_operation",
+      "success": true,
+      "duration": 0.1,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:53:23.033726"
+    },
+    {
+      "action": "Write file",
+      "action_type": "file_operation",
+      "success": true,
+      "duration": 0.2,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:53:23.152508"
+    },
+    {
+      "action": "API call",
+      "action_type": "network",
+      "success": false,
+      "duration": 1.5,
+      "context": {},
+      "error": "Connection timeout",
+      "timestamp": "2026-03-24T03:53:23.276370"
+    },
+    {
+      "action": "Process data",
+      "action_type": "computation",
+      "success": true,
+      "duration": 0.5,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:53:23.417465"
+    },
+    {
+      "action": "API call",
+      "action_type": "network",
+      "success": false,
+      "duration": 2.0,
+      "context": {},
+      "error": "Connection timeout",
+      "timestamp": "2026-03-24T03:53:23.556192"
+    },
+    {
+      "action": "Read file",
+      "action_type": "file_operation",
+      "success": true,
+      "duration": 0.1,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:53:23.697430"
+    },
+    {
+      "action": "API call",
+      "action_type": "network",
+      "success": true,
+      "duration": 0.8,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:53:23.837561"
+    },
+    {
+      "action": "Process data",
+      "action_type": "computation",
+      "success": true,
+      "duration": 0.6,
+      "context": {},
+      "error": null,
+      "timestamp": "2026-03-24T03:53:23.987348"
+    }
+  ],
+  "error_log": [
+    {
+      "action": "API call",
+      "error": "Connection timeout",
+      "timestamp": "2026-03-24T03:24:07.758312",
+      "context": null
+    },
+    {
+      "action": "API call",
+      "error": "Connection timeout",
+      "timestamp": "2026-03-24T03:24:07.997766",
+      "context": null
+    },
+    {
+      "action": "API call",
+      "error": "Connection timeout",
+      "timestamp": "2026-03-24T03:53:23.305847",
+      "context": null
+    },
+    {
+      "action": "API call",
+      "error": "Connection timeout",
+      "timestamp": "2026-03-24T03:53:23.582900",
+      "context": null
+    }
+  ],
+  "performance_snapshots": [
+    {
+      "timestamp": "2026-03-24T03:24:08.453425",
+      "success_rate": 0.75,
+      "avg_response_time": 0.725,
+      "error_rate": 0.25,
+      "health_score": 52.291666666666664,
+      "total_actions": 8
+    },
+    {
+      "timestamp": "2026-03-24T03:53:24.126966",
+      "success_rate": 0.75,
+      "avg_response_time": 0.725,
+      "error_rate": 0.25,
+      "health_score": 52.291666666666664,
+      "total_actions": 16
+    }
+  ]
+}

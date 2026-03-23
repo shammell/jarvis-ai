@@ -1,497 +1,95 @@
-You are working on the JARVIS v9.0 AI Agent project at C:\Users\AK\jarvis_project
-
-Your job is to apply ALL of the following fixes in order. Make one commit per fix with a clear commit message. Do NOT add any API keys or secrets. Do NOT break existing functionality.
-
-═══════════════════════════════════════════════════════
-FIX 1: Create core/autonomy_guard.py
-═══════════════════════════════════════════════════════
-Create a new file core/autonomy_guard.py with this exact content:
-
-import os
-
-def autonomy_enabled() -> bool:
-    val = os.getenv("AUTONOMOUS_MODE", "false").lower()
-    return val in ("1", "true", "yes", "on")
-
-def require_autonomy(action_name: str) -> None:
-    if not autonomy_enabled():
-        raise RuntimeError(
-            f"Autonomous mode is DISABLED. Blocked action: '{action_name}'. "
-            f"Set AUTONOMOUS_MODE=true in .env to enable."
-        )
-
-Then find every place in jarvis_brain.py, enhanced_autonomy.py, and core/autonomous_executor.py (if it exists) where shell commands are executed, WhatsApp messages are sent, or Docker containers are launched. Add this at the top of those functions:
-
-from core.autonomy_guard import require_autonomy
-require_autonomy("shell")  # or "whatsapp_send", "docker_run", etc.
-
-Commit message: "feat: add autonomy kill-switch guard (AUTONOMOUS_MODE env var)"
-
-═══════════════════════════════════════════════════════
-FIX 2: Create core/llm_exceptions.py and core/llm_provider.py
-═══════════════════════════════════════════════════════
-Create core/llm_exceptions.py:
-
-class LLMClientUnavailableError(RuntimeError):
-    """Raised when the LLM client is not initialized or unavailable."""
-    pass
-
-Create core/llm_provider.py:
-
-import os
-import threading
-from core.llm_exceptions import LLMClientUnavailableError
-
-class LLMProvider:
-    _instance = None
-    _lock = threading.Lock()
-
-    def __init__(self):
-        self.client = None
-        self._init_client()
-
-    def _init_client(self):
-        api_key = os.getenv("GROQ_API_KEY")
-        if api_key:
-            try:
-                from groq import Groq
-                self.client = Groq(api_key=api_key)
-            except ImportError:
-                self.client = None
-        else:
-            self.client = None
-
-    @classmethod
-    def instance(cls):
-        with cls._lock:
-            if cls._instance is None:
-                cls._instance = cls()
-        return cls._instance
-
-    def get_client(self):
-        if not self.client:
-            raise LLMClientUnavailableError(
-                "LLM client not initialized. Set GROQ_API_KEY in .env"
-            )
-        return self.client
-
-Then find in core/speculative_decoder.py this pattern:
-    if not self.client:
-        logger.error("❌ Groq client not initialized")
-        return {"text": "", "tokens": 0, "time_ms": 0, "accepted_ratio": 0.0}
-
-Replace with:
-    from core.llm_exceptions import LLMClientUnavailableError
-    if not self.client:
-        raise LLMClientUnavailableError("Groq client not initialized. Set GROQ_API_KEY.")
-
-Do the same for any other module that silently returns empty dict when client is None.
-
-Commit message: "feat: central LLMProvider with fail-fast exceptions instead of silent empty returns"
-
-═══════════════════════════════════════════════════════
-FIX 3: Fix double request_count increment in main.py
-═══════════════════════════════════════════════════════
-In main.py, inside the process_message() method (NOT _process_message_impl), find and REMOVE this line:
-    self.request_count += 1
-
-Keep it only inside _process_message_impl(). The same applies to stream_response() — remove increment from the outer wrapper, keep only in _stream_response_impl().
-
-Also fix the duplicate "Step 8" label in _process_message_impl — rename the second one to "Step 9".
-
-Commit message: "fix: remove duplicate request_count increment and fix step numbering"
-
-═══════════════════════════════════════════════════════
-FIX 4: Fix Z3 logic verifier in core/neuro_symbolic_verifier.py
-═══════════════════════════════════════════════════════
-Find the verify_logic_statement() method. Currently it creates an empty Z3 solver and immediately calls solver.check() without adding any constraints — this always returns sat and is meaningless.
-
-Replace the body with:
-
-    try:
-        solver = self.z3.Solver()
-        # Parse simple numeric constraints from statement string
-        # e.g. "x > 5 and x < 10" 
-        import re
-        # Extract variable assignments or inequalities
-        # For now: log that full NL parsing is not yet implemented
-        # and return a structured "not_implemented" response
-        logger.warning(
-            "Z3 NL constraint parsing not yet implemented for: %s", statement
-        )
-        return {
-            "success": True,
-            "verified": False,
-            "note": "Natural language to Z3 constraint parsing is pending implementation",
-            "statement": statement
-        }
-    except Exception as e:
-        logger.error("Logic verification failed: %s", e)
-        return {"success": False, "error": str(e), "verified": False}
-
-This is honest — it stops lying that it verified something when it didn't.
-
-Commit message: "fix: neuro-symbolic verifier no longer returns false-positive sat from empty Z3 solver"
-
-═══════════════════════════════════════════════════════
-FIX 5: Fill SEA evolution stubs in core/self_evolving_architecture.py
-═══════════════════════════════════════════════════════
-Find _generate_evolutionary_variants(), _test_variants(), and _apply_beneficial_variants(). They all contain just `pass`. Replace each with meaningful logging so the system is honest about its state:
-
-async def _generate_evolutionary_variants(self, bottlenecks):
-    logger.info(
-        "SEA: %d bottlenecks detected. Evolutionary variant generation "
-        "not yet implemented — logging for future training data.", 
-        len(bottlenecks)
-    )
-    for b in bottlenecks:
-        logger.info("  Bottleneck: %s severity=%.2f strategies=%s",
-            b.function_signature, b.severity, b.suggested_strategies)
-    return []
-
-async def _test_variants(self, variants):
-    if variants:
-        logger.info("SEA: variant testing not yet implemented.")
-    return []
-
-async def _apply_beneficial_variants(self, winners):
-    if winners:
-        logger.info("SEA: variant application not yet implemented.")
-
-Commit message: "fix: SEA stubs now log honestly instead of silently doing nothing"
-
-═══════════════════════════════════════════════════════
-FIX 6: Fix Executor.shell in jarvis_brain.py
-═══════════════════════════════════════════════════════
-Find any call to asyncio.create_subprocess_exec that looks like this:
-    proc = await asyncio.create_subprocess_exec(
-        *cmd_args,
-        full_cmd,          # <-- THIS IS THE BUG: extra arg
-        stdout=...,
-        stderr=...
-    )
-
-Remove the extra `full_cmd` positional argument. Correct form:
-    proc = await asyncio.create_subprocess_exec(
-        *cmd_args,
-        stdout=asyncio.subprocess.PIPE,
-        stderr=asyncio.subprocess.PIPE
-    )
-
-Also ensure every proc.communicate() call has a timeout:
-    stdout, stderr = await asyncio.wait_for(
-        proc.communicate(), timeout=30.0
-    )
-
-And wrap it in try/except asyncio.TimeoutError:
-    try:
-        stdout, stderr = await asyncio.wait_for(proc.communicate(), timeout=30.0)
-    except asyncio.TimeoutError:
-        proc.kill()
-        await proc.communicate()
-        return {"success": False, "error": "Command timed out after 30s"}
-
-Commit message: "fix: remove extra positional arg from create_subprocess_exec and add 30s timeout"
-
-═══════════════════════════════════════════════════════
-FIX 7: Replace all bare except clauses
-═══════════════════════════════════════════════════════
-Search the entire codebase for:
-    except:
-    except Exception as e: pass
-    except Exception: pass
-
-Replace every instance with:
-    except Exception as e:
-        logger.exception("Error in <describe what was happening>: %s", e)
-        raise  # or return structured error if this is an API handler
-
-For API route handlers (FastAPI endpoints), instead of raising, return:
-    return {"success": False, "error": str(e), "code": "INTERNAL_ERROR"}
-
-Commit message: "fix: replace all bare excepts with logged exceptions"
-
-═══════════════════════════════════════════════════════
-FIX 8: Replace shell=True subprocess calls
-═══════════════════════════════════════════════════════
-Search the entire codebase for subprocess.Popen(..., shell=True) and subprocess.run(..., shell=True).
-
-For each one, replace using shlex.split() to convert string commands to list form:
-
-import shlex
-import subprocess
-
-# BEFORE (dangerous):
-proc = subprocess.Popen("python script.py --arg value", shell=True)
-
-# AFTER (safe):
-args = shlex.split("python script.py --arg value")
-proc = subprocess.Popen(args)
-
-For cases where shell features like && are used:
-    args = ["/bin/bash", "-c", the_command_string]
-    proc = subprocess.Popen(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-
-Also redirect stdout/stderr to files instead of PIPE when not immediately read:
-    import os
-    log_dir = "logs/services"
-    os.makedirs(log_dir, exist_ok=True)
-    stdout_file = open(f"{log_dir}/{service_name}.out.log", "a")
-    stderr_file = open(f"{log_dir}/{service_name}.err.log", "a")
-    proc = subprocess.Popen(args, stdout=stdout_file, stderr=stderr_file)
-
-Commit message: "fix: replace shell=True subprocess calls with safe list args and file-based logging"
-
-═══════════════════════════════════════════════════════
-FIX 9: Harden System2 PRM score parsing
-═══════════════════════════════════════════════════════
-In core/system2_thinking.py, find where the PRM (Process Reward Model) score is parsed from LLM output. Find code like float(response_text) or similar brittle parsing.
-
-Add this helper at the top of the file:
-
-import re
-
-def _parse_prm_score(text: str, default: float = 0.5) -> float:
-    """Robustly parse a 0.0-1.0 score from LLM text output."""
-    # Try JSON first
-    try:
-        import json
-        data = json.loads(text)
-        val = float(data.get("score", default))
-        return max(0.0, min(1.0, val))
-    except Exception:
-        pass
-    # Fallback: regex extract first number
-    m = re.search(r"([-+]?\d*\.\d+|\d+)", text)
-    if not m:
-        logger.warning("PRM returned no parseable score: %s", text[:100])
-        return default
-    try:
-        val = float(m.group(0))
-        return max(0.0, min(1.0, val))
-    except Exception:
-        return default
-
-Replace all brittle score parsing with _parse_prm_score(response_text).
-
-Also update the PRM system prompt to request JSON output:
-    "Return your assessment as JSON: {\"score\": 0.0-1.0, \"explanation\": \"brief reason\"}"
-
-Commit message: "fix: harden System2 PRM score parsing with JSON-first + regex fallback + clamping"
-
-═══════════════════════════════════════════════════════
-FIX 10: Add YAML frontmatter parsing to skill loader
-═══════════════════════════════════════════════════════
-In core/skill_loader.py, find where .md skill files are read and parsed. Replace any ad-hoc string splitting with proper YAML parsing:
-
-import yaml
-
-def _parse_skill_file(self, skill_path: str) -> dict:
-    with open(skill_path, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    metadata = {}
-    body = content
-    
-    if content.startswith('---'):
-        parts = content.split('---', 2)
-        if len(parts) >= 3:
-            try:
-                metadata = yaml.safe_load(parts[1]) or {}
-                body = parts[2]
-            except yaml.YAMLError as e:
-                logger.error("YAML parse error in skill %s: %s", skill_path, e)
-                os.makedirs("logs", exist_ok=True)
-                with open("logs/skill_loader_errors.log", "a") as le:
-                    le.write(f"{skill_path}: {repr(e)}\n")
-    
-    return {"metadata": metadata, "body": body, "path": skill_path}
-
-Commit message: "fix: use yaml.safe_load for skill frontmatter parsing with error logging"
-
-═══════════════════════════════════════════════════════
-FIX 11: Add .env.example file
-═══════════════════════════════════════════════════════
-Create a file .env.example (NOT .env) with this content:
-
-# Copy this file to .env and fill in your values
-# NEVER commit .env to git
-
-# LLM Provider
-GROQ_API_KEY=your_groq_api_key_here
-
-# Anthropic (for Claude)
-ANTHROPIC_API_KEY=your_anthropic_key_here
-
-# Supabase
-SUPABASE_URL=your_supabase_url_here
-SUPABASE_KEY=your_supabase_anon_key_here
-
-# Autonomy Settings
-AUTONOMOUS_MODE=false
-STAGED_AUTONOMY=false
-
-# WhatsApp
-WHATSAPP_PORT=3000
-
-# API Settings
-CORS_ORIGINS=http://localhost:3000,http://localhost:3001
-
-# Redis (for memory)
-REDIS_URL=redis://localhost:6379
-
-Commit message: "docs: add .env.example with all required environment variables"
-
-═══════════════════════════════════════════════════════
-FIX 12: Add GitHub Actions CI workflow
-═══════════════════════════════════════════════════════
-Create .github/workflows/ci.yml:
-
-name: JARVIS CI
-
-on:
-  push:
-    branches: [master, main]
-  pull_request:
-    branches: [master, main]
-
-jobs:
-  security-and-quality:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-      
-      - name: Install dev dependencies
-        run: |
-          pip install ruff pytest detect-secrets pip-audit
-          pip install -r requirements.txt || true
-      
-      - name: Run ruff linter
-        run: ruff check . --ignore E501
-        continue-on-error: true
-      
-      - name: Check for secrets
-        run: detect-secrets scan --baseline .secrets.baseline || true
-      
-      - name: Audit dependencies
-        run: pip-audit -r requirements.txt || true
-      
-      - name: Run tests
-        run: pytest tests/ -v --tb=short || true
-      
-      - name: Health check imports
-        run: |
-          python -c "from core.autonomy_guard import autonomy_enabled; print('autonomy_guard OK')"
-          python -c "from core.llm_provider import LLMProvider; print('llm_provider OK')"
-          python -c "from core.llm_exceptions import LLMClientUnavailableError; print('llm_exceptions OK')"
-
-Commit message: "ci: add GitHub Actions workflow for linting, secret scanning, and tests"
-
-═══════════════════════════════════════════════════════
-FIX 13: Add SECURITY.md
-═══════════════════════════════════════════════════════
-Create SECURITY.md:
-
-# Security Policy
-
-## Environment Variables
-- NEVER commit .env to git
-- Copy .env.example to .env and fill in values
-- Rotate GROQ_API_KEY immediately if exposed (go to console.groq.com/keys)
-
-## Autonomous Mode
-- AUTONOMOUS_MODE=false by default (safe)
-- Set AUTONOMOUS_MODE=true only in controlled environments
-- Use STAGED_AUTONOMY=true to require human approval for destructive actions
-
-## API Key Rotation
-1. Go to the provider dashboard (Groq, Anthropic, Supabase)
-2. Delete the exposed key
-3. Create a new key
-4. Update your .env file
-5. Restart JARVIS
-
-## Reporting Vulnerabilities
-Open a GitHub Issue marked [SECURITY]
-
-Commit message: "docs: add SECURITY.md with key rotation and autonomy guidelines"
-
-═══════════════════════════════════════════════════════
-FIX 14: Clean up scratch files
-═══════════════════════════════════════════════════════
-Delete these files from the repository:
-- a.txt
-- b.txt  
-- c.txt
-
-These are scratch/test files that should not be in the repo.
-
-Commit message: "chore: remove scratch files a.txt b.txt c.txt"
-
-═══════════════════════════════════════════════════════
-FIX 15: Write a proper README.md
-═══════════════════════════════════════════════════════
-Replace or update README.md with this structure:
-
-# JARVIS v9.0 ULTRA — AI Agent Platform
-
-An autonomous AI assistant platform with WhatsApp integration, vector memory, 
-skill graph, speculative decoding, and neuro-symbolic verification.
-
-## What It Does
-- Answers questions via WhatsApp, Web UI, or REST API
-- Uses speculative decoding (8B draft + 70B verify) for fast, high-quality responses
-- Maintains persistent memory across conversations (GraphRAG + ColBERT)
-- Composes skills dynamically via a knowledge graph
-- Monitors itself and detects performance bottlenecks (Self-Evolving Architecture)
-
-## Quick Start
-1. Copy .env.example to .env and fill in your API keys
-2. Install dependencies: pip install -r requirements.txt && npm install
-3. Start the API: python main.py
-4. Access at: http://localhost:8000/docs
-
-## Architecture
-- main.py — FastAPI orchestrator (14 subsystems)
-- core/speculative_decoder.py — 2x speed LLM inference
-- core/neuro_symbolic_verifier.py — Z3 + SymPy math/code verification
-- core/skill_graph.py — NetworkX-based skill composition
-- core/self_evolving_architecture.py — Performance monitoring + evolution
-- memory/ — GraphRAG, ColBERT, vector memory
-- whatsapp/ — Baileys bridge for WhatsApp
-
-## Deployment Options
-See README for full deployment guide.
-
-## Security
-See SECURITY.md
-
-Commit message: "docs: rewrite README.md with proper architecture overview and quick start"
-
-═══════════════════════════════════════════════════════
-FINAL VERIFICATION STEPS
-═══════════════════════════════════════════════════════
-After all fixes, run these verification commands:
-
-1. python -c "from core.autonomy_guard import require_autonomy; require_autonomy('test')"
-   Expected: RuntimeError with message about AUTONOMOUS_MODE
-
-2. python -c "import os; os.environ['AUTONOMOUS_MODE']='true'; from core.autonomy_guard import require_autonomy; require_autonomy('test'); print('OK - autonomy enabled')"
-   Expected: prints "OK - autonomy enabled"
-
-3. python -c "from core.llm_exceptions import LLMClientUnavailableError; from core.llm_provider import LLMProvider; print('imports OK')"
-   Expected: prints "imports OK"
-
-4. python -c "from core.neuro_symbolic_verifier import NeuroSymbolicVerifier; print('verifier OK')"
-   Expected: prints "verifier OK"
-
-5. python -c "import ast; from core.neuro_symbolic_verifier import _validate_ast_safety; print(_validate_ast_safety('x = 1 + 2'))"
-   Expected: True
-
-Report all results and list every file changed with a summary of what was changed and why.
+You are a principal engineer and AI systems researcher (NeurIPS/ICML level).
+I am giving you targeted files from my JARVIS autonomous agent codebase.
+Your job is NOT a full overhaul — it is a SURGICAL, PRIORITIZED, VERIFIABLE
+improvement of the specific files I provide.
+
+=== GROUND RULES (NON-NEGOTIABLE) ===
+1. Only modify files I explicitly paste. Never invent file contents.
+2. Every change must cite WHY (bug fix / perf / safety / research upgrade).
+3. Output must be copy-paste ready. No placeholders, no "# TODO".
+4. If a change requires another file to change, flag it as a dependency.
+5. Rate each change: [CRITICAL BUG] [SECURITY] [PERF] [RESEARCH UPGRADE] [CLEANUP]
+
+=== CURRENT KNOWN ISSUES (verified by me) ===
+
+CRITICAL BUG #1 — jarvis_brain.py Executor.shell():
+  *cmd_args AND full_cmd both passed to create_subprocess_exec → TypeError on every shell call.
+  Fix: Remove redundant full_cmd argument.
+
+CRITICAL BUG #2 — Security blocklist (jarvis_brain.py):
+  Blocks only ["rm -rf /", "format C:", "shutdown"] — trivially bypassed.
+  Fix: Implement proper sandboxed execution with allowlist approach.
+
+ARCHITECTURE GAP #1 — LLM provider (llm_provider.py):
+  Groq is hardcoded as only provider. No fallback chain.
+  Fix: Provider abstraction with priority queue: Groq → Anthropic → local llama.cpp
+
+RESEARCH GAP #1 — core/speculative_decoder.py:
+  Claims "speculative decoding" but is actually just Groq API + semantic string matching.
+  Real speculative decoding (Leviathan et al. 2023) requires draft model + verifier model.
+  Since we use API-only inference, implement BanditSpec-style adaptive batching instead:
+  - Use historical acceptance rates per query-type to dynamically size draft batches
+  - Track per-query-type latency/cost to optimize API call batching
+  This is honest AND gives real speedup on API-based systems.
+
+RESEARCH GAP #2 — memory/graph_rag.py:
+  Basic networkx graph with no dynamic community evolution.
+  Upgrade: Implement incremental Louvain with decay factor for old edges
+  (temporal graph RAG — nodes lose weight over time, recent context stays hot).
+
+SAFETY GAP #1 — core/self_evolving_architecture.py:
+  Self-modification loop has no gating mechanism.
+  Fix: Every proposed self-modification must pass:
+    (a) Z3 formal constraint check (z3_logic.py exists — use it)
+    (b) Unit test suite on proposed change
+    (c) Semantic diff review logged to SECURITY_AUDIT.json
+  Only then apply. Human-in-loop flag for changes above risk_score > 7.
+
+=== THIS SESSION'S SCOPE (do ONLY these, in this order) ===
+
+Priority 1 — Fix the two CRITICAL BUGS. These crash the system.
+Priority 2 — Implement proper shell sandboxing (allowlist > blocklist).
+Priority 3 — LLM provider abstraction with fallback chain.
+Priority 4 — BanditSpec-style adaptive batching for speculative_decoder.py
+Priority 5 — Temporal decay for graph_rag.py
+
+=== FILES I AM PASTING BELOW ===
+[PASTE: jarvis_brain.py]
+[PASTE: core/speculative_decoder.py]
+[PASTE: memory/graph_rag.py]
+[PASTE: core/llm_provider.py]
+
+=== OUTPUT FORMAT (strict) ===
+
+For each file, output:
+
+## FILE: filename.py
+### Changes made:
+- [CRITICAL BUG] Line X: <what was wrong> → <what you did>
+- [SECURITY] ...
+- [RESEARCH UPGRADE] ...
+
+### Dependencies flagged:
+- <list any other files that need updating as a result>
+
+### Full corrected code:
+```python
+# complete production-ready code here
+```
+
+### Test to verify this fix works:
+```python
+# minimal pytest test that would have caught this bug
+```
+
+---
+
+After all Priority 1-5 files, output:
+
+## NEXT SESSION PROMPT
+A refined version of this prompt for the next session,
+pre-loaded with: remaining issues, updated known state,
+and next 5 priorities.
+
+=== BEGIN ===
+[Paste your files here and Claude will execute]

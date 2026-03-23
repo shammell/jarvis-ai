@@ -10,7 +10,15 @@
       "Bash(ls:*)",
       "Bash(dir:*)",
       "Bash(node --check \"C:/Users/AK/jarvis_project/grpc_service/node_client.js\")",
-      "Bash(node --check \"C:/Users/AK/jarvis_project/whatsapp/baileys_bridge.js\")"
+      "Bash(node --check \"C:/Users/AK/jarvis_project/whatsapp/baileys_bridge.js\")",
+      "Bash(pytest:*)",
+      "Bash(export PYTHONPATH=$PYTHONPATH:.)",
+      "Bash(PYTHONPATH=\"C:/Users/AK/jarvis_project\" pytest tests/test_fixes_v9.py)",
+      "Bash(PYTHONPATH=\"C:/Users/AK/jarvis_project\" pytest tests/test_llm_features.py)",
+      "Bash(PYTHONPATH=\"C:/Users/AK/jarvis_project\" pytest tests/test_graph_decay.py)",
+      "Bash(PYTHONPATH=\"C:/Users/AK/jarvis_project\" pytest tests/test_sea_security.py)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
