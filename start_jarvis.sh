@@ -67,9 +67,9 @@ if [ ! -d node_modules ]; then
 fi
 
 echo "[3/3] Checking gRPC protobuf files..."
-if [ ! -f grpc/jarvis_pb2.py ]; then
+if [ ! -f grpc_service/jarvis_pb2.py ]; then
     echo "Generating gRPC protobuf files..."
-    python3 -m grpc_tools.protoc -I./grpc --python_out=./grpc --grpc_python_out=./grpc ./grpc/jarvis.proto
+    python3 -m grpc_tools.protoc -I./grpc_service --python_out=./grpc_service --grpc_python_out=./grpc_service ./grpc_service/jarvis.proto
     if [ $? -ne 0 ]; then
         echo "[ERROR] Failed to generate protobuf files"
         exit 1
@@ -84,14 +84,14 @@ echo "========================================"
 echo ""
 echo "Services will start in order:"
 echo "  1. gRPC Server (port 50051)"
-echo "  2. Main Orchestrator (port 8000)"
+echo "  2. Main Orchestrator (port 8080)"
 echo "  3. WhatsApp Bridge (port 3000)"
 echo ""
 echo "Press Ctrl+C to stop all services"
 echo ""
 
 # Start unified launcher
-python3 unified_launcher.py
+python3 launchers/unified_launcher.py
 
 if [ $? -ne 0 ]; then
     echo ""

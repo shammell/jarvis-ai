@@ -43,6 +43,13 @@ target/
 *.swp
 *.swo
 
+# Claude generated worktrees and temp artifacts
+.claude/worktrees/
+
+# Runtime state and local data
+memory/*.db
+memory_storage/*.json
+
 # Ralph backup directories (created by migration)
 .ralph_backup_*
-.env 
+.env

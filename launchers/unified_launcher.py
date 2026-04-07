@@ -4,8 +4,10 @@ JARVIS UNIFIED LAUNCHER - PhD-Level System Orchestration
 ==========================================================
 Manages all three services with proper lifecycle:
 1. gRPC Server (port 50051)
-2. Main Orchestrator (port 8000)
+2. Main Orchestrator (port 8080)
 3. WhatsApp Bridge (port 3000)
+
+Current canonical API port: 8080
 
 Features:
 - Graceful startup/shutdown
@@ -24,6 +26,7 @@ import signal
 import logging
 import asyncio
 import psutil
+import socket
 from typing import Dict, List, Optional
 from datetime import datetime
 import json
@@ -85,6 +88,14 @@ class ServiceManager:
                 return True
             else:
                 logger.error(f"❌ {self.name} failed to start")
+                try:
+                    stdout, stderr = self.process.communicate(timeout=1)
+                    if stdout and stdout.strip():
+                        logger.error(f"📤 {self.name} stdout (tail): {stdout.strip()[-800:]}")
+                    if stderr and stderr.strip():
+                        logger.error(f"📥 {self.name} stderr (tail): {stderr.strip()[-800:]}")
+                except Exception:
+                    pass
                 return False
 
         except Exception as e:
@@ -178,6 +189,36 @@ class ServiceManager:
 class UnifiedLauncher:
     """Unified launcher for all JARVIS services"""
 
+    @staticmethod
+    def _is_port_in_use(port: int) -> bool:
+        """Return True when a local TCP port is already bound."""
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            sock.settimeout(0.3)
+            return sock.connect_ex(("127.0.0.1", port)) == 0
+
+    def _preflight_ports(self) -> bool:
+        """Validate critical ports are free before starting services."""
+        required_ports = {
+            "grpc": 50051,
+            "orchestrator": 8080,
+            "whatsapp": 3000,
+        }
+
+        blocked = []
+        for service_name, port in required_ports.items():
+            if self._is_port_in_use(port):
+                blocked.append((service_name, port))
+
+        if blocked:
+            logger.error("❌ Port preflight check failed.")
+            for service_name, port in blocked:
+                logger.error(f"   - {service_name} requires port {port}, but it is already in use")
+            logger.error("   Hint: stop stale JARVIS processes and retry.")
+            return False
+
+        logger.info("✅ Port preflight check passed")
+        return True
+
     def __init__(self):
         self.services: Dict[str, ServiceManager] = {}
         self.running = False
@@ -231,6 +272,15 @@ class UnifiedLauncher:
             )
             logger.info("📌 MCP Terminal Server available")
 
+        # Service 5: Voice Runtime (Optional but preferred for hands-free mode)
+        if os.path.exists("voice_jarvis.py"):
+            self.services['voice'] = ServiceManager(
+                name="Voice Runtime",
+                command=[sys.executable, "voice_jarvis.py"],
+                cwd=os.getcwd()
+            )
+            logger.info("📌 Voice runtime available")
+
     def start_all(self):
         """Start all services in order"""
         logger.info("\n🚀 Starting all services...")
@@ -242,6 +292,8 @@ class UnifiedLauncher:
         optional_services = []
         if 'mcp' in self.services:
             optional_services.append('mcp')
+        if 'voice' in self.services:
+            optional_services.append('voice')
 
         # Start critical services
         for service_name in critical_services:
@@ -273,7 +325,7 @@ class UnifiedLauncher:
         self.running = False
 
         # Stop in reverse order
-        stop_order = ['mcp', 'whatsapp', 'orchestrator', 'grpc']
+        stop_order = ['voice', 'mcp', 'whatsapp', 'orchestrator', 'grpc']
         for service_name in stop_order:
             if service_name in self.services:
                 self.services[service_name].stop()
@@ -328,6 +380,9 @@ class UnifiedLauncher:
     def run(self):
         """Main run method"""
         self.setup_services()
+
+        if not self._preflight_ports():
+            return 1
 
         if not self.start_all():
             logger.error("❌ Failed to start services")
