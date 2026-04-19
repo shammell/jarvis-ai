@@ -26,10 +26,10 @@ export function getSupabaseConfigError() {
 
 export const supabaseClient = {
   auth: {
-    getSession: (...args: any[]) => getConfiguredSupabase().auth.getSession(...args),
-    signInWithPassword: (...args: any[]) => getConfiguredSupabase().auth.signInWithPassword(...args),
-    signUp: (...args: any[]) => getConfiguredSupabase().auth.signUp(...args),
-    signOut: (...args: any[]) => getConfiguredSupabase().auth.signOut(...args),
+    getSession: (...args: Parameters<ReturnType<typeof getConfiguredSupabase>['auth']['getSession']>) => getConfiguredSupabase().auth.getSession(...args),
+    signInWithPassword: (...args: Parameters<ReturnType<typeof getConfiguredSupabase>['auth']['signInWithPassword']>) => getConfiguredSupabase().auth.signInWithPassword(...args),
+    signUp: (...args: Parameters<ReturnType<typeof getConfiguredSupabase>['auth']['signUp']>) => getConfiguredSupabase().auth.signUp(...args),
+    signOut: (...args: Parameters<ReturnType<typeof getConfiguredSupabase>['auth']['signOut']>) => getConfiguredSupabase().auth.signOut(...args),
   },
 }
 
