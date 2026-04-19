@@ -1,0 +1,21 @@
+---
+source_file: "skills\loki-mode\benchmarks\results\humaneval-loki-solutions\10.py"
+type: "code"
+community: "Community 75"
+location: "L11"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_75
+---
+
+# make_palindrome()
+
+## Connections
+- [[10.py]] - `contains` [EXTRACTED]
+- [[10.py_1]] - `contains` [EXTRACTED]
+- [[Find the shortest palindrome that begins with a supplied string.     Algorithm]] - `rationale_for` [EXTRACTED]
+- [[Test if given string is a palindrome_1]] - `rationale_for` [EXTRACTED]
+- [[is_palindrome()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_75

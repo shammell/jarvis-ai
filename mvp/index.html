@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JARVIS MVP Chat</title>
+  <style>
+    :root {
+      --bg: #0f1a24;
+      --panel: #142434;
+      --muted: #9db4c8;
+      --text: #e8f0f7;
+      --accent: #17c964;
+      --accent2: #1f8fff;
+      --danger: #ff6b6b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Segoe UI, Tahoma, sans-serif;
+      background: radial-gradient(circle at top, #1a2f43, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 16px;
+    }
+    .app {
+      width: min(900px, 100%);
+      background: rgba(20, 36, 52, 0.92);
+      border: 1px solid #2f465b;
+      border-radius: 14px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+      overflow: hidden;
+    }
+    .head {
+      padding: 14px 16px;
+      background: linear-gradient(90deg, #17344b, #12304a);
+      border-bottom: 1px solid #2f465b;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .title { font-weight: 700; }
+    .muted { color: var(--muted); font-size: 13px; }
+    .log {
+      height: 58vh;
+      overflow-y: auto;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .msg {
+      max-width: 80%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    .user {
+      align-self: flex-end;
+      background: #1b3a56;
+      border: 1px solid #326083;
+    }
+    .bot {
+      align-self: flex-start;
+      background: #163224;
+      border: 1px solid #2b6a47;
+    }
+    .err {
+      align-self: center;
+      background: #3e2222;
+      border: 1px solid #8a3b3b;
+      color: #ffd7d7;
+    }
+    .bar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px;
+      padding: 12px;
+      border-top: 1px solid #2f465b;
+      background: #112233;
+    }
+    textarea {
+      width: 100%;
+      resize: vertical;
+      min-height: 52px;
+      max-height: 160px;
+      border-radius: 8px;
+      border: 1px solid #35536a;
+      background: #0f2030;
+      color: var(--text);
+      padding: 10px;
+      font: inherit;
+    }
+    button {
+      border: 0;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent2), var(--accent));
+      color: white;
+      font-weight: 700;
+      padding: 0 18px;
+      cursor: pointer;
+      min-width: 110px;
+    }
+    button:disabled { opacity: 0.6; cursor: not-allowed; }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 0 12px 12px;
+    }
+    input[type="text"] {
+      flex: 1;
+      border-radius: 8px;
+      border: 1px solid #35536a;
+      background: #0f2030;
+      color: var(--text);
+      padding: 8px 10px;
+    }
+    .danger {
+      background: linear-gradient(135deg, #ce5454, var(--danger));
+      min-width: 88px;
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="head">
+      <div>
+        <div class="title">JARVIS MVP Chat</div>
+        <div class="muted">Fast test UI for /api/message endpoint</div>
+      </div>
+      <div class="muted" id="status">Checking backend...</div>
+    </section>
+
+    <section class="row">
+      <label class="muted" for="baseUrl">API URL</label>
+      <input id="baseUrl" type="text" value="http://localhost:8000" />
+      <button class="danger" id="ping">Ping</button>
+    </section>
+
+    <section class="log" id="log"></section>
+
+    <section class="bar">
+      <textarea id="prompt" placeholder="Type your message for JARVIS..."></textarea>
+      <button id="send">Send</button>
+    </section>
+  </main>
+
+  <script>
+    const log = document.getElementById("log");
+    const promptEl = document.getElementById("prompt");
+    const sendBtn = document.getElementById("send");
+    const pingBtn = document.getElementById("ping");
+    const baseUrlEl = document.getElementById("baseUrl");
+    const statusEl = document.getElementById("status");
+
+    function addMsg(kind, text) {
+      const el = document.createElement("div");
+      el.className = `msg ${kind}`;
+      el.textContent = text;
+      log.appendChild(el);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    async function ping() {
+      const base = baseUrlEl.value.trim().replace(/\/$/, "");
+      statusEl.textContent = "Checking backend...";
+      try {
+        const res = await fetch(`${base}/health`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        statusEl.textContent = "Backend healthy";
+      } catch (err) {
+        statusEl.textContent = `Backend not reachable (${err.message})`;
+      }
+    }
+
+    async function send() {
+      const text = promptEl.value.trim();
+      if (!text) return;
+      const base = baseUrlEl.value.trim().replace(/\/$/, "");
+      addMsg("user", text);
+      promptEl.value = "";
+      sendBtn.disabled = true;
+      try {
+        const res = await fetch(`${base}/api/message`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: text, user_id: "mvp_tester" })
+        });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        addMsg("bot", data.text || JSON.stringify(data));
+      } catch (err) {
+        addMsg("err", `Request failed: ${err.message}`);
+      } finally {
+        sendBtn.disabled = false;
+      }
+    }
+
+    sendBtn.addEventListener("click", send);
+    pingBtn.addEventListener("click", ping);
+    promptEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        send();
+      }
+    });
+
+    ping();
+    addMsg("bot", "MVP ready. Send a message to test JARVIS.");
+  </script>
+</body>
+</html>

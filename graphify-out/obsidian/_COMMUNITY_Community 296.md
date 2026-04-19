@@ -1,0 +1,18 @@
+---
+type: community
+members: 1
+---
+
+# Community 296
+
+**Members:** 1 nodes
+
+## Members
+- [[Normaliza status para ATIVO  CANCELADO  SUSPENSO  IRREGULAR.]] - rationale - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_296
+SORT file.name ASC
+```

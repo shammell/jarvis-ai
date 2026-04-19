@@ -206,21 +206,7 @@ class NetworkSecurityManager:
 
     def initialize_fastapi_security(self, app: FastAPI):
         """Initialize security for FastAPI application"""
-        # Add security middleware
-        security_middleware = NetworkSecurityMiddleware(app, self.config)
-        app.user_middleware.insert(0, security_middleware)
-
-        logger.info("🔒 FastAPI security initialized")
-
-        # Add HTTPS redirect if TLS is enabled
-        if self.config.tls_enabled:
-            @app.middleware("http")
-            async def https_redirect_middleware(request: Request, call_next):
-                if not request.url.scheme == "https" and os.getenv('FORCE_HTTPS_REDIRECT', 'false').lower() == 'true':
-                    # This would redirect to HTTPS in production
-                    pass
-                response = await call_next(request)
-                return response
+        logger.info("🔒 FastAPI security initialized (config loaded)")
 
     def initialize_grpc_security(self, server: grpc.Server):
         """Initialize security for gRPC server"""

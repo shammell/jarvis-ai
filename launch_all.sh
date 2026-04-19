@@ -11,7 +11,7 @@ cd "$(dirname "$0")"
 
 # Start Python gRPC server (background)
 echo "[1/3] Starting gRPC server ..."
-python grpc/python_server.py &
+python grpc_service/python_server.py &
 GRPC_PID=$!
 sleep 3
 

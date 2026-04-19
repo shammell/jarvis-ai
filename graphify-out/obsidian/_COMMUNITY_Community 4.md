@@ -1,0 +1,332 @@
+---
+type: community
+members: 292
+---
+
+# Community 4
+
+**Members:** 292 nodes
+
+## Members
+- [[.__del__()]] - code - skills\docx-official\scripts\document.py
+- [[.__getitem__()]] - code - skills\docx-official\scripts\document.py
+- [[.__init__()_20]] - code - agents\code_analyzer.py
+- [[.__init__()_21]] - code - agents\coordinator.py
+- [[.__init__()_22]] - code - agents\optimizer.py
+- [[.__init__()_23]] - code - agents\researcher.py
+- [[.__init__()_24]] - code - agents\tester.py
+- [[.__init__()_138]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.__init__()_139]] - code - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[.__init__()_140]] - code - skills\docx-official\scripts\document.py
+- [[.__init__()_141]] - code - skills\docx-official\scripts\document.py
+- [[.__init__()_142]] - code - skills\docx-official\scripts\utilities.py
+- [[._add_author_to_people()]] - code - skills\docx-official\scripts\document.py
+- [[._add_content_type_for_people()]] - code - skills\docx-official\scripts\document.py
+- [[._add_relationship_for_people()]] - code - skills\docx-official\scripts\document.py
+- [[._add_to_comments_extended_xml()]] - code - skills\docx-official\scripts\document.py
+- [[._add_to_comments_extensible_xml()]] - code - skills\docx-official\scripts\document.py
+- [[._add_to_comments_ids_xml()]] - code - skills\docx-official\scripts\document.py
+- [[._add_to_comments_xml()]] - code - skills\docx-official\scripts\document.py
+- [[._analyze_architecture()]] - code - agents\researcher.py
+- [[._analyze_dependencies()]] - code - agents\researcher.py
+- [[._analyze_javascript()]] - code - agents\code_analyzer.py
+- [[._analyze_python()]] - code - agents\code_analyzer.py
+- [[._check_best_practices()]] - code - agents\code_analyzer.py
+- [[._check_complexity()]] - code - agents\code_analyzer.py
+- [[._check_undefined_variables()]] - code - agents\code_analyzer.py
+- [[._clean_ignorable_namespaces()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[._comment_range_end_xml()]] - code - skills\docx-official\scripts\document.py
+- [[._comment_range_start_xml()]] - code - skills\docx-official\scripts\document.py
+- [[._comment_ref_run_xml()]] - code - skills\docx-official\scripts\document.py
+- [[._ensure_comment_content_types()]] - code - skills\docx-official\scripts\document.py
+- [[._ensure_comment_relationships()]] - code - skills\docx-official\scripts\document.py
+- [[._ensure_w14_namespace()]] - code - skills\docx-official\scripts\document.py
+- [[._ensure_w16cex_namespace()]] - code - skills\docx-official\scripts\document.py
+- [[._ensure_w16du_namespace()]] - code - skills\docx-official\scripts\document.py
+- [[._execute_task()]] - code - agents\coordinator.py
+- [[._execute_test()]] - code - agents\tester.py
+- [[._explore_codebase()]] - code - agents\researcher.py
+- [[._extract_text_content()]] - code - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[._generate_detailed_diff()]] - code - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[._generate_tests()]] - code - agents\tester.py
+- [[._get_element_text()]] - code - skills\docx-official\scripts\utilities.py
+- [[._get_expected_relationship_type()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[._get_git_word_diff()]] - code - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[._get_nesting_depth()]] - code - agents\code_analyzer.py
+- [[._get_next_change_id()]] - code - skills\docx-official\scripts\document.py
+- [[._get_next_comment_id()]] - code - skills\docx-official\scripts\document.py
+- [[._get_original_file_errors()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[._get_schema_path()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[._has_author()]] - code - skills\docx-official\scripts\document.py
+- [[._has_override()]] - code - skills\docx-official\scripts\document.py
+- [[._has_relationship()]] - code - skills\docx-official\scripts\document.py
+- [[._inject_attributes_to_nodes()]] - code - skills\docx-official\scripts\document.py
+- [[._load_existing_comments()]] - code - skills\docx-official\scripts\document.py
+- [[._looks_like_uuid()]] - code - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[._optimize_code()]] - code - agents\optimizer.py
+- [[._optimize_database()]] - code - agents\optimizer.py
+- [[._optimize_system()]] - code - agents\optimizer.py
+- [[._parse_fragment()]] - code - skills\docx-official\scripts\utilities.py
+- [[._preprocess_for_mc_ignorable()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[._remove_claude_tracked_changes()]] - code - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[._remove_ignorable_elements()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[._remove_template_tags_from_text_nodes()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[._run_tests()]] - code - agents\tester.py
+- [[._setup_tracking()]] - code - skills\docx-official\scripts\document.py
+- [[._update_people_xml()]] - code - skills\docx-official\scripts\document.py
+- [[._update_settings()]] - code - skills\docx-official\scripts\document.py
+- [[._validate_single_file_xsd()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.add_comment()]] - code - skills\docx-official\scripts\document.py
+- [[.analyze()]] - code - agents\code_analyzer.py
+- [[.append_to()]] - code - skills\docx-official\scripts\document.py
+- [[.append_to()_1]] - code - skills\docx-official\scripts\utilities.py
+- [[.auto_delegate()]] - code - agents\coordinator.py
+- [[.compare_paragraph_counts()]] - code - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[.count_paragraphs_in_original()]] - code - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[.count_paragraphs_in_unpacked()]] - code - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[.delegate()]] - code - agents\coordinator.py
+- [[.generate_test_code()]] - code - agents\tester.py
+- [[.get_next_rid()]] - code - skills\docx-official\scripts\utilities.py
+- [[.get_node()]] - code - skills\docx-official\scripts\utilities.py
+- [[.insert_after()]] - code - skills\docx-official\scripts\document.py
+- [[.insert_after()_1]] - code - skills\docx-official\scripts\utilities.py
+- [[.insert_before()]] - code - skills\docx-official\scripts\document.py
+- [[.insert_before()_1]] - code - skills\docx-official\scripts\utilities.py
+- [[.optimize()]] - code - agents\optimizer.py
+- [[.replace_node()]] - code - skills\docx-official\scripts\document.py
+- [[.replace_node()_1]] - code - skills\docx-official\scripts\utilities.py
+- [[.reply_to_comment()]] - code - skills\docx-official\scripts\document.py
+- [[.research()]] - code - agents\researcher.py
+- [[.revert_deletion()]] - code - skills\docx-official\scripts\document.py
+- [[.revert_insertion()]] - code - skills\docx-official\scripts\document.py
+- [[.save()_9]] - code - skills\docx-official\scripts\document.py
+- [[.save()_10]] - code - skills\docx-official\scripts\utilities.py
+- [[.suggest_deletion()]] - code - skills\docx-official\scripts\document.py
+- [[.test()]] - code - agents\tester.py
+- [[.validate()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.validate()_1]] - code - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[.validate()_2]] - code - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[.validate()_3]] - code - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[.validate()_4]] - code - skills\docx-official\scripts\document.py
+- [[.validate_against_xsd()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.validate_all_relationship_ids()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.validate_content_types()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.validate_deletions()]] - code - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[.validate_file_against_xsd()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.validate_file_references()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.validate_insertions()]] - code - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[.validate_namespaces()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.validate_no_duplicate_slide_layouts()]] - code - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[.validate_notes_slide_references()]] - code - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[.validate_slide_layout_ids()]] - code - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[.validate_unique_ids()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[.validate_uuid_ids()]] - code - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[.validate_whitespace_preservation()]] - code - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[.validate_xml()]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Add RSID and optionally enable track revisions in settings.xml.          Args]] - rationale - skills\docx-official\scripts\document.py
+- [[Add a comment spanning from one element to another.          Args]] - rationale - skills\docx-official\scripts\document.py
+- [[Add a reply to an existing comment.          Args             parent_comment]] - rationale - skills\docx-official\scripts\document.py
+- [[Add a single comment to comments.xml.]] - rationale - skills\docx-official\scripts\document.py
+- [[Add a single comment to commentsExtended.xml.]] - rationale - skills\docx-official\scripts\document.py
+- [[Add a single comment to commentsExtensible.xml.]] - rationale - skills\docx-official\scripts\document.py
+- [[Add a single comment to commentsIds.xml.]] - rationale - skills\docx-official\scripts\document.py
+- [[Add author to people.xml (called during initialization).]] - rationale - skills\docx-official\scripts\document.py
+- [[Add people.xml content type to Content_Types.xml if not already present.]] - rationale - skills\docx-official\scripts\document.py
+- [[Add people.xml relationship to document.xml.rels if not already present.]] - rationale - skills\docx-official\scripts\document.py
+- [[Analyze JavaScript code]] - rationale - agents\code_analyzer.py
+- [[Analyze and optimize performance          Args             target What to opti]] - rationale - agents\optimizer.py
+- [[Analyze code and return findings          Args             code Source code to]] - rationale - agents\code_analyzer.py
+- [[Analyze project dependencies]] - rationale - agents\researcher.py
+- [[Analyze system architecture]] - rationale - agents\researcher.py
+- [[Analyzers modulos de analise por dimensao.  Cada analyzer recebe os dados de]] - rationale - skills\skill-sentinel\scripts\analyzers\__init__.py
+- [[Append XML content as a child of a DOM element.          Args             el]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Append to with automatic attribute injection.]] - rationale - skills\docx-official\scripts\document.py
+- [[Automatically determine which agents to use based on request          Args]] - rationale - agents\coordinator.py
+- [[Base validator with common validation logic for document files.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Base validator with common validation logic for document files._1]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[BaseSchemaValidator]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[BaseSchemaValidator_1]] - code
+- [[Calculate nesting depth]] - rationale - agents\code_analyzer.py
+- [[Check code complexity]] - rationale - agents\code_analyzer.py
+- [[Check for best practices]] - rationale - agents\code_analyzer.py
+- [[Check for undefined variables]] - rationale - agents\code_analyzer.py
+- [[Check if a relationship with given target exists.]] - rationale - skills\docx-official\scripts\document.py
+- [[Check if a value has the general structure of a UUID.]] - rationale - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[Check if an author already exists in people.xml.]] - rationale - skills\docx-official\scripts\document.py
+- [[Check if an override with given part name exists.]] - rationale - skills\docx-official\scripts\document.py
+- [[Clean up temporary directory on deletion.]] - rationale - skills\docx-official\scripts\document.py
+- [[CodeAnalyzerAgent]] - code - agents\code_analyzer.py
+- [[Compare paragraph counts between original and new document.]] - rationale - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Coordinates multiple sub-agents     - Agent selection     - Task delegation]] - rationale - agents\coordinator.py
+- [[Count the number of paragraphs in the original docx file.]] - rationale - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Count the number of paragraphs in the unpacked document.]] - rationale - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Create a SAX parser that tracks line and column numbers for each element.]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Create people.xml if it doesn't exist.]] - rationale - skills\docx-official\scripts\document.py
+- [[DOCXSchemaValidator]] - code - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Delegate tasks to appropriate sub-agents          Args             tasks List]] - rationale - agents\coordinator.py
+- [[Determine the appropriate schema path for an XML file.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Document]] - code - skills\docx-official\scripts\document.py
+- [[DocxXMLEditor]] - code - skills\docx-official\scripts\document.py
+- [[Editor for manipulating OOXML XML files with line-number-based node finding.]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Ensure Content_Types.xml has comment content types.]] - rationale - skills\docx-official\scripts\document.py
+- [[Ensure w14 namespace is declared on the root element.]] - rationale - skills\docx-official\scripts\document.py
+- [[Ensure w16cex namespace is declared on the root element.]] - rationale - skills\docx-official\scripts\document.py
+- [[Ensure w16du namespace is declared on the root element.]] - rationale - skills\docx-official\scripts\document.py
+- [[Ensure word_relsdocument.xml.rels has comment relationships.]] - rationale - skills\docx-official\scripts\document.py
+- [[Execute a single task with appropriate agent]] - rationale - agents\coordinator.py
+- [[Execute a single test]] - rationale - agents\tester.py
+- [[Explore codebase structure]] - rationale - agents\researcher.py
+- [[Extract text content from Word XML, preserving paragraph structure.          E]] - rationale - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[Generate XML for comment range end with reference run.          Note wrsidR]] - rationale - skills\docx-official\scripts\document.py
+- [[Generate XML for comment range start.]] - rationale - skills\docx-official\scripts\document.py
+- [[Generate XML for comment reference run.          Note wrsidR is automaticall]] - rationale - skills\docx-official\scripts\document.py
+- [[Generate and run tests          Args             target What to test (function]] - rationale - agents\tester.py
+- [[Generate detailed word-level differences using git word diff.]] - rationale - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[Generate random 8-character hex ID for paradurable IDs.      Values are const]] - rationale - skills\docx-official\scripts\document.py
+- [[Generate random 8-character hex RSID.]] - rationale - skills\docx-official\scripts\document.py
+- [[Generate test code for a function]] - rationale - agents\tester.py
+- [[Generate word diff using git with character-level precision.]] - rationale - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[Get XSD validation errors from a single file in the original document.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Get a DOM element by tag and identifier.          Finds an element by either i]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Get or create a DocxXMLEditor for the specified XML file.          Enables laz]] - rationale - skills\docx-official\scripts\document.py
+- [[Get the expected relationship type for an element.         First checks the exp]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Get the next available change ID by checking all tracked change elements.]] - rationale - skills\docx-official\scripts\document.py
+- [[Get the next available comment ID.]] - rationale - skills\docx-official\scripts\document.py
+- [[Get the next available rId for relationships files.]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Initialize with path to XML file and parse with line number tracking.]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Initialize with path to unpacked Word document directory.         Automatically]] - rationale - skills\docx-official\scripts\document.py
+- [[Initialize with required RSID and optional author.          Args]] - rationale - skills\docx-official\scripts\document.py
+- [[Inject RSID, author, and date attributes into DOM nodes where applicable.]] - rationale - skills\docx-official\scripts\document.py
+- [[Insert XML content after a DOM element.          Args             elem defu]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Insert XML content before a DOM element.          Args             elem def]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Insert after with automatic attribute injection.]] - rationale - skills\docx-official\scripts\document.py
+- [[Insert before with automatic attribute injection.]] - rationale - skills\docx-official\scripts\document.py
+- [[Load existing comments from files to enable replies.]] - rationale - skills\docx-official\scripts\document.py
+- [[Main validation method that returns True if valid, False otherwise.]] - rationale - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[Manages comments in unpacked Word documents.]] - rationale - skills\docx-official\scripts\document.py
+- [[Mark a wr or wp element as deleted with tracked changes (in-place DOM manipula]] - rationale - skills\docx-official\scripts\document.py
+- [[Optimize code performance]] - rationale - agents\optimizer.py
+- [[Optimize database performance]] - rationale - agents\optimizer.py
+- [[Optimize system performance]] - rationale - agents\optimizer.py
+- [[OptimizerAgent]] - code - agents\optimizer.py
+- [[PPTXSchemaValidator]] - code - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[Pack a directory into an Office file (.docx.pptx.xlsx).      Args]] - rationale - skills\docx-official\ooxml\scripts\pack.py
+- [[Parse XML fragment and return list of imported nodes.          Args]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Preprocess XML to handle mcIgnorable attribute properly.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Recursively extract all text content from an element.          Skips text node]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Recursively remove all elements not in allowed namespaces.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[RedliningValidator]] - code - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[Reject a deletion by re-inserting the deleted content.          Creates wins]] - rationale - skills\docx-official\scripts\document.py
+- [[Reject an insertion by wrapping its content in a deletion.          Wraps all]] - rationale - skills\docx-official\scripts\document.py
+- [[Remove attributes and elements not in allowed namespaces.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Remove template tags from XML text nodes and collect warnings.          Templa]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Remove tracked changes authored by Claude from the XML root.]] - rationale - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[Replace a DOM element with new XML content.          Args             elem]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Replace node with automatic attribute injection.]] - rationale - skills\docx-official\scripts\document.py
+- [[Research a topic          Args             topic What to research]] - rationale - agents\researcher.py
+- [[ResearcherAgent]] - code - agents\researcher.py
+- [[Run all validation checks and return True if all pass.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Run all validation checks and return True if all pass._1]] - rationale - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Run all validation checks and return True if all pass._2]] - rationale - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[Save all modified XML files to disk and copy to destination directory.]] - rationale - skills\docx-official\scripts\document.py
+- [[Save the edited XML back to the file.          Serializes the DOM tree and wri]] - rationale - skills\docx-official\scripts\utilities.py
+- [[Set up comment infrastructure in unpacked directory.          Args]] - rationale - skills\docx-official\scripts\document.py
+- [[Specialized agent for code analysis     - Bug detection     - Code review     -]] - rationale - agents\code_analyzer.py
+- [[Specialized agent for performance optimization     - Bottleneck detection     -]] - rationale - agents\optimizer.py
+- [[Specialized agent for research     - Codebase exploration     - Information gath]] - rationale - agents\researcher.py
+- [[Specialized agent for testing     - Test generation     - Test execution     - C]] - rationale - agents\tester.py
+- [[Strip unnecessary whitespace and remove comments.]] - rationale - skills\docx-official\ooxml\scripts\pack.py
+- [[SubAgentCoordinator]] - code - agents\coordinator.py
+- [[TesterAgent_1]] - code - agents\tester.py
+- [[Transform paragraph XML to add tracked change wrapping for insertion.]] - rationale - skills\docx-official\scripts\document.py
+- [[Validate XML files against XSD schemas, showing only new errors compared to orig]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Validate a single XML file against XSD schema, comparing with original.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Validate a single XML file against XSD schema. Returns (is_valid, errors_set).]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Validate document by converting to HTML with soffice.]] - rationale - skills\docx-official\ooxml\scripts\pack.py
+- [[Validate that ID attributes that look like UUIDs contain only hex values.]] - rationale - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[Validate that all .rels files properly reference files and that all files are re]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Validate that all XML files are well-formed.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Validate that all content files are properly declared in Content_Types.xml.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Validate that all rid attributes in XML files reference existing IDs         i]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Validate that each notesSlide file is referenced by only one slide.]] - rationale - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[Validate that each slide has exactly one slideLayout reference.]] - rationale - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[Validate that namespace prefixes in Ignorable attributes are declared.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Validate that sldLayoutId elements in slide masters reference valid slide layout]] - rationale - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[Validate that specific IDs are unique according to OOXML requirements.]] - rationale - skills\docx-official\ooxml\scripts\validation\base.py
+- [[Validate that wdelText elements are not within wins elements.         wdelTe]] - rationale - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Validate that wt elements are not within wdel elements.         For some reas]] - rationale - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Validate that wt elements with whitespace have xmlspace='preserve'.]] - rationale - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Validate the document against XSD schema and redlining rules.          Raises]] - rationale - skills\docx-official\scripts\document.py
+- [[Validator for PowerPoint presentation XML files against XSD schemas.]] - rationale - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[Validator for PowerPoint presentation XML files against XSD schemas._1]] - rationale - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[Validator for Word document XML files against XSD schemas.]] - rationale - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Validator for Word document XML files against XSD schemas._1]] - rationale - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[Validator for tracked changes in Word documents.]] - rationale - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[Validator for tracked changes in Word documents._1]] - rationale - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[XMLEditor]] - code
+- [[XMLEditor_1]] - code - skills\docx-official\scripts\utilities.py
+- [[XMLEditor that automatically applies RSID, author, and date to new elements.]] - rationale - skills\docx-official\scripts\document.py
+- [[__init__.py]] - code - agents\__init__.py
+- [[__init__.py_7]] - code - core\__init__.py
+- [[__init__.py_8]] - code - grpc_service\__init__.py
+- [[__init__.py_9]] - code - memory\__init__.py
+- [[__init__.py_11]] - code - skills\docx-official\ooxml\scripts\validation\__init__.py
+- [[__init__.py_13]] - code - skills\junta-leiloeiros\scripts\scraper\__init__.py
+- [[__init__.py_17]] - code - skills\skill-sentinel\scripts\analyzers\__init__.py
+- [[_create_line_tracking_parser()]] - code - skills\docx-official\scripts\utilities.py
+- [[_generate_hex_id()]] - code - skills\docx-official\scripts\document.py
+- [[_generate_rsid()]] - code - skills\docx-official\scripts\document.py
+- [[base.py]] - code - skills\docx-official\ooxml\scripts\validation\base.py
+- [[code_analyzer.py]] - code - agents\code_analyzer.py
+- [[condense_xml()]] - code - skills\docx-official\ooxml\scripts\pack.py
+- [[coordinator.py]] - code - agents\coordinator.py
+- [[document.py]] - code - skills\docx-official\scripts\document.py
+- [[docx.py]] - code - skills\docx-official\ooxml\scripts\validation\docx.py
+- [[main()_25]] - code - skills\docx-official\ooxml\scripts\pack.py
+- [[main()_26]] - code - skills\docx-official\ooxml\scripts\validate.py
+- [[optimizer.py]] - code - agents\optimizer.py
+- [[pack.py]] - code - skills\docx-official\ooxml\scripts\pack.py
+- [[pack_document()]] - code - skills\docx-official\ooxml\scripts\pack.py
+- [[pptx.py]] - code - skills\docx-official\ooxml\scripts\validation\pptx.py
+- [[redlining.py]] - code - skills\docx-official\ooxml\scripts\validation\redlining.py
+- [[researcher.py]] - code - agents\researcher.py
+- [[suggest_paragraph()]] - code - skills\docx-official\scripts\document.py
+- [[test()]] - code - agents\code_analyzer.py
+- [[test()_1]] - code - agents\coordinator.py
+- [[test()_2]] - code - agents\optimizer.py
+- [[test()_3]] - code - agents\researcher.py
+- [[test()_4]] - code - agents\tester.py
+- [[tester.py]] - code - agents\tester.py
+- [[utilities.py]] - code - skills\docx-official\scripts\utilities.py
+- [[validate.py]] - code - skills\docx-official\ooxml\scripts\validate.py
+- [[validate_document()]] - code - skills\docx-official\ooxml\scripts\pack.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_4
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 38 edges to [[_COMMUNITY_Community 1]]
+- 20 edges to [[_COMMUNITY_Community 11]]
+- 15 edges to [[_COMMUNITY_Community 2]]
+- 4 edges to [[_COMMUNITY_Community 25]]
+- 3 edges to [[_COMMUNITY_Community 8]]
+- 2 edges to [[_COMMUNITY_Community 9]]
+- 2 edges to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_Community 16]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 50]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+
+## Top bridge nodes
+- [[._execute_task()]] - degree 12, connects to 5 communities
+- [[.validate_file_references()]] - degree 8, connects to 4 communities
+- [[.validate_content_types()]] - degree 8, connects to 4 communities
+- [[.validate_slide_layout_ids()]] - degree 7, connects to 4 communities
+- [[._validate_single_file_xsd()]] - degree 12, connects to 3 communities

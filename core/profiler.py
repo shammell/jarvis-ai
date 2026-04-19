@@ -47,11 +47,11 @@ class Profiler:
     @contextmanager
     def profile(self, operation: str, component: str = "default"):
         """
-        Context manager for profiling operations
+        Context manager for profiling operations.
 
-        Usage:
-            with profiler.profile("skill_matching", "orchestrator"):
-                result = match_skills(query)
+        RATIONALE: High-granularity performance tracking is essential for detecting
+        latent bottlenecks in the system DAG that standard logging might miss.
+        Enables the closed-loop feedback system to trigger architecture evolution.
         """
         start_time = time.perf_counter()
         start_mem = self._get_memory_usage()
@@ -170,7 +170,7 @@ class Profiler:
 
         return {name: self.get_benchmarks(name) for name in self.benchmarks}
 
-    def get_bottlelinecks(self, hours: int = 1) -> List[Dict[str, Any]]:
+    def get_bottlenecks(self, hours: int = 1) -> List[Dict[str, Any]]:
         """Get detected bottlenecks"""
         cutoff = datetime.now() - timedelta(hours=hours)
         recent = [
@@ -198,7 +198,7 @@ class Profiler:
             "median_latency_ms": round(statistics.median(latencies), 2),
             "p95_latency_ms": round(sorted(latencies)[int(len(latencies) * 0.95)] if len(latencies) > 20 else max(latencies), 2),
             "max_latency_ms": round(max(latencies), 2),
-            "bottlenecks_detected": len(self.get_bottlelinecks(hours))
+            "bottlenecks_detected": len(self.get_bottlenecks(hours))
         }
 
     def generate_report(self) -> str:

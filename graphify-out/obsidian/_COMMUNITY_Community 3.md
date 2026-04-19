@@ -1,0 +1,330 @@
+---
+type: community
+members: 293
+---
+
+# Community 3
+
+**Members:** 293 nodes
+
+## Members
+- [[.__init__()_197]] - code - tests\security\run_security_tests.py
+- [[.__init__()_198]] - code - tests\security\test_security_coverage.py
+- [[.analyze_class_coverage()]] - code - tests\security\test_security_coverage.py
+- [[.analyze_module_coverage()]] - code - tests\security\test_security_coverage.py
+- [[.check_test_file_coverage()]] - code - tests\security\test_security_coverage.py
+- [[.generate_final_report()]] - code - tests\security\run_security_tests.py
+- [[.get_expected_test_files()]] - code - tests\security\test_security_coverage.py
+- [[.run_all_security_tests()]] - code - tests\security\run_security_tests.py
+- [[.run_coverage_analysis()]] - code - tests\security\test_security_coverage.py
+- [[.setUp()]] - code - tests\security\test_input_validator.py
+- [[.setUp()_1]] - code - tests\security\test_jwt_auth.py
+- [[.setUp()_2]] - code - tests\security\test_rate_limiting.py
+- [[.setUp()_3]] - code - tests\security\test_rbac.py
+- [[.setUp()_4]] - code - tests\security\test_security_e2e.py
+- [[.setUp()_5]] - code - tests\security\test_security_integration.py
+- [[.setUp()_6]] - code - tests\security\test_security_manager.py
+- [[.setUp()_7]] - code - tests\security\test_security_middleware.py
+- [[.test_admin_role_permissions()]] - code - tests\security\test_rbac.py
+- [[.test_agent_role_permissions()]] - code - tests\security\test_rbac.py
+- [[.test_audit_log()]] - code - tests\security\test_security_manager.py
+- [[.test_authenticate_request_expired_token()]] - code - tests\security\test_security_middleware.py
+- [[.test_authenticate_request_invalid_auth_header()]] - code - tests\security\test_security_middleware.py
+- [[.test_authenticate_request_ip_mismatch()]] - code - tests\security\test_security_middleware.py
+- [[.test_authenticate_request_no_auth_header()]] - code - tests\security\test_security_middleware.py
+- [[.test_authenticate_request_success()]] - code - tests\security\test_security_middleware.py
+- [[.test_authenticate_user_failure()]] - code - tests\security\test_security_manager.py
+- [[.test_authenticate_user_success()]] - code - tests\security\test_security_manager.py
+- [[.test_authorize_operation_denied()]] - code - tests\security\test_security_middleware.py
+- [[.test_authorize_operation_success()]] - code - tests\security\test_security_middleware.py
+- [[.test_check_permission_denied()]] - code - tests\security\test_security_manager.py
+- [[.test_check_permission_granted()]] - code - tests\security\test_security_manager.py
+- [[.test_cleanup_expired_data()]] - code - tests\security\test_security_manager.py
+- [[.test_complete_authentication_flow()]] - code - tests\security\test_security_integration.py
+- [[.test_complete_user_lifecycle()]] - code - tests\security\test_security_e2e.py
+- [[.test_dynamic_permission_changes()]] - code - tests\security\test_rbac.py
+- [[.test_failed_attempts_lockout()]] - code - tests\security\test_security_manager.py
+- [[.test_generate_tokens()]] - code - tests\security\test_security_manager.py
+- [[.test_guest_role_permissions()]] - code - tests\security\test_rbac.py
+- [[.test_hash_password()]] - code - tests\security\test_security_manager.py
+- [[.test_jwt_claims_validation()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_ip_address_binding()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_multiple_token_validation()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_refresh_token_structure()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_refresh_token_validation()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_secret_key_rotation()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_session_id_uniqueness()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_token_algorithm()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_token_expiration()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_token_invalidation_on_logout()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_token_payload_integrity()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_token_rotation()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_token_size_limits()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_token_structure()]] - code - tests\security\test_jwt_auth.py
+- [[.test_jwt_user_agent_binding()]] - code - tests\security\test_jwt_auth.py
+- [[.test_logout_all_sessions()]] - code - tests\security\test_security_manager.py
+- [[.test_logout_user()]] - code - tests\security\test_security_manager.py
+- [[.test_max_sessions_per_user()]] - code - tests\security\test_security_manager.py
+- [[.test_middleware_error_handling()]] - code - tests\security\test_security_middleware.py
+- [[.test_middleware_integration()]] - code - tests\security\test_security_middleware.py
+- [[.test_middleware_performance()]] - code - tests\security\test_security_middleware.py
+- [[.test_middleware_security_events()]] - code - tests\security\test_security_middleware.py
+- [[.test_pattern_compilation()]] - code - tests\security\test_input_validator.py
+- [[.test_permission_audit_trail()]] - code - tests\security\test_rbac.py
+- [[.test_permission_denial()]] - code - tests\security\test_rbac.py
+- [[.test_permission_error_handling()]] - code - tests\security\test_rbac.py
+- [[.test_permission_escalation_attempts()]] - code - tests\security\test_security_e2e.py
+- [[.test_permission_hierarchy()]] - code - tests\security\test_rbac.py
+- [[.test_permission_hierarchy_integration()]] - code - tests\security\test_security_integration.py
+- [[.test_permission_inheritance()]] - code - tests\security\test_rbac.py
+- [[.test_permission_isolation()]] - code - tests\security\test_rbac.py
+- [[.test_permission_matrix()]] - code - tests\security\test_rbac.py
+- [[.test_permission_specificity()]] - code - tests\security\test_rbac.py
+- [[.test_permission_validation_with_tokens()]] - code - tests\security\test_rbac.py
+- [[.test_rate_limit_basic_functionality()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_cleanup_old_entries()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_concurrent_requests()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_config_structure()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_error_handling()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_hourly_limits()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_monitoring()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_multiple_permissions()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_reset_after_timeout()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_statistics()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_temporary_block()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_time_window()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_user_isolation()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limit_with_permission_check()]] - code - tests\security\test_rate_limiting.py
+- [[.test_rate_limiting()_1]] - code - tests\security\test_security_manager.py
+- [[.test_rate_limiting_integration()]] - code - tests\security\test_security_integration.py
+- [[.test_rate_limiting_under_load()]] - code - tests\security\test_security_e2e.py
+- [[.test_role_transition_security()]] - code - tests\security\test_rbac.py
+- [[.test_sanitize_input_basic()]] - code - tests\security\test_input_validator.py
+- [[.test_sanitize_input_length_limit()]] - code - tests\security\test_input_validator.py
+- [[.test_sanitize_input_non_string()]] - code - tests\security\test_input_validator.py
+- [[.test_sanitize_input_null_bytes()]] - code - tests\security\test_input_validator.py
+- [[.test_sanitize_input_whitespace()]] - code - tests\security\test_input_validator.py
+- [[.test_sanitize_request_basic()]] - code - tests\security\test_security_middleware.py
+- [[.test_sanitize_request_edge_cases()]] - code - tests\security\test_security_middleware.py
+- [[.test_sanitize_request_nested()]] - code - tests\security\test_security_middleware.py
+- [[.test_security_attack_simulation()]] - code - tests\security\test_security_e2e.py
+- [[.test_security_audit_trail()]] - code - tests\security\test_security_integration.py
+- [[.test_security_cleanup_integration()]] - code - tests\security\test_security_integration.py
+- [[.test_security_configuration_hardening()]] - code - tests\security\test_security_e2e.py
+- [[.test_security_flow_with_dangerous_input()]] - code - tests\security\test_security_integration.py
+- [[.test_security_monitoring_and_alerts()]] - code - tests\security\test_security_e2e.py
+- [[.test_security_performance_under_stress()]] - code - tests\security\test_security_e2e.py
+- [[.test_security_statistics_integration()]] - code - tests\security\test_security_integration.py
+- [[.test_security_stats()]] - code - tests\security\test_security_manager.py
+- [[.test_security_with_mock_orchestrator()]] - code - tests\security\test_security_integration.py
+- [[.test_session_management()_1]] - code - tests\security\test_security_manager.py
+- [[.test_session_management_integration()]] - code - tests\security\test_security_integration.py
+- [[.test_session_risk_scoring()]] - code - tests\security\test_security_manager.py
+- [[.test_system_role_permissions()]] - code - tests\security\test_rbac.py
+- [[.test_user_role_permissions()]] - code - tests\security\test_rbac.py
+- [[.test_validate_context_dangerous()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_context_safe()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_context_too_large()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_file_path_dangerous()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_file_path_safe()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_input_command_injection()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_input_edge_cases()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_input_length_limits()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_input_non_string()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_input_safe_content()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_input_sql_injection()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_input_with_sql_keywords_in_context()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_input_with_unicode()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_input_xss()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_query_dangerous()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_query_safe()]] - code - tests\security\test_input_validator.py
+- [[.test_validate_request_basic()]] - code - tests\security\test_security_middleware.py
+- [[.test_validate_request_dangerous_content()]] - code - tests\security\test_security_middleware.py
+- [[.test_validate_request_non_dict()]] - code - tests\security\test_security_middleware.py
+- [[.test_validate_request_size_limits()]] - code - tests\security\test_security_middleware.py
+- [[.test_validate_token_expired()]] - code - tests\security\test_security_manager.py
+- [[.test_validate_token_invalid_type()]] - code - tests\security\test_security_manager.py
+- [[.test_validate_token_success()]] - code - tests\security\test_security_manager.py
+- [[.test_verify_password()]] - code - tests\security\test_security_manager.py
+- [[Analyze test coverage for security components]] - rationale - tests\security\test_security_coverage.py
+- [[Analyze what methods exist in a class]] - rationale - tests\security\test_security_coverage.py
+- [[Analyze what methods exist in a module]] - rationale - tests\security\test_security_coverage.py
+- [[Check which test files exist]] - rationale - tests\security\test_security_coverage.py
+- [[Comprehensive security test runner with detailed reporting]] - rationale - tests\security\run_security_tests.py
+- [[End-to-End Security Tests]] - rationale - tests\security\test_security_e2e.py
+- [[Generate comprehensive final report]] - rationale - tests\security\run_security_tests.py
+- [[Get list of expected test files]] - rationale - tests\security\test_security_coverage.py
+- [[Run all security test suites]] - rationale - tests\security\run_security_tests.py
+- [[Run complete coverage analysis]] - rationale - tests\security\test_security_coverage.py
+- [[SecurityCoverageAnalyzer]] - code - tests\security\test_security_coverage.py
+- [[SecurityTestRunner]] - code - tests\security\run_security_tests.py
+- [[Simulate common security attacks and verify protection]] - rationale - tests\security\test_security_e2e.py
+- [[Test IP address binding in tokens]] - rationale - tests\security\test_jwt_auth.py
+- [[Test InputValidator class functionality]] - rationale - tests\security\test_input_validator.py
+- [[Test JWT authentication functionality]] - rationale - tests\security\test_jwt_auth.py
+- [[Test JWT claims validation]] - rationale - tests\security\test_jwt_auth.py
+- [[Test JWT refresh token structure]] - rationale - tests\security\test_jwt_auth.py
+- [[Test JWT secret key changes]] - rationale - tests\security\test_jwt_auth.py
+- [[Test JWT token algorithm enforcement]] - rationale - tests\security\test_jwt_auth.py
+- [[Test JWT token expiration]] - rationale - tests\security\test_jwt_auth.py
+- [[Test JWT token generation]] - rationale - tests\security\test_security_manager.py
+- [[Test JWT token payload integrity]] - rationale - tests\security\test_jwt_auth.py
+- [[Test JWT token rotation during refresh]] - rationale - tests\security\test_jwt_auth.py
+- [[Test JWT token size limits]] - rationale - tests\security\test_jwt_auth.py
+- [[Test JWT token structure and claims]] - rationale - tests\security\test_jwt_auth.py
+- [[Test Rate Limiting functionality]] - rationale - tests\security\test_rate_limiting.py
+- [[Test Role-Based Access Control functionality]] - rationale - tests\security\test_rbac.py
+- [[Test SQL injection detection]] - rationale - tests\security\test_input_validator.py
+- [[Test SecurityManager class functionality]] - rationale - tests\security\test_security_manager.py
+- [[Test SecurityMiddleware class functionality]] - rationale - tests\security\test_security_middleware.py
+- [[Test agent role permissions]] - rationale - tests\security\test_rbac.py
+- [[Test authentication with IP address mismatch]] - rationale - tests\security\test_security_middleware.py
+- [[Test authentication with expired token]] - rationale - tests\security\test_security_middleware.py
+- [[Test authentication with invalid Authorization header]] - rationale - tests\security\test_security_middleware.py
+- [[Test authentication without Authorization header]] - rationale - tests\security\test_security_middleware.py
+- [[Test basic input sanitization]] - rationale - tests\security\test_input_validator.py
+- [[Test basic rate limiting functionality]] - rationale - tests\security\test_rate_limiting.py
+- [[Test basic request sanitization]] - rationale - tests\security\test_security_middleware.py
+- [[Test basic request validation]] - rationale - tests\security\test_security_middleware.py
+- [[Test cleanup of expired data]] - rationale - tests\security\test_security_manager.py
+- [[Test cleanup of old rate limit entries]] - rationale - tests\security\test_rate_limiting.py
+- [[Test command injection detection]] - rationale - tests\security\test_input_validator.py
+- [[Test complete authentication flow from request to response]] - rationale - tests\security\test_security_integration.py
+- [[Test complete middleware integration]] - rationale - tests\security\test_security_middleware.py
+- [[Test complete security audit trail]] - rationale - tests\security\test_security_integration.py
+- [[Test complete user lifecycle from auth to logout]] - rationale - tests\security\test_security_e2e.py
+- [[Test context size validation]] - rationale - tests\security\test_input_validator.py
+- [[Test dangerous context validation]] - rationale - tests\security\test_input_validator.py
+- [[Test dangerous file path detection]] - rationale - tests\security\test_input_validator.py
+- [[Test dangerous query validation]] - rationale - tests\security\test_input_validator.py
+- [[Test denied operation authorization]] - rationale - tests\security\test_security_middleware.py
+- [[Test edge cases for input validation]] - rationale - tests\security\test_input_validator.py
+- [[Test edge cases in request sanitization]] - rationale - tests\security\test_security_middleware.py
+- [[Test expired token validation]] - rationale - tests\security\test_security_manager.py
+- [[Test failed authentication lockout]] - rationale - tests\security\test_security_manager.py
+- [[Test failed user authentication]] - rationale - tests\security\test_security_manager.py
+- [[Test guest role permissions]] - rationale - tests\security\test_rbac.py
+- [[Test hourly rate limits]] - rationale - tests\security\test_rate_limiting.py
+- [[Test input length limiting]] - rationale - tests\security\test_input_validator.py
+- [[Test input length validation]] - rationale - tests\security\test_input_validator.py
+- [[Test input validation with Unicode characters]] - rationale - tests\security\test_input_validator.py
+- [[Test invalid token type validation]] - rationale - tests\security\test_security_manager.py
+- [[Test logout all sessions for user]] - rationale - tests\security\test_security_manager.py
+- [[Test max sessions per user enforcement]] - rationale - tests\security\test_security_manager.py
+- [[Test middleware error handling]] - rationale - tests\security\test_security_middleware.py
+- [[Test middleware performance with large requests]] - rationale - tests\security\test_security_middleware.py
+- [[Test nested request sanitization]] - rationale - tests\security\test_security_middleware.py
+- [[Test null byte removal]] - rationale - tests\security\test_input_validator.py
+- [[Test password hashing]] - rationale - tests\security\test_security_manager.py
+- [[Test password verification]] - rationale - tests\security\test_security_manager.py
+- [[Test permission check when denied]] - rationale - tests\security\test_security_manager.py
+- [[Test permission check when granted]] - rationale - tests\security\test_security_manager.py
+- [[Test permission escalation attempts]] - rationale - tests\security\test_security_e2e.py
+- [[Test permission handling with invalid inputs]] - rationale - tests\security\test_rbac.py
+- [[Test permission hierarchy]] - rationale - tests\security\test_rbac.py
+- [[Test permission hierarchy across different roles]] - rationale - tests\security\test_security_integration.py
+- [[Test permission inheritance patterns]] - rationale - tests\security\test_rbac.py
+- [[Test permission validation with actual tokens]] - rationale - tests\security\test_rbac.py
+- [[Test rate limit monitoring and alerting]] - rationale - tests\security\test_rate_limiting.py
+- [[Test rate limiting error handling]] - rationale - tests\security\test_rate_limiting.py
+- [[Test rate limiting for different permissions independently]] - rationale - tests\security\test_rate_limiting.py
+- [[Test rate limiting functionality]] - rationale - tests\security\test_security_manager.py
+- [[Test rate limiting in conjunction with permission checks]] - rationale - tests\security\test_rate_limiting.py
+- [[Test rate limiting integration with authentication]] - rationale - tests\security\test_security_integration.py
+- [[Test rate limiting time window behavior]] - rationale - tests\security\test_rate_limiting.py
+- [[Test rate limiting under high load]] - rationale - tests\security\test_security_e2e.py
+- [[Test rate limiting with concurrent requests]] - rationale - tests\security\test_rate_limiting.py
+- [[Test refresh token specific validation]] - rationale - tests\security\test_jwt_auth.py
+- [[Test request validation with dangerous content]] - rationale - tests\security\test_security_middleware.py
+- [[Test request validation with non-dict input]] - rationale - tests\security\test_security_middleware.py
+- [[Test request validation with size limits]] - rationale - tests\security\test_security_middleware.py
+- [[Test safe context validation]] - rationale - tests\security\test_input_validator.py
+- [[Test safe file path validation]] - rationale - tests\security\test_input_validator.py
+- [[Test safe query validation]] - rationale - tests\security\test_input_validator.py
+- [[Test sanitization with non-string inputs]] - rationale - tests\security\test_input_validator.py
+- [[Test security configuration and hardening]] - rationale - tests\security\test_security_e2e.py
+- [[Test security data cleanup]] - rationale - tests\security\test_security_integration.py
+- [[Test security during role transitions]] - rationale - tests\security\test_rbac.py
+- [[Test security flow with dangerous input]] - rationale - tests\security\test_security_integration.py
+- [[Test security integration across the entire system]] - rationale - tests\security\test_security_integration.py
+- [[Test security integration with mocked orchestrator]] - rationale - tests\security\test_security_integration.py
+- [[Test security monitoring and alert generation]] - rationale - tests\security\test_security_e2e.py
+- [[Test security statistics]] - rationale - tests\security\test_security_manager.py
+- [[Test security statistics collection]] - rationale - tests\security\test_security_integration.py
+- [[Test security system performance under stress]] - rationale - tests\security\test_security_e2e.py
+- [[Test session management]] - rationale - tests\security\test_security_manager.py
+- [[Test session management integration]] - rationale - tests\security\test_security_integration.py
+- [[Test session risk scoring for high-risk permissions]] - rationale - tests\security\test_security_manager.py
+- [[Test successful operation authorization]] - rationale - tests\security\test_security_middleware.py
+- [[Test successful request authentication]] - rationale - tests\security\test_security_middleware.py
+- [[Test successful token validation]] - rationale - tests\security\test_security_manager.py
+- [[Test successful user authentication]] - rationale - tests\security\test_security_manager.py
+- [[Test system role permissions]] - rationale - tests\security\test_rbac.py
+- [[Test temporary blocking after hitting rate limit]] - rationale - tests\security\test_rate_limiting.py
+- [[Test that SQL keywords in safe context are allowed]] - rationale - tests\security\test_input_validator.py
+- [[Test that admin role has all permissions]] - rationale - tests\security\test_rbac.py
+- [[Test that middleware generates security events]] - rationale - tests\security\test_security_middleware.py
+- [[Test that permission changes affect new tokens]] - rationale - tests\security\test_rbac.py
+- [[Test that permission checks are logged]] - rationale - tests\security\test_rbac.py
+- [[Test that rate limit configuration is properly structured]] - rationale - tests\security\test_rate_limiting.py
+- [[Test that rate limiting affects security statistics]] - rationale - tests\security\test_rate_limiting.py
+- [[Test that rate limits are isolated per user]] - rationale - tests\security\test_rate_limiting.py
+- [[Test that rate limits reset after timeout]] - rationale - tests\security\test_rate_limiting.py
+- [[Test that regex patterns are properly compiled]] - rationale - tests\security\test_input_validator.py
+- [[Test that roles are properly denied unauthorized permissions]] - rationale - tests\security\test_rbac.py
+- [[Test that roles don't share unintended permissions]] - rationale - tests\security\test_rbac.py
+- [[Test that session IDs are unique]] - rationale - tests\security\test_jwt_auth.py
+- [[Test that specific permissions are properly enforced]] - rationale - tests\security\test_rbac.py
+- [[Test the complete permission matrix]] - rationale - tests\security\test_rbac.py
+- [[Test token invalidation on logout]] - rationale - tests\security\test_jwt_auth.py
+- [[Test user agent binding in tokens]] - rationale - tests\security\test_jwt_auth.py
+- [[Test user role permissions]] - rationale - tests\security\test_rbac.py
+- [[Test validation of multiple tokens simultaneously]] - rationale - tests\security\test_jwt_auth.py
+- [[Test validation of safe content]] - rationale - tests\security\test_input_validator.py
+- [[Test validation with non-string inputs]] - rationale - tests\security\test_input_validator.py
+- [[Test whitespace normalization]] - rationale - tests\security\test_input_validator.py
+- [[TestInputValidator]] - code - tests\security\test_input_validator.py
+- [[TestJWTAuthentication]] - code - tests\security\test_jwt_auth.py
+- [[TestRBAC]] - code - tests\security\test_rbac.py
+- [[TestRateLimiting]] - code - tests\security\test_rate_limiting.py
+- [[TestSecurityE2E]] - code - tests\security\test_security_e2e.py
+- [[TestSecurityIntegration]] - code - tests\security\test_security_integration.py
+- [[TestSecurityManager]] - code - tests\security\test_security_manager.py
+- [[TestSecurityMiddleware]] - code - tests\security\test_security_middleware.py
+- [[main()_97]] - code - tests\security\run_security_tests.py
+- [[run_security_tests.py]] - code - tests\security\run_security_tests.py
+- [[test_input_validator.py]] - code - tests\security\test_input_validator.py
+- [[test_jwt_auth.py]] - code - tests\security\test_jwt_auth.py
+- [[test_rate_limiting.py]] - code - tests\security\test_rate_limiting.py
+- [[test_rbac.py]] - code - tests\security\test_rbac.py
+- [[test_security_e2e.py]] - code - tests\security\test_security_e2e.py
+- [[test_security_integration.py]] - code - tests\security\test_security_integration.py
+- [[test_security_manager.py]] - code - tests\security\test_security_manager.py
+- [[test_security_middleware.py]] - code - tests\security\test_security_middleware.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_3
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 515 edges to [[_COMMUNITY_Community 32]]
+- 122 edges to [[_COMMUNITY_Community 0]]
+- 75 edges to [[_COMMUNITY_Community 16]]
+- 15 edges to [[_COMMUNITY_Community 1]]
+- 7 edges to [[_COMMUNITY_Community 2]]
+- 5 edges to [[_COMMUNITY_Community 45]]
+- 4 edges to [[_COMMUNITY_Community 14]]
+- 2 edges to [[_COMMUNITY_Community 7]]
+- 2 edges to [[_COMMUNITY_Community 11]]
+- 1 edge to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+
+## Top bridge nodes
+- [[TestSecurityIntegration]] - degree 23, connects to 4 communities
+- [[TestSecurityMiddleware]] - degree 30, connects to 3 communities
+- [[TestSecurityE2E]] - degree 19, connects to 3 communities
+- [[.test_security_monitoring_and_alerts()]] - degree 10, connects to 3 communities
+- [[.test_security_attack_simulation()]] - degree 7, connects to 3 communities

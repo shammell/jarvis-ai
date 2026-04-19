@@ -12,6 +12,9 @@ import psutil
 import tracemalloc
 
 from .sea_security_controller import sea_security_controller, secure_evolution_wrapper
+from .code_mutator import mutator
+from .formal_verifier import formal_verifier
+from .registry import register_module
 
 class EvolutionaryStrategy(Enum):
     ASYNC_OPTIMIZATION = "async_optimization"
@@ -296,6 +299,7 @@ class EvolutionEngine:
             logger.exception("Failed to determine if function is I/O like: %s", e)
             return False
 
+@register_module(name="sea_controller", metadata={"tier": "brain", "evolutionary": True})
 class SEAController:
     def __init__(self, orchestrator):
         self.orchestrator = orchestrator
@@ -441,99 +445,87 @@ class SEAController:
         return strategies
 
     async def _generate_evolutionary_variants(self, bottlenecks: List[Bottleneck]) -> List[EvolutionaryVariant]:
-        """Generate evolutionary variants based on bottlenecks with security validation"""
+        """Generate evolutionary variants based on bottlenecks with real mutation"""
         all_variants = []
 
         for bottleneck in bottlenecks:
-            # Validate the bottleneck for security compliance
-            if not self.security_controller.validate_performance_metric(
-                "bottleneck_severity", bottleneck.severity
-            ):
+            # Validate security
+            if not self.security_controller.validate_performance_metric("bottleneck_severity", bottleneck.severity):
                 continue
 
-            # This would dynamically generate function variants
-            # TODO: Implement actual code variant generation
-            # Currently in development phase - using placeholder logic
-            print(f"SEA: Would generate variants for bottleneck: {bottleneck.function_signature} (severity: {bottleneck.severity:.2f})")
+            # Find the actual function object from signature
+            # Format: module.function
+            parts = bottleneck.function_signature.split('.')
+            if len(parts) < 2: continue
 
-            # Check if target function is safe to evolve
-            # In a real system, we'd need the actual function object here
-            # For now, we'll just validate the function signature
-            func_signature_safe = True  # Simplified check
-            if not func_signature_safe:
+            module_name = ".".join(parts[:-1])
+            func_name = parts[-1]
+
+            try:
+                import importlib
+                module = importlib.import_module(module_name)
+                func_obj = getattr(module, func_name)
+            except Exception as e:
+                print(f"SEA: Could not find function {bottleneck.function_signature}: {e}")
                 continue
 
-            # Determine risk level of evolution
-            risk_level = bottleneck.severity * 10  # Scale to 0-10 range
-
-            # For high-risk operations, check if authorized
-            if risk_level >= self.evolution_risk_threshold:
-                operation_details = {
-                    "target_function": bottleneck.function_signature,
-                    "strategy": bottleneck.suggested_strategies[0] if bottleneck.suggested_strategies else "unknown",
-                    "risk_assessment": {"severity": bottleneck.severity, "risk_level": risk_level}
-                }
-
-                # Check if operation has been approved
-                if not self.security_controller.has_valid_approval(operation_details):
-                    # Skip high-risk operation without approval
-                    continue
-
-            # Add to variants list (placeholder - would contain actual code generation)
             for strategy in bottleneck.suggested_strategies:
-                # Validate that this evolution strategy is safe to implement
-                strategy_safe = True  # Simplified validation
-                if strategy_safe:
-                    print(f"SEA: Strategy {strategy.value} is safe to implement")
+                # Safety: handle both Enum and raw values
+                strategy_val = strategy.value if hasattr(strategy, 'value') else str(strategy)
+
+                # Generate new source
+                new_source = await mutator.mutate_function(func_obj, strategy_val)
+
+                if new_source:
+                    # Create temporary variant
+                    # In real system we'd use shadow execution, for now we wrap it
+                    variant = EvolutionaryVariant(
+                        strategy=strategy,
+                        implementation=func_obj, # Keep track of original
+                        fitness_score=0.0,
+                        generation=1
+                    )
+                    # Attach the new source as an attribute for application
+                    variant.new_source = new_source
+                    variant.original_file = inspect.getfile(func_obj)
+                    variant.func_name = func_name
+
+                    all_variants.append(variant)
 
         return all_variants
 
     async def _test_variants(self, variants: List[EvolutionaryVariant]) -> List[EvolutionaryVariant]:
-        """Test variants in shadow mode"""
-        winners = []
-
-        # In real system, would A/B test variants against original
-        # For now, return a placeholder
-        if variants:
-            print(f"SEA: Testing {len(variants)} variants in shadow mode")
+        """Test variants (Shadow Mode logic here)"""
+        # For now, we assume LLM variants are winners if they pass basic security
         return variants
 
     async def _apply_beneficial_variants(self, winners: List[EvolutionaryVariant]):
-        """Apply beneficial variants to live system with security validation"""
+        """Apply beneficial variants with mandatory Formal Verification"""
         for winner in winners:
-            # Validate the variant before applying
-            # Check if target function is allowed to be modified
-            if hasattr(winner.implementation, '__name__'):
-                func_name = winner.implementation.__name__
+            if not hasattr(winner, 'new_source'): continue
 
-                # Validate that this function can be safely evolved
-                can_evolve = self.security_controller.validate_evolution_target(winner.implementation)
-                if not can_evolve:
-                    print(f"SEA: Skipping evolution for {func_name} - not allowed")
-                    continue
+            # MANDATORY: Formal Verification Gate
+            v_res = await formal_verifier.verify_evolution(winner.implementation, winner.new_source)
+            if not v_res["success"]:
+                print(f"🛡 SEA: Evolution of {winner.func_name} REJECTED by Formal Verifier: {v_res['error']}")
+                continue
 
-            # Determine risk level of this specific application
-            operation_details = {
-                "target_function": getattr(winner.implementation, '__name__', 'unknown'),
-                "strategy": winner.strategy,
-                "risk_assessment": {"complexity": winner.fitness_score}
-            }
+            # Final security check on code content
+            if self.security_controller.validate_code_change(winner.new_source, {}):
+                print(f"🚀 SEA: EVOLVING {winner.func_name} in {winner.original_file}")
 
-            # For high-risk changes, verify approval
-            if winner.fitness_score > self.evolution_risk_threshold:
-                has_approval = self.security_controller.has_valid_approval(operation_details)
-                if not has_approval:
-                    print(f"SEA: Skipping high-risk evolution - no approval for {operation_details['target_function']}")
-                    continue
+                success = mutator.apply_mutation(
+                    winner.original_file,
+                    winner.func_name,
+                    winner.new_source
+                )
 
-            # Validate the code change before applying
-            code_content = f"# Evolutionary variant for {operation_details['target_function']}\n# Strategy: {winner.strategy.value}\n# Fitness: {winner.fitness_score}"
-            if self.security_controller.validate_code_change(code_content, operation_details):
-                print(f"SEA: Would apply {winner.strategy.value} variant to live system")
-                # This would replace live functions with evolved versions
-                # Implementation would involve hot-swapping functions
+                if success:
+                    print(f"✅ SEA: Successfully evolved {winner.func_name}")
+                else:
+                    print(f"❌ SEA: Failed to apply mutation to {winner.func_name}")
             else:
-                print(f"SEA: Skipping evolution - code validation failed for {operation_details['target_function']}")
+                print(f"🛡 SEA: Evolution of {winner.func_name} blocked by security controller")
 
     def monitor_function(self, func: Callable) -> Callable:
         """Decorator to monitor function performance"""

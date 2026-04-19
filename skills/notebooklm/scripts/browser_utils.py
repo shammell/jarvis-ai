@@ -22,8 +22,11 @@ class BrowserFactory:
         user_data_dir: str = str(BROWSER_PROFILE_DIR)
     ) -> BrowserContext:
         """
-        Launch a persistent browser context with anti-detection features
-        and cookie workaround.
+        Launch a persistent browser context.
+
+        RATIONALE: Persistence is required to maintain session state across
+        individual skill executions, preventing repeated login flows and
+        reducing detection risk by bot-mitigation systems.
         """
         # Launch persistent context
         context = playwright.chromium.launch_persistent_context(
@@ -44,7 +47,12 @@ class BrowserFactory:
 
     @staticmethod
     def _inject_cookies(context: BrowserContext):
-        """Inject cookies from state.json if available"""
+        """
+        Inject cookies from state.json if available.
+
+        RATIONALE: Workaround for Playwright session persistence issues where
+        non-expiring cookies are not automatically committed to the profile disk.
+        """
         if STATE_FILE.exists():
             try:
                 with open(STATE_FILE, 'r') as f:

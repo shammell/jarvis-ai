@@ -12,6 +12,10 @@ import json
 
 logger = logging.getLogger(__name__)
 
+# Clear proxy env vars to prevent Groq SDK TypeError
+for _k in ("HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy", "ALL_PROXY", "all_proxy"):
+    os.environ.pop(_k, None)
+
 
 class LocalLLMFallback:
     """
@@ -154,6 +158,9 @@ class HybridLLMManager:
 
         # Initialize Groq
         try:
+            # Clear proxy env vars that crash Groq SDK
+            for k in ("HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy", "ALL_PROXY", "all_proxy"):
+                os.environ.pop(k, None)
             from groq import Groq
             self.groq_client = Groq(api_key=self.groq_api_key)
             self.groq_available = True

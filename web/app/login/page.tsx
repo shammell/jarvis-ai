@@ -33,6 +33,10 @@ export default function LoginPage() {
         setError(error.message)
       } else if (data.session) {
         router.push('/chat')
+      } else if (data.user && !data.session) {
+        setError('Check your email for confirmation link')
+      } else {
+        setError('Login failed — please try again')
       }
     } catch (err: any) {
       setError(err.message)

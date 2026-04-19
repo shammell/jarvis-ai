@@ -1,0 +1,541 @@
+---
+type: community
+members: 459
+---
+
+# Community 2
+
+**Members:** 459 nodes
+
+## Members
+- [[.__init__()_143]] - code - skills\instagram\scripts\api_client.py
+- [[.__init__()_144]] - code - skills\instagram\scripts\api_client.py
+- [[.__init__()_145]] - code - skills\skill-sentinel\scripts\db.py
+- [[.__init__()_146]] - code - skills\instagram\scripts\governance.py
+- [[.__init__()_147]] - code - skills\instagram\scripts\governance.py
+- [[.__init__()_173]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[.__init__()_175]] - code - skills\skill-sentinel\scripts\governance.py
+- [[.__init__()_176]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[._analyze_skill()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[._connect()]] - code - skills\skill-sentinel\scripts\db.py
+- [[._find_skill_dirs()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[._format_confirmation_message()]] - code - skills\instagram\scripts\governance.py
+- [[._get_client()]] - code - skills\instagram\scripts\api_client.py
+- [[._request()]] - code - skills\instagram\scripts\api_client.py
+- [[._search_recursive()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[.check_container_status()]] - code - skills\instagram\scripts\api_client.py
+- [[.check_rate_limit()_1]] - code - skills\instagram\scripts\governance.py
+- [[.close()]] - code - skills\instagram\scripts\api_client.py
+- [[.complete_audit_run()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.count_findings_by_severity()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.count_hashtag_searches_last_week()]] - code - skills\instagram\scripts\db.py
+- [[.count_publishes_today()]] - code - skills\instagram\scripts\db.py
+- [[.count_requests_last_hour()]] - code - skills\instagram\scripts\db.py
+- [[.create_audit_run()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.create_confirmation_request()]] - code - skills\instagram\scripts\governance.py
+- [[.create_media_container()]] - code - skills\instagram\scripts\api_client.py
+- [[.delete()]] - code - skills\instagram\scripts\api_client.py
+- [[.delete_comment()]] - code - skills\instagram\scripts\api_client.py
+- [[.delete_template()]] - code - skills\instagram\scripts\db.py
+- [[.discover_all()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[.discover_skill()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[.do_GET()]] - code - skills\instagram\scripts\auth.py
+- [[.dump_all_json()]] - code - skills\junta-leiloeiros\scripts\db.py
+- [[.execute()_12]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[.get()_1]] - code - skills\instagram\scripts\api_client.py
+- [[.get_account_by_id()]] - code - skills\instagram\scripts\db.py
+- [[.get_active_account()]] - code - skills\instagram\scripts\db.py
+- [[.get_all()]] - code - skills\junta-leiloeiros\scripts\db.py
+- [[.get_audit_runs()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.get_by_estado()]] - code - skills\junta-leiloeiros\scripts\db.py
+- [[.get_comments()]] - code - skills\instagram\scripts\api_client.py
+- [[.get_comments()_1]] - code - skills\instagram\scripts\db.py
+- [[.get_confirmation_category()]] - code - skills\instagram\scripts\governance.py
+- [[.get_conversations()]] - code - skills\instagram\scripts\api_client.py
+- [[.get_customers()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[.get_findings_for_run()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.get_hashtag_recent_media()]] - code - skills\instagram\scripts\api_client.py
+- [[.get_hashtag_top_media()]] - code - skills\instagram\scripts\api_client.py
+- [[.get_latest_completed_run()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.get_latest_snapshot()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.get_media_details()]] - code - skills\instagram\scripts\api_client.py
+- [[.get_media_insights()]] - code - skills\instagram\scripts\api_client.py
+- [[.get_mentions()]] - code - skills\instagram\scripts\api_client.py
+- [[.get_orders()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[.get_post_by_id()]] - code - skills\instagram\scripts\db.py
+- [[.get_posts()]] - code - skills\instagram\scripts\db.py
+- [[.get_posts_for_publishing()]] - code - skills\instagram\scripts\db.py
+- [[.get_products()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[.get_rate_status()]] - code - skills\instagram\scripts\governance.py
+- [[.get_recent_actions()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.get_recent_actions()_1]] - code - skills\skill-sentinel\scripts\governance.py
+- [[.get_recommendations_for_run()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.get_score_trend()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.get_snapshots_for_run()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.get_stats()_19]] - code - skills\skill-sentinel\scripts\db.py
+- [[.get_template_by_name()]] - code - skills\instagram\scripts\db.py
+- [[.get_templates()]] - code - skills\instagram\scripts\db.py
+- [[.get_total()]] - code - skills\junta-leiloeiros\scripts\db.py
+- [[.get_user_insights()]] - code - skills\instagram\scripts\api_client.py
+- [[.get_user_media()]] - code - skills\instagram\scripts\api_client.py
+- [[.get_user_profile()]] - code - skills\instagram\scripts\api_client.py
+- [[.insert_finding()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.insert_findings_batch()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.insert_hashtag_search()]] - code - skills\instagram\scripts\db.py
+- [[.insert_insights()]] - code - skills\instagram\scripts\db.py
+- [[.insert_post()]] - code - skills\instagram\scripts\db.py
+- [[.insert_recommendation()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.insert_score_history()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.insert_skill_snapshot()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.insert_user_insights()]] - code - skills\instagram\scripts\db.py
+- [[.is_permission_error()]] - code - skills\instagram\scripts\api_client.py
+- [[.is_rate_limit()]] - code - skills\instagram\scripts\api_client.py
+- [[.log_action()]] - code - skills\skill-sentinel\scripts\db.py
+- [[.log_action()_1]] - code - skills\instagram\scripts\governance.py
+- [[.log_action()_2]] - code - skills\skill-sentinel\scripts\governance.py
+- [[.log_audit_complete()]] - code - skills\skill-sentinel\scripts\governance.py
+- [[.log_audit_start()]] - code - skills\skill-sentinel\scripts\governance.py
+- [[.log_message()]] - code - skills\instagram\scripts\auth.py
+- [[.log_recommendation()]] - code - skills\skill-sentinel\scripts\governance.py
+- [[.paginate_orders()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[.paginate_products()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[.post()]] - code - skills\instagram\scripts\api_client.py
+- [[.publish_media()]] - code - skills\instagram\scripts\api_client.py
+- [[.reply_to_comment()_1]] - code - skills\instagram\scripts\api_client.py
+- [[.requires_confirmation()]] - code - skills\instagram\scripts\governance.py
+- [[.search_hashtag()]] - code - skills\instagram\scripts\api_client.py
+- [[.send_message()_1]] - code - skills\instagram\scripts\api_client.py
+- [[.set_metafields()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[.to_dict()_5]] - code - skills\instagram\scripts\governance.py
+- [[.update_post_status()]] - code - skills\instagram\scripts\db.py
+- [[.update_token()]] - code - skills\instagram\scripts\db.py
+- [[.upload_to_imgur()]] - code - skills\instagram\scripts\api_client.py
+- [[.upsert_account()]] - code - skills\instagram\scripts\db.py
+- [[.upsert_comments()]] - code - skills\instagram\scripts\db.py
+- [[.upsert_many()]] - code - skills\junta-leiloeiros\scripts\db.py
+- [[.upsert_template()]] - code - skills\instagram\scripts\db.py
+- [[111.py]] - code - skills\loki-mode\benchmarks\results\2026-01-05-00-49-17\humaneval-solutions\111.py
+- [[111.py_1]] - code - skills\loki-mode\benchmarks\results\humaneval-loki-solutions\111.py
+- [[API REST para consulta de leiloeiros das Juntas Comerciais do Brasil.  Uso]] - rationale - skills\junta-leiloeiros\scripts\serve_api.py
+- [[Analisa melhores horários para postar baseado em engajamento.]] - rationale - skills\instagram\scripts\analyze.py
+- [[Analisa padroes cross-skill. Diferente dos outros analyzers,     recebe TODAS a]] - rationale - skills\skill-sentinel\scripts\analyzers\cross_skill.py
+- [[Analisa tendência de crescimento.]] - rationale - skills\instagram\scripts\analyze.py
+- [[Analisa uma skill e retorna metadados completos.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Analytics e insights do Instagram.  Uso     python scriptsinsights.py --med]] - rationale - skills\instagram\scripts\insights.py
+- [[Analyzer cross-skill.  Identifica padroes compartilhados entre skills que pode]] - rationale - skills\skill-sentinel\scripts\analyzers\cross_skill.py
+- [[Análise inteligente de dados do Instagram (SQL puro, sem dependências externas).]] - rationale - skills\instagram\scripts\analyze.py
+- [[Aplica variáveis a um template de caption.]] - rationale - skills\instagram\scripts\publish.py
+- [[Aprova um rascunho para publicação.]] - rationale - skills\instagram\scripts\publish.py
+- [[Atualiza status de um post e campos adicionais.]] - rationale - skills\instagram\scripts\db.py
+- [[Auto-governanca do Sentinel.  Registra todas as acoes do sentinel em audit log]] - rationale - skills\skill-sentinel\scripts\governance.py
+- [[BaseHTTPRequestHandler]] - code
+- [[Build Shopify GID from resource type and ID.      Args         resource_type]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Busca detalhes de uma mídia específica.]] - rationale - skills\instagram\scripts\api_client.py
+- [[Busca e exibe perfil do Instagram.]] - rationale - skills\instagram\scripts\profile.py
+- [[Busca informações do perfil da conta Instagram.]] - rationale - skills\instagram\scripts\api_client.py
+- [[Busca insights da conta.]] - rationale - skills\instagram\scripts\insights.py
+- [[Busca insights de todos os posts recentes.]] - rationale - skills\instagram\scripts\insights.py
+- [[Busca insights de um post específico.]] - rationale - skills\instagram\scripts\insights.py
+- [[Busca o ID de uma hashtag.]] - rationale - skills\instagram\scripts\api_client.py
+- [[Busca posts com uma hashtag.]] - rationale - skills\instagram\scripts\hashtags.py
+- [[Busca recursiva por SKILL.md com limite de profundidade.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Busca templates por palavras-chave nas tags.]] - rationale - skills\ai-studio-image\scripts\templates.py
+- [[CLI principal do Sentinel orquestra a auditoria completa do ecossistema.  Uso]] - rationale - skills\skill-sentinel\scripts\run_audit.py
+- [[Calcula score composto ponderado.]] - rationale - skills\skill-sentinel\scripts\run_audit.py
+- [[Camada de persistencia SQLite para a skill Sentinel.  Armazena auditorias, fin]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Cancela um post (move para status cancelled).]] - rationale - skills\instagram\scripts\schedule.py
+- [[Cliente da Instagram Graph API com retry, rate limiting e logging integrados.]] - rationale - skills\instagram\scripts\api_client.py
+- [[Configuração e verificação de conta Instagram.  Uso     python scriptsaccou]] - rationale - skills\instagram\scripts\account_setup.py
+- [[Conta findings por severidade.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Conta linhas de um arquivo de texto.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Conta publicações hoje (para rate limiting).]] - rationale - skills\instagram\scripts\db.py
+- [[Conta requests na última hora (para rate limiting).]] - rationale - skills\instagram\scripts\db.py
+- [[Container for GraphQL response data.]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Converte imagem para JPEG se necessário.]] - rationale - skills\instagram\scripts\publish.py
+- [[Cria container de mídia (step 1 do publish).]] - rationale - skills\instagram\scripts\api_client.py
+- [[Cria ou atualiza um template.]] - rationale - skills\instagram\scripts\templates.py
+- [[Cria tabelas e indices se nao existirem.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Cria tabelas e índices se não existirem.]] - rationale - skills\instagram\scripts\db.py
+- [[Cria tabelas e índices se não existirem._1]] - rationale - skills\junta-leiloeiros\scripts\db.py
+- [[Cria um novo post (draft por padrão). Retorna o id.]] - rationale - skills\instagram\scripts\db.py
+- [[Cria um pedido de confirmação para o Claude apresentar ao usuário.         Reto]] - rationale - skills\instagram\scripts\governance.py
+- [[Cria uma nova execucao de auditoria. Retorna o id.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Database]] - code - skills\skill-sentinel\scripts\db.py
+- [[Deleta um comentário.]] - rationale - skills\instagram\scripts\comments.py
+- [[Descobre e inventaria skills no ecossistema.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Descobre o Instagram BusinessCreator account via Facebook Pages.     Retorna]] - rationale - skills\instagram\scripts\auth.py
+- [[Descobre todas as skills, retornando metadados enriquecidos.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Descobre uma skill especifica pelo nome.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Detalhes de uma mídia específica.]] - rationale - skills\instagram\scripts\media.py
+- [[Detect project type and available linters.]] - rationale - skills\lint-and-validate\scripts\lint_runner.py
+- [[Detecta tipo de conta e status.]] - rationale - skills\instagram\scripts\account_setup.py
+- [[Encontra diretorios que contem SKILL.md.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Envia DM para um usuário.]] - rationale - skills\instagram\scripts\messages.py
+- [[Erro da Instagram Graph API.]] - rationale - skills\instagram\scripts\api_client.py
+- [[Example usage of ShopifyGraphQL client.]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Excecao quando rate limit e excedido.]] - rationale - skills\leiloeiro-risco\scripts\governance.py
+- [[Exception]] - code
+- [[Executa a publicação de foto (2-step).]] - rationale - skills\instagram\scripts\publish.py
+- [[Executa auditoria completa. Retorna dict com resultados.]] - rationale - skills\skill-sentinel\scripts\run_audit.py
+- [[Executa publicação após confirmação do usuário.]] - rationale - skills\instagram\scripts\publish.py
+- [[Executa todos os analyzers em uma skill e retorna resultados.]] - rationale - skills\skill-sentinel\scripts\run_audit.py
+- [[Execute a GraphQL querymutation.          Args             query GraphQL q]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Exportação de dados de leiloeiros para diferentes formatos.  Uso     python]] - rationale - skills\junta-leiloeiros\scripts\export.py
+- [[Extract numeric ID from Shopify GID.      Args         gid Global ID (e.g.,]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Extrai frontmatter YAML simples de um arquivo SKILL.md.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Extrai informacoes de funcoesclasses via AST.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Faz request à Graph API com retry, rate limiting e logging.]] - rationale - skills\instagram\scripts\api_client.py
+- [[Faz upload de arquivo local para o Imgur (anônimo).         Retorna a URL públi]] - rationale - skills\instagram\scripts\api_client.py
+- [[Fluxo completo de setup OAuth.]] - rationale - skills\instagram\scripts\auth.py
+- [[Formata mensagem de confirmação legível.]] - rationale - skills\instagram\scripts\governance.py
+- [[Formata score como string.]] - rationale - skills\skill-sentinel\scripts\report_generator.py
+- [[Força renovação do token.]] - rationale - skills\instagram\scripts\auth.py
+- [[Generator that yields all orders with automatic pagination.          Args]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Generator that yields all products with automatic pagination.          Args]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Gera confirmation_request para acoes de alto risco.]] - rationale - skills\leiloeiro-risco\scripts\governance.py
+- [[Gera relatorio Markdown completo.]] - rationale - skills\skill-sentinel\scripts\report_generator.py
+- [[Gerador de relatorios Markdown.  Produz relatorio estruturado com resumo execu]] - rationale - skills\skill-sentinel\scripts\report_generator.py
+- [[Gerencia rate limits, logging e confirmações.]] - rationale - skills\instagram\scripts\governance.py
+- [[Gestão de comentários do Instagram.  Uso     python scriptscomments.py --li]] - rationale - skills\instagram\scripts\comments.py
+- [[Given a string representing a space separated lowercase letters, return a dictio]] - rationale - skills\loki-mode\benchmarks\results\2026-01-05-00-49-17\humaneval-solutions\111.py
+- [[Given a string representing a space separated lowercase letters, return a dictio_1]] - rationale - skills\loki-mode\benchmarks\results\humaneval-loki-solutions\111.py
+- [[GovernanceManager]] - code - skills\instagram\scripts\governance.py
+- [[GraphQLResponse]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[Info de uma hashtag (apenas o ID — media_count requer permissões especiais).]] - rationale - skills\instagram\scripts\hashtags.py
+- [[Inicia servidor local e espera pelo código de autorização.]] - rationale - skills\instagram\scripts\auth.py
+- [[Initialize the GraphQL client.          Args             shop_domain Store]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Insere multiplos findings de uma vez.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Insere ou atualiza conta. Retorna o id da conta.]] - rationale - skills\instagram\scripts\db.py
+- [[Insere ou atualiza registros.         Registros sem matrícula são inseridos sem]] - rationale - skills\junta-leiloeiros\scripts\db.py
+- [[Insere snapshot de uma skill. Retorna o id.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Insere um finding. Retorna o id.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[InstagramAPI]] - code - skills\instagram\scripts\api_client.py
+- [[InstagramAPIError]] - code - skills\instagram\scripts\api_client.py
+- [[Limite de taxa excedido.]] - rationale - skills\instagram\scripts\governance.py
+- [[Lista comentários de um post.]] - rationale - skills\instagram\scripts\comments.py
+- [[Lista conversas recentes.]] - rationale - skills\instagram\scripts\messages.py
+- [[Lista mídia do usuário com paginação.]] - rationale - skills\instagram\scripts\api_client.py
+- [[Lista mídia do usuário.]] - rationale - skills\instagram\scripts\media.py
+- [[Lista posts pendentes.]] - rationale - skills\instagram\scripts\schedule.py
+- [[Lista templates disponiveis, opcionalmente filtrados por modo.]] - rationale - skills\ai-studio-image\scripts\templates.py
+- [[Lista todos os .py dentro de um diretorio (recursivo).]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Lista todos os templates.]] - rationale - skills\instagram\scripts\templates.py
+- [[Lista top posts por engajamento.]] - rationale - skills\instagram\scripts\analyze.py
+- [[Listagem e detalhes de mídia do Instagram.  Uso     python scriptsmedia.py]] - rationale - skills\instagram\scripts\media.py
+- [[Marca uma auditoria como completa.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Mensagens diretas do Instagram (DMs).  Uso     python scriptsmessages.py --]] - rationale - skills\instagram\scripts\messages.py
+- [[Mostra comentários não respondidos.]] - rationale - skills\instagram\scripts\comments.py
+- [[Mostra detalhes de um template.]] - rationale - skills\instagram\scripts\templates.py
+- [[Mostra guia de setupmigração.]] - rationale - skills\instagram\scripts\account_setup.py
+- [[Mostra historico de auditorias.]] - rationale - skills\skill-sentinel\scripts\run_audit.py
+- [[Mostra mensagens de uma conversa.]] - rationale - skills\instagram\scripts\messages.py
+- [[Mostra menções recentes.]] - rationale - skills\instagram\scripts\comments.py
+- [[Mostra status da autenticação.]] - rationale - skills\instagram\scripts\auth.py
+- [[OAuthCallbackHandler]] - code - skills\instagram\scripts\auth.py
+- [[Orquestrador de publicação processa posts approvedscheduled.  Uso     pyth]] - rationale - skills\instagram\scripts\schedule.py
+- [[Orquestrador de scraping — coleta dados de todas as 27 Juntas Comerciais do Bras]] - rationale - skills\junta-leiloeiros\scripts\run_all.py
+- [[Parse requirements.txt se existir.]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Pesquisa e tracking de hashtags do Instagram.  Uso     python scriptshashta]] - rationale - skills\instagram\scripts\hashtags.py
+- [[Posts aprovadosagendados prontos para publicar.]] - rationale - skills\instagram\scripts\db.py
+- [[Preview de um template com variáveis aplicadas.]] - rationale - skills\instagram\scripts\templates.py
+- [[Processa todos os posts approvedscheduled prontos para publicar.]] - rationale - skills\instagram\scripts\schedule.py
+- [[Publica carrossel de imagens.]] - rationale - skills\instagram\scripts\publish.py
+- [[Publica um container (step 2 do publish).]] - rationale - skills\instagram\scripts\api_client.py
+- [[Publica vídeo, reel ou story de vídeo.]] - rationale - skills\instagram\scripts\publish.py
+- [[Publicação de conteúdo no Instagram.  Suporta foto, vídeo, reel, story, carro]] - rationale - skills\instagram\scripts\publish.py
+- [[Query customers with pagination.          Args             first Number of]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Query orders with pagination.          Args             first Number of ord]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Query products with pagination.          Args             first Number of p]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[RateLimitExceeded]] - code - skills\leiloeiro-risco\scripts\governance.py
+- [[Registra acao no action_log para auditoria.]] - rationale - skills\leiloeiro-risco\scripts\governance.py
+- [[Registra acoes do sentinel para auditabilidade.]] - rationale - skills\skill-sentinel\scripts\governance.py
+- [[Registra uma acao no audit log.]] - rationale - skills\skill-sentinel\scripts\governance.py
+- [[Registra uma ação no audit log.]] - rationale - skills\instagram\scripts\governance.py
+- [[Renova um long-lived token (deve ter mais de 24hr e menos de 60 dias).]] - rationale - skills\instagram\scripts\auth.py
+- [[Responde a um comentário.]] - rationale - skills\instagram\scripts\comments.py
+- [[Resumo geral da conta.]] - rationale - skills\instagram\scripts\analyze.py
+- [[Retorna (records, name) para o tipo de dados.]] - rationale - skills\instagram\scripts\export.py
+- [[Retorna a categoria de confirmação de uma ação.]] - rationale - skills\instagram\scripts\governance.py
+- [[Retorna a conta ativa (primeira ativa encontrada).]] - rationale - skills\instagram\scripts\db.py
+- [[Retorna a ultima auditoria completa.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Retorna acoes recentes do audit_log.]] - rationale - skills\leiloeiro-risco\scripts\governance.py
+- [[Retorna contagem de leiloeiros por estado.]] - rationale - skills\junta-leiloeiros\scripts\db.py
+- [[Retorna estatisticas gerais do sentinel.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Retorna estatísticas gerais do banco.]] - rationale - skills\instagram\scripts\db.py
+- [[Retorna historico de scores para uma skilldimensao.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Retorna indicador textual de severidade.]] - rationale - skills\skill-sentinel\scripts\report_generator.py
+- [[Retorna label textual para um score numerico.]] - rationale - skills\skill-sentinel\scripts\config.py
+- [[Retorna o snapshot mais recente de uma skill.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Retorna registros com filtros opcionais.]] - rationale - skills\junta-leiloeiros\scripts\db.py
+- [[Retorna status atual de todos os rate limits.]] - rationale - skills\instagram\scripts\governance.py
+- [[Retorna todos os dados como string JSON.]] - rationale - skills\junta-leiloeiros\scripts\db.py
+- [[Retorna ultimas auditorias.]] - rationale - skills\skill-sentinel\scripts\db.py
+- [[Retorna um template pelo nome.]] - rationale - skills\ai-studio-image\scripts\templates.py
+- [[Run a single linter and return results.]] - rationale - skills\lint-and-validate\scripts\lint_runner.py
+- [[Salva relatorio em arquivo e retorna o path.]] - rationale - skills\skill-sentinel\scripts\report_generator.py
+- [[Scanner de skills descobre e inventaria todas as skills do ecossistema.  Perc]] - rationale - skills\skill-sentinel\scripts\scanner.py
+- [[Scrapa um estado e retorna resultado com metadados.]] - rationale - skills\junta-leiloeiros\scripts\run_all.py
+- [[Se for arquivo local, faz upload no Imgur e retorna URL pública.]] - rationale - skills\instagram\scripts\publish.py
+- [[SentinelGovernance]] - code - skills\skill-sentinel\scripts\governance.py
+- [[Servidor HTTP mínimo para capturar o callback OAuth.]] - rationale - skills\instagram\scripts\auth.py
+- [[Set metafields on resources.          Args             metafields List of m]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[Shopify GraphQL API client with built-in utilities.      Features     - Quer]] - rationale - skills\shopify-development\scripts\shopify_graphql.py
+- [[ShopifyGraphQL]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[SkillScanner]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[Sync comentários dos posts recentes.]] - rationale - skills\instagram\scripts\run_all.py
+- [[Sync insights dos posts recentes.]] - rationale - skills\instagram\scripts\run_all.py
+- [[Templates reutilizáveis de conteúdo para Instagram.  Uso     python scripts]] - rationale - skills\instagram\scripts\templates.py
+- [[Troca authorization code por short-lived token (~1hr).]] - rationale - skills\instagram\scripts\auth.py
+- [[Troca short-lived token por long-lived token (60 dias).]] - rationale - skills\instagram\scripts\auth.py
+- [[Verifica rate limits antes de uma ação.         Retorna dict com remaining e wa]] - rationale - skills\instagram\scripts\governance.py
+- [[Verifica rate_limit — retorna True se dentro do limite.]] - rationale - skills\leiloeiro-risco\scripts\governance.py
+- [[Verifica se o token está próximo de expirar ( 7 dias) e renova.     Retorna o]] - rationale - skills\instagram\scripts\auth.py
+- [[Verifica se todos os pré-requisitos estão OK.]] - rationale - skills\instagram\scripts\account_setup.py
+- [[Verifica se uma ação requer confirmação do usuário.]] - rationale - skills\instagram\scripts\governance.py
+- [[Verifica se é um arquivo local (não URL).]] - rationale - skills\instagram\scripts\publish.py
+- [[Verifica status de um container (usado para vídeos que precisam processar).]] - rationale - skills\instagram\scripts\api_client.py
+- [[Verifica warning_threshold e retorna warnings se ultrapassado.]] - rationale - skills\leiloeiro-risco\scripts\governance.py
+- [[Visualização e gestão do perfil Instagram.  Uso     python scriptsprofile.p]] - rationale - skills\instagram\scripts\profile.py
+- [[Wrapper da Instagram Graph API com governança integrada.]] - rationale - skills\instagram\scripts\api_client.py
+- [[_apply_template()]] - code - skills\instagram\scripts\publish.py
+- [[_compute_overall_score()]] - code - skills\skill-sentinel\scripts\run_audit.py
+- [[_connect()]] - code - skills\instagram\scripts\analyze.py
+- [[_convert_to_jpeg()]] - code - skills\instagram\scripts\publish.py
+- [[_count_lines()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[_do_publish_photo()]] - code - skills\instagram\scripts\publish.py
+- [[_extract_functions()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[_format_score()]] - code - skills\skill-sentinel\scripts\report_generator.py
+- [[_is_local_file()]] - code - skills\instagram\scripts\publish.py
+- [[_list_python_files()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[_parse_requirements()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[_parse_yaml_frontmatter()]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[_run_analyzers()]] - code - skills\skill-sentinel\scripts\run_audit.py
+- [[_severity_icon()]] - code - skills\skill-sentinel\scripts\report_generator.py
+- [[account_setup.py]] - code - skills\instagram\scripts\account_setup.py
+- [[analyze.py]] - code - skills\instagram\scripts\analyze.py
+- [[analyze_cross_skill()]] - code - skills\skill-sentinel\scripts\analyzers\cross_skill.py
+- [[api_client.py]] - code - skills\instagram\scripts\api_client.py
+- [[approve_post()]] - code - skills\instagram\scripts\publish.py
+- [[auth.py_1]] - code - skills\instagram\scripts\auth.py
+- [[auto_refresh_if_needed()]] - code - skills\instagram\scripts\auth.py
+- [[best_times()]] - code - skills\instagram\scripts\analyze.py
+- [[best_times()_1]] - code - skills\instagram\scripts\serve_api.py
+- [[build_gid()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[busca()]] - code - skills\junta-leiloeiros\scripts\serve_api.py
+- [[cancel_post()]] - code - skills\instagram\scripts\schedule.py
+- [[check_account()]] - code - skills\instagram\scripts\account_setup.py
+- [[check_rate()]] - code - skills\leiloeiro-risco\scripts\governance.py
+- [[check_warning_threshold()]] - code - skills\leiloeiro-risco\scripts\governance.py
+- [[comments.py]] - code - skills\instagram\scripts\comments.py
+- [[config.py_6]] - code - skills\skill-sentinel\scripts\config.py
+- [[create_template()]] - code - skills\instagram\scripts\templates.py
+- [[cross_skill.py]] - code - skills\skill-sentinel\scripts\analyzers\cross_skill.py
+- [[dashboard()]] - code - skills\instagram\scripts\serve_api.py
+- [[db.py]] - code - skills\instagram\scripts\db.py
+- [[db.py_1]] - code - skills\junta-leiloeiros\scripts\db.py
+- [[db.py_2]] - code - skills\skill-sentinel\scripts\db.py
+- [[delete_comment()]] - code - skills\instagram\scripts\comments.py
+- [[delete_template()]] - code - skills\instagram\scripts\templates.py
+- [[detect_project_type()]] - code - skills\lint-and-validate\scripts\lint_runner.py
+- [[discover_instagram_account()]] - code - skills\instagram\scripts\auth.py
+- [[do_confirmed_publish()]] - code - skills\instagram\scripts\publish.py
+- [[do_export()]] - code - skills\instagram\scripts\export.py
+- [[do_refresh()]] - code - skills\instagram\scripts\auth.py
+- [[exchange_code_for_short_token()]] - code - skills\instagram\scripts\auth.py
+- [[exchange_for_long_lived_token()]] - code - skills\instagram\scripts\auth.py
+- [[export.py]] - code - skills\instagram\scripts\export.py
+- [[export.py_1]] - code - skills\junta-leiloeiros\scripts\export.py
+- [[export_csv()]] - code - skills\junta-leiloeiros\scripts\serve_api.py
+- [[export_csv()_1]] - code - skills\junta-leiloeiros\scripts\export.py
+- [[export_csv_file()]] - code - skills\instagram\scripts\export.py
+- [[export_json()]] - code - skills\junta-leiloeiros\scripts\export.py
+- [[export_json()_1]] - code - skills\junta-leiloeiros\scripts\serve_api.py
+- [[export_jsonl()]] - code - skills\junta-leiloeiros\scripts\export.py
+- [[export_parquet()]] - code - skills\junta-leiloeiros\scripts\export.py
+- [[extract_id()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[fetch_all_insights()]] - code - skills\instagram\scripts\insights.py
+- [[generate_report()]] - code - skills\skill-sentinel\scripts\report_generator.py
+- [[get()]] - code - skills\last30days\scripts\lib\http.py
+- [[get_data()]] - code - skills\instagram\scripts\export.py
+- [[get_recent_actions()]] - code - skills\leiloeiro-risco\scripts\governance.py
+- [[get_score_label()]] - code - skills\skill-sentinel\scripts\config.py
+- [[get_scraper()]] - code - skills\junta-leiloeiros\scripts\scraper\states.py
+- [[get_template()]] - code - skills\ai-studio-image\scripts\templates.py
+- [[governance.py]] - code - skills\instagram\scripts\governance.py
+- [[governance.py_1]] - code - skills\leiloeiro-avaliacao\scripts\governance.py
+- [[governance.py_2]] - code - skills\leiloeiro-edital\scripts\governance.py
+- [[governance.py_3]] - code - skills\leiloeiro-ia\scripts\governance.py
+- [[governance.py_4]] - code - skills\leiloeiro-juridico\scripts\governance.py
+- [[governance.py_5]] - code - skills\leiloeiro-mercado\scripts\governance.py
+- [[governance.py_6]] - code - skills\leiloeiro-risco\scripts\governance.py
+- [[governance.py_7]] - code - skills\skill-sentinel\scripts\governance.py
+- [[growth_trend()]] - code - skills\instagram\scripts\analyze.py
+- [[hashtag_info()]] - code - skills\instagram\scripts\hashtags.py
+- [[hashtags.py]] - code - skills\instagram\scripts\hashtags.py
+- [[histogram()]] - code - skills\loki-mode\benchmarks\results\humaneval-loki-solutions\111.py
+- [[insights.py]] - code - skills\instagram\scripts\insights.py
+- [[insights_summary()]] - code - skills\instagram\scripts\serve_api.py
+- [[is_success()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[leiloeiros_por_estado()]] - code - skills\junta-leiloeiros\scripts\serve_api.py
+- [[lint_runner.py]] - code - skills\lint-and-validate\scripts\lint_runner.py
+- [[list_comments()]] - code - skills\instagram\scripts\comments.py
+- [[list_comments()_1]] - code - skills\instagram\scripts\serve_api.py
+- [[list_conversations()]] - code - skills\instagram\scripts\messages.py
+- [[list_leiloeiros()]] - code - skills\junta-leiloeiros\scripts\serve_api.py
+- [[list_media()]] - code - skills\instagram\scripts\media.py
+- [[list_pending()]] - code - skills\instagram\scripts\schedule.py
+- [[list_posts()]] - code - skills\instagram\scripts\serve_api.py
+- [[list_templates()]] - code - skills\instagram\scripts\templates.py
+- [[list_templates()_1]] - code - skills\instagram\scripts\serve_api.py
+- [[log_action()]] - code - skills\leiloeiro-risco\scripts\governance.py
+- [[main()_15]] - code - skills\instagram\scripts\templates.py
+- [[main()_30]] - code - skills\go-rod-master\examples\request_hijacking.go
+- [[main()_33]] - code - skills\instagram\scripts\account_setup.py
+- [[main()_34]] - code - skills\instagram\scripts\analyze.py
+- [[main()_35]] - code - skills\instagram\scripts\auth.py
+- [[main()_36]] - code - skills\instagram\scripts\comments.py
+- [[main()_37]] - code - skills\junta-leiloeiros\scripts\export.py
+- [[main()_38]] - code - skills\instagram\scripts\hashtags.py
+- [[main()_39]] - code - skills\instagram\scripts\insights.py
+- [[main()_40]] - code - skills\instagram\scripts\media.py
+- [[main()_41]] - code - skills\instagram\scripts\messages.py
+- [[main()_42]] - code - skills\instagram\scripts\profile.py
+- [[main()_43]] - code - skills\instagram\scripts\publish.py
+- [[main()_44]] - code - skills\junta-leiloeiros\scripts\run_all.py
+- [[main()_45]] - code - skills\instagram\scripts\schedule.py
+- [[main()_46]] - code - skills\junta-leiloeiros\scripts\serve_api.py
+- [[main()_49]] - code - skills\lint-and-validate\scripts\lint_runner.py
+- [[main()_74]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[main()_81]] - code - skills\skill-sentinel\scripts\run_audit.py
+- [[media.py]] - code - skills\instagram\scripts\media.py
+- [[media_details()]] - code - skills\instagram\scripts\media.py
+- [[media_insights()]] - code - skills\instagram\scripts\insights.py
+- [[messages.py]] - code - skills\instagram\scripts\messages.py
+- [[overall_summary()]] - code - skills\instagram\scripts\analyze.py
+- [[preview_template()]] - code - skills\instagram\scripts\templates.py
+- [[process_pending()]] - code - skills\instagram\scripts\schedule.py
+- [[profile.py]] - code - skills\instagram\scripts\profile.py
+- [[publish.py]] - code - skills\instagram\scripts\publish.py
+- [[publish_carousel()]] - code - skills\instagram\scripts\publish.py
+- [[publish_photo()]] - code - skills\instagram\scripts\publish.py
+- [[publish_video()]] - code - skills\instagram\scripts\publish.py
+- [[query_cost()]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[recent_actions()]] - code - skills\instagram\scripts\serve_api.py
+- [[refresh_long_lived_token()]] - code - skills\instagram\scripts\auth.py
+- [[reply_to_comment()]] - code - skills\instagram\scripts\comments.py
+- [[report_generator.py]] - code - skills\skill-sentinel\scripts\report_generator.py
+- [[request_hijacking.go]] - code - skills\go-rod-master\examples\request_hijacking.go
+- [[requires_confirmation()]] - code - skills\leiloeiro-risco\scripts\governance.py
+- [[root()]] - code - skills\junta-leiloeiros\scripts\serve_api.py
+- [[run()_5]] - code - skills\instagram\scripts\publish.py
+- [[run()_6]] - code - skills\junta-leiloeiros\scripts\run_all.py
+- [[run_all.py]] - code - skills\instagram\scripts\run_all.py
+- [[run_all.py_1]] - code - skills\junta-leiloeiros\scripts\run_all.py
+- [[run_audit()_1]] - code - skills\skill-sentinel\scripts\run_audit.py
+- [[run_audit.py]] - code - skills\skill-sentinel\scripts\run_audit.py
+- [[run_linter()]] - code - skills\lint-and-validate\scripts\lint_runner.py
+- [[save_report()]] - code - skills\skill-sentinel\scripts\report_generator.py
+- [[scanner.py]] - code - skills\skill-sentinel\scripts\scanner.py
+- [[schedule.py]] - code - skills\instagram\scripts\schedule.py
+- [[scrape_state()]] - code - skills\junta-leiloeiros\scripts\run_all.py
+- [[search_hashtag()]] - code - skills\instagram\scripts\hashtags.py
+- [[search_templates()]] - code - skills\ai-studio-image\scripts\templates.py
+- [[send_message()_1]] - code - skills\instagram\scripts\messages.py
+- [[serve_api.py]] - code - skills\instagram\scripts\serve_api.py
+- [[serve_api.py_1]] - code - skills\junta-leiloeiros\scripts\serve_api.py
+- [[setup()_1]] - code - skills\instagram\scripts\auth.py
+- [[shopify_graphql.py]] - code - skills\shopify-development\scripts\shopify_graphql.py
+- [[show_guide()]] - code - skills\instagram\scripts\account_setup.py
+- [[show_history()]] - code - skills\skill-sentinel\scripts\run_audit.py
+- [[show_mentions()]] - code - skills\instagram\scripts\comments.py
+- [[show_status()]] - code - skills\instagram\scripts\auth.py
+- [[show_template()]] - code - skills\instagram\scripts\templates.py
+- [[show_thread()]] - code - skills\instagram\scripts\messages.py
+- [[show_unreplied()]] - code - skills\instagram\scripts\comments.py
+- [[stats()]] - code - skills\junta-leiloeiros\scripts\serve_api.py
+- [[sync_comments()]] - code - skills\instagram\scripts\run_all.py
+- [[sync_insights()]] - code - skills\instagram\scripts\run_all.py
+- [[sync_media()]] - code - skills\instagram\scripts\run_all.py
+- [[sync_profile()]] - code - skills\instagram\scripts\run_all.py
+- [[templates.py]] - code - skills\ai-studio-image\scripts\templates.py
+- [[templates.py_1]] - code - skills\instagram\scripts\templates.py
+- [[top_posts()]] - code - skills\instagram\scripts\analyze.py
+- [[upload_if_local()]] - code - skills\instagram\scripts\publish.py
+- [[user_insights()]] - code - skills\instagram\scripts\insights.py
+- [[verify_setup()]] - code - skills\instagram\scripts\account_setup.py
+- [[view_profile()]] - code - skills\instagram\scripts\profile.py
+- [[wait_for_oauth_code()]] - code - skills\instagram\scripts\auth.py
+- [[webhook_receive()]] - code - skills\instagram\scripts\serve_api.py
+- [[webhook_stub()]] - code - skills\instagram\scripts\serve_api.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_2
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 147 edges to [[_COMMUNITY_Community 1]]
+- 77 edges to [[_COMMUNITY_Community 0]]
+- 60 edges to [[_COMMUNITY_Community 11]]
+- 51 edges to [[_COMMUNITY_Community 9]]
+- 46 edges to [[_COMMUNITY_Community 8]]
+- 33 edges to [[_COMMUNITY_Community 10]]
+- 27 edges to [[_COMMUNITY_Community 13]]
+- 20 edges to [[_COMMUNITY_Community 23]]
+- 20 edges to [[_COMMUNITY_Community 14]]
+- 20 edges to [[_COMMUNITY_Community 24]]
+- 19 edges to [[_COMMUNITY_Community 5]]
+- 19 edges to [[_COMMUNITY_Community 25]]
+- 17 edges to [[_COMMUNITY_Community 7]]
+- 16 edges to [[_COMMUNITY_Community 6]]
+- 15 edges to [[_COMMUNITY_Community 4]]
+- 13 edges to [[_COMMUNITY_Community 16]]
+- 11 edges to [[_COMMUNITY_Community 15]]
+- 10 edges to [[_COMMUNITY_Community 32]]
+- 9 edges to [[_COMMUNITY_Community 37]]
+- 8 edges to [[_COMMUNITY_Community 19]]
+- 8 edges to [[_COMMUNITY_Community 17]]
+- 7 edges to [[_COMMUNITY_Community 3]]
+- 6 edges to [[_COMMUNITY_Community 18]]
+- 6 edges to [[_COMMUNITY_Community 12]]
+- 5 edges to [[_COMMUNITY_Community 21]]
+- 5 edges to [[_COMMUNITY_Community 40]]
+- 5 edges to [[_COMMUNITY_Community 34]]
+- 4 edges to [[_COMMUNITY_Community 43]]
+- 4 edges to [[_COMMUNITY_Community 47]]
+- 4 edges to [[_COMMUNITY_Community 20]]
+- 4 edges to [[_COMMUNITY_Community 64]]
+- 3 edges to [[_COMMUNITY_Community 33]]
+- 3 edges to [[_COMMUNITY_Community 38]]
+- 3 edges to [[_COMMUNITY_Community 49]]
+- 3 edges to [[_COMMUNITY_Community 31]]
+- 2 edges to [[_COMMUNITY_Community 59]]
+- 2 edges to [[_COMMUNITY_Community 42]]
+- 2 edges to [[_COMMUNITY_Community 69]]
+- 2 edges to [[_COMMUNITY_Community 52]]
+- 2 edges to [[_COMMUNITY_Community 28]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 1 edge to [[_COMMUNITY_Community 57]]
+- 1 edge to [[_COMMUNITY_Community 72]]
+- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 112]]
+- 1 edge to [[_COMMUNITY_Community 48]]
+- 1 edge to [[_COMMUNITY_Community 231]]
+- 1 edge to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 73]]
+- 1 edge to [[_COMMUNITY_Community 233]]
+- 1 edge to [[_COMMUNITY_Community 74]]
+- 1 edge to [[_COMMUNITY_Community 71]]
+- 1 edge to [[_COMMUNITY_Community 248]]
+- 1 edge to [[_COMMUNITY_Community 53]]
+- 1 edge to [[_COMMUNITY_Community 22]]
+
+## Top bridge nodes
+- [[get()]] - degree 591, connects to 56 communities
+- [[Exception]] - degree 21, connects to 10 communities
+- [[.execute()_12]] - degree 30, connects to 4 communities
+- [[.get_stats()_19]] - degree 18, connects to 4 communities
+- [[scrape_state()]] - degree 9, connects to 4 communities

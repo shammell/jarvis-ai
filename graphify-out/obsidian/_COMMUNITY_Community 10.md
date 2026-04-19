@@ -1,0 +1,238 @@
+---
+type: community
+members: 194
+---
+
+# Community 10
+
+**Members:** 194 nodes
+
+## Members
+- [[IMPORTANT Buffer entire response before yielding]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[TODO Replace with shell=False and proper argument parsing for security]] - rationale - skills\webapp-testing\scripts\with_server.py
+- [[.__init__()_159]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[.__init__()_160]] - code - skills\notebooklm\scripts\browser_session.py
+- [[.__init__()_183]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.__init__()_184]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.__init__()_185]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.__init__()_186]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.__init__()_187]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.__init__()_188]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.__init__()_189]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[.__init__()_190]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.__init__()_191]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.__init__()_192]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.__init__()_193]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[._build_gemini_contents()]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[._initialize()]] - code - skills\notebooklm\scripts\browser_session.py
+- [[._process_agent_responses()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[._process_transcriptions()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[._run_loop()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[._save_auth_info()]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[._save_browser_state()]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[._send_speech_to_output()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[._simulate_gemini_stream()]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[._snapshot_latest_response()]] - code - skills\notebooklm\scripts\browser_session.py
+- [[._wait_for_latest_answer()]] - code - skills\notebooklm\scripts\browser_session.py
+- [[._wait_for_ready()]] - code - skills\notebooklm\scripts\browser_session.py
+- [[.add_interruptible_event()]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.ask()]] - code - skills\notebooklm\scripts\browser_session.py
+- [[.broadcast_interrupt()]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.cancel_current_task()]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[.cancel_current_task()_1]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.chunk_generator()]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.clear_auth()]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[.clear_conversation_history()]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[.close()_1]] - code - skills\notebooklm\scripts\browser_session.py
+- [[.consume_nonblocking()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.create_silent_chunk()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.create_speech()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.generate_response()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.generate_response()_1]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[.get_auth_info()]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[.get_conversation_history()]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[.get_info()]] - code - skills\notebooklm\scripts\browser_session.py
+- [[.get_message_up_to()]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.interrupt()]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.is_authenticated()]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[.is_expired()]] - code - skills\notebooklm\scripts\browser_session.py
+- [[.is_interrupted()]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.mute()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.process()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.process()_1]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.process()_2]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.process()_3]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.re_auth()]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[.receive_audio()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.reset()]] - code - skills\notebooklm\scripts\browser_session.py
+- [[.send_audio()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.send_speech_to_output()]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[.setup_auth()]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[.start()_5]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.start()_6]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.terminate()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.terminate()_1]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.unmute()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[.update_last_bot_message_on_cut_off()]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[.validate_auth()]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[Add an event to the interruptible queue]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[AgentResponse]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Ask a question in this session          Args             question The quest]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Ask a question to NotebookLM      Args         question Question to ask]] - rationale - skills\notebooklm\scripts\ask_question.py
+- [[AuthManager]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[Base class for all workers in the pipeline]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[BaseWorker]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Broadcast interrupt to all in-flight events                  This is called wh]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Browser Utilities for NotebookLM Skill Handles browser launching, stealth featu]] - rationale - skills\notebooklm\scripts\browser_utils.py
+- [[BrowserFactory]] - code - skills\notebooklm\scripts\browser_utils.py
+- [[BrowserSession]] - code - skills\notebooklm\scripts\browser_session.py
+- [[Build conversation contents for Gemini API                  Format]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Called when bot starts speaking (prevents echo)]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Called when bot stops speaking]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Cancel the current generation task (for interrupts)]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Cancel the current synthesis task]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Check if session has expired (default 15 minutes)]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Check if this event has been interrupted]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Check if valid authentication exists]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Clear all authentication data          Returns             True if cleared s]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Clear the conversation history]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Client calls this to send audio]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Close this session and clean up resources]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Command-line interface for authentication management]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Conversation orchestrator with interrupt support          Key Features     -]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[ConversationWithInterrupts]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Converts audio chunks to text transcriptions using Deepgram]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Converts text to speech using ElevenLabs]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Create a silent audio chunk]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[DeepgramTranscriber]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[ElevenLabsSynthesizer]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Example of how to use the GeminiAgent]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Example scenario User interrupts bot mid-sentence]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Example Complete Voice AI Engine Implementation  This example demonstrates a]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Example Gemini Agent Implementation with Streaming  This example shows how to]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Example Interrupt System Implementation  This example demonstrates how to imp]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Factory for creating configured browser contexts]] - rationale - skills\notebooklm\scripts\browser_utils.py
+- [[GeminiAgent]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[GeminiAgent_1]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Generate mock audio chunks]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Generate speech audio from text                  Returns SynthesisResult with]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Generate streaming response from Gemini                  IMPORTANT This buffe]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Generate streaming response from LLM]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[GeneratedResponse]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Get authentication information]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Get information about this session]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Get partial message up to specified seconds]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Get the current latest response text]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Get the full conversation history]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Gracefully shut down all workers]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Handle incoming Telegram updates.]] - rationale - skills\telegram\assets\boilerplate\python\webhook_server.py
+- [[Health check endpoint.]] - rationale - skills\telegram\assets\boilerplate\python\webhook_server.py
+- [[Human-like interaction utilities]] - rationale - skills\notebooklm\scripts\browser_utils.py
+- [[Initialize a new browser session          Args             session_id Uniqu]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Initialize the authentication manager]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Initialize the browser session and navigate to NotebookLM]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Interrupt this event                  Returns             True if the event]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[InterruptibleEvent]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[LLM-powered conversational agent using Google Gemini]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[LLM-powered conversational agent using Google Gemini          Key Features]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Main processing loop - runs forever until terminated]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Manages authentication and browser state for NotebookLM      Features     -]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Message]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[MockSynthesisResult]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[MockTranscription]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Orchestrates the entire voice conversation pipeline]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Override this - does the actual work]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Perform interactive authentication setup          Args             headless]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Perform re-authentication (clear and setup)          Args             headle]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Process audio chunk and generate transcription]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Process responses from agent and synthesize]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Process transcription and detect interrupts                  If the user start]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Process transcription and generate response]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Process transcriptions from transcriber]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Receive audio from client]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Register webhook with Telegram.]] - rationale - skills\telegram\assets\boilerplate\python\webhook_server.py
+- [[Represents a single persistent browser session for NotebookLM      Each sessio]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Reset the chat by reloading the page]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Save authentication metadata]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Save browser state to disk]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Send audio chunk to client]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Send synthesized audio to output with rate limiting                  CRITICAL]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Send synthesized speech to output with interrupt support                  Args]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Sends audio chunks to client via WebSocket]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Simulate Gemini streaming response                  In a real implementation,]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Start the worker's processing loop]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[StealthUtils]] - code - skills\notebooklm\scripts\browser_utils.py
+- [[StreamingConversation]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Synthesis worker that supports interrupts          Key Features     - Checks]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[SynthesisResult]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[SynthesisWorkerWithInterrupts]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Transcription]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Transcription worker that detects interrupts          Key Features     - Det]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[TranscriptionWorkerWithInterrupts]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[Update conversation history when bot is interrupted                  This ensu]] - rationale - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[Validate that stored authentication works         Uses persistent context to ma]] - rationale - skills\notebooklm\scripts\auth_manager.py
+- [[Wait for NotebookLM page to be ready]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Wait for and extract the new answer]] - rationale - skills\notebooklm\scripts\browser_session.py
+- [[Wait for server to be ready by polling the port.]] - rationale - skills\webapp-testing\scripts\with_server.py
+- [[WebSocket endpoint for voice conversations]] - rationale - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[WebsocketOutputDevice]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[Wrapper for events that can be interrupted          Every event in the pipelin]] - rationale - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[_inject_cookies()]] - code - skills\notebooklm\scripts\browser_utils.py
+- [[ask_notebooklm()]] - code - skills\notebooklm\scripts\ask_question.py
+- [[auth_manager.py]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[browser_session.py]] - code - skills\notebooklm\scripts\browser_session.py
+- [[browser_utils.py]] - code - skills\notebooklm\scripts\browser_utils.py
+- [[complete_voice_engine.py]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[conversation_endpoint()]] - code - skills\voice-ai-engine-development\examples\complete_voice_engine.py
+- [[echo()_1]] - code - skills\telegram\assets\boilerplate\python\webhook_server.py
+- [[example_interrupt_scenario()]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[example_usage()]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[gemini_agent_example.py]] - code - skills\voice-ai-engine-development\examples\gemini_agent_example.py
+- [[health()_2]] - code - skills\telegram\assets\boilerplate\python\webhook_server.py
+- [[human_type()]] - code - skills\notebooklm\scripts\browser_utils.py
+- [[interrupt_system_example.py]] - code - skills\voice-ai-engine-development\examples\interrupt_system_example.py
+- [[is_server_ready()]] - code - skills\webapp-testing\scripts\with_server.py
+- [[launch_persistent_context()]] - code - skills\notebooklm\scripts\browser_utils.py
+- [[main()_56]] - code - skills\notebooklm\scripts\auth_manager.py
+- [[main()_91]] - code - skills\webapp-testing\scripts\with_server.py
+- [[random_delay()]] - code - skills\notebooklm\scripts\browser_utils.py
+- [[realistic_click()]] - code - skills\notebooklm\scripts\browser_utils.py
+- [[register_webhook()]] - code - skills\telegram\assets\boilerplate\python\webhook_server.py
+- [[start()_2]] - code - skills\telegram\assets\boilerplate\python\webhook_server.py
+- [[webhook()]] - code - skills\telegram\assets\boilerplate\python\webhook_server.py
+- [[webhook_server.py]] - code - skills\telegram\assets\boilerplate\python\webhook_server.py
+- [[with_server.py]] - code - skills\webapp-testing\scripts\with_server.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_10
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 33 edges to [[_COMMUNITY_Community 2]]
+- 15 edges to [[_COMMUNITY_Community 1]]
+- 14 edges to [[_COMMUNITY_Community 7]]
+- 12 edges to [[_COMMUNITY_Community 11]]
+- 5 edges to [[_COMMUNITY_Community 0]]
+- 5 edges to [[_COMMUNITY_Community 9]]
+- 5 edges to [[_COMMUNITY_Community 29]]
+- 3 edges to [[_COMMUNITY_Community 18]]
+- 3 edges to [[_COMMUNITY_Community 8]]
+- 3 edges to [[_COMMUNITY_Community 25]]
+- 2 edges to [[_COMMUNITY_Community 16]]
+- 2 edges to [[_COMMUNITY_Community 12]]
+- 2 edges to [[_COMMUNITY_Community 17]]
+- 2 edges to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+
+## Top bridge nodes
+- [[.close()_1]] - degree 57, connects to 9 communities
+- [[ask_notebooklm()]] - degree 14, connects to 5 communities
+- [[.setup_auth()]] - degree 12, connects to 3 communities
+- [[.ask()]] - degree 10, connects to 3 communities
+- [[.get_auth_info()]] - degree 7, connects to 3 communities

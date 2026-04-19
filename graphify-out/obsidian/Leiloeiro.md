@@ -1,0 +1,86 @@
+---
+source_file: "skills\junta-leiloeiros\scripts\scraper\base_scraper.py"
+type: "code"
+community: "Community 8"
+location: "L22"
+tags:
+  - graphify/code
+  - graphify/INFERRED
+  - community/Community_8
+---
+
+# Leiloeiro
+
+## Connections
+- [[.make_leiloeiro()]] - `calls` [EXTRACTED]
+- [[.to_dict()_6]] - `method` [EXTRACTED]
+- [[Aciona o web-scraper via subprocess (skill web-scraper) para um estado específic]] - `uses` [INFERRED]
+- [[Analyzers modulos de analise por dimensao.  Cada analyzer recebe os dados de]] - `uses` [INFERRED]
+- [[Busca dados do post de leiloeiros via API REST do CMS.         GET apipublic]] - `uses` [INFERRED]
+- [[Coleta todos os leiloeiros via endpoint AJAX de paginacao.         GET Auxilia]] - `uses` [INFERRED]
+- [[Estrategia alternativa coleta conteudo entre tags hr.         Cada bloco ent]] - `uses` [INFERRED]
+- [[Executa o fallback de web-scraper para os estados indicados.     Salva resultad]] - `uses` [INFERRED]
+- [[Extrai campos de uma linha de texto e popula o record.]] - `uses` [INFERRED]
+- [[Extrai leiloeiros da lista HTML.         Estrutura ul class=ats-listaLnks]] - `uses` [INFERRED]
+- [[Extração direta como fallback quando web-scraper não está disponível.]] - `uses` [INFERRED]
+- [[Fallback GET simples na URL principal com verify=False.         Pode retornar]] - `uses` [INFERRED]
+- [[Fetch com verify=False para sites com SSL problematico.]] - `uses` [INFERRED]
+- [[Fluxo         1. GET relatorioConsultasLeiloeiroTradutor  - extrai token CS]] - `uses` [INFERRED]
+- [[GET + POST dentro do mesmo AsyncClient.         O servidor ASP.NET emite um coo]] - `uses` [INFERRED]
+- [[GenericJuntaScraper]] - `uses` [INFERRED]
+- [[Integração com a skill web-scraper para extração inteligente de fallback.  Qua]] - `uses` [INFERRED]
+- [[JucapScraper]] - `uses` [INFERRED]
+- [[JuceacScraper]] - `uses` [INFERRED]
+- [[JucealScraper]] - `uses` [INFERRED]
+- [[JucebScraper]] - `uses` [INFERRED]
+- [[JucecScraper]] - `uses` [INFERRED]
+- [[JucemaScraper]] - `uses` [INFERRED]
+- [[JucemgScraper]] - `uses` [INFERRED]
+- [[JucepScraper]] - `uses` [INFERRED]
+- [[JucepaScraper]] - `uses` [INFERRED]
+- [[JuceparScraper]] - `uses` [INFERRED]
+- [[JucepeScraper]] - `uses` [INFERRED]
+- [[JucepiScraper]] - `uses` [INFERRED]
+- [[JucerScraper]] - `uses` [INFERRED]
+- [[JucerjaScraper]] - `uses` [INFERRED]
+- [[JucernScraper]] - `uses` [INFERRED]
+- [[JucescScraper]] - `uses` [INFERRED]
+- [[JucespScraper]] - `uses` [INFERRED]
+- [[JucetinsScraper]] - `uses` [INFERRED]
+- [[JucisDfScraper]] - `uses` [INFERRED]
+- [[JucisrsScraper]] - `uses` [INFERRED]
+- [[POST para leiloeirosbuscalistar com Nome=Todos.         Retorna todos os 376]] - `uses` [INFERRED]
+- [[Parseia a pagina pagina140 (ordem alfabetica).         Cada leiloeiro e um bl]] - `uses` [INFERRED]
+- [[Parseia a tabela id=example retornada pelo POST.          Colunas (índice 0-]] - `uses` [INFERRED]
+- [[Parseia conteudo HTML do CMS da JUCEMA.         Formato dos paragrafos]] - `uses` [INFERRED]
+- [[Parseia estrutura DLDTDD do WordPress com anotacao malformada.         Estrat]] - `uses` [INFERRED]
+- [[Parseia o formato plano HTML da JUCISRS.         Toda a lista esta dentro de um]] - `uses` [INFERRED]
+- [[Parseia tabela pagina141 (antiguidade).         Tabela com 2 colunas Ordem]] - `uses` [INFERRED]
+- [[Playwright com SSL completamente desabilitado para cert autoassinado.]] - `uses` [INFERRED]
+- [[Retorna lista de estados com status VAZIO na última coleta.]] - `uses` [INFERRED]
+- [[Scraper JUCAP — Junta Comercial do Amapa URL httpsjucap.portal.ap.gov.brpa]] - `uses` [INFERRED]
+- [[Scraper JUCEAC — Junta Comercial do Estado do Acre URL httpsjuceac.ac.gov.b]] - `uses` [INFERRED]
+- [[Scraper JUCEAL — Junta Comercial do Estado de Alagoas URL httpwww.juceal.al]] - `uses` [INFERRED]
+- [[Scraper JUCEB — Junta Comercial do Estado da Bahia URL httpswww.ba.gov.brj]] - `uses` [INFERRED]
+- [[Scraper JUCEC — Junta Comercial do Estado do Ceará URL httpswww.jucec.ce.go]] - `uses` [INFERRED]
+- [[Scraper JUCEMA — Junta Comercial do Estado do Maranhao URL httpsportal.juce]] - `uses` [INFERRED]
+- [[Scraper JUCEMG — Junta Comercial do Estado de Minas Gerais URLs descobertas em]] - `uses` [INFERRED]
+- [[Scraper JUCEP — Junta Comercial do Estado da Paraíba URL httpsjucep.pb.gov.]] - `uses` [INFERRED]
+- [[Scraper JUCEPA — Junta Comercial do Estado do Pará URL httpswww.jucepa.pa.g]] - `uses` [INFERRED]
+- [[Scraper JUCEPAR — Junta Comercial do Paraná URL httpswww.juntacomercial.pr.]] - `uses` [INFERRED]
+- [[Scraper JUCEPE — Junta Comercial do Estado de Pernambuco URL httpsportal.ju]] - `uses` [INFERRED]
+- [[Scraper JUCEPI — Junta Comercial do Estado do Piauí URL httpsportal.pi.gov.]] - `uses` [INFERRED]
+- [[Scraper JUCER — Junta Comercial do Estado de Rondonia URL httpsrondonia.ro.]] - `uses` [INFERRED]
+- [[Scraper JUCERJA — Junta Comercial do Estado do Rio de Janeiro URL httpswww.]] - `uses` [INFERRED]
+- [[Scraper JUCERN — Junta Comercial do Estado do Rio Grande do Norte URL httpw]] - `uses` [INFERRED]
+- [[Scraper JUCESC — Junta Comercial do Estado de Santa Catarina URL httpsleilo]] - `uses` [INFERRED]
+- [[Scraper JUCESP — Junta Comercial do Estado de São Paulo  MECANISMO REAL (desco]] - `uses` [INFERRED]
+- [[Scraper JUCETINS — Junta Comercial do Estado do Tocantins URL httpswww.to.g]] - `uses` [INFERRED]
+- [[Scraper JUCIS-DF — Junta Comercial, Industrial e Serviços do Distrito Federal U]] - `uses` [INFERRED]
+- [[Scraper JUCISRS — Junta Comercial, Industrial e Servicos do Rio Grande do Sul U]] - `uses` [INFERRED]
+- [[Scraper genérico para juntas com tabela HTML padrão.     Subclasses definem ape]] - `uses` [INFERRED]
+- [[Scraper genérico para juntas que usam formato padrão de tabela HTML. Estados se]] - `uses` [INFERRED]
+- [[base_scraper.py]] - `contains` [EXTRACTED]
+- [[run_fallback()]] - `calls` [INFERRED]
+
+#graphify/code #graphify/INFERRED #community/Community_8

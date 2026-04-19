@@ -18,6 +18,7 @@ if sys.platform == 'win32':
 import re, json, asyncio, logging, threading, time, uuid, subprocess, platform, signal, hashlib, ast
 from datetime import datetime
 from typing import Dict, Any, Optional, List
+from core.registry import register_module
 import aiofiles
 import uvicorn
 from fastapi import FastAPI
@@ -380,11 +381,13 @@ class Agents:
 AGENTS = Agents()
 
 # ================= MAIN JARVIS LOOP =================
+@register_module(name="jarvis_core", metadata={"tier": "root"})
 class Jarvis:
     def __init__(self):
         self.queue = asyncio.Queue()
         self.loop = None
         self.fs_graph_file = "graph_map.json"
+        self.workers = []
 
     def get_execution_order(self, milestones):
         # Simple dependency sorter
@@ -408,6 +411,12 @@ class Jarvis:
         EVENTS.emit(f"🎯 NEW GOAL ▶ {goal}")
         MEMORY.add(goal, {"type": "goal"})
         await self.queue.put(goal)
+
+        # Swarm Scaling: If queue is deep, spawn temporary worker
+        if self.queue.qsize() > 2 and len(self.workers) < 10:
+            EVENTS.emit(f"🐝 SWARM SCALING ▶ Spawning dynamic worker")
+            worker_task = asyncio.create_task(self.worker())
+            self.workers.append(worker_task)
 
     async def save_state(self, ctx: str, task_name: str, status: str):
         """Saves checkpoint to disk"""
@@ -583,13 +592,36 @@ if __name__ == "__main__":
         
         # Workers
         for _ in range(CFG.MAX_CONCURRENT):
-            asyncio.create_task(CORE.worker())
+            worker_task = asyncio.create_task(CORE.worker())
+            CORE.workers.append(worker_task)
+
+        # Initialize Heartbeat Registry
+        try:
+            from core.registry import registry
+            EVENTS.emit(f"💓 SYSTEM REGISTRY ACTIVE: {registry.get_registry_stats()['total_modules']} modules")
+        except Exception as e:
+            EVENTS.emit(f"⚠️ Registry Init Failed: {e}")
 
         # Watcher
         obs = Observer()
-        handler = Watcher() # Class ka instance banaya
+        handler = Watcher()
         obs.schedule(handler, ".", recursive=False)
         obs.start()
+
+        # Initialize Autonomous Feedback Loop
+        try:
+            from core.self_monitor import SelfMonitor
+            from core.self_evolving_architecture import SEAController
+            from core.closed_feedback_loop import initialize_feedback
+
+            monitor = SelfMonitor()
+            sea = SEAController(CORE)
+            f_loop = initialize_feedback(monitor, sea)
+            CORE.loop.create_task(f_loop.start())
+            EVENTS.emit("🧠 AUTONOMOUS FEEDBACK LOOP ACTIVE")
+        except Exception as e:
+            EVENTS.emit(f"⚠️ Feedback Loop Failed to Start: {e}")
+
         EVENTS.emit("🚀 JARVIS SYSTEM ONLINE")
 
         # Load Checkpoint/Goal

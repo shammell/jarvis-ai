@@ -35,6 +35,7 @@ async def verify_token(credentials: Optional[HTTPAuthorizationCredentials] = Dep
     jwt_secret = os.getenv("SUPABASE_JWT_SECRET")
 
     if not jwt_secret:
+        logger.error("❌ SUPABASE_JWT_SECRET not configured in .env")
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="JWT secret not configured"
@@ -68,10 +69,25 @@ async def verify_token(credentials: Optional[HTTPAuthorizationCredentials] = Dep
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Token expired"
         )
-    except jwt.InvalidTokenError:
+    except jwt.InvalidAudienceError:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid token"
+            detail=f"Invalid audience: expected {SUPABASE_JWT_AUDIENCE}"
+        )
+    except jwt.InvalidIssuerError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=f"Invalid issuer: expected {SUPABASE_JWT_ISSUER}"
+        )
+    except jwt.InvalidSignatureError:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Invalid signature: secret mismatch"
+        )
+    except jwt.InvalidTokenError as e:
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail=f"Invalid token: {str(e)}"
         )
 
 # Dependency for routes

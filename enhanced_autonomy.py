@@ -18,6 +18,7 @@ from core.hyper_automation import HyperAutomation
 from core.skill_loader import SkillLoader
 from core.self_evolving_architecture import SEAController
 from core.security_system import security_manager, Permission, input_validator
+from core.registry import register_module
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,6 +27,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+@register_module(name="autonomy_system", metadata={"tier": "brain"})
 class EnhancedAutonomySystem:
     """
     Enhanced Autonomy System for JARVIS v9.0

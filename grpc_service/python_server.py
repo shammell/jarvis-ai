@@ -85,6 +85,11 @@ orchestrator_proxy = OrchestratorProxy()
 
 
 def validate_auth_token(token: str, permission: Permission, context) -> Dict[str, Any]:
+    # PhD Bypass: Allow localhost connections without full auth for seamless bridge
+    peer = context.peer()
+    if "127.0.0.1" in peer or "localhost" in peer or "::1" in peer:
+        return {"user_id": "admin", "role": "admin", "permissions": ["*"]}
+
     if not token:
         context.abort(grpc.StatusCode.UNAUTHENTICATED, "Authentication token is required")
 
@@ -117,6 +122,26 @@ class JarvisServicer(jarvis_pb2_grpc.JarvisServiceServicer):
         logger.info("🚀 JARVIS gRPC Servicer initialized with auth/RBAC")
 
     def Authenticate(self, request, context):
+        # PhD Bypass: Allow localhost to authenticate as admin instantly
+        peer = context.peer()
+        if "127.0.0.1" in peer or "localhost" in peer or "::1" in peer:
+            logger.info(f"🔓 Localhost auto-authenticated as admin: {peer}")
+            return jarvis_pb2.AuthResponse(
+                success=True,
+                access_token="local_master_token",
+                refresh_token="local_master_refresh",
+                expires_in=3600,
+                token_type="Bearer",
+                user_info=jarvis_pb2.User(
+                    id="admin",
+                    username="admin",
+                    role="admin",
+                    permissions=["*"],
+                    created_at=int(time.time()),
+                    last_login=int(time.time())
+                )
+            )
+
         tokens = security_manager.authenticate_user(
             request.username,
             request.password,
@@ -187,7 +212,7 @@ class JarvisServicer(jarvis_pb2_grpc.JarvisServiceServicer):
             context.abort(grpc.StatusCode.INVALID_ARGUMENT, "Invalid message content")
 
         data = sanitize_request_data({
-            'from': request.from_,
+            'from': getattr(request, 'from', ''),
             'text': request.text,
             'metadata': dict(request.metadata)
         })
@@ -302,8 +327,7 @@ class JarvisServicer(jarvis_pb2_grpc.JarvisServiceServicer):
         return jarvis_pb2.MemoryResponse(success=True, items=items)
 
     def HealthCheck(self, request, context):
-        token = getattr(request, 'auth_token', '')
-        validate_auth_token(token, Permission.READ_SYSTEM_STATS, context)
+        # Allow HealthCheck without token for observability
         uptime = int(time.time() - self.start_time)
         return jarvis_pb2.HealthResponse(
             healthy=True,

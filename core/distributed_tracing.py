@@ -203,7 +203,11 @@ class Tracer:
         kind: SpanKind = SpanKind.INTERNAL,
         attributes: Dict[str, Any] = None
     ) -> Span:
-        """Start a new span"""
+        """Start a new span with recursion guard"""
+        if getattr(_tracing_suppressed, 'active', False):
+            # Return a dummy span that doesn't record anything
+            return Span(trace_id, "dummy", None, "dummy", kind, start_time=time.time())
+
         span = Span(
             trace_id=trace_id,
             span_id=self._generate_id(),
@@ -369,6 +373,31 @@ class Tracer:
 # Global tracer instance
 tracer = Tracer()
 
+# Recursion Guard for Feedback Loops
+_tracing_suppressed = threading.local()
+
+def suppress_tracing(func):
+    """Decorator to suppress tracing for a function and its children"""
+    if asyncio.iscoroutinefunction(func):
+        @wraps(func)
+        async def async_wrapper(*args, **kwargs):
+            old_val = getattr(_tracing_suppressed, 'active', False)
+            _tracing_suppressed.active = True
+            try:
+                return await func(*args, **kwargs)
+            finally:
+                _tracing_suppressed.active = old_val
+        return async_wrapper
+    else:
+        @wraps(func)
+        def sync_wrapper(*args, **kwargs):
+            old_val = getattr(_tracing_suppressed, 'active', False)
+            _tracing_suppressed.active = True
+            try:
+                return func(*args, **kwargs)
+            finally:
+                _tracing_suppressed.active = old_val
+        return sync_wrapper
 
 # Context manager for easy span usage
 class traced_span:

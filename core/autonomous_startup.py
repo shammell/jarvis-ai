@@ -8,6 +8,7 @@ import logging
 import asyncio
 from datetime import datetime
 from pathlib import Path
+from .goal_manager import GoalPriority
 
 logger = logging.getLogger(__name__)
 
@@ -146,7 +147,7 @@ class AutonomousStartup:
             try:
                 result = await self.autonomy_system.execute_goal(
                     "Optimize system performance",
-                    priority=4,  # CRITICAL
+                    priority=GoalPriority.CRITICAL,
                     context={"auto_triggered": True, "health_score": health}
                 )
 

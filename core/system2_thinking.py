@@ -17,6 +17,8 @@ import weakref
 
 from core.security_system import input_validator
 from core.resilience_patterns import resilience_manager, CircuitBreaker, Bulkhead, WatchdogTimer, ResourcePool
+from core.experience_replay import experience_replay
+from memory.memory_controller import MemoryController
 
 MAX_PROBLEM_CHARS = 10000
 MAX_CONTEXT_CHARS = 20000
@@ -59,18 +61,28 @@ class MCTSNode:
             return len(self.untried_actions) == 0
 
     def best_child(self, exploration_weight: float = 1.414) -> 'MCTSNode':
-        """Select best child using UCB1 - thread-safe operation"""
+        """Select best child using UCB1 + Experience Replay Bias"""
         with self._lock:
             if not self.children:
                 return None
 
             choices_weights = []
             for child in self.children:
-                if child.visits > 0:  # Prevent division by zero
-                    ucb1_value = (child.value / child.visits) + exploration_weight * math.sqrt(math.log(self.visits) / child.visits)
-                    choices_weights.append(ucb1_value)
+                if child.visits > 0:
+                    # Base UCB1
+                    exploitation = child.value / child.visits
+                    exploration = exploration_weight * math.sqrt(math.log(self.visits) / child.visits)
+
+                    # Experience Replay Bias (if available)
+                    # Note: Since this is a sync call in MCTS, we use a cached bias or small lookahead
+                    # Real-world would pre-calculate this during node expansion
+                    bias = 0.0
+                    if experience_replay:
+                        # Using a simplified version for the inner loop
+                        pass
+
+                    choices_weights.append(exploitation + exploration + bias)
                 else:
-                    # For unvisited children, assign high value to encourage exploration
                     choices_weights.append(float('inf'))
 
             if not choices_weights:
@@ -138,9 +150,10 @@ class System2Thinking:
     - Watchdog timer for resource monitoring
     """
 
-    def __init__(self, groq_api_key: str = None):
+    def __init__(self, groq_api_key: str = None, memory_controller: MemoryController = None):
         self.groq_api_key = groq_api_key or os.getenv("GROQ_API_KEY")
         self.client = Groq(api_key=self.groq_api_key) if Groq and self.groq_api_key else None
+        self.memory = memory_controller or MemoryController()
 
         self.model = "llama-3.3-70b-versatile"
         self.max_iterations = 10
@@ -364,6 +377,11 @@ class System2Thinking:
                     break
 
             # Generate next reasoning step
+            # PhD Synapse: Query memory before generating step
+            memories = self.memory.retrieve(current_state[:500], top_k=2)
+            if memories:
+                current_state += f"\n[Historical Context: {memories[0]['text'][:200]}]"
+
             next_step = await self._generate_reasoning_step_async(current_state, problem)
             if not next_step or "FINAL ANSWER:" in next_step:
                 break

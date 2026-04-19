@@ -16,6 +16,7 @@ import traceback
 from datetime import datetime
 import asyncio
 from functools import wraps
+from .registry import register_module
 
 logger = logging.getLogger(__name__)
 
@@ -168,6 +169,7 @@ class Result(Generic[T, E]):
         return self
 
 
+@register_module(name="error_handler", metadata={"tier": "core", "critical": True})
 class ErrorHandler:
     """
     PhD-Level Error Handler

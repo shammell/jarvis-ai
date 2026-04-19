@@ -18,6 +18,10 @@ MAX_DRAFT_LENGTH = 512
 MAX_TEMPERATURE = 1.5
 MIN_TEMPERATURE = 0.0
 
+# Clear proxy env vars BEFORE importing groq to prevent TypeError
+for _k in ("HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy", "ALL_PROXY", "all_proxy"):
+    os.environ.pop(_k, None)
+
 try:
     from groq import Groq
 except ImportError:

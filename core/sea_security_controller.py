@@ -98,6 +98,19 @@ class SEASecurityController:
         """Gate execution using AutonomyGuard"""
         require_autonomy(task_name, risk_score=risk_score)
 
+    def cleanup_expired_approvals(self):
+        """Cleanup expired approval tokens (no-op for now)"""
+        pass
+
+    def get_security_state(self) -> Dict[str, Any]:
+        """Return current SEA security state for monitoring"""
+        return {
+            "lockdown": False,
+            "z3_available": self.z3.z3_available,
+            "security_controller": "active",
+            "risk_threshold": 7
+        }
+
 # Singleton instance
 sea_security_controller = SEASecurityController()
 

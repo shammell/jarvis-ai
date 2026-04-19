@@ -1,0 +1,253 @@
+---
+type: community
+members: 206
+---
+
+# Community 7
+
+**Members:** 206 nodes
+
+## Members
+- [[.__init__()_33]] - code - automation\intelligent_automation.py
+- [[.__init__()_38]] - code - control\phd_computer_control.py
+- [[.__init__()_39]] - code - control\phd_master_control.py
+- [[.__init__()_42]] - code - control\real_quantum_system.py
+- [[.__init__()_43]] - code - control\real_quantum_system.py
+- [[.__init__()_45]] - code - core\active_perception.py
+- [[.__init__()_71]] - code - core\infinite_swarm.py
+- [[.__init__()_123]] - code - launchers\unified_launcher.py
+- [[.__init__()_124]] - code - launchers\unified_launcher.py
+- [[._analyze_clipboard()]] - code - core\active_perception.py
+- [[._analyze_screen_context()]] - code - core\active_perception.py
+- [[._decide_next_action()]] - code - control\phd_computer_control.py
+- [[._detect_content_type()]] - code - core\active_perception.py
+- [[._execute_autonomous_action()]] - code - control\phd_computer_control.py
+- [[._execute_plan()]] - code - control\phd_master_control.py
+- [[._learn_from_execution()]] - code - control\phd_master_control.py
+- [[._monitor_clipboard()]] - code - core\active_perception.py
+- [[._monitor_screen()]] - code - core\active_perception.py
+- [[._plan_actions()]] - code - control\phd_master_control.py
+- [[._precompute_context()]] - code - core\active_perception.py
+- [[._precompute_result()]] - code - core\active_perception.py
+- [[._predict_next_action()]] - code - core\active_perception.py
+- [[._preflight_ports()]] - code - launchers\unified_launcher.py
+- [[._update_performance_stats()]] - code - automation\intelligent_automation.py
+- [[.adaptive_wait()]] - code - automation\intelligent_automation.py
+- [[.analyze_chrome_tabs()]] - code - control\real_quantum_system.py
+- [[.autonomous_execute()]] - code - control\phd_computer_control.py
+- [[.autonomous_mode()_1]] - code - control\phd_master_control.py
+- [[.calculate_screen_change()]] - code - automation\intelligent_automation.py
+- [[.capture_screen_fast()]] - code - control\phd_computer_control.py
+- [[.execute_intelligent_workflow()]] - code - automation\intelligent_automation.py
+- [[.execute_phd_workflow()]] - code - control\phd_master_control.py
+- [[.execute_task()]] - code - core\infinite_swarm.py
+- [[.execute_with_retry()]] - code - automation\intelligent_automation.py
+- [[.find_chrome_by_profile()]] - code - automation\intelligent_automation.py
+- [[.find_chrome_windows()]] - code - control\real_quantum_system.py
+- [[.find_process()]] - code - control\real_quantum_system.py
+- [[.get_active_window()]] - code - control\real_quantum_system.py
+- [[.get_all_windows()]] - code - control\real_quantum_system.py
+- [[.get_daemon_stats()]] - code - core\active_perception.py
+- [[.get_insights()]] - code - automation\intelligent_automation.py
+- [[.get_performance_report()]] - code - control\phd_computer_control.py
+- [[.get_precomputed_result()]] - code - core\active_perception.py
+- [[.get_running_processes()]] - code - control\real_quantum_system.py
+- [[.get_status()_2]] - code - launchers\unified_launcher.py
+- [[.get_system_info()]] - code - control\real_quantum_system.py
+- [[.get_system_status()_3]] - code - control\phd_master_control.py
+- [[.is_running()]] - code - launchers\unified_launcher.py
+- [[.kill_process()]] - code - control\real_quantum_system.py
+- [[.launch_application()]] - code - control\real_quantum_system.py
+- [[.learn_sequence()]] - code - control\phd_computer_control.py
+- [[.monitor_loop()]] - code - launchers\unified_launcher.py
+- [[.optimize_performance()]] - code - control\phd_master_control.py
+- [[.print_status()]] - code - launchers\unified_launcher.py
+- [[.real_time_assistance()]] - code - control\phd_master_control.py
+- [[.record_action()]] - code - control\phd_computer_control.py
+- [[.register_callback()]] - code - core\active_perception.py
+- [[.replay_sequence()]] - code - control\phd_computer_control.py
+- [[.restart()]] - code - launchers\unified_launcher.py
+- [[.run()]] - code - launchers\unified_launcher.py
+- [[.setup_services()]] - code - launchers\unified_launcher.py
+- [[.should_restart()]] - code - launchers\unified_launcher.py
+- [[.smart_click_phd()]] - code - control\phd_computer_control.py
+- [[.smart_close_tab()]] - code - automation\intelligent_automation.py
+- [[.smart_navigate()]] - code - automation\intelligent_automation.py
+- [[.smart_open_tab()]] - code - automation\intelligent_automation.py
+- [[.smart_type_phd()]] - code - control\phd_computer_control.py
+- [[.start_all()]] - code - launchers\unified_launcher.py
+- [[.start_daemon()]] - code - core\active_perception.py
+- [[.start_monitoring()]] - code - control\phd_computer_control.py
+- [[.stop()_2]] - code - launchers\unified_launcher.py
+- [[.stop_all()]] - code - launchers\unified_launcher.py
+- [[.stop_daemon()]] - code - core\active_perception.py
+- [[.stop_monitoring()]] - code - control\phd_computer_control.py
+- [[.switch_to_chrome()]] - code - automation\intelligent_automation.py
+- [[.switch_to_window()_1]] - code - control\real_quantum_system.py
+- [[.take_screenshot()]] - code - automation\intelligent_automation.py
+- [[.take_smart_screenshot()]] - code - control\real_quantum_system.py
+- [[.understand_and_act()]] - code - control\phd_master_control.py
+- [[========================================================== JARVIS UNIFIED LAUNCH]] - rationale - launchers\unified_launcher.py
+- [[ActionRecord]] - code - control\phd_computer_control.py
+- [[ActionResult]] - code - automation\intelligent_automation.py
+- [[ActivePerceptionDaemon]] - code - core\active_perception.py
+- [[Analisa os snapshots coletados e gera relatório.]] - rationale - skills\claude-monitor\scripts\monitor.py
+- [[Analyze Chrome window to detect tabs]] - rationale - control\real_quantum_system.py
+- [[Analyze clipboard content]] - rationale - core\active_perception.py
+- [[Analyze screen context and trigger actions]] - rationale - core\active_perception.py
+- [[Autonomous execution towards goal          Args             goal High-level go]] - rationale - control\phd_computer_control.py
+- [[Autonomous mode - execute multiple goals          Args             goals List]] - rationale - control\phd_master_control.py
+- [[Calculate screen change percentage]] - rationale - automation\intelligent_automation.py
+- [[Capture screen efficiently]] - rationale - automation\intelligent_automation.py
+- [[Check if service is running]] - rationale - launchers\unified_launcher.py
+- [[Check if service should be restarted]] - rationale - launchers\unified_launcher.py
+- [[Close tab with intelligence]] - rationale - automation\intelligent_automation.py
+- [[Coleta um snapshot rápido do sistema.]] - rationale - skills\claude-monitor\scripts\monitor.py
+- [[Complete system state]] - rationale - control\phd_master_control.py
+- [[Continuous Active Perception for JARVIS v11.0     - OS-level screen monitoring]] - rationale - core\active_perception.py
+- [[Decide next action (simplified heuristic)]] - rationale - control\phd_computer_control.py
+- [[Detect type of clipboard content]] - rationale - core\active_perception.py
+- [[Execute PhD-level workflow with full intelligence          Args             wor]] - rationale - control\phd_master_control.py
+- [[Execute action with smart retry logic]] - rationale - automation\intelligent_automation.py
+- [[Execute autonomous action]] - rationale - control\phd_computer_control.py
+- [[Execute workflow with intelligent decision making]] - rationale - automation\intelligent_automation.py
+- [[Find Chrome window, optionally by profile]] - rationale - automation\intelligent_automation.py
+- [[Find all Chrome windows with user profiles]] - rationale - control\real_quantum_system.py
+- [[Formata o relatório para exibição.]] - rationale - skills\claude-monitor\scripts\monitor.py
+- [[Get URL from Chrome address bar]] - rationale - archive\old_modules\get_github_url.py
+- [[Get all open windows with details]] - rationale - control\real_quantum_system.py
+- [[Get all running processes]] - rationale - control\real_quantum_system.py
+- [[Get complete system information]] - rationale - control\real_quantum_system.py
+- [[Get complete system status_2]] - rationale - control\phd_master_control.py
+- [[Get currently active window]] - rationale - control\real_quantum_system.py
+- [[Get daemon statistics]] - rationale - core\active_perception.py
+- [[Get performance insights]] - rationale - automation\intelligent_automation.py
+- [[Get performance metrics]] - rationale - control\phd_computer_control.py
+- [[Get precomputed result if available]] - rationale - core\active_perception.py
+- [[Individual agent in the swarm]] - rationale - core\infinite_swarm.py
+- [[Intelligent automation with real learning capabilities     - Adaptive timing ba]] - rationale - automation\intelligent_automation.py
+- [[IntelligentAutomation]] - code - automation\intelligent_automation.py
+- [[Launch application intelligently]] - rationale - control\real_quantum_system.py
+- [[Learn action sequence for replay          Args             name Sequence name]] - rationale - control\phd_computer_control.py
+- [[Learn from execution for future improvement]] - rationale - control\phd_master_control.py
+- [[Manages a single service process]] - rationale - launchers\unified_launcher.py
+- [[Monitor clipboard changes]] - rationale - core\active_perception.py
+- [[Monitor screen content continuously]] - rationale - core\active_perception.py
+- [[Monitor services and restart if needed]] - rationale - launchers\unified_launcher.py
+- [[Navigate with intelligence]] - rationale - automation\intelligent_automation.py
+- [[Open new tab with intelligence]] - rationale - automation\intelligent_automation.py
+- [[PhD-Level Computer Control System      Features     - Autonomous decision-makin]] - rationale - control\phd_computer_control.py
+- [[PhD-Level Master Control System      Ultimate Features     - Unified visual + c]] - rationale - control\phd_master_control.py
+- [[PhD-level click with verification          Args             x, y Position]] - rationale - control\phd_computer_control.py
+- [[PhD-level typing with verification          Args             text Text to type]] - rationale - control\phd_computer_control.py
+- [[PhDComputerControl]] - code - control\phd_computer_control.py
+- [[PhDMasterControl]] - code - control\phd_master_control.py
+- [[Plan action sequence based on understanding]] - rationale - control\phd_master_control.py
+- [[Precompute likely next actions]] - rationale - core\active_perception.py
+- [[Precompute result for predicted action]] - rationale - core\active_perception.py
+- [[Predict what user will do next]] - rationale - core\active_perception.py
+- [[Print status of all services]] - rationale - launchers\unified_launcher.py
+- [[Real Quantum Control - Full laptop control      Features     - Process manageme]] - rationale - control\real_quantum_system.py
+- [[Real Quantum Vision - Actually sees and understands screen      Features     -]] - rationale - control\real_quantum_system.py
+- [[Real-time assistance mode - monitor and suggest actions          Args]] - rationale - control\phd_master_control.py
+- [[RealQuantumControl]] - code - control\real_quantum_system.py
+- [[RealQuantumVision]] - code - control\real_quantum_system.py
+- [[Record action for learning]] - rationale - control\phd_computer_control.py
+- [[Record of executed action]] - rationale - control\phd_computer_control.py
+- [[Register callback for events          Args             event_type Type of even]] - rationale - core\active_perception.py
+- [[Replay learned sequence          Args             name Sequence name]] - rationale - control\phd_computer_control.py
+- [[Result of an action with metrics]] - rationale - automation\intelligent_automation.py
+- [[Self-optimize system performance]] - rationale - control\phd_master_control.py
+- [[ServiceManager]] - code - launchers\unified_launcher.py
+- [[Start all services in order]] - rationale - launchers\unified_launcher.py
+- [[Start real-time screen monitoring          Args             callback Function]] - rationale - control\phd_computer_control.py
+- [[Start the perception daemon          Returns             Start result]] - rationale - core\active_perception.py
+- [[Stop real-time monitoring]] - rationale - control\phd_computer_control.py
+- [[Stop the service gracefully]] - rationale - launchers\unified_launcher.py
+- [[SwarmAgent_1]] - code - core\infinite_swarm.py
+- [[Switch to Chrome with verification]] - rationale - automation\intelligent_automation.py
+- [[Switch to specific window]] - rationale - control\real_quantum_system.py
+- [[SystemState]] - code - control\phd_master_control.py
+- [[Take screenshot and analyze]] - rationale - control\real_quantum_system.py
+- [[Ultra-fast screen capture with hash          Returns             (base64_image,]] - rationale - control\phd_computer_control.py
+- [[Understand screen context and execute goal autonomously          Args]] - rationale - control\phd_master_control.py
+- [[Unified launcher for all JARVIS services]] - rationale - launchers\unified_launcher.py
+- [[UnifiedLauncher]] - code - launchers\unified_launcher.py
+- [[Update performance statistics for learning]] - rationale - automation\intelligent_automation.py
+- [[Validate critical ports are free before starting services.]] - rationale - launchers\unified_launcher.py
+- [[Wait adaptively based on learned performance]] - rationale - automation\intelligent_automation.py
+- [[_is_port_in_use()]] - code - launchers\unified_launcher.py
+- [[active_perception.py]] - code - core\active_perception.py
+- [[analyze_snapshots()]] - code - skills\claude-monitor\scripts\monitor.py
+- [[displayQuickAnswer()]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[downloadResults()]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[fast_function()]] - code - core\optimization_engine.py
+- [[find_chrome()]] - code - archive\old_modules\get_github_url.py
+- [[format_report()]] - code - skills\claude-monitor\scripts\monitor.py
+- [[get_github_url.py]] - code - archive\old_modules\get_github_url.py
+- [[get_url_from_chrome()]] - code - archive\old_modules\get_github_url.py
+- [[intelligent_automation.py]] - code - automation\intelligent_automation.py
+- [[main()_17]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[main()_21]] - code - skills\claude-monitor\scripts\monitor.py
+- [[monitor.py]] - code - skills\claude-monitor\scripts\monitor.py
+- [[optimization_engine.py]] - code - core\optimization_engine.py
+- [[parseCliArgs()]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[phd_computer_control.py]] - code - control\phd_computer_control.py
+- [[phd_master_control.py]] - code - control\phd_master_control.py
+- [[pollUntilComplete()]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[printHelp()]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[real_quantum_system.py]] - code - control\real_quantum_system.py
+- [[reportSummary()]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[run_actor.js]] - code - skills\apify-audience-analysis\reference\scripts\run_actor.js
+- [[run_actor.js_1]] - code - skills\apify-brand-reputation-monitoring\reference\scripts\run_actor.js
+- [[run_actor.js_2]] - code - skills\apify-competitor-intelligence\reference\scripts\run_actor.js
+- [[run_actor.js_3]] - code - skills\apify-content-analytics\reference\scripts\run_actor.js
+- [[run_actor.js_4]] - code - skills\apify-ecommerce\reference\scripts\run_actor.js
+- [[run_actor.js_5]] - code - skills\apify-influencer-discovery\reference\scripts\run_actor.js
+- [[run_actor.js_6]] - code - skills\apify-lead-generation\reference\scripts\run_actor.js
+- [[run_actor.js_7]] - code - skills\apify-market-research\reference\scripts\run_actor.js
+- [[run_actor.js_8]] - code - skills\apify-trend-analysis\reference\scripts\run_actor.js
+- [[run_actor.js_9]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[sleep()]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[slow_function()]] - code - core\optimization_engine.py
+- [[startActor()]] - code - skills\apify-ultimate-scraper\reference\scripts\run_actor.js
+- [[take_snapshot()]] - code - skills\claude-monitor\scripts\monitor.py
+- [[test_daemon()]] - code - core\active_perception.py
+- [[unified_launcher.py]] - code - launchers\unified_launcher.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_7
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 44 edges to [[_COMMUNITY_Community 1]]
+- 20 edges to [[_COMMUNITY_Community 0]]
+- 17 edges to [[_COMMUNITY_Community 2]]
+- 16 edges to [[_COMMUNITY_Community 44]]
+- 14 edges to [[_COMMUNITY_Community 10]]
+- 8 edges to [[_COMMUNITY_Community 11]]
+- 8 edges to [[_COMMUNITY_Community 17]]
+- 5 edges to [[_COMMUNITY_Community 8]]
+- 5 edges to [[_COMMUNITY_Community 29]]
+- 4 edges to [[_COMMUNITY_Community 16]]
+- 4 edges to [[_COMMUNITY_Community 12]]
+- 4 edges to [[_COMMUNITY_Community 26]]
+- 2 edges to [[_COMMUNITY_Community 18]]
+- 2 edges to [[_COMMUNITY_Community 6]]
+- 2 edges to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 9]]
+
+## Top bridge nodes
+- [[sleep()]] - degree 104, connects to 17 communities
+- [[downloadResults()]] - degree 14, connects to 3 communities
+- [[.stop()_2]] - degree 7, connects to 3 communities
+- [[reportSummary()]] - degree 13, connects to 2 communities
+- [[.execute_intelligent_workflow()]] - degree 9, connects to 2 communities

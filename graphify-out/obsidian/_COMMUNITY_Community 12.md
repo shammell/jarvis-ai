@@ -1,0 +1,218 @@
+---
+type: community
+members: 181
+---
+
+# Community 12
+
+**Members:** 181 nodes
+
+## Members
+- [[.__aenter__()]] - code - core\resilience_base.py
+- [[.__aenter__()_1]] - code - core\resilience_base.py
+- [[.__aexit__()]] - code - core\resilience_base.py
+- [[.__aexit__()_1]] - code - core\resilience_base.py
+- [[.__call__()]] - code - core\resilience_patterns.py
+- [[.__init__()_62]] - code - core\error_handling.py
+- [[.__init__()_63]] - code - core\error_handling.py
+- [[.__init__()_64]] - code - core\error_handling.py
+- [[.__init__()_90]] - code - core\resilience_base.py
+- [[.__init__()_91]] - code - core\resilience_base.py
+- [[.__init__()_92]] - code - core\resilience_base.py
+- [[.__init__()_93]] - code - core\resilience_base.py
+- [[.__init__()_94]] - code - core\resilience_base.py
+- [[.__init__()_95]] - code - core\resilience_base.py
+- [[.__init__()_96]] - code - core\resilience_patterns.py
+- [[.__init__()_115]] - code - core\system2_thinking.py
+- [[.__init__()_116]] - code - core\system2_thinking.py
+- [[.__post_init__()]] - code - core\error_handling.py
+- [[._apply_action_async()]] - code - core\system2_thinking.py
+- [[._async_wrapper()]] - code - core\resilience_patterns.py
+- [[._backpropagate_async()]] - code - core\system2_thinking.py
+- [[._calculate_retry_delay()]] - code - core\error_handling.py
+- [[._classify_error()]] - code - core\error_handling.py
+- [[._create_resource()]] - code - core\resilience_base.py
+- [[._determine_severity()]] - code - core\error_handling.py
+- [[._execute_with_resilience()]] - code - core\error_handling.py
+- [[._expand_async()]] - code - core\system2_thinking.py
+- [[._extract_path_async()]] - code - core\system2_thinking.py
+- [[._generate_actions()]] - code - core\system2_thinking.py
+- [[._generate_user_message()]] - code - core\error_handling.py
+- [[._handle_failure()]] - code - core\resilience_base.py
+- [[._handle_success()]] - code - core\resilience_base.py
+- [[._is_recoverable()]] - code - core\error_handling.py
+- [[._is_retryable_error()]] - code - core\error_handling.py
+- [[._log_error()]] - code - core\error_handling.py
+- [[._record_request()]] - code - core\resilience_base.py
+- [[._reset_circuit()]] - code - core\resilience_base.py
+- [[._select_async()]] - code - core\system2_thinking.py
+- [[._should_reset()]] - code - core\resilience_base.py
+- [[._should_trip()]] - code - core\resilience_base.py
+- [[._store_error()]] - code - core\error_handling.py
+- [[._sync_wrapper()]] - code - core\resilience_patterns.py
+- [[._trip_circuit()]] - code - core\resilience_base.py
+- [[.acquire()]] - code - core\resilience_base.py
+- [[.acquire_timer()]] - code - core\resilience_base.py
+- [[.add_child()]] - code - core\system2_thinking.py
+- [[.and_then()]] - code - core\error_handling.py
+- [[.best_child()]] - code - core\system2_thinking.py
+- [[.bulkhead_protect()]] - code - core\error_handling.py
+- [[.calculate_delay()]] - code - core\resilience_base.py
+- [[.circuit_breaker_protect()]] - code - core\error_handling.py
+- [[.execute_with_resource_pool()]] - code - core\error_handling.py
+- [[.get_bulkhead()]] - code - core\resilience_base.py
+- [[.get_child_count()]] - code - core\system2_thinking.py
+- [[.get_children()]] - code - core\system2_thinking.py
+- [[.get_circuit_breaker()]] - code - core\resilience_base.py
+- [[.get_error_stats()]] - code - core\error_handling.py
+- [[.get_health_status()]] - code - core\error_handling.py
+- [[.get_overall_health()]] - code - core\resilience_base.py
+- [[.get_resource_pool()]] - code - core\resilience_base.py
+- [[.get_stats()_9]] - code - core\resilience_base.py
+- [[.get_stats()_10]] - code - core\resilience_base.py
+- [[.get_system_status()_4]] - code - core\resilience_base.py
+- [[.get_usage_stats()]] - code - core\resilience_base.py
+- [[.get_watchdog()]] - code - core\resilience_base.py
+- [[.handle_exception()]] - code - core\error_handling.py
+- [[.handle_whatsapp_message()_1]] - code - archive\old_modules\main_genesis.py
+- [[.increment_visit()]] - code - core\system2_thinking.py
+- [[.is_failure()]] - code - core\error_handling.py
+- [[.is_fully_expanded()]] - code - core\system2_thinking.py
+- [[.is_success()]] - code - core\error_handling.py
+- [[.map()]] - code - core\error_handling.py
+- [[.map_error()]] - code - core\error_handling.py
+- [[.reason()]] - code - core\system2_thinking.py
+- [[.release()]] - code - core\resilience_base.py
+- [[.release_timer()]] - code - core\resilience_base.py
+- [[.remove_child()]] - code - core\system2_thinking.py
+- [[.resilient_call()]] - code - core\error_handling.py
+- [[.to_dict()_3]] - code - core\error_handling.py
+- [[.unwrap()]] - code - core\error_handling.py
+- [[.unwrap_error()]] - code - core\error_handling.py
+- [[.unwrap_or()]] - code - core\error_handling.py
+- [[.update_health_indicator()]] - code - core\resilience_base.py
+- [[.update_value()]] - code - core\system2_thinking.py
+- [[========================================================== JARVIS - PhD-Level Er]] - rationale - core\error_handling.py
+- [[Add a child node - thread-safe with bounded resources]] - rationale - core\system2_thinking.py
+- [[Apply reasoning action to generate new state - async with resilience]] - rationale - core\system2_thinking.py
+- [[Backpropagate value up the tree - async with concurrency safety]] - rationale - core\system2_thinking.py
+- [[BaseResilienceManager]] - code
+- [[Bulkhead]] - code - core\resilience_base.py
+- [[Calculate retry delay with exponential backoff and jitter]] - rationale - core\error_handling.py
+- [[Chain operations (flatMap)]] - rationale - core\error_handling.py
+- [[Check if error is recoverable]] - rationale - core\error_handling.py
+- [[Check if result is failure]] - rationale - core\error_handling.py
+- [[Check if result is success]] - rationale - core\error_handling.py
+- [[Circuit breaker metrics]] - rationale - core\resilience_base.py
+- [[Circuit breaker states]] - rationale - core\resilience_base.py
+- [[CircuitBreaker]] - code - core\resilience_base.py
+- [[CircuitMetrics]] - code - core\resilience_base.py
+- [[CircuitState]] - code - core\resilience_base.py
+- [[Classify error by type]] - rationale - core\error_handling.py
+- [[Convert to dictionary_2]] - rationale - core\error_handling.py
+- [[Create failure result]] - rationale - core\error_handling.py
+- [[Create success result]] - rationale - core\error_handling.py
+- [[Decorator for applying bulkhead pattern]] - rationale - core\resilience_patterns.py
+- [[Decorator for applying circuit breaker pattern]] - rationale - core\resilience_patterns.py
+- [[Decorator for applying resilience patterns to functions]] - rationale - core\resilience_patterns.py
+- [[Decorator for applying retry policy]] - rationale - core\resilience_patterns.py
+- [[Decorator for applying watchdog monitoring]] - rationale - core\resilience_patterns.py
+- [[Decorator to add bulkhead isolation to a function]] - rationale - core\error_handling.py
+- [[Decorator to add circuit breaker to a function]] - rationale - core\error_handling.py
+- [[Decorator to add full resilience to a function]] - rationale - core\error_handling.py
+- [[Decorator to apply bulkhead isolation to a function]] - rationale - core\error_handling.py
+- [[Decorator to apply circuit breaker to a function]] - rationale - core\error_handling.py
+- [[Decorator to make a function resilient with configurable patterns]] - rationale - core\error_handling.py
+- [[Decorator to manage resource pool for a function]] - rationale - core\error_handling.py
+- [[Deep reasoning using MCTS + PRM with security validations         Concurrency-sa]] - rationale - core\system2_thinking.py
+- [[Determine error severity]] - rationale - core\error_handling.py
+- [[Determine if an error is retryable]] - rationale - core\error_handling.py
+- [[Enhanced ResilienceManager with JARVIS specific integration]] - rationale - core\resilience_patterns.py
+- [[Enhanced error handler with resilience patterns     - Circuit breakers     - Re]] - rationale - core\error_handling.py
+- [[Error categories for classification]] - rationale - core\error_handling.py
+- [[Error severity levels]] - rationale - core\error_handling.py
+- [[ErrorCategory]] - code - core\error_handling.py
+- [[ErrorHandler]] - code - core\error_handling.py
+- [[ErrorSeverity]] - code - core\error_handling.py
+- [[Execute a function with resilience patterns]] - rationale - core\error_handling.py
+- [[Execute a function with resource pool management]] - rationale - core\error_handling.py
+- [[Execute async function safely and return Result]] - rationale - core\error_handling.py
+- [[Execute function safely and return Result]] - rationale - core\error_handling.py
+- [[Expand node by trying an untried action - async with resource management]] - rationale - core\system2_thinking.py
+- [[Extract reasoning path from root to node - async with concurrency safety]] - rationale - core\system2_thinking.py
+- [[Generate possible reasoning actions]] - rationale - core\system2_thinking.py
+- [[Generate user-friendly error message]] - rationale - core\error_handling.py
+- [[Get comprehensive health status including resilience metrics]] - rationale - core\error_handling.py
+- [[Get error or raise exception]] - rationale - core\error_handling.py
+- [[Get value or raise exception]] - rationale - core\error_handling.py
+- [[Handle exception and convert to JarvisError]] - rationale - core\error_handling.py
+- [[JARVIS v9.0 - PhD-Level Resilience Patterns Implementation Phase 6 Robustness &]] - rationale - core\resilience_patterns.py
+- [[JarvisError]] - code - core\error_handling.py
+- [[Log error with appropriate level]] - rationale - core\error_handling.py
+- [[MCTSNode]] - code - core\system2_thinking.py
+- [[Node in Monte Carlo Tree Search - Concurrency-safe with bounded resources]] - rationale - core\system2_thinking.py
+- [[PhD-Level Error Handler     - Automatic error classification     - Recovery stra]] - rationale - core\error_handling.py
+- [[Remove a child node - thread-safe]] - rationale - core\system2_thinking.py
+- [[ResilienceDecorator]] - code - core\resilience_patterns.py
+- [[ResilienceManager]] - code - core\resilience_base.py
+- [[ResilienceManager_1]] - code - core\resilience_patterns.py
+- [[ResilientErrorHandler]] - code - core\error_handling.py
+- [[ResourcePool]] - code - core\resilience_base.py
+- [[Result]] - code - core\error_handling.py
+- [[Result type for Railway-Oriented Programming     Either Success(value) or Failur]] - rationale - core\error_handling.py
+- [[RetryPolicy]] - code - core\resilience_base.py
+- [[Select a node to expand using UCB1 - async with concurrency safety]] - rationale - core\system2_thinking.py
+- [[Select best child using UCB1 + Experience Replay Bias]] - rationale - core\system2_thinking.py
+- [[Store error in history]] - rationale - core\error_handling.py
+- [[Structured error type]] - rationale - core\error_handling.py
+- [[Thread-safe value update]] - rationale - core\system2_thinking.py
+- [[Thread-safe visit count increment]] - rationale - core\system2_thinking.py
+- [[Thread-safe way to get child count]] - rationale - core\system2_thinking.py
+- [[Thread-safe way to get children]] - rationale - core\system2_thinking.py
+- [[WatchdogTimer]] - code - core\resilience_base.py
+- [[Wrapper for asynchronous functions]] - rationale - core\resilience_patterns.py
+- [[Wrapper for synchronous functions]] - rationale - core\resilience_patterns.py
+- [[bulkhead()]] - code - core\resilience_patterns.py
+- [[circuit_breaker()]] - code - core\resilience_patterns.py
+- [[error_handling.py]] - code - core\error_handling.py
+- [[failing_function()]] - code - core\error_handling.py
+- [[failure()]] - code - core\error_handling.py
+- [[resilience_base.py]] - code - core\resilience_base.py
+- [[resilience_patterns.py]] - code - core\resilience_patterns.py
+- [[retry_policy()]] - code - core\resilience_patterns.py
+- [[safe_execute()]] - code - core\error_handling.py
+- [[safe_execute_async()]] - code - core\error_handling.py
+- [[success()]] - code - core\error_handling.py
+- [[system2_thinking.py]] - code - core\system2_thinking.py
+- [[watchdog()]] - code - core\resilience_patterns.py
+- [[with_bulkhead()]] - code - core\error_handling.py
+- [[with_circuit_breaker()]] - code - core\error_handling.py
+- [[with_resilience()]] - code - core\error_handling.py
+- [[with_resource_pool()]] - code - core\error_handling.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_12
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 57 edges to [[_COMMUNITY_Community 0]]
+- 10 edges to [[_COMMUNITY_Community 1]]
+- 6 edges to [[_COMMUNITY_Community 2]]
+- 5 edges to [[_COMMUNITY_Community 15]]
+- 4 edges to [[_COMMUNITY_Community 7]]
+- 3 edges to [[_COMMUNITY_Community 21]]
+- 3 edges to [[_COMMUNITY_Community 11]]
+- 2 edges to [[_COMMUNITY_Community 10]]
+- 1 edge to [[_COMMUNITY_Community 45]]
+- 1 edge to [[_COMMUNITY_Community 17]]
+- 1 edge to [[_COMMUNITY_Community 29]]
+
+## Top bridge nodes
+- [[.reason()]] - degree 23, connects to 7 communities
+- [[.get_health_status()]] - degree 6, connects to 3 communities
+- [[.handle_exception()]] - degree 15, connects to 2 communities
+- [[.handle_whatsapp_message()_1]] - degree 13, connects to 2 communities
+- [[.acquire()]] - degree 8, connects to 2 communities

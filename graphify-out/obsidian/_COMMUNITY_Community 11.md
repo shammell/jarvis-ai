@@ -1,0 +1,237 @@
+---
+type: community
+members: 183
+---
+
+# Community 11
+
+**Members:** 183 nodes
+
+## Members
+- [[.__init__()_203]] - code - voice\prompt_generator.py
+- [[.__init__()_205]] - code - voice\task_chain.py
+- [[.__init__()_206]] - code - voice\task_chain_executor.py
+- [[.__init__()_207]] - code - voice\task_chain_executor.py
+- [[.__init__()_209]] - code - voice\voice_bridge.py
+- [[.__post_init__()_2]] - code - voice\task_chain_executor.py
+- [[.__post_init__()_3]] - code - voice\task_chain_executor.py
+- [[._detect_task_type()]] - code - voice\task_chain_executor.py
+- [[._execute_chain()]] - code - voice\task_chain_executor.py
+- [[._execute_with_recovery()]] - code - voice\task_chain_executor.py
+- [[._extract_app_name()]] - code - voice\task_chain_executor.py
+- [[._extract_object()]] - code - voice\task_chain_executor.py
+- [[._handle_complex_command()]] - code - voice\task_chain_executor.py
+- [[._handle_create_code()]] - code - voice\prompt_generator.py
+- [[._handle_document_read()]] - code - voice\prompt_generator.py
+- [[._handle_general_query()]] - code - voice\prompt_generator.py
+- [[._handle_image_analyze()]] - code - voice\prompt_generator.py
+- [[._handle_open_app()]] - code - voice\prompt_generator.py
+- [[._handle_recall()]] - code - voice\task_chain_executor.py
+- [[._handle_resume()]] - code - voice\task_chain_executor.py
+- [[._handle_screen_analyze()]] - code - voice\prompt_generator.py
+- [[._handle_system_control()]] - code - voice\prompt_generator.py
+- [[._handle_type_text()]] - code - voice\prompt_generator.py
+- [[._handle_web_search()]] - code - voice\prompt_generator.py
+- [[._init_db()_1]] - code - voice\task_chain_executor.py
+- [[._is_complex_command()]] - code - voice\task_chain_executor.py
+- [[._is_resume_request()]] - code - voice\task_chain_executor.py
+- [[._llm_parse()]] - code - voice\task_chain_executor.py
+- [[._process_single_step()]] - code - voice\prompt_generator.py
+- [[._resolve_reference()]] - code - voice\task_chain_executor.py
+- [[._rule_based_parse()]] - code - voice\task_chain_executor.py
+- [[._should_continue_on_failure()]] - code - voice\task_chain_executor.py
+- [[._update_context()]] - code - voice\task_chain_executor.py
+- [[._update_context_from_task()]] - code - voice\task_chain_executor.py
+- [[.clear_context()]] - code - voice\task_chain_executor.py
+- [[.constructor()_10]] - code - whatsapp\baileys_bridge.js
+- [[.duration_ms()]] - code - voice\task_chain_executor.py
+- [[.execute()_13]] - code - whatsapp\baileys_bridge.js
+- [[.execute_chain()]] - code - voice\task_chain.py
+- [[.execute_goal()_2]] - code - voice\voice_bridge.py
+- [[.getState()]] - code - whatsapp\baileys_bridge.js
+- [[.get_context()]] - code - voice\task_chain_executor.py
+- [[.get_incomplete_chains()]] - code - voice\task_chain_executor.py
+- [[.get_pattern()]] - code - voice\task_chain_executor.py
+- [[.get_shortcut()]] - code - voice\task_chain_executor.py
+- [[.get_status()_3]] - code - voice\task_chain_executor.py
+- [[.handle()]] - code - voice\voice_bridge.py
+- [[.initialize()]] - code - voice\voice_bridge.py
+- [[.mark_chain_complete()]] - code - voice\task_chain_executor.py
+- [[.onFailure()]] - code - whatsapp\baileys_bridge.js
+- [[.onSuccess()]] - code - whatsapp\baileys_bridge.js
+- [[.parse()]] - code - voice\task_chain.py
+- [[.parse_complex_command()]] - code - voice\task_chain_executor.py
+- [[.process()_4]] - code - voice\prompt_generator.py
+- [[.process()_5]] - code - voice\task_chain_executor.py
+- [[.progress()]] - code - voice\task_chain_executor.py
+- [[.save_chain()]] - code - voice\task_chain_executor.py
+- [[.save_context()]] - code - voice\task_chain_executor.py
+- [[.save_pattern()]] - code - voice\task_chain_executor.py
+- [[.shutdown()_1]] - code - voice\voice_bridge.py
+- [[.test_concurrent_security_requests()]] - code - tests\security\test_security_integration.py
+- [[.to_dict()_14]] - code - voice\task_chain_executor.py
+- [[.to_dict()_15]] - code - voice\task_chain_executor.py
+- [[A chain of related tasks from a complex command.]] - rationale - voice\task_chain_executor.py
+- [[Analyze current screen content.]] - rationale - voice\prompt_generator.py
+- [[Analyze provided image path.]] - rationale - voice\prompt_generator.py
+- [[Bridge between voice system and JARVIS orchestrator.      Takes transcribed text]] - rationale - voice\voice_bridge.py
+- [[Check if command has multiple parts.]] - rationale - voice\task_chain_executor.py
+- [[Check if text looks like a high-level goal.]] - rationale - voice\voice_bridge.py
+- [[Check if user wants to resume incomplete task.]] - rationale - voice\task_chain_executor.py
+- [[CircuitBreaker_1]] - code - whatsapp\baileys_bridge.js
+- [[Clear current context (useful for testing).]] - rationale - voice\task_chain_executor.py
+- [[Detect task type from command text.]] - rationale - voice\task_chain_executor.py
+- [[Detect user's intent from transcribed text.]] - rationale - voice\prompt_generator.py
+- [[Determine if we should continue chain after a task failure.]] - rationale - voice\task_chain_executor.py
+- [[Execute a chain of tasks with status updates.]] - rationale - voice\task_chain_executor.py
+- [[Execute a chain of tasks.]] - rationale - voice\task_chain.py
+- [[Execute a high-level goal.]] - rationale - voice\voice_bridge.py
+- [[Execute a single task with fallback recovery.]] - rationale - voice\task_chain_executor.py
+- [[Extract application name from open command.]] - rationale - voice\task_chain_executor.py
+- [[Extract the main objecttarget from a command.]] - rationale - voice\task_chain_executor.py
+- [[Generate a filename from the command text.]] - rationale - voice\prompt_generator.py
+- [[Generate code and open in VS Code.]] - rationale - voice\prompt_generator.py
+- [[Generates smart prompts and executes actions based on voice commands.      Usage]] - rationale - voice\prompt_generator.py
+- [[Get a learned pattern if it exists.]] - rationale - voice\task_chain_executor.py
+- [[Get all incomplete task chains for a user.]] - rationale - voice\task_chain_executor.py
+- [[Get conversation context for a user.]] - rationale - voice\task_chain_executor.py
+- [[Get current executor status.]] - rationale - voice\task_chain_executor.py
+- [[Get the original command for a shortcut (e.g., 'woh wala').]] - rationale - voice\task_chain_executor.py
+- [[GoalStore]] - code - voice\task_chain_executor.py
+- [[Handle a multi-step command.]] - rationale - voice\task_chain_executor.py
+- [[Handle a voice command and return response text.]] - rationale - voice\voice_bridge.py
+- [[Handle general queries via LLM.]] - rationale - voice\prompt_generator.py
+- [[Handle recall patterns like 'woh wala karo'.]] - rationale - voice\task_chain_executor.py
+- [[Handle system control commands.]] - rationale - voice\prompt_generator.py
+- [[Handle type text commands.          Examples             - Hello World likho]] - rationale - voice\prompt_generator.py
+- [[Initialize bridge with orchestrator connection.]] - rationale - voice\voice_bridge.py
+- [[Initialize database tables.]] - rationale - voice\task_chain_executor.py
+- [[IntentType]] - code - voice\prompt_generator.py
+- [[Main executor for multi-step voice commands.      Features     - Parse complex]] - rationale - voice\task_chain_executor.py
+- [[Mark a chain as completed.]] - rationale - voice\task_chain_executor.py
+- [[Open browser and search.]] - rationale - voice\prompt_generator.py
+- [[Parse a complex command into individual tasks.         Uses LLM if available for]] - rationale - voice\task_chain_executor.py
+- [[Parse command text into task steps.]] - rationale - voice\task_chain.py
+- [[Persistent storage for incomplete tasks and goals.     Enables resumption across]] - rationale - voice\task_chain_executor.py
+- [[Process a voice command and return response text.]] - rationale - voice\prompt_generator.py
+- [[Process a voice command, detecting if it's complexmulti-part.         Returns r]] - rationale - voice\task_chain_executor.py
+- [[PromptGenerator]] - code - voice\prompt_generator.py
+- [[Quick check if a command is complex (for routing).     Use this in prompt_genera]] - rationale - voice\task_chain_executor.py
+- [[Read and summarize PDFWordText documents.]] - rationale - voice\prompt_generator.py
+- [[Remove markdown code fences from LLM output.]] - rationale - voice\prompt_generator.py
+- [[Resolve reference words to actual objects.]] - rationale - voice\task_chain_executor.py
+- [[Resume incomplete tasks from previous session.]] - rationale - voice\task_chain_executor.py
+- [[Rule-based parsing for complex commands.]] - rationale - voice\task_chain_executor.py
+- [[Run security tests with coverage analysis]] - rationale - tests\security\test_security_coverage.py
+- [[Save a successful command pattern for learning.]] - rationale - voice\task_chain_executor.py
+- [[Save conversation context for reference resolution.]] - rationale - voice\task_chain_executor.py
+- [[Save or update a task chain.]] - rationale - voice\task_chain_executor.py
+- [[Shutdown the voice bridge.]] - rationale - voice\voice_bridge.py
+- [[Simple multi-step command executor with retryfallback.]] - rationale - voice\task_chain.py
+- [[Simple task step with retry tracking.]] - rationale - voice\task_chain.py
+- [[Single executable task in a chain.]] - rationale - voice\task_chain_executor.py
+- [[Task]] - code - voice\task_chain_executor.py
+- [[TaskChain]] - code - voice\task_chain_executor.py
+- [[TaskChainExecutor]] - code - voice\task_chain.py
+- [[TaskChainExecutor_1]] - code - voice\task_chain_executor.py
+- [[TaskStatus_1]] - code - voice\task_chain_executor.py
+- [[TaskStep]] - code - voice\task_chain.py
+- [[TaskType]] - code - voice\task_chain_executor.py
+- [[Test security system under concurrent requests]] - rationale - tests\security\test_security_integration.py
+- [[Update context from a completed task.]] - rationale - voice\task_chain_executor.py
+- [[Update conversation context after command execution.]] - rationale - voice\task_chain_executor.py
+- [[Use LLM to parse complex command into steps.]] - rationale - voice\task_chain_executor.py
+- [[VoiceBridge]] - code - voice\voice_bridge.py
+- [[Wrap Groq client into a simple async callable.]] - rationale - voice\voice_bridge.py
+- [[Wrap JARVIS LLM manager into a simple async callable.]] - rationale - voice\voice_bridge.py
+- [[_clean_code()]] - code - voice\prompt_generator.py
+- [[_generate_filename()]] - code - voice\prompt_generator.py
+- [[_looks_like_high_level_goal()]] - code - voice\voice_bridge.py
+- [[_wrap_groq()]] - code - voice\voice_bridge.py
+- [[_wrap_llm()]] - code - voice\voice_bridge.py
+- [[api.ts]] - code - web\lib\api.ts
+- [[authenticateGRPCClient()]] - code - whatsapp\baileys_bridge.js
+- [[authenticateJWT()]] - code - whatsapp\baileys_bridge.js
+- [[baileys_bridge.js]] - code - whatsapp\baileys_bridge.js
+- [[checkAuthAndLoadChats()]] - code - web\app\chat\page.tsx
+- [[client.ts]] - code - web\lib\supabase\client.ts
+- [[connectToWhatsApp()]] - code - whatsapp\baileys_bridge.js
+- [[createChat()]] - code - web\lib\api.ts
+- [[deleteChat()]] - code - web\lib\api.ts
+- [[detect_intent()]] - code - voice\prompt_generator.py
+- [[ensureGRPCAuth()]] - code - whatsapp\baileys_bridge.js
+- [[forwardToPython()]] - code - whatsapp\baileys_bridge.js
+- [[getConfiguredSupabase()]] - code - web\lib\supabase\client.ts
+- [[getMessages()]] - code - web\lib\api.ts
+- [[getSession()]] - code - web\lib\supabase\client.ts
+- [[getSupabaseConfigError()]] - code - web\lib\supabase\client.ts
+- [[handleNewChat()]] - code - web\app\chat\page.tsx
+- [[handleSendMessage()]] - code - web\app\chat\page.tsx
+- [[handleSignOut()]] - code - web\app\chat\page.tsx
+- [[initGRPCClient()]] - code - whatsapp\baileys_bridge.js
+- [[isDuplicate()]] - code - whatsapp\baileys_bridge.js
+- [[isSupabaseConfigured()]] - code - web\lib\supabase\client.ts
+- [[is_complex_command()]] - code - voice\task_chain_executor.py
+- [[listChats()]] - code - web\lib\api.ts
+- [[loadChats()]] - code - web\app\chat\page.tsx
+- [[loadMessages()]] - code - web\app\chat\page.tsx
+- [[page.tsx_1]] - code - web\app\chat\page.tsx
+- [[processMessageQueue()]] - code - whatsapp\baileys_bridge.js
+- [[prompt_generator.py]] - code - voice\prompt_generator.py
+- [[run_security_tests_with_coverage()]] - code - tests\security\test_security_coverage.py
+- [[sendMessage()]] - code - web\lib\api.ts
+- [[sendMessageDirect()]] - code - whatsapp\baileys_bridge.js
+- [[signIn()]] - code - web\lib\supabase\client.ts
+- [[signOut()]] - code - web\lib\supabase\client.ts
+- [[signUp()]] - code - web\lib\supabase\client.ts
+- [[start()_3]] - code - whatsapp\baileys_bridge.js
+- [[streamMessage()]] - code - web\lib\api.ts
+- [[task_chain.py]] - code - voice\task_chain.py
+- [[task_chain_executor.py]] - code - voice\task_chain_executor.py
+- [[test_security_coverage.py]] - code - tests\security\test_security_coverage.py
+- [[updateMetrics()]] - code - whatsapp\baileys_bridge.js
+- [[voice_bridge.py]] - code - voice\voice_bridge.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_11
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 60 edges to [[_COMMUNITY_Community 2]]
+- 27 edges to [[_COMMUNITY_Community 1]]
+- 24 edges to [[_COMMUNITY_Community 0]]
+- 20 edges to [[_COMMUNITY_Community 4]]
+- 12 edges to [[_COMMUNITY_Community 13]]
+- 12 edges to [[_COMMUNITY_Community 10]]
+- 8 edges to [[_COMMUNITY_Community 7]]
+- 6 edges to [[_COMMUNITY_Community 16]]
+- 6 edges to [[_COMMUNITY_Community 23]]
+- 4 edges to [[_COMMUNITY_Community 18]]
+- 4 edges to [[_COMMUNITY_Community 8]]
+- 4 edges to [[_COMMUNITY_Community 5]]
+- 3 edges to [[_COMMUNITY_Community 15]]
+- 3 edges to [[_COMMUNITY_Community 12]]
+- 3 edges to [[_COMMUNITY_Community 32]]
+- 3 edges to [[_COMMUNITY_Community 67]]
+- 3 edges to [[_COMMUNITY_Community 17]]
+- 3 edges to [[_COMMUNITY_Community 29]]
+- 2 edges to [[_COMMUNITY_Community 19]]
+- 2 edges to [[_COMMUNITY_Community 36]]
+- 2 edges to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_Community 74]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 30]]
+
+## Top bridge nodes
+- [[.parse()]] - degree 36, connects to 9 communities
+- [[start()_3]] - degree 19, connects to 9 communities
+- [[.process()_5]] - degree 24, connects to 5 communities
+- [[.execute()_13]] - degree 70, connects to 4 communities
+- [[.to_dict()_15]] - degree 12, connects to 4 communities

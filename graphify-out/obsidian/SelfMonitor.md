@@ -1,0 +1,87 @@
+---
+source_file: "core\self_monitor.py"
+type: "code"
+community: "Community 0"
+location: "L27"
+tags:
+  - graphify/code
+  - graphify/INFERRED
+  - community/Community_0
+---
+
+# SelfMonitor
+
+## Connections
+- [[.__init__()_4]] - `calls` [INFERRED]
+- [[.__init__()_106]] - `method` [EXTRACTED]
+- [[._calculate_health_score()]] - `method` [EXTRACTED]
+- [[._load_data()]] - `method` [EXTRACTED]
+- [[._save_data()]] - `method` [EXTRACTED]
+- [[._update_metrics()]] - `method` [EXTRACTED]
+- [[.generate_report()_1]] - `method` [EXTRACTED]
+- [[.get_average_response_time()]] - `method` [EXTRACTED]
+- [[.get_error_rate()]] - `method` [EXTRACTED]
+- [[.get_success_rate()]] - `method` [EXTRACTED]
+- [[.identify_failure_patterns()]] - `method` [EXTRACTED]
+- [[.identify_weaknesses()]] - `method` [EXTRACTED]
+- [[.record_action()_1]] - `method` [EXTRACTED]
+- [[.record_metric()]] - `method` [EXTRACTED]
+- [[.suggest_improvements()]] - `method` [EXTRACTED]
+- [[.take_snapshot()]] - `method` [EXTRACTED]
+- [[========================================================== JARVIS - Closed Feedb]] - `uses` [INFERRED]
+- [[AI]] - `uses` [INFERRED]
+- [[Agents]] - `uses` [INFERRED]
+- [[Analyze current state and generate proactive suggestions          Returns]] - `uses` [INFERRED]
+- [[Analyze trace and trigger responses]] - `uses` [INFERRED]
+- [[Analyze trace and trigger responses with recursion guard]] - `uses` [INFERRED]
+- [[Anticipate what the user might want to do next          Args             curren]] - `uses` [INFERRED]
+- [[CFG]] - `uses` [INFERRED]
+- [[Callback for progress updates]] - `uses` [INFERRED]
+- [[Callback for progress updates_1]] - `uses` [INFERRED]
+- [[Callback when task completes]] - `uses` [INFERRED]
+- [[Callback when task completes_1]] - `uses` [INFERRED]
+- [[Callback when task needs approval]] - `uses` [INFERRED]
+- [[Callback when task needs approval_1]] - `uses` [INFERRED]
+- [[ClosedFeedbackLoop]] - `uses` [INFERRED]
+- [[Enhanced Autonomy System for JARVIS v9.0      Integrates     - Autonomous decis]] - `uses` [INFERRED]
+- [[Enhanced Autonomy System for JARVIS v9.0      Integrates     - Autonomous decis_1]] - `uses` [INFERRED]
+- [[EnhancedAutonomySystem]] - `uses` [INFERRED]
+- [[EventBus]] - `uses` [INFERRED]
+- [[Execute a high-level goal autonomously          Args             goal_descripti]] - `uses` [INFERRED]
+- [[Execute a high-level goal autonomously          Args             goal_descripti_1]] - `uses` [INFERRED]
+- [[Execute a proactive suggestion]] - `uses` [INFERRED]
+- [[Execute a proactive suggestion_1]] - `uses` [INFERRED]
+- [[Execute a proactive suggestion          Args             suggestion_id Index o]] - `uses` [INFERRED]
+- [[Execute a task using a coordinated team of agents          Args             tas]] - `uses` [INFERRED]
+- [[Execute a task using a coordinated team of agents          Args             tas_1]] - `uses` [INFERRED]
+- [[Executor]] - `uses` [INFERRED]
+- [[FileTracker]] - `uses` [INFERRED]
+- [[Filter suggestions based on learned user preferences]] - `uses` [INFERRED]
+- [[Get comprehensive system status          Returns             System status incl]] - `uses` [INFERRED]
+- [[Get comprehensive system status          Returns             System status incl_1]] - `uses` [INFERRED]
+- [[Get proactive agent statistics]] - `uses` [INFERRED]
+- [[Get proactive suggestions          Returns             Suggestions and system s]] - `uses` [INFERRED]
+- [[Get proactive suggestions          Returns             Suggestions and system s_1]] - `uses` [INFERRED]
+- [[Initialize default agent teams based on Claude Code patterns]] - `uses` [INFERRED]
+- [[Initialize default agent teams based on Claude Code patterns_1]] - `uses` [INFERRED]
+- [[Jarvis]] - `uses` [INFERRED]
+- [[Learn from rejected suggestions]] - `uses` [INFERRED]
+- [[Main CLI interface for testing]] - `uses` [INFERRED]
+- [[Main CLI interface for testing_1]] - `uses` [INFERRED]
+- [[Memory]] - `uses` [INFERRED]
+- [[Proactive intelligence system     - Anticipates user needs     - Suggests improv]] - `uses` [INFERRED]
+- [[ProactiveAgent]] - `uses` [INFERRED]
+- [[Reject a suggestion and learn from it          Args             suggestion_id]] - `uses` [INFERRED]
+- [[Resume work from previous session          Returns             Resume status an]] - `uses` [INFERRED]
+- [[Resume work from previous session          Returns             Resume status an_1]] - `uses` [INFERRED]
+- [[Saves checkpoint to disk]] - `uses` [INFERRED]
+- [[Saves checkpoint to disk_1]] - `uses` [INFERRED]
+- [[Self-monitoring and performance tracking system     - Track actions and outcomes]] - `rationale_for` [EXTRACTED]
+- [[Start the feedback loop]] - `uses` [INFERRED]
+- [[The Central Nervous System bridge.     Automatically reacts to performance dat]] - `uses` [INFERRED]
+- [[Watcher]] - `uses` [INFERRED]
+- [[main()_2]] - `calls` [INFERRED]
+- [[self_monitor.py]] - `contains` [EXTRACTED]
+- [[test_proactive_agent()]] - `calls` [INFERRED]
+
+#graphify/code #graphify/INFERRED #community/Community_0

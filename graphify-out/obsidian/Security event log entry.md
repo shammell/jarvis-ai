@@ -1,0 +1,17 @@
+---
+source_file: "core\security_system.py"
+type: "rationale"
+community: "Community 32"
+location: "L156"
+tags:
+  - graphify/rationale
+  - graphify/EXTRACTED
+  - community/Community_32
+---
+
+# Security event log entry
+
+## Connections
+- [[SecurityEvent]] - `rationale_for` [EXTRACTED]
+
+#graphify/rationale #graphify/EXTRACTED #community/Community_32

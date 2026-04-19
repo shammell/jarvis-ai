@@ -1,0 +1,194 @@
+---
+type: community
+members: 151
+---
+
+# Community 15
+
+**Members:** 151 nodes
+
+## Members
+- [[.__hash__()]] - code - core\provider_contract.py
+- [[.__init__()_51]] - code - core\coding_execution_router.py
+- [[.__init__()_86]] - code - core\provider_contract.py
+- [[.__init__()_87]] - code - core\provider_contract.py
+- [[.__init__()_97]] - code - core\routing_policy.py
+- [[.__new__()]] - code - core\provider_contract.py
+- [[._get_healthy_providers()]] - code - core\coding_execution_router.py
+- [[._map_provider_type_to_id()]] - code - core\coding_execution_router.py
+- [[._map_provider_types_to_ids()]] - code - core\coding_execution_router.py
+- [[._parse_risk_level()]] - code - core\coding_execution_router.py
+- [[._provider_id_to_provider_type()]] - code - core\coding_execution_router.py
+- [[._provider_info_to_dict()]] - code - core\coding_execution_router.py
+- [[._select_best_provider()]] - code - core\coding_execution_router.py
+- [[._track_decision()]] - code - core\coding_execution_router.py
+- [[.attempt_bypass()]] - code - core\routing_policy.py
+- [[.can_handle()_4]] - code - core\provider_contract.py
+- [[.can_provider_handle_risk()]] - code - core\routing_policy.py
+- [[.check_all_providers_health()]] - code - core\coding_execution_router.py
+- [[.check_health()]] - code - core\provider_contract.py
+- [[.check_provider_health()]] - code - core\coding_execution_router.py
+- [[.execute()_6]] - code - core\provider_contract.py
+- [[.get_all_providers()]] - code - core\provider_contract.py
+- [[.get_allowed_providers()]] - code - core\routing_policy.py
+- [[.get_allowed_providers_for_class()]] - code - core\coding_execution_router.py
+- [[.get_bypass_statistics()]] - code - core\routing_policy.py
+- [[.get_effective_fallback_order()]] - code - core\routing_policy.py
+- [[.get_primary_provider()]] - code - core\provider_contract.py
+- [[.get_primary_provider_task()]] - code - core\routing_policy.py
+- [[.get_provider()]] - code - core\provider_contract.py
+- [[.get_providers_for_capability()]] - code - core\provider_contract.py
+- [[.get_quota()]] - code - core\provider_contract.py
+- [[.get_routing_statistics()]] - code - core\coding_execution_router.py
+- [[.health_check_all()]] - code - core\provider_contract.py
+- [[.provider_info()]] - code - core\provider_contract.py
+- [[.register_provider()]] - code - core\provider_contract.py
+- [[.requires_approval()]] - code - core\routing_policy.py
+- [[.route_plan()]] - code - core\coding_execution_router.py
+- [[.route_task()]] - code - core\coding_execution_router.py
+- [[.route_task()_1]] - code - core\routing_policy.py
+- [[.select_primary_provider()]] - code - core\provider_contract.py
+- [[.to_dict()]] - code - core\coding_execution_router.py
+- [[.unregister_provider()]] - code - core\provider_contract.py
+- [[.validate_routing()]] - code - core\coding_execution_router.py
+- [[.validate_task_routing()]] - code - core\routing_policy.py
+- [[Abstract base class defining the contract all provider adapters must implement.]] - rationale - core\provider_contract.py
+- [[Capabilities a provider can execute.]] - rationale - core\provider_contract.py
+- [[Categorization for task routing decisions.]] - rationale - core\project_goal_compiler.py
+- [[Central registry for provider discovery and lookup.      Manages     - Provider]] - rationale - core\provider_contract.py
+- [[Check health of a specific provider and update registry.          Args]] - rationale - core\coding_execution_router.py
+- [[Check health of all registered providers.          Returns             Dict map]] - rationale - core\coding_execution_router.py
+- [[Check if a provider is allowed to handle a given risk level.          Args]] - rationale - core\routing_policy.py
+- [[Check if a task requires human approval.          Args             task_type T]] - rationale - core\routing_policy.py
+- [[Check if provider can handle task type.]] - rationale - core\provider_contract.py
+- [[Classification of task types for routing purposes.]] - rationale - core\routing_policy.py
+- [[ClaudeCodeProvider]] - code - core\provider_contract.py
+- [[Coding Execution Router - Multi-provider routing for compiled execution plans.]] - rationale - core\coding_execution_router.py
+- [[CodingExecutionRouter]] - code - core\coding_execution_router.py
+- [[Compiled execution plan ready for routing.      Contains the complete plan from]] - rationale - core\coding_execution_router.py
+- [[Convert ProviderInfo to dict.]] - rationale - core\coding_execution_router.py
+- [[Convert ProviderType to canonical provider ID string.]] - rationale - core\coding_execution_router.py
+- [[Convert provider ID to provider type.]] - rationale - core\coding_execution_router.py
+- [[Convert to serializable dict.]] - rationale - core\coding_execution_router.py
+- [[Create ExecutionPlan from CompiledGoal.]] - rationale - core\coding_execution_router.py
+- [[Create a new router with default configuration.]] - rationale - core\coding_execution_router.py
+- [[Defines routing policy for task class → provider mapping.      Features     - T]] - rationale - core\routing_policy.py
+- [[Ensure primary providers are registered.]] - rationale - core\coding_execution_router.py
+- [[Enum]] - code
+- [[Execute a compiled task.          This is a mock implementation for routing - ac]] - rationale - core\provider_contract.py
+- [[ExecutionPlan]] - code - core\coding_execution_router.py
+- [[Filter to only healthy providers.]] - rationale - core\coding_execution_router.py
+- [[Get a provider by ID.          Args             provider_id ID of provider to]] - rationale - core\provider_contract.py
+- [[Get all providers that can handle a specific capability.          Args]] - rationale - core\provider_contract.py
+- [[Get all registered providers.]] - rationale - core\provider_contract.py
+- [[Get fallback order considering available providers.          Args             t]] - rationale - core\routing_policy.py
+- [[Get routing statistics from recent decisions.]] - rationale - core\coding_execution_router.py
+- [[Get statistics about bypass attempts.]] - rationale - core\routing_policy.py
+- [[Get the default policy enforcer instance.]] - rationale - core\routing_policy.py
+- [[Get the default routing policy instance.]] - rationale - core\routing_policy.py
+- [[Get the global primary provider (for tasks without specific requirements).]] - rationale - core\provider_contract.py
+- [[Get the global registry instance (thread-safe).]] - rationale - core\provider_contract.py
+- [[Get the ordered list of allowed providers for a task class.          Args]] - rationale - core\coding_execution_router.py
+- [[Get the ordered list of allowed providers for a task class.          Args_1]] - rationale - core\routing_policy.py
+- [[Get the policy enforcer.]] - rationale - core\coding_execution_router.py
+- [[Get the primary (first) provider for a task class.          Args             ta]] - rationale - core\routing_policy.py
+- [[Get the provider registry.]] - rationale - core\coding_execution_router.py
+- [[Get the routing policy.]] - rationale - core\coding_execution_router.py
+- [[GoalStatus]] - code - core\goal_manager.py
+- [[Health check result for a provider.]] - rationale - core\provider_contract.py
+- [[Health status of a provider.]] - rationale - core\provider_contract.py
+- [[Information about a provider.]] - rationale - core\provider_contract.py
+- [[Initialize the router.          Args             registry Provider registry fo]] - rationale - core\coding_execution_router.py
+- [[Map provider types to actual provider IDs.]] - rationale - core\coding_execution_router.py
+- [[Outcome of a routing decision.]] - rationale - core\coding_execution_router.py
+- [[Parse string risk level to enum.]] - rationale - core\coding_execution_router.py
+- [[Perform health check.          Simulates health check - in production this would]] - rationale - core\provider_contract.py
+- [[Perform health checks on all providers.          Returns             Dict mappi]] - rationale - core\provider_contract.py
+- [[PolicyEnforcer]] - code - core\routing_policy.py
+- [[Primary provider implementation for Claude Code operations.      This is the def]] - rationale - core\provider_contract.py
+- [[Provider Contracts - Abstract base classes for provider adapters and registry.]] - rationale - core\provider_contract.py
+- [[ProviderCapability]] - code - core\provider_contract.py
+- [[ProviderContract]] - code - core\provider_contract.py
+- [[ProviderHealthCheck]] - code - core\provider_contract.py
+- [[ProviderInfo]] - code - core\provider_contract.py
+- [[ProviderRegistry]] - code - core\provider_contract.py
+- [[ProviderStatus]] - code - core\provider_contract.py
+- [[ProviderType]] - code - core\routing_policy.py
+- [[PyEnum]] - code
+- [[Record and evaluate a bypass attempt.          Bypassing is when a task is route]] - rationale - core\routing_policy.py
+- [[Register a provider in the registry.          Args             provider Provid]] - rationale - core\provider_contract.py
+- [[Result of a routing decision.      Contains     - Decision status (selectedblo]] - rationale - core\coding_execution_router.py
+- [[Return current quota information.]] - rationale - core\provider_contract.py
+- [[Return provider information.]] - rationale - core\provider_contract.py
+- [[Risk classification for task routing.]] - rationale - core\routing_policy.py
+- [[RiskLevel]] - code - core\routing_policy.py
+- [[Route a complete execution plan.          Routes all tool steps from a compiled]] - rationale - core\coding_execution_router.py
+- [[Route a single task from a compiled plan to a provider.          This method]] - rationale - core\coding_execution_router.py
+- [[Route a task to the best available provider.          Args             task_cla]] - rationale - core\routing_policy.py
+- [[RouterDecision]] - code - core\coding_execution_router.py
+- [[Routes compiled execution plans to appropriate provider adapters.      Key featu]] - rationale - core\coding_execution_router.py
+- [[Routing Policy - Task classification and provider mapping system.  This module d]] - rationale - core\routing_policy.py
+- [[RoutingDecision]] - code - core\coding_execution_router.py
+- [[RoutingPolicy]] - code - core\routing_policy.py
+- [[Runtime enforcer for routing policies.      Responsibilities     - Route compil]] - rationale - core\routing_policy.py
+- [[Select the best provider from healthy providers.          Selection criteria]] - rationale - core\coding_execution_router.py
+- [[Select the primary (preferred) provider for a task type.          Implements det]] - rationale - core\provider_contract.py
+- [[Singleton pattern for registry.]] - rationale - core\provider_contract.py
+- [[TaskClass]] - code - core\project_goal_compiler.py
+- [[TaskClass_1]] - code - core\routing_policy.py
+- [[Track a routing decision for metrics.]] - rationale - core\coding_execution_router.py
+- [[Types of providers available for routing.]] - rationale - core\routing_policy.py
+- [[Unregister a provider from the registry.          Args             provider_id]] - rationale - core\provider_contract.py
+- [[Validate if a task can be routed to a specific provider.          Args]] - rationale - core\coding_execution_router.py
+- [[Validate if a task can be routed to a specific provider.          Args_1]] - rationale - core\routing_policy.py
+- [[_ensure_initial_providers()]] - code - core\coding_execution_router.py
+- [[can_handle()]] - code - core\provider_contract.py
+- [[check_health()]] - code - core\provider_contract.py
+- [[coding_execution_router.py]] - code - core\coding_execution_router.py
+- [[create_router()]] - code - core\coding_execution_router.py
+- [[enforcer()]] - code - core\coding_execution_router.py
+- [[execute()]] - code - core\provider_contract.py
+- [[from_compiled_plan()]] - code - core\coding_execution_router.py
+- [[get_policy_enforcer()]] - code - core\routing_policy.py
+- [[get_quota()]] - code - core\provider_contract.py
+- [[get_registry()]] - code - core\provider_contract.py
+- [[get_routing_policy()]] - code - core\routing_policy.py
+- [[goal_manager.py]] - code - core\goal_manager.py
+- [[policy()]] - code - core\coding_execution_router.py
+- [[provider_contract.py]] - code - core\provider_contract.py
+- [[provider_info()]] - code - core\provider_contract.py
+- [[registry()]] - code - core\coding_execution_router.py
+- [[routing_policy.py]] - code - core\routing_policy.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_15
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 834 edges to [[_COMMUNITY_Community 30]]
+- 420 edges to [[_COMMUNITY_Community 22]]
+- 49 edges to [[_COMMUNITY_Community 28]]
+- 26 edges to [[_COMMUNITY_Community 0]]
+- 17 edges to [[_COMMUNITY_Community 1]]
+- 11 edges to [[_COMMUNITY_Community 2]]
+- 5 edges to [[_COMMUNITY_Community 12]]
+- 4 edges to [[_COMMUNITY_Community 29]]
+- 3 edges to [[_COMMUNITY_Community 21]]
+- 3 edges to [[_COMMUNITY_Community 32]]
+- 3 edges to [[_COMMUNITY_Community 11]]
+- 2 edges to [[_COMMUNITY_Community 42]]
+- 2 edges to [[_COMMUNITY_Community 19]]
+- 2 edges to [[_COMMUNITY_Community 25]]
+- 2 edges to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 16]]
+- 1 edge to [[_COMMUNITY_Community 14]]
+
+## Top bridge nodes
+- [[Enum]] - degree 45, connects to 9 communities
+- [[.route_task()_1]] - degree 22, connects to 4 communities
+- [[.route_plan()]] - degree 9, connects to 4 communities
+- [[.get_allowed_providers()]] - degree 16, connects to 3 communities
+- [[.can_provider_handle_risk()]] - degree 13, connects to 3 communities

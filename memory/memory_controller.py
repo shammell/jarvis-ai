@@ -63,6 +63,9 @@ class MemoryController:
         self.max_contexts = self.config.get("max_contexts", 100)
         self.context_ttl = self.config.get("context_ttl", 3600)  # 1 hour default
 
+        # Async Airlock - Background Task Management
+        self.background_tasks = set()
+
         logger.info("🧠 Memory Controller initialized with encryption and RBAC")
 
     def _init_graph_rag(self):

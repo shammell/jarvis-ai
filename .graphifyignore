@@ -1,0 +1,24 @@
+# JARVIS - Graphify & Claude Noise Reduction
+# Ignore high-noise/low-logic utility folders
+
+# Documentation & Template Noise
+skills/pptx-official/
+skills/voice-ai-engine-development/templates/
+docs/archive/
+*.prompt.md
+
+# Build & System Noise
+**/__pycache__/
+**/.pytest_cache/
+**/venv/
+**/node_modules/
+**/dist/
+**/build/
+# Additional Pruning
+spec-kit/
+jarvis_project_production2/
+projects/
+Desktop/
+bin/
+*.json
+*.log

@@ -1,0 +1,21 @@
+---
+source_file: "core\proactive_agent.py"
+type: "rationale"
+community: "Community 0"
+location: "L130"
+tags:
+  - graphify/rationale
+  - graphify/INFERRED
+  - community/Community_0
+---
+
+# Filter suggestions based on learned user preferences
+
+## Connections
+- [[._filter_by_preferences()]] - `rationale_for` [EXTRACTED]
+- [[GoalManager]] - `uses` [INFERRED]
+- [[GoalPriority]] - `uses` [INFERRED]
+- [[HyperAutomation]] - `uses` [INFERRED]
+- [[SelfMonitor]] - `uses` [INFERRED]
+
+#graphify/rationale #graphify/INFERRED #community/Community_0

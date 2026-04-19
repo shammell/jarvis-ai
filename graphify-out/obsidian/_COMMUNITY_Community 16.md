@@ -1,0 +1,200 @@
+---
+type: community
+members: 150
+---
+
+# Community 16
+
+**Members:** 150 nodes
+
+## Members
+- [[.__init__()_5]] - code - jarvis_brain.py
+- [[.__init__()_6]] - code - jarvis_brain.py
+- [[.__init__()_7]] - code - jarvis_brain.py
+- [[.__init__()_8]] - code - jarvis_brain.py
+- [[.__init__()_9]] - code - jarvis_brain.py
+- [[.__init__()_10]] - code - jarvis_brain.py
+- [[.__init__()_78]] - code - core\network_security.py
+- [[.__init__()_79]] - code - core\network_security.py
+- [[.__init__()_80]] - code - core\network_security.py
+- [[.__init__()_100]] - code - core\security_system.py
+- [[._compute_hash()]] - code - jarvis_brain.py
+- [[._save()]] - code - jarvis_brain.py
+- [[.add_goal()]] - code - jarvis_brain.py
+- [[.add_goal_from_file()]] - code - jarvis_brain.py
+- [[.block_ip()]] - code - core\network_security.py
+- [[.call()]] - code - jarvis_brain.py
+- [[.changed()]] - code - jarvis_brain.py
+- [[.check_rate_limit()]] - code - core\network_security.py
+- [[.constructor()_3]] - code - mcp\real_quantum_mcp.js
+- [[.deploy_to_vercel()]] - code - core\compute_infrastructure.py
+- [[.dev()]] - code - jarvis_brain.py
+- [[.dispatch()]] - code - core\network_security.py
+- [[.docker_run()]] - code - jarvis_brain.py
+- [[.emit()]] - code - jarvis_brain.py
+- [[.executeCommand()_2]] - code - mcp\real_quantum_mcp.js
+- [[.extract_json()]] - code - jarvis_brain.py
+- [[.generate_self_signed_cert()]] - code - core\network_security.py
+- [[.get_execution_order()]] - code - jarvis_brain.py
+- [[.get_grpc_client_ssl_credentials()]] - code - core\network_security.py
+- [[.get_grpc_ssl_credentials()]] - code - core\network_security.py
+- [[.get_network_stats()]] - code - core\network_security.py
+- [[.get_ssl_context()]] - code - core\network_security.py
+- [[.initialize_fastapi_security()]] - code - core\network_security.py
+- [[.initialize_grpc_security()]] - code - core\network_security.py
+- [[.on_modified()]] - code - jarvis_brain.py
+- [[.pm()]] - code - jarvis_brain.py
+- [[.qa()]] - code - jarvis_brain.py
+- [[.read()]] - code - jarvis_brain.py
+- [[.run()_3]] - code - mcp\real_quantum_mcp.js
+- [[.run_goal()]] - code - jarvis_brain.py
+- [[.save_state()]] - code - jarvis_brain.py
+- [[.search()]] - code - jarvis_brain.py
+- [[.setupHandlers()_2]] - code - mcp\real_quantum_mcp.js
+- [[.shell()]] - code - jarvis_brain.py
+- [[.stream()]] - code - jarvis_brain.py
+- [[.validate_command()]] - code - core\security_system.py
+- [[.validate_connection()]] - code - core\network_security.py
+- [[.validate_context()]] - code - core\security_system.py
+- [[.validate_file_path()_1]] - code - core\security_system.py
+- [[.validate_query()]] - code - core\security_system.py
+- [[.worker()]] - code - jarvis_brain.py
+- [[.write()]] - code - jarvis_brain.py
+- [[AI]] - code - jarvis_brain.py
+- [[Agents]] - code - jarvis_brain.py
+- [[BaseHTTPMiddleware]] - code
+- [[Build a fast dedupe signature without reading entire huge files.]] - rationale - scripts\full_repo_audit.py
+- [[Centralized network security manager for the JARVIS system]] - rationale - core\network_security.py
+- [[Check if client has exceeded rate limit]] - rationale - core\network_security.py
+- [[Clean up JARVIS temporary files and logs.]] - rationale - jarvis.py
+- [[Clean up the root directory of the JARVIS project by moving files to organized s]] - rationale - jarvis.py
+- [[Comprehensive input validation and sanitization_1]] - rationale - core\security_system.py
+- [[Count files in root directory that are not in the safelist or hidden.]] - rationale - jarvis.py
+- [[Create SSL context with secure settings]] - rationale - core\network_security.py
+- [[Deploy project to Vercel          Args             project_path Local path to]] - rationale - core\compute_infrastructure.py
+- [[Detecta qual CLI de LLM está disponível (claude  gh copilot).]] - rationale - skills\audio-transcriber\scripts\transcribe.py
+- [[Ensure certificate paths exist and create self-signed certificates if needed]] - rationale - core\network_security.py
+- [[EventBus]] - code - jarvis_brain.py
+- [[Executor]] - code - jarvis_brain.py
+- [[FileAudit]] - code - scripts\full_repo_audit.py
+- [[FileSystemEventHandler]] - code
+- [[FileTracker]] - code - jarvis_brain.py
+- [[Generate self-signed certificate for development]] - rationale - core\network_security.py
+- [[Gerencia fluxo completo de prompts com prompt-engineer.          Cenário A Us]] - rationale - skills\audio-transcriber\scripts\transcribe.py
+- [[Get gRPC SSL credentials for secure server]] - rationale - core\network_security.py
+- [[Get gRPC client SSL credentials for secure connections]] - rationale - core\network_security.py
+- [[Get network security statistics]] - rationale - core\network_security.py
+- [[Initialize security for FastAPI application]] - rationale - core\network_security.py
+- [[Initialize security for gRPC server]] - rationale - core\network_security.py
+- [[InputValidator_1]] - code - core\security_system.py
+- [[Invoca prompt-engineer skill via CLI para melhorargerar prompts.          Arg]] - rationale - skills\audio-transcriber\scripts\transcribe.py
+- [[JARVIS v9.0 - Network Security Implementation Phase 4 Network & Communication S]] - rationale - core\network_security.py
+- [[Jarvis]] - code - jarvis_brain.py
+- [[Launch Backend, Frontend, and Voice systems in parallel.]] - rationale - jarvis.py
+- [[Memory]] - code - jarvis_brain.py
+- [[Network security configuration manager]] - rationale - core\network_security.py
+- [[NetworkSecurityConfig]] - code - core\network_security.py
+- [[NetworkSecurityManager]] - code - core\network_security.py
+- [[NetworkSecurityMiddleware]] - code - core\network_security.py
+- [[Processa transcript com LLM usando prompt fornecido.          Args         t]] - rationale - skills\audio-transcriber\scripts\transcribe.py
+- [[Read at most max_bytes and decode safely for regex heuristics.]] - rationale - scripts\full_repo_audit.py
+- [[RealQuantumMCPServer]] - code - mcp\real_quantum_mcp.js
+- [[Run JARVIS in autonomous mode.]] - rationale - jarvis.py
+- [[Salva transcript e ata em arquivos .md com timestamp.          Returns]] - rationale - skills\audio-transcriber\scripts\transcribe.py
+- [[Security middleware for FastAPI applications]] - rationale - core\network_security.py
+- [[Show JARVIS system status and health.]] - rationale - jarvis.py
+- [[Start the JARVIS orchestrator (jarvis_brain).]] - rationale - jarvis.py
+- [[Stop all tracked subprocesses.]] - rationale - jarvis.py
+- [[Test error handling and logging improvements in main.py wrapper methods]] - rationale - test_error_handling.py
+- [[Transcreve áudio usando Whisper com barra de progresso.          Returns]] - rationale - skills\audio-transcriber\scripts\transcribe.py
+- [[Validate a command against an allowlist and check for injection patterns.]] - rationale - core\security_system.py
+- [[Validate context data]] - rationale - core\security_system.py
+- [[Validate file paths to prevent directory traversal_1]] - rationale - core\security_system.py
+- [[Validate network connection]] - rationale - core\network_security.py
+- [[Validate search queries]] - rationale - core\security_system.py
+- [[Wait for a port to become active.]] - rationale - jarvis.py
+- [[Watcher]] - code - jarvis_brain.py
+- [[append_ctx()]] - code - jarvis_brain.py
+- [[autonomous()]] - code - jarvis.py
+- [[bootstrap()]] - code - jarvis.py
+- [[build_report()]] - code - scripts\full_repo_audit.py
+- [[classify_file()]] - code - scripts\full_repo_audit.py
+- [[clean()]] - code - jarvis.py
+- [[clean_root()]] - code - jarvis.py
+- [[collect_capabilities()]] - code - scripts\full_repo_audit.py
+- [[detect_cli_tool()]] - code - skills\audio-transcriber\scripts\transcribe.py
+- [[events()]] - code - jarvis_brain.py
+- [[full_repo_audit.py]] - code - scripts\full_repo_audit.py
+- [[handle_prompt_workflow()]] - code - skills\audio-transcriber\scripts\transcribe.py
+- [[invoke_prompt_engineer()]] - code - skills\audio-transcriber\scripts\transcribe.py
+- [[is_cluttered()]] - code - jarvis.py
+- [[is_mirror_path()]] - code - scripts\full_repo_audit.py
+- [[iter_code_files()]] - code - scripts\full_repo_audit.py
+- [[jarvis.py]] - code - jarvis.py
+- [[jarvis_brain.py]] - code - jarvis_brain.py
+- [[main()_2]] - code - jarvis_brain.py
+- [[main()_8]] - code - scripts\full_repo_audit.py
+- [[main()_18]] - code - skills\audio-transcriber\scripts\transcribe.py
+- [[network_security.py]] - code - core\network_security.py
+- [[normalize_rel_path()]] - code - scripts\full_repo_audit.py
+- [[parse_python_file()]] - code - jarvis_brain.py
+- [[path_partition()]] - code - scripts\full_repo_audit.py
+- [[process_with_llm()]] - code - skills\audio-transcriber\scripts\transcribe.py
+- [[real_quantum_mcp.js]] - code - mcp\real_quantum_mcp.js
+- [[safe_read_text()]] - code - scripts\full_repo_audit.py
+- [[sampled_file_signature()]] - code - scripts\full_repo_audit.py
+- [[save_outputs()]] - code - skills\audio-transcriber\scripts\transcribe.py
+- [[setup_certificate_paths()]] - code - core\network_security.py
+- [[sha1_bytes()]] - code - scripts\full_repo_audit.py
+- [[shutdown_processes()]] - code - jarvis.py
+- [[start()]] - code - jarvis.py
+- [[status()]] - code - jarvis.py
+- [[test_error_handling()]] - code - test_error_handling.py
+- [[test_error_handling.py]] - code - test_error_handling.py
+- [[test_network_security()]] - code - core\network_security.py
+- [[to_markdown()]] - code - scripts\full_repo_audit.py
+- [[transcribe.py]] - code - skills\audio-transcriber\scripts\transcribe.py
+- [[transcribe_audio()]] - code - skills\audio-transcriber\scripts\transcribe.py
+- [[ui()]] - code - jarvis_brain.py
+- [[wait_for_port()]] - code - jarvis.py
+- [[write_outputs()]] - code - scripts\full_repo_audit.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_16
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 75 edges to [[_COMMUNITY_Community 3]]
+- 39 edges to [[_COMMUNITY_Community 1]]
+- 27 edges to [[_COMMUNITY_Community 0]]
+- 13 edges to [[_COMMUNITY_Community 14]]
+- 13 edges to [[_COMMUNITY_Community 2]]
+- 6 edges to [[_COMMUNITY_Community 11]]
+- 6 edges to [[_COMMUNITY_Community 13]]
+- 4 edges to [[_COMMUNITY_Community 7]]
+- 4 edges to [[_COMMUNITY_Community 249]]
+- 4 edges to [[_COMMUNITY_Community 9]]
+- 3 edges to [[_COMMUNITY_Community 32]]
+- 2 edges to [[_COMMUNITY_Community 10]]
+- 2 edges to [[_COMMUNITY_Community 23]]
+- 2 edges to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 261]]
+- 1 edge to [[_COMMUNITY_Community 4]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 53]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 15]]
+- 1 edge to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 41]]
+
+## Top bridge nodes
+- [[.read()]] - degree 29, connects to 11 communities
+- [[InputValidator_1]] - degree 89, connects to 5 communities
+- [[main()_2]] - degree 14, connects to 5 communities
+- [[.run()_3]] - degree 16, connects to 4 communities
+- [[bootstrap()]] - degree 8, connects to 4 communities

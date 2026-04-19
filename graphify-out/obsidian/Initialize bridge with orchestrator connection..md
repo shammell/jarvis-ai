@@ -1,0 +1,20 @@
+---
+source_file: "voice\voice_bridge.py"
+type: "rationale"
+community: "Community 11"
+location: "L80"
+tags:
+  - graphify/rationale
+  - graphify/INFERRED
+  - community/Community_11
+---
+
+# Initialize bridge with orchestrator connection.
+
+## Connections
+- [[.initialize()]] - `rationale_for` [EXTRACTED]
+- [[HybridLLMManager]] - `uses` [INFERRED]
+- [[IntentType]] - `uses` [INFERRED]
+- [[PromptGenerator]] - `uses` [INFERRED]
+
+#graphify/rationale #graphify/INFERRED #community/Community_11

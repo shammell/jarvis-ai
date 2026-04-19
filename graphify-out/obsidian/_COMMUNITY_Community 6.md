@@ -1,0 +1,297 @@
+---
+type: community
+members: 250
+---
+
+# Community 6
+
+**Members:** 250 nodes
+
+## Members
+- [[.__init__()_177]] - code - skills\slack-gif-creator\core\gif_builder.py
+- [[.__init__()_178]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.__init__()_179]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.add_frame()]] - code - skills\slack-gif-creator\core\gif_builder.py
+- [[.add_frames()]] - code - skills\slack-gif-creator\core\gif_builder.py
+- [[.deduplicate_frames()]] - code - skills\slack-gif-creator\core\gif_builder.py
+- [[.emit()_1]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.emit_confetti()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.emit_sparkles()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.get_alpha()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.get_particle_count()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.is_alive()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.optimize_colors()]] - code - skills\slack-gif-creator\core\gif_builder.py
+- [[.render()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.render()_1]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.save()_11]] - code - skills\slack-gif-creator\core\gif_builder.py
+- [[.update()_2]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[.update()_3]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[A single particle in a particle system.]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Add a frame to the GIF.          Args             frame Frame as numpy arra]] - rationale - skills\slack-gif-creator\core\gif_builder.py
+- [[Add a glow effect to areas of a specific color.      Args         frame PIL]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Add a vignette effect (darkened edges) to frame.      Args         frame PI]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Add drop shadow to an object.      Args         frame PIL Image         ob]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Add motion blur by blending with previous frame.      Args         frame Cu]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Add motion trail effect to moving object.      Args         frames List of]] - rationale - skills\slack-gif-creator\templates\move.py
+- [[Add multiple frames at once.]] - rationale - skills\slack-gif-creator\core\gif_builder.py
+- [[Apply kaleidoscope effect by mirroringrotating frame sections.      Args]] - rationale - skills\slack-gif-creator\templates\kaleidoscope.py
+- [[Apply opacity to an RGBA image.      Args         image RGBA image]] - rationale - skills\slack-gif-creator\templates\fade.py
+- [[Apply screen shake effect to entire frame.      Args         frame PIL Imag]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Apply simple mirror effect (faster than full kaleidoscope).      Args]] - rationale - skills\slack-gif-creator\templates\kaleidoscope.py
+- [[Back ease-in (slight overshoot backward before forward motion).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Back ease-in-out (overshoot at both ends).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Back ease-out (overshoot forward then settle back).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Blend two colors together.      Args         color1 First RGB color]] - rationale - skills\slack-gif-creator\core\color_palettes.py
+- [[Bounce ease-in (bouncy start).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Bounce ease-out (bouncy end).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Builder for creating optimized GIFs from frames.]] - rationale - skills\slack-gif-creator\core\gif_builder.py
+- [[Calculate position along a parabolic arc (natural motion path).      Args]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Calculate screen shake offset for a frame.      Args         intensity Shak]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Calculate squash and stretch scales for more dynamic animation.      Args]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Check if particle is still alive.]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Composite one image on top of another.      Args         base Base image]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Create mind blown dramatic zoom with shake.      Args         emoji Emoji]] - rationale - skills\slack-gif-creator\templates\zoom.py
+- [[Create nope reaction flip (like flipping table).      Args         num_fra]] - rationale - skills\slack-gif-creator\templates\flip.py
+- [[Create 3D-style flip animation.      Args         object1_data First object]] - rationale - skills\slack-gif-creator\templates\flip.py
+- [[Create a blank frame with solid color background.      Args         width F]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Create a bright flash effect at impact point.      Args         frame PIL I]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Create a gradient of colors between two colors.      Args         start_colo]] - rationale - skills\slack-gif-creator\core\color_palettes.py
+- [[Create a loading spinner animation.      Args         num_frames Number of]] - rationale - skills\slack-gif-creator\templates\spin.py
+- [[Create a smooth path through multiple points.      Args         points List]] - rationale - skills\slack-gif-creator\templates\move.py
+- [[Create a vertical gradient background.      Args         width Frame width]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Create an explosion effect that expands and fades.      Args         frame]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Create animated kaleidoscope effect.      Args         base_frame Frame to]] - rationale - skills\slack-gif-creator\templates\kaleidoscope.py
+- [[Create animation with multiple objects sliding in sequence.      Args]] - rationale - skills\slack-gif-creator\templates\slide.py
+- [[Create attention-grabbing pulse (good for emoji GIFs).      Args         emo]] - rationale - skills\slack-gif-creator\templates\pulse.py
+- [[Create dramatic explosion zoom effect.      Args         emoji Emoji to exp]] - rationale - skills\slack-gif-creator\templates\zoom.py
+- [[Create excited wiggle for emoji GIFs.      Args         emoji Emoji to wigg]] - rationale - skills\slack-gif-creator\templates\wiggle.py
+- [[Create expanding ring effects.      Args         frame PIL Image to draw on]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Create explosion animation.      Args         object_type 'emoji', 'circle']] - rationale - skills\slack-gif-creator\templates\explode.py
+- [[Create fade animation.      Args         object_type 'emoji', 'text', 'imag]] - rationale - skills\slack-gif-creator\templates\fade.py
+- [[Create frames for a bouncing animation.      Args         object_type 'circ]] - rationale - skills\slack-gif-creator\templates\bounce.py
+- [[Create frames for a shaking animation.      Args         object_type 'circl]] - rationale - skills\slack-gif-creator\templates\shake.py
+- [[Create frames showing object moving along a path.      Args         object_t]] - rationale - skills\slack-gif-creator\templates\move.py
+- [[Create morphing animation between two objects.      Args         object1_dat]] - rationale - skills\slack-gif-creator\templates\morph.py
+- [[Create pulsingscaling animation.      Args         object_type 'emoji', 'c]] - rationale - skills\slack-gif-creator\templates\pulse.py
+- [[Create quick emoji reaction morph (for emoji GIFs).      Args         emoji_]] - rationale - skills\slack-gif-creator\templates\morph.py
+- [[Create quick flip for emoji GIFs.      Args         emoji_front Front emoji]] - rationale - skills\slack-gif-creator\templates\flip.py
+- [[Create simple particle burst effect.      Args         num_frames Number of]] - rationale - skills\slack-gif-creator\templates\explode.py
+- [[Create slide animation.      Args         object_type 'emoji', 'text']] - rationale - skills\slack-gif-creator\templates\slide.py
+- [[Create slow, calming breathing animation (in and out).      Args         obj]] - rationale - skills\slack-gif-creator\templates\pulse.py
+- [[Create speed lines for motion effect.      Args         frame PIL Image to]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Create spinningrotating animation.      Args         object_type 'emoji',]] - rationale - skills\slack-gif-creator\templates\spin.py
+- [[Create wigglewobble animation.      Args         object_type 'emoji', 'tex]] - rationale - skills\slack-gif-creator\templates\wiggle.py
+- [[Create zoom animation.      Args         object_type 'emoji', 'text', 'imag]] - rationale - skills\slack-gif-creator\templates\zoom.py
+- [[Crossfade between two objects.      Args         object1_data First object]] - rationale - skills\slack-gif-creator\templates\fade.py
+- [[Cubic ease-in (slow start).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Cubic ease-out (fast start).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Cursor()]] - code - skills\remotion-best-practices\rules\assets\text-animations-typewriter.tsx
+- [[Darken a color by a given amount.      Args         color RGB color tuple]] - rationale - skills\slack-gif-creator\core\color_palettes.py
+- [[Draw a 5-pointed star.      Args         frame PIL Image to draw on]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw a circle on a frame.      Args         frame PIL Image to draw on]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw a circle with drop shadow.      Args         frame PIL Image to draw o]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw a line on a frame.      Args         frame PIL Image to draw on]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw a rectangle on a frame.      Args         frame PIL Image to draw on]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw a rectangle with rounded corners.      Args         frame PIL Image to]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw a simple stick figure.      Args         frame PIL Image to draw on]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw emoji text on a frame (requires system emoji support).      Args]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw emoji with optional shadow for better visual quality.      Args]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw text in a semi-transparent box for guaranteed readability.      Args]] - rationale - skills\slack-gif-creator\core\typography.py
+- [[Draw text on a frame.      Args         frame PIL Image to draw on]] - rationale - skills\slack-gif-creator\core\frame_composer.py
+- [[Draw text with drop shadow for depth.      Args         frame PIL Image to]] - rationale - skills\slack-gif-creator\core\typography.py
+- [[Draw text with glow effect for emphasis.      Args         frame PIL Image]] - rationale - skills\slack-gif-creator\core\typography.py
+- [[Draw text with outline for maximum readability.      This is THE most importan]] - rationale - skills\slack-gif-creator\core\typography.py
+- [[Elastic ease-in (spring effect).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Elastic ease-out (spring effect).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Emit a burst of particles.          Args             x, y Emission position]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Emit confetti particles (colorful, falling).          Args             x, y]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Emit sparkle particles (twinkling stars).          Args             x, y Em]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Fade from one solid color to another.      Args         start_color Startin]] - rationale - skills\slack-gif-creator\templates\fade.py
+- [[Find the largest font size that fits within given dimensions.      Args]] - rationale - skills\slack-gif-creator\core\typography.py
+- [[GIFBuilder]] - code - skills\slack-gif-creator\core\gif_builder.py
+- [[Get a color for impactemphasis effects.      Args         effect_type Type]] - rationale - skills\slack-gif-creator\core\color_palettes.py
+- [[Get a color palette by name.      Args         name Palette name (vibrant,]] - rationale - skills\slack-gif-creator\core\color_palettes.py
+- [[Get a font with fallback support.      Args         size Font size in pixel]] - rationale - skills\slack-gif-creator\core\typography.py
+- [[Get a limited color palette optimized for emoji GIFs (64KB).      Args]] - rationale - skills\slack-gif-creator\core\color_palettes.py
+- [[Get easing function by name.]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Get number of active particles.]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Get particle opacity based on lifetime.]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Get the best text color (black or white) for a given background.      Uses lum]] - rationale - skills\slack-gif-creator\core\color_palettes.py
+- [[Get the complementary (opposite) color on the color wheel.      Args]] - rationale - skills\slack-gif-creator\core\color_palettes.py
+- [[Get the dimensions of text without drawing it.      Args         text Text]] - rationale - skills\slack-gif-creator\core\typography.py
+- [[Initialize GIF builder.          Args             width Frame width in pixe]] - rationale - skills\slack-gif-creator\core\gif_builder.py
+- [[Initialize a particle.          Args             x, y Starting position]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Initialize particle system.]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Interpolate between two values with easing.      Args         start Start v]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Lighten a color by a given amount.      Args         color RGB color tuple]] - rationale - skills\slack-gif-creator\core\color_palettes.py
+- [[Linear interpolation (no easing).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Manages a collection of particles.]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Morph through a sequence of shapes.      Args         shapes List of shape]] - rationale - skills\slack-gif-creator\templates\morph.py
+- [[MyAnimation()]] - code - skills\remotion-best-practices\rules\assets\text-animations-typewriter.tsx
+- [[Particle]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[ParticleSystem]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[Quadratic ease-in (slow start, accelerating).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Quadratic ease-in-out (slow start and end).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Quadratic ease-out (fast start, decelerating).]] - rationale - skills\slack-gif-creator\core\easing.py
+- [[Reduce colors in all frames using quantization.          Args             nu]] - rationale - skills\slack-gif-creator\core\gif_builder.py
+- [[Remove duplicate or near-duplicate consecutive frames.          Args]] - rationale - skills\slack-gif-creator\core\gif_builder.py
+- [[Render all particles to frame.]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Render particle to frame.          Args             frame PIL Image to draw]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Save frames as optimized GIF for Slack.          Args             output_pat]] - rationale - skills\slack-gif-creator\core\gif_builder.py
+- [[Scale font size proportionally to frame dimensions.      Useful for maintainin]] - rationale - skills\slack-gif-creator\core\typography.py
+- [[Update all particles.]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[Update particle position and lifetime.]] - rationale - skills\slack-gif-creator\core\visual_effects.py
+- [[add_drop_shadow()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[add_glow_effect()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[add_motion_blur()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[add_vignette()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[apply_kaleidoscope()]] - code - skills\slack-gif-creator\templates\kaleidoscope.py
+- [[apply_opacity()]] - code - skills\slack-gif-creator\templates\fade.py
+- [[apply_screen_shake()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[apply_simple_mirror()]] - code - skills\slack-gif-creator\templates\kaleidoscope.py
+- [[apply_squash_stretch()]] - code - skills\slack-gif-creator\core\easing.py
+- [[apply_trail_effect()]] - code - skills\slack-gif-creator\templates\move.py
+- [[blend_colors()]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[bounce.py]] - code - skills\slack-gif-creator\templates\bounce.py
+- [[calculate_arc_motion()]] - code - skills\slack-gif-creator\core\easing.py
+- [[color_palettes.py]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[composite_layers()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[convert()]] - code - skills\pdf-official\scripts\convert_pdf_to_images.py
+- [[convert_pdf_to_images.py]] - code - skills\pdf-official\scripts\convert_pdf_to_images.py
+- [[create_attention_pulse()]] - code - skills\slack-gif-creator\templates\pulse.py
+- [[create_blank_frame()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[create_bounce_animation()]] - code - skills\slack-gif-creator\templates\bounce.py
+- [[create_breathing_animation()]] - code - skills\slack-gif-creator\templates\pulse.py
+- [[create_crossfade()]] - code - skills\slack-gif-creator\templates\fade.py
+- [[create_excited_wiggle()]] - code - skills\slack-gif-creator\templates\wiggle.py
+- [[create_explode_animation()]] - code - skills\slack-gif-creator\templates\explode.py
+- [[create_explosion_effect()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[create_explosion_zoom()]] - code - skills\slack-gif-creator\templates\zoom.py
+- [[create_fade_animation()]] - code - skills\slack-gif-creator\templates\fade.py
+- [[create_fade_to_color()]] - code - skills\slack-gif-creator\templates\fade.py
+- [[create_flip_animation()]] - code - skills\slack-gif-creator\templates\flip.py
+- [[create_gradient_background()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[create_gradient_colors()]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[create_impact_flash()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[create_kaleidoscope_animation()]] - code - skills\slack-gif-creator\templates\kaleidoscope.py
+- [[create_loading_spinner()]] - code - skills\slack-gif-creator\templates\spin.py
+- [[create_mind_blown_zoom()]] - code - skills\slack-gif-creator\templates\zoom.py
+- [[create_morph_animation()]] - code - skills\slack-gif-creator\templates\morph.py
+- [[create_move_animation()]] - code - skills\slack-gif-creator\templates\move.py
+- [[create_multi_slide()]] - code - skills\slack-gif-creator\templates\slide.py
+- [[create_nope_flip()]] - code - skills\slack-gif-creator\templates\flip.py
+- [[create_particle_burst()]] - code - skills\slack-gif-creator\templates\explode.py
+- [[create_path_from_points()]] - code - skills\slack-gif-creator\templates\move.py
+- [[create_pulse_animation()]] - code - skills\slack-gif-creator\templates\pulse.py
+- [[create_quick_flip()]] - code - skills\slack-gif-creator\templates\flip.py
+- [[create_reaction_morph()]] - code - skills\slack-gif-creator\templates\morph.py
+- [[create_screen_shake_offset()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[create_shake_animation()]] - code - skills\slack-gif-creator\templates\shake.py
+- [[create_shape_morph()]] - code - skills\slack-gif-creator\templates\morph.py
+- [[create_shockwave_rings()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[create_slide_animation()]] - code - skills\slack-gif-creator\templates\slide.py
+- [[create_speed_lines()]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[create_spin_animation()]] - code - skills\slack-gif-creator\templates\spin.py
+- [[create_validation_image()]] - code - skills\pdf-official\scripts\create_validation_image.py
+- [[create_validation_image.py]] - code - skills\pdf-official\scripts\create_validation_image.py
+- [[create_wiggle_animation()]] - code - skills\slack-gif-creator\templates\wiggle.py
+- [[create_zoom_animation()]] - code - skills\slack-gif-creator\templates\zoom.py
+- [[darken_color()]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[draw_circle()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_circle_with_shadow()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_emoji()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_emoji_enhanced()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_line()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_rectangle()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_rounded_rectangle()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_star()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_stick_figure()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_text()]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[draw_text_in_box()]] - code - skills\slack-gif-creator\core\typography.py
+- [[draw_text_with_glow()]] - code - skills\slack-gif-creator\core\typography.py
+- [[draw_text_with_outline()]] - code - skills\slack-gif-creator\core\typography.py
+- [[draw_text_with_shadow()]] - code - skills\slack-gif-creator\core\typography.py
+- [[ease_back_in()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_back_in_out()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_back_out()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_in_bounce()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_in_cubic()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_in_elastic()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_in_out_bounce()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_in_out_cubic()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_in_out_elastic()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_in_out_quad()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_in_quad()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_out_bounce()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_out_cubic()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_out_elastic()]] - code - skills\slack-gif-creator\core\easing.py
+- [[ease_out_quad()]] - code - skills\slack-gif-creator\core\easing.py
+- [[easing.py]] - code - skills\slack-gif-creator\core\easing.py
+- [[explode.py]] - code - skills\slack-gif-creator\templates\explode.py
+- [[fade.py]] - code - skills\slack-gif-creator\templates\fade.py
+- [[flip.py]] - code - skills\slack-gif-creator\templates\flip.py
+- [[frame_composer.py]] - code - skills\slack-gif-creator\core\frame_composer.py
+- [[getTypedText()]] - code - skills\remotion-best-practices\rules\assets\text-animations-typewriter.tsx
+- [[get_complementary_color()]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[get_easing()]] - code - skills\slack-gif-creator\core\easing.py
+- [[get_emoji_palette()]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[get_font()]] - code - skills\slack-gif-creator\core\typography.py
+- [[get_impact_color()]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[get_optimal_font_size()]] - code - skills\slack-gif-creator\core\typography.py
+- [[get_palette()]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[get_text_color_for_background()]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[get_text_size()]] - code - skills\slack-gif-creator\core\typography.py
+- [[gif_builder.py]] - code - skills\slack-gif-creator\core\gif_builder.py
+- [[interpolate()]] - code - skills\slack-gif-creator\core\easing.py
+- [[kaleidoscope.py]] - code - skills\slack-gif-creator\templates\kaleidoscope.py
+- [[lighten_color()]] - code - skills\slack-gif-creator\core\color_palettes.py
+- [[linear()]] - code - skills\slack-gif-creator\core\easing.py
+- [[morph.py]] - code - skills\slack-gif-creator\templates\morph.py
+- [[move.py]] - code - skills\slack-gif-creator\templates\move.py
+- [[pulse.py]] - code - skills\slack-gif-creator\templates\pulse.py
+- [[scale_font_for_frame()]] - code - skills\slack-gif-creator\core\typography.py
+- [[shake.py]] - code - skills\slack-gif-creator\templates\shake.py
+- [[slide.py]] - code - skills\slack-gif-creator\templates\slide.py
+- [[spin.py]] - code - skills\slack-gif-creator\templates\spin.py
+- [[text-animations-typewriter.tsx]] - code - skills\remotion-best-practices\rules\assets\text-animations-typewriter.tsx
+- [[typography.py]] - code - skills\slack-gif-creator\core\typography.py
+- [[visual_effects.py]] - code - skills\slack-gif-creator\core\visual_effects.py
+- [[wiggle.py]] - code - skills\slack-gif-creator\templates\wiggle.py
+- [[zoom.py]] - code - skills\slack-gif-creator\templates\zoom.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_6
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 25 edges to [[_COMMUNITY_Community 18]]
+- 16 edges to [[_COMMUNITY_Community 2]]
+- 6 edges to [[_COMMUNITY_Community 0]]
+- 5 edges to [[_COMMUNITY_Community 1]]
+- 3 edges to [[_COMMUNITY_Community 25]]
+- 2 edges to [[_COMMUNITY_Community 19]]
+- 2 edges to [[_COMMUNITY_Community 7]]
+- 2 edges to [[_COMMUNITY_Community 39]]
+- 1 edge to [[_COMMUNITY_Community 4]]
+- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 35]]
+- 1 edge to [[_COMMUNITY_Community 27]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 10]]
+- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 11]]
+- 1 edge to [[_COMMUNITY_Community 29]]
+- 1 edge to [[_COMMUNITY_Community 23]]
+- 1 edge to [[_COMMUNITY_Community 3]]
+- 1 edge to [[_COMMUNITY_Community 44]]
+
+## Top bridge nodes
+- [[.update()_3]] - degree 24, connects to 15 communities
+- [[.save()_11]] - degree 17, connects to 7 communities
+- [[create_validation_image()]] - degree 4, connects to 2 communities
+- [[GIFBuilder]] - degree 41, connects to 1 community
+- [[convert()]] - degree 21, connects to 1 community

@@ -14,7 +14,12 @@ class SupabaseClient:
 
     @classmethod
     def get_service_client(cls) -> Client:
-        """Get or create Supabase client singleton with service role key - for admin operations only"""
+        """
+        Get or create Supabase client singleton with service role key.
+
+        RATIONALE: Administrative operations require bypassing Row Level Security (RLS)
+        to manage global system state or user data directly from the backend.
+        """
         if cls._service_instance is None:
             url = os.getenv("SUPABASE_URL")
             key = os.getenv("SUPABASE_SERVICE_KEY")  # Service key for backend admin operations
@@ -28,7 +33,12 @@ class SupabaseClient:
 
     @classmethod
     def get_anon_client(cls) -> Client:
-        """Get or create Supabase client singleton with anon key - for creating user-specific clients"""
+        """
+        Get or create Supabase client singleton with anon key.
+
+        RATIONALE: Standard user-facing operations must use the anonymous key
+        to ensure that Supabase RLS policies are strictly enforced.
+        """
         if cls._anon_instance is None:
             url = os.getenv("SUPABASE_URL")
             key = os.getenv("SUPABASE_ANON_KEY")  # Anon key for user-specific requests

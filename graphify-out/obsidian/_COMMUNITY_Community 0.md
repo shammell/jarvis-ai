@@ -1,0 +1,934 @@
+---
+type: community
+members: 868
+---
+
+# Community 0
+
+**Members:** 868 nodes
+
+## Members
+- [[TODO Actually deploy changes (restart services, update configs, etc.)]] - rationale - core\rapid_iteration.py
+- [[.__init__()]] - code - agent_teams_demo.py
+- [[.__init__()_1]] - code - agent_teams_demo.py
+- [[.__init__()_2]] - code - agent_teams_demo.py
+- [[.__init__()_3]] - code - agent_teams_demo.py
+- [[.__init__()_4]] - code - enhanced_autonomy.py
+- [[.__init__()_12]] - code - main.py
+- [[.__init__()_13]] - code - main.py
+- [[.__init__()_14]] - code - main.py
+- [[.__init__()_15]] - code - main.py
+- [[.__init__()_18]] - code - voice_jarvis.py
+- [[.__init__()_31]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[.__init__()_32]] - code - archive\old_modules\main_genesis.py
+- [[.__init__()_44]] - code - core\action_receipt_store.py
+- [[.__init__()_46]] - code - core\autonomous_decision.py
+- [[.__init__()_47]] - code - core\autonomous_executor.py
+- [[.__init__()_48]] - code - core\autonomous_startup.py
+- [[.__init__()_52]] - code - core\cognitive_emotional_sync.py
+- [[.__init__()_53]] - code - core\compute_infrastructure.py
+- [[.__init__()_56]] - code - core\distributed_tracing.py
+- [[.__init__()_57]] - code - core\economic_agency.py
+- [[.__init__()_59]] - code - core\encryption_utils.py
+- [[.__init__()_60]] - code - core\encryption_utils.py
+- [[.__init__()_61]] - code - core\ephemeral_distillation.py
+- [[.__init__()_65]] - code - core\experience_replay.py
+- [[.__init__()_66]] - code - core\first_principles.py
+- [[.__init__()_69]] - code - core\goal_manager.py
+- [[.__init__()_70]] - code - core\hyper_automation.py
+- [[.__init__()_72]] - code - core\infinite_swarm.py
+- [[.__init__()_74]] - code - core\local_llm_fallback.py
+- [[.__init__()_75]] - code - core\local_llm_fallback.py
+- [[.__init__()_76]] - code - core\memory_sleep.py
+- [[.__init__()_81]] - code - core\neuro_symbolic_verifier.py
+- [[.__init__()_82]] - code - core\optimization_engine.py
+- [[.__init__()_83]] - code - core\proactive_agent.py
+- [[.__init__()_84]] - code - core\profiler.py
+- [[.__init__()_88]] - code - core\quality_scorer.py
+- [[.__init__()_89]] - code - core\rapid_iteration.py
+- [[.__init__()_106]] - code - core\self_monitor.py
+- [[.__init__()_107]] - code - core\skill_graph.py
+- [[.__init__()_108]] - code - core\skill_loader.py
+- [[.__init__()_109]] - code - core\speculative_decoder.py
+- [[.__init__()_110]] - code - core\swarm_coordinator.py
+- [[.__init__()_111]] - code - core\swarm_coordinator.py
+- [[.__init__()_112]] - code - core\swarm_coordinator.py
+- [[.__init__()_113]] - code - core\swarm_coordinator.py
+- [[.__init__()_114]] - code - core\swarm_coordinator.py
+- [[.__init__()_117]] - code - core\tool_synthesizer.py
+- [[.__init__()_118]] - code - core\workflow_synth.py
+- [[.__init__()_125]] - code - memory\colbert_retriever.py
+- [[.__init__()_126]] - code - memory\graph_rag.py
+- [[.__init__()_127]] - code - memory\memory_controller.py
+- [[._add_documents_colbert()]] - code - memory\colbert_retriever.py
+- [[._add_documents_tfidf()]] - code - memory\colbert_retriever.py
+- [[._apply_temporal_decay()]] - code - memory\graph_rag.py
+- [[._build_chain()]] - code - core\workflow_synth.py
+- [[._build_dependency_edges()]] - code - core\skill_graph.py
+- [[._build_workflow()]] - code - core\workflow_synth.py
+- [[._cache_response()]] - code - main.py
+- [[._calculate_accuracy()]] - code - core\quality_scorer.py
+- [[._calculate_actionability()]] - code - core\quality_scorer.py
+- [[._calculate_clarity()]] - code - core\quality_scorer.py
+- [[._calculate_completeness()]] - code - core\quality_scorer.py
+- [[._calculate_health_score()]] - code - core\self_monitor.py
+- [[._calculate_metrics()]] - code - core\skill_graph.py
+- [[._calculate_relevance()]] - code - core\quality_scorer.py
+- [[._calculate_risk()]] - code - core\autonomous_decision.py
+- [[._check_bottleneck()]] - code - core\profiler.py
+- [[._check_lockdown()]] - code - core\autonomous_decision.py
+- [[._check_module_status()]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[._check_pending_work()]] - code - core\autonomous_startup.py
+- [[._check_rate_limit()]] - code - main.py
+- [[._check_request_deduplication()]] - code - main.py
+- [[._compress_graph()]] - code - core\memory_sleep.py
+- [[._compute_maxsim()]] - code - memory\colbert_retriever.py
+- [[._convert_episodic_to_semantic()]] - code - core\memory_sleep.py
+- [[._create_steps()]] - code - core\workflow_synth.py
+- [[._decompose_goal()]] - code - core\autonomous_executor.py
+- [[._decrypt_result()]] - code - memory\memory_controller.py
+- [[._detect_communities()]] - code - memory\graph_rag.py
+- [[._detect_exact_repetition()]] - code - core\hyper_automation.py
+- [[._detect_patterns()]] - code - core\hyper_automation.py
+- [[._detect_sequential_patterns()]] - code - core\hyper_automation.py
+- [[._detect_similar_tasks()]] - code - core\hyper_automation.py
+- [[._detect_temporal_patterns()]] - code - core\hyper_automation.py
+- [[._determine_automation_type()]] - code - core\hyper_automation.py
+- [[._enforce_security_bounds()]] - code - core\autonomous_decision.py
+- [[._estimate_complexity()]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[._estimate_complexity()_1]] - code - archive\old_modules\main_genesis.py
+- [[._estimate_risk()]] - code - core\workflow_synth.py
+- [[._estimate_time()]] - code - core\workflow_synth.py
+- [[._evaluate_reasoning_async()]] - code - core\system2_thinking.py
+- [[._evict_lowest_priority_context()]] - code - memory\memory_controller.py
+- [[._execute_autonomous_tasks()]] - code - core\autonomous_startup.py
+- [[._execute_subtask()]] - code - archive\old_modules\main_genesis.py
+- [[._execute_task()_1]] - code - core\autonomous_executor.py
+- [[._extract_axioms()]] - code - core\first_principles.py
+- [[._extract_entities_regex()]] - code - memory\graph_rag.py
+- [[._extract_score_robust()]] - code - core\system2_thinking.py
+- [[._fallback_decomposition()]] - code - core\first_principles.py
+- [[._filter_by_preferences()]] - code - core\proactive_agent.py
+- [[._find_matching_skills()]] - code - core\workflow_synth.py
+- [[._generate_automation()]] - code - core\hyper_automation.py
+- [[._generate_cache_key()]] - code - main.py
+- [[._generate_local()]] - code - core\local_llm_fallback.py
+- [[._generate_outcomes()]] - code - core\autonomous_executor.py
+- [[._generate_reasoning()]] - code - core\first_principles.py
+- [[._generate_reasoning_step_async()]] - code - core\system2_thinking.py
+- [[._generate_response()]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[._get_memory_usage()]] - code - core\profiler.py
+- [[._get_optimization_suggestion()]] - code - core\profiler.py
+- [[._get_timestamp()]] - code - core\encryption_utils.py
+- [[._has_valid_high_risk_approval()]] - code - core\autonomous_decision.py
+- [[._identify_assumptions()]] - code - core\first_principles.py
+- [[._identify_constraints()]] - code - core\first_principles.py
+- [[._init_cache()]] - code - memory\memory_controller.py
+- [[._init_colbert()]] - code - memory\colbert_retriever.py
+- [[._init_colbert()_1]] - code - memory\memory_controller.py
+- [[._init_db()]] - code - core\action_receipt_store.py
+- [[._init_graph_rag()]] - code - memory\memory_controller.py
+- [[._init_llama_cpp()]] - code - core\local_llm_fallback.py
+- [[._init_symbolic_engines()]] - code - core\neuro_symbolic_verifier.py
+- [[._init_tfidf_fallback()]] - code - memory\colbert_retriever.py
+- [[._initialize_agent_teams()]] - code - enhanced_autonomy.py
+- [[._is_complex_query()]] - code - main.py
+- [[._learn_from_outcome()]] - code - core\autonomous_decision.py
+- [[._learn_from_rejection()]] - code - core\proactive_agent.py
+- [[._load_data()]] - code - core\self_monitor.py
+- [[._load_goals()]] - code - core\goal_manager.py
+- [[._load_seed_documents()]] - code - memory\memory_controller.py
+- [[._log_tenant_access()]] - code - memory\memory_controller.py
+- [[._match_goal()]] - code - core\skill_graph.py
+- [[._on_need_approval()]] - code - enhanced_autonomy.py
+- [[._on_progress_update()]] - code - enhanced_autonomy.py
+- [[._on_task_complete()]] - code - enhanced_autonomy.py
+- [[._optimize_databases()]] - code - core\memory_sleep.py
+- [[._parallelize()]] - code - core\workflow_synth.py
+- [[._parse_intent()]] - code - core\workflow_synth.py
+- [[._prune_vectors()]] - code - core\memory_sleep.py
+- [[._rebuild_solution()]] - code - core\first_principles.py
+- [[._report_progress()]] - code - core\autonomous_executor.py
+- [[._request_user_input()]] - code - core\autonomous_executor.py
+- [[._requires_high_risk_approval()]] - code - core\autonomous_decision.py
+- [[._resume_previous_session()]] - code - core\autonomous_startup.py
+- [[._retrieve_colbert()]] - code - memory\colbert_retriever.py
+- [[._retrieve_tfidf()]] - code - memory\colbert_retriever.py
+- [[._run_garbage_collection()]] - code - core\memory_sleep.py
+- [[._save_data()]] - code - core\self_monitor.py
+- [[._save_goals()]] - code - core\goal_manager.py
+- [[._sign_security_config()]] - code - core\autonomous_decision.py
+- [[._simulate_async()]] - code - core\system2_thinking.py
+- [[._start_proactive_monitoring()]] - code - core\autonomous_startup.py
+- [[._stream_fast_response()]] - code - main.py
+- [[._stream_response_impl()]] - code - main.py
+- [[._suggest_automation()]] - code - core\hyper_automation.py
+- [[._types_compatible()]] - code - core\skill_graph.py
+- [[._update_metrics()]] - code - core\self_monitor.py
+- [[._validate_security_baseline()]] - code - core\autonomous_decision.py
+- [[.add_documents()]] - code - memory\colbert_retriever.py
+- [[.add_note()]] - code - core\goal_manager.py
+- [[.add_to_graph()]] - code - memory\graph_rag.py
+- [[.analyze_and_suggest()]] - code - core\proactive_agent.py
+- [[.analyze_user_input()]] - code - core\cognitive_emotional_sync.py
+- [[.analyze_why()]] - code - core\first_principles.py
+- [[.anticipate_next_action()]] - code - core\proactive_agent.py
+- [[.apply_optimization()]] - code - core\optimization_engine.py
+- [[.approve_automation()]] - code - core\hyper_automation.py
+- [[.approve_high_risk_action()]] - code - core\autonomous_decision.py
+- [[.authenticate_request()]] - code - main.py
+- [[.authenticate_user()]] - code - main.py
+- [[.authorize_operation()]] - code - main.py
+- [[.auto_tune_hyperparameters()]] - code - core\rapid_iteration.py
+- [[.background_loop()]] - code - core\autonomous_startup.py
+- [[.benchmark()]] - code - core\optimization_engine.py
+- [[.build_graph()]] - code - core\skill_graph.py
+- [[.calculate_quality()]] - code - core\quality_scorer.py
+- [[.can_handle()]] - code - agent_teams_demo.py
+- [[.can_handle()_1]] - code - agent_teams_demo.py
+- [[.can_handle()_2]] - code - agent_teams_demo.py
+- [[.can_handle()_3]] - code - agent_teams_demo.py
+- [[.can_handle()_5]] - code - core\swarm_coordinator.py
+- [[.can_handle()_6]] - code - core\swarm_coordinator.py
+- [[.can_handle()_7]] - code - core\swarm_coordinator.py
+- [[.cancel_goal()]] - code - core\goal_manager.py
+- [[.check_permission()]] - code - main.py
+- [[.cleanup_expired_contexts()]] - code - memory\memory_controller.py
+- [[.clear_cache()]] - code - memory\memory_controller.py
+- [[.compare_to_baseline()]] - code - core\optimization_engine.py
+- [[.complete_goal()]] - code - core\goal_manager.py
+- [[.create_agent_team()]] - code - core\swarm_coordinator.py
+- [[.create_experiment()]] - code - core\rapid_iteration.py
+- [[.create_goal()]] - code - core\goal_manager.py
+- [[.decompose()]] - code - core\first_principles.py
+- [[.decompose_task()]] - code - core\infinite_swarm.py
+- [[.decrypt_for_tenant()]] - code - core\encryption_utils.py
+- [[.detect_bottlenecks()]] - code - core\optimization_engine.py
+- [[.detect_leaks()]] - code - core\encryption_utils.py
+- [[.encrypt_for_tenant()]] - code - core\encryption_utils.py
+- [[.enter_sleep_cycle()]] - code - core\memory_sleep.py
+- [[.evaluate()]] - code - core\honest_execution_policy.py
+- [[.evaluate_decision()]] - code - core\autonomous_decision.py
+- [[.execute()_7]] - code - core\swarm_coordinator.py
+- [[.execute_anything()]] - code - archive\old_modules\main_genesis.py
+- [[.execute_goal()]] - code - enhanced_autonomy.py
+- [[.execute_goal()_1]] - code - core\autonomous_executor.py
+- [[.execute_suggestion()]] - code - enhanced_autonomy.py
+- [[.execute_suggestion()_1]] - code - core\proactive_agent.py
+- [[.execute_with_agent_team()]] - code - enhanced_autonomy.py
+- [[.execute_with_swarm()]] - code - core\infinite_swarm.py
+- [[.execute_workflow()_2]] - code - core\workflow_synth.py
+- [[.extract_entities_and_relationships()]] - code - memory\graph_rag.py
+- [[.find_skill_chain()]] - code - core\skill_graph.py
+- [[.format_response()]] - code - core\cognitive_emotional_sync.py
+- [[.generate()_1]] - code - core\local_llm_fallback.py
+- [[.generate_report()_1]] - code - core\self_monitor.py
+- [[.generate_tokens()]] - code - main.py
+- [[.get_active_goals()]] - code - core\goal_manager.py
+- [[.get_all_pinned_contexts()]] - code - memory\memory_controller.py
+- [[.get_autonomy_report()]] - code - core\autonomous_decision.py
+- [[.get_average_response_time()]] - code - core\self_monitor.py
+- [[.get_benchmarks()]] - code - core\profiler.py
+- [[.get_component_stats()]] - code - core\profiler.py
+- [[.get_dimension_averages()]] - code - core\quality_scorer.py
+- [[.get_distillation_stats()]] - code - core\ephemeral_distillation.py
+- [[.get_error_rate()]] - code - core\self_monitor.py
+- [[.get_goals_by_priority()]] - code - core\goal_manager.py
+- [[.get_historical_bias()]] - code - core\experience_replay.py
+- [[.get_memory_health()]] - code - memory\memory_controller.py
+- [[.get_model_info()]] - code - core\local_llm_fallback.py
+- [[.get_next_goal()]] - code - core\goal_manager.py
+- [[.get_optimization_report()]] - code - core\optimization_engine.py
+- [[.get_parallel_groups()]] - code - core\skill_graph.py
+- [[.get_pinned_context()]] - code - memory\memory_controller.py
+- [[.get_proactive_suggestions()]] - code - enhanced_autonomy.py
+- [[.get_quality_trend()]] - code - core\quality_scorer.py
+- [[.get_security_state()]] - code - core\autonomous_decision.py
+- [[.get_skill_info()]] - code - core\skill_graph.py
+- [[.get_sleep_stats()]] - code - core\memory_sleep.py
+- [[.get_stats()]] - code - core\autonomous_decision.py
+- [[.get_stats()_2]] - code - core\goal_manager.py
+- [[.get_stats()_3]] - code - core\hyper_automation.py
+- [[.get_stats()_4]] - code - core\local_llm_fallback.py
+- [[.get_stats()_5]] - code - core\proactive_agent.py
+- [[.get_stats()_7]] - code - core\quality_scorer.py
+- [[.get_stats()_8]] - code - core\rapid_iteration.py
+- [[.get_stats()_11]] - code - core\skill_graph.py
+- [[.get_stats()_12]] - code - core\skill_loader.py
+- [[.get_stats()_14]] - code - core\swarm_coordinator.py
+- [[.get_stats()_15]] - code - core\workflow_synth.py
+- [[.get_stats()_16]] - code - memory\colbert_retriever.py
+- [[.get_stats()_17]] - code - memory\graph_rag.py
+- [[.get_stats()_18]] - code - memory\memory_controller.py
+- [[.get_status()]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[.get_status()_1]] - code - core\autonomous_executor.py
+- [[.get_success_rate()]] - code - core\self_monitor.py
+- [[.get_suggestions()]] - code - core\hyper_automation.py
+- [[.get_swarm_stats()]] - code - core\infinite_swarm.py
+- [[.get_system_status()]] - code - enhanced_autonomy.py
+- [[.get_system_status()_1]] - code - archive\old_modules\main_genesis.py
+- [[.get_tenant_namespace()]] - code - core\encryption_utils.py
+- [[.get_verification_stats()]] - code - core\neuro_symbolic_verifier.py
+- [[.get_workflow_info()]] - code - core\workflow_synth.py
+- [[.handle_whatsapp_message()]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[.hash_password()]] - code - main.py
+- [[.identify_failure_patterns()]] - code - core\self_monitor.py
+- [[.identify_weaknesses()]] - code - core\self_monitor.py
+- [[.is_available()]] - code - core\local_llm_fallback.py
+- [[.list_skills()]] - code - core\skill_loader.py
+- [[.load()_2]] - code - memory\colbert_retriever.py
+- [[.load()_3]] - code - memory\graph_rag.py
+- [[.load_skills()]] - code - core\skill_loader.py
+- [[.load_state()]] - code - main.py
+- [[.load_state()_1]] - code - core\economic_agency.py
+- [[.log_access()]] - code - core\encryption_utils.py
+- [[.log_security_event()]] - code - main.py
+- [[.log_task()]] - code - core\hyper_automation.py
+- [[.logout_user()]] - code - main.py
+- [[.match_skills()]] - code - core\skill_loader.py
+- [[.monitor_function()]] - code - core\self_evolving_architecture.py
+- [[.pause()]] - code - core\autonomous_executor.py
+- [[.pause_goal()]] - code - core\goal_manager.py
+- [[.pin_context()]] - code - memory\memory_controller.py
+- [[.profile_function()]] - code - core\optimization_engine.py
+- [[.record_action()_1]] - code - core\self_monitor.py
+- [[.record_benchmark()]] - code - core\profiler.py
+- [[.record_metric()]] - code - core\self_monitor.py
+- [[.record_outcome()]] - code - core\autonomous_decision.py
+- [[.register_agent()]] - code - core\swarm_coordinator.py
+- [[.reject_suggestion()]] - code - core\proactive_agent.py
+- [[.reset_monthly_budget()]] - code - core\economic_agency.py
+- [[.reset_stats()]] - code - core\speculative_decoder.py
+- [[.resume()]] - code - core\autonomous_executor.py
+- [[.resume_goal()]] - code - core\goal_manager.py
+- [[.resume_session()]] - code - enhanced_autonomy.py
+- [[.retrieve()]] - code - memory\colbert_retriever.py
+- [[.retrieve()_1]] - code - memory\memory_controller.py
+- [[.run_demo_mode()]] - code - jarvis_runner.py
+- [[.run_forever()]] - code - voice_jarvis.py
+- [[.run_nightly_maintenance()]] - code - archive\old_modules\main_genesis.py
+- [[.sanitize_input()]] - code - main.py
+- [[.sanitize_request()]] - code - main.py
+- [[.save()_1]] - code - core\autonomous_decision.py
+- [[.save()_2]] - code - core\hyper_automation.py
+- [[.save()_3]] - code - core\optimization_engine.py
+- [[.save()_4]] - code - core\profiler.py
+- [[.save()_5]] - code - core\rapid_iteration.py
+- [[.save()_6]] - code - core\skill_graph.py
+- [[.save()_7]] - code - memory\colbert_retriever.py
+- [[.save()_8]] - code - memory\graph_rag.py
+- [[.save_all()]] - code - memory\memory_controller.py
+- [[.save_state()_1]] - code - main.py
+- [[.save_state()_2]] - code - core\economic_agency.py
+- [[.schedule_sleep()]] - code - core\memory_sleep.py
+- [[.set_attribute()]] - code - core\distributed_tracing.py
+- [[.set_baseline()]] - code - core\optimization_engine.py
+- [[.set_security_lockdown()]] - code - core\autonomous_decision.py
+- [[.should_enter_sleep()]] - code - core\memory_sleep.py
+- [[.simulate_parallel_futures()]] - code - core\infinite_swarm.py
+- [[.spawn_swarm()]] - code - core\infinite_swarm.py
+- [[.start()]] - code - voice_jarvis.py
+- [[.startup()]] - code - core\autonomous_startup.py
+- [[.stop()]] - code - voice_jarvis.py
+- [[.store()]] - code - memory\memory_controller.py
+- [[.store_agent_result()]] - code - memory\memory_controller.py
+- [[.stream_direct()]] - code - core\speculative_decoder.py
+- [[.suggest_autonomy_increase()]] - code - core\autonomous_decision.py
+- [[.suggest_improvements()]] - code - core\self_monitor.py
+- [[.suggest_optimizations()]] - code - core\optimization_engine.py
+- [[.sweep_leaks()]] - code - core\encryption_utils.py
+- [[.synthesize()]] - code - core\workflow_synth.py
+- [[.take_snapshot()]] - code - core\self_monitor.py
+- [[.to_dict()_4]] - code - core\skill_graph.py
+- [[.track_performance()]] - code - core\rapid_iteration.py
+- [[.unpin_context()]] - code - memory\memory_controller.py
+- [[.update_progress()]] - code - core\goal_manager.py
+- [[.validate_autonomous_action()]] - code - core\autonomous_decision.py
+- [[.validate_composition()]] - code - core\skill_graph.py
+- [[.validate_file_path()]] - code - main.py
+- [[.validate_input()]] - code - main.py
+- [[.validate_token()]] - code - main.py
+- [[.verify_password()]] - code - main.py
+- [[.visualize_ascii()]] - code - core\skill_graph.py
+- [[10x optimization engine for JARVIS v9.0     - Auto-profiling     - Bottleneck de]] - rationale - core\optimization_engine.py
+- [[========================================================== JARVIS - Experience R]] - rationale - core\experience_replay.py
+- [[A complete synthesized workflow]] - rationale - core\workflow_synth.py
+- [[A single step in a synthesized workflow]] - rationale - core\workflow_synth.py
+- [[ActionReceiptStore]] - code - core\action_receipt_store.py
+- [[Add documents to the retriever         documents List of text strings         m]] - rationale - memory\colbert_retriever.py
+- [[Add documents using ColBERT]] - rationale - memory\colbert_retriever.py
+- [[Add documents using TF-IDF fallback]] - rationale - memory\colbert_retriever.py
+- [[Add seed documents if the retriever is empty.]] - rationale - memory\memory_controller.py
+- [[Add text to knowledge graph         - Extracts entities and relationships]] - rationale - memory\graph_rag.py
+- [[Adjusts the output based on the user's cognitive state.]] - rationale - core\cognitive_emotional_sync.py
+- [[Agent that analyzes information]] - rationale - agent_teams_demo.py
+- [[Agent that builds implementations]] - rationale - agent_teams_demo.py
+- [[Agent that executes tasks]] - rationale - core\swarm_coordinator.py
+- [[Agent that performs research tasks]] - rationale - agent_teams_demo.py
+- [[Agent that plans tasks]] - rationale - core\swarm_coordinator.py
+- [[Agent that tests implementations]] - rationale - agent_teams_demo.py
+- [[Agent that verifies results]] - rationale - core\swarm_coordinator.py
+- [[AgentTeamRequest]] - code - main.py
+- [[AnalystAgent]] - code - agent_teams_demo.py
+- [[Analyze current state and generate proactive suggestions          Returns]] - rationale - core\proactive_agent.py
+- [[Analyze with first principles (requires authentication)]] - rationale - main.py
+- [[Analyzes user sentiment, typing cadence (simulated), and phrasing      to dynami]] - rationale - core\cognitive_emotional_sync.py
+- [[Anticipate what the user might want to do next          Args             curren]] - rationale - core\proactive_agent.py
+- [[Apply optimization and verify improvement          Args             name Optim]] - rationale - core\optimization_engine.py
+- [[Apply temporal decay to edge weights         Edges older than decay_half_life lo]] - rationale - memory\graph_rag.py
+- [[Approve and deploy automation          Args             suggestion_id Suggesti]] - rationale - core\hyper_automation.py
+- [[Authenticate user and return tokens]] - rationale - main.py
+- [[Authorize operation based on user permissions]] - rationale - main.py
+- [[Auto-start JARVIS with full autonomy     Runs without user prompting]] - rationale - jarvis_autonomous.py
+- [[Auto-tune hyperparameters based on recent performance          Args]] - rationale - core\rapid_iteration.py
+- [[Autonomous Economic Agency for JARVIS v11.0     - Crypto wallet integration]] - rationale - core\economic_agency.py
+- [[Autonomous decision-making engine for JARVIS v9.0     - Risk-based auto-approval]] - rationale - core\autonomous_decision.py
+- [[Autonomous startup system that runs automatically     - Loads previous session s]] - rationale - core\autonomous_startup.py
+- [[Autonomous task execution engine     - Takes high-level goals     - Breaks down]] - rationale - core\autonomous_executor.py
+- [[AutonomousDecision]] - code - core\autonomous_decision.py
+- [[AutonomousEconomicAgent]] - code - core\economic_agency.py
+- [[AutonomousExecutor]] - code - core\autonomous_executor.py
+- [[AutonomousStartup]] - code - core\autonomous_startup.py
+- [[Background loop that runs continuously         Monitors and executes tasks auton]] - rationale - core\autonomous_startup.py
+- [[Background worker for Async Airlock Buffer.         Runs System 2 thinking and p]] - rationale - main.py
+- [[Base class for swarm agents]] - rationale - core\swarm_coordinator.py
+- [[Benchmark function performance          Args             name Benchmark name]] - rationale - core\optimization_engine.py
+- [[Build a valid skill chain]] - rationale - core\workflow_synth.py
+- [[Build edges between skills based on dependencies]] - rationale - core\skill_graph.py
+- [[Build final workflow object]] - rationale - core\workflow_synth.py
+- [[Build skill graph from skill files]] - rationale - core\skill_graph.py
+- [[BuilderAgent]] - code - agent_teams_demo.py
+- [[CFG]] - code - jarvis_brain.py
+- [[Cache response for duplicate request detection          Args             messag]] - rationale - main.py
+- [[Calculate accuracyconfidence score]] - rationale - core\quality_scorer.py
+- [[Calculate actionability score]] - rationale - core\quality_scorer.py
+- [[Calculate clarityreadability score]] - rationale - core\quality_scorer.py
+- [[Calculate completeness score]] - rationale - core\quality_scorer.py
+- [[Calculate graph metrics for each node]] - rationale - core\skill_graph.py
+- [[Calculate overall system health score (0-100)          Returns             Heal]] - rationale - core\self_monitor.py
+- [[Calculate quality score for a response          Args             response The]] - rationale - core\quality_scorer.py
+- [[Calculate relevance score]] - rationale - core\quality_scorer.py
+- [[Calculate risk score for action]] - rationale - core\autonomous_decision.py
+- [[Call this from JARVIS main.py startup     Runs autonomous startup without user p]] - rationale - core\autonomous_startup.py
+- [[Callback for progress updates]] - rationale - enhanced_autonomy.py
+- [[Callback when task completes]] - rationale - enhanced_autonomy.py
+- [[Callback when task needs approval]] - rationale - enhanced_autonomy.py
+- [[Channel]] - code - core\intent_envelope.py
+- [[Check for pending work and execute automatically]] - rationale - core\autonomous_startup.py
+- [[Check if agent can handle current state]] - rationale - core\swarm_coordinator.py
+- [[Check if local LLM is available]] - rationale - core\local_llm_fallback.py
+- [[Check if operation is a bottleneck]] - rationale - core\profiler.py
+- [[Check if output type can satisfy input type]] - rationale - core\skill_graph.py
+- [[Check if system should enter sleep mode          Conditions         - CPU usage]] - rationale - core\memory_sleep.py
+- [[Check if this is a duplicate request and return cached response if available]] - rationale - main.py
+- [[Check if user has required permission]] - rationale - main.py
+- [[Check status of all modules]] - rationale - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[Classifies actions into risk classes with human-readable reasons.]] - rationale - core\honest_execution_policy.py
+- [[Clean detected context leaks]] - rationale - core\encryption_utils.py
+- [[CognitiveSyncEngine]] - code - core\cognitive_emotional_sync.py
+- [[ColBERT late interaction retrieval for JARVIS v9.0     - Token-level similarity]] - rationale - memory\colbert_retriever.py
+- [[ColBERTRetriever]] - code - memory\colbert_retriever.py
+- [[Compare current performance to baseline]] - rationale - core\optimization_engine.py
+- [[Comprehensive input validation and sanitization]] - rationale - main.py
+- [[Compress GraphRAG knowledge graph]] - rationale - core\memory_sleep.py
+- [[Compute MaxSim score (ColBERT late interaction)         For each query token, fi]] - rationale - memory\colbert_retriever.py
+- [[Context manager for tracing spans]] - rationale - core\distributed_tracing.py
+- [[ContextLeakSweeper]] - code - core\encryption_utils.py
+- [[Convenience function to decrypt data for tenant]] - rationale - core\encryption_utils.py
+- [[Convenience function to encrypt data for tenant]] - rationale - core\encryption_utils.py
+- [[Convenience function to log context access]] - rationale - core\encryption_utils.py
+- [[Convenience function to register tenant]] - rationale - core\encryption_utils.py
+- [[Convenience function to sweep context leaks]] - rationale - core\encryption_utils.py
+- [[Convert episodic memories to semantic knowledge]] - rationale - core\memory_sleep.py
+- [[Create AB test experiment          Args             name Experiment name]] - rationale - core\rapid_iteration.py
+- [[Create a new goal          Args             description Goal description]] - rationale - core\goal_manager.py
+- [[Create a team of agents that can work together]] - rationale - core\swarm_coordinator.py
+- [[Create workflow steps from skill chain]] - rationale - core\workflow_synth.py
+- [[DecisionRequest]] - code - main.py
+- [[Decompose high-level goal into executable tasks          This is where we break]] - rationale - core\autonomous_executor.py
+- [[Decompose problem into first principles          Args             problem The]] - rationale - core\first_principles.py
+- [[Decompose task into subtasks using recursive decomposition          Args]] - rationale - core\infinite_swarm.py
+- [[Decorator to monitor function performance]] - rationale - core\self_evolving_architecture.py
+- [[Decrypt data for specific tenant]] - rationale - core\encryption_utils.py
+- [[Demo function showcasing agent team capabilities]] - rationale - agent_teams_demo.py
+- [[Detect and clean context-pinning leaks]] - rationale - core\encryption_utils.py
+- [[Detect communities using Louvain algorithm]] - rationale - memory\graph_rag.py
+- [[Detect exact task repetition]] - rationale - core\hyper_automation.py
+- [[Detect performance bottlenecks]] - rationale - core\optimization_engine.py
+- [[Detect potential context pinning leaks]] - rationale - core\encryption_utils.py
+- [[Detect repetitive patterns in task history]] - rationale - core\hyper_automation.py
+- [[Detect sequential task patterns (task chains)]] - rationale - core\hyper_automation.py
+- [[Detect similar tasks using fuzzy matching]] - rationale - core\hyper_automation.py
+- [[Detect temporal patterns (daily, weekly, monthly)]] - rationale - core\hyper_automation.py
+- [[Determine if query requires System 2 thinking]] - rationale - main.py
+- [[Determine what type of automation to suggest]] - rationale - core\hyper_automation.py
+- [[Disable autonomous mode (admin only)]] - rationale - main.py
+- [[Dynamic Tool Synthesis for JARVIS v11.0     - Autonomous tool creation     - MCP]] - rationale - core\tool_synthesizer.py
+- [[DynamicToolSynthesizer]] - code - core\tool_synthesizer.py
+- [[Enable autonomous mode (admin only)]] - rationale - main.py
+- [[Enable autonomous mode (admin only)_1]] - rationale - main.py
+- [[Encrypt data for specific tenant]] - rationale - core\encryption_utils.py
+- [[Enhanced Autonomy System for JARVIS v9.0      Integrates     - Autonomous decis]] - rationale - enhanced_autonomy.py
+- [[EnhancedAutonomySystem]] - code - enhanced_autonomy.py
+- [[Enter sleep mode and consolidate memories          Returns             Sleep cy]] - rationale - core\memory_sleep.py
+- [[Enterprise-grade security manager with JWT authentication and RBAC]] - rationale - main.py
+- [[Ephemeral Model Distillation for JARVIS v11.0     - On-the-fly model distillatio]] - rationale - core\ephemeral_distillation.py
+- [[EphemeralModelDistiller]] - code - core\ephemeral_distillation.py
+- [[Estimate execution time for skill]] - rationale - core\workflow_synth.py
+- [[Estimate risk score for skill]] - rationale - core\workflow_synth.py
+- [[Estimate task complexity]] - rationale - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[Estimate task complexity (1-10)]] - rationale - archive\old_modules\main_genesis.py
+- [[Evaluate whether to make decision autonomously          Args             action]] - rationale - core\autonomous_decision.py
+- [[Evict context with lowest priority]] - rationale - memory\memory_controller.py
+- [[Execute ANYTHING the user asks for         PhD-Level Enhancement With distribut]] - rationale - archive\old_modules\main_genesis.py
+- [[Execute a high-level goal autonomously          Args             goal High-lev]] - rationale - core\autonomous_executor.py
+- [[Execute a high-level goal autonomously          Args             goal_descripti]] - rationale - enhanced_autonomy.py
+- [[Execute a proactive suggestion]] - rationale - enhanced_autonomy.py
+- [[Execute a proactive suggestion          Args             suggestion_id Index o]] - rationale - core\proactive_agent.py
+- [[Execute a single subtask]] - rationale - archive\old_modules\main_genesis.py
+- [[Execute a single task          Args             task Task to execute]] - rationale - core\autonomous_executor.py
+- [[Execute a synthesized workflow]] - rationale - core\workflow_synth.py
+- [[Execute a task using a coordinated team of agents          Args             tas]] - rationale - enhanced_autonomy.py
+- [[Execute a task using a coordinated team of agents (requires authentication)]] - rationale - main.py
+- [[Execute agent with current state          Args             state Shared state]] - rationale - core\swarm_coordinator.py
+- [[Execute autonomous maintenance tasks]] - rationale - core\autonomous_startup.py
+- [[Execute task using swarm intelligence          Args             task Main task]] - rationale - core\infinite_swarm.py
+- [[ExecutorAgent]] - code - core\swarm_coordinator.py
+- [[ExperienceReplay]] - code - core\experience_replay.py
+- [[Extract and validate authentication token from request headers]] - rationale - main.py
+- [[Extract entities and relationships from text using LLM         Returns {entitie]] - rationale - memory\graph_rag.py
+- [[Extract fundamental truths (axioms)]] - rationale - core\first_principles.py
+- [[Fallback regex-based entity extraction]] - rationale - memory\graph_rag.py
+- [[Fallback when LLM unavailable]] - rationale - core\first_principles.py
+- [[FastAPI lifespan handler for async startup and shutdown]] - rationale - main.py
+- [[Filter suggestions based on learned user preferences]] - rationale - core\proactive_agent.py
+- [[Find a chain of skills that achieves the goal]] - rationale - core\skill_graph.py
+- [[Find skills matching the goal]] - rationale - core\workflow_synth.py
+- [[First-principles reasoning engine     - Decompose problems into axioms     - Cha]] - rationale - core\first_principles.py
+- [[FirstPrinciples]] - code - core\first_principles.py
+- [[Generate ASCII visualization of skill graph]] - rationale - core\skill_graph.py
+- [[Generate JWT access and refresh tokens]] - rationale - main.py
+- [[Generate a cache key for request deduplication          Args             messag]] - rationale - main.py
+- [[Generate automation codeconfig]] - rationale - core\hyper_automation.py
+- [[Generate automation suggestion]] - rationale - core\hyper_automation.py
+- [[Generate comprehensive performance report          Args             time_window]] - rationale - core\self_monitor.py
+- [[Generate explanation of the reasoning process]] - rationale - core\first_principles.py
+- [[Generate fast response with speculative decoding]] - rationale - main.py
+- [[Generate list of outcomes from completed tasks]] - rationale - core\autonomous_executor.py
+- [[Generate next reasoning step - async with resource monitoring]] - rationale - core\system2_thinking.py
+- [[Generate response from result]] - rationale - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[Generate response with System 2 thinking]] - rationale - main.py
+- [[Generate response with streaming from the LLM         This method yields respons]] - rationale - main.py
+- [[Generate text with automatic fallback          Args             messages Chat]] - rationale - core\local_llm_fallback.py
+- [[Generate using local LLM]] - rationale - core\local_llm_fallback.py
+- [[Generative Compute Infrastructure for JARVIS v11.0     - TerraformIaC generatio]] - rationale - core\compute_infrastructure.py
+- [[GenerativeComputeInfrastructure]] - code - core\compute_infrastructure.py
+- [[Get all pinned contexts with tenant isolation]] - rationale - memory\memory_controller.py
+- [[Get automation statistics]] - rationale - core\hyper_automation.py
+- [[Get automation suggestions]] - rationale - main.py
+- [[Get automation suggestions_1]] - rationale - core\hyper_automation.py
+- [[Get automation suggestions (requires authentication)]] - rationale - main.py
+- [[Get autonomous system status (requires authentication)]] - rationale - main.py
+- [[Get autonomy statistics and report]] - rationale - core\autonomous_decision.py
+- [[Get average response time]] - rationale - core\self_monitor.py
+- [[Get average scores per dimension]] - rationale - core\quality_scorer.py
+- [[Get complete system status]] - rationale - archive\old_modules\main_genesis.py
+- [[Get comprehensive health status for monitoring]] - rationale - main.py
+- [[Get comprehensive system statistics]] - rationale - main.py
+- [[Get comprehensive system status          Returns             System status incl]] - rationale - enhanced_autonomy.py
+- [[Get current execution status]] - rationale - core\autonomous_executor.py
+- [[Get current memory usage in MB]] - rationale - core\profiler.py
+- [[Get current timestamp]] - rationale - core\encryption_utils.py
+- [[Get current user information]] - rationale - main.py
+- [[Get decision statistics]] - rationale - core\autonomous_decision.py
+- [[Get detailed skill information]] - rationale - core\skill_graph.py
+- [[Get distillation statistics]] - rationale - core\ephemeral_distillation.py
+- [[Get goals by priority]] - rationale - core\goal_manager.py
+- [[Get iteration statistics]] - rationale - core\rapid_iteration.py
+- [[Get memory system health status with tenant-specific metrics]] - rationale - memory\memory_controller.py
+- [[Get memory system statistics with tenant-specific metrics]] - rationale - memory\memory_controller.py
+- [[Get model information]] - rationale - core\local_llm_fallback.py
+- [[Get namespace for tenant]] - rationale - core\encryption_utils.py
+- [[Get next goal to work on         Prioritizes by priority  progress  created_a]] - rationale - core\goal_manager.py
+- [[Get optimization report]] - rationale - core\optimization_engine.py
+- [[Get optimization suggestion for bottleneck]] - rationale - core\profiler.py
+- [[Get proactive agent statistics]] - rationale - core\proactive_agent.py
+- [[Get proactive suggestions          Returns             Suggestions and system s]] - rationale - enhanced_autonomy.py
+- [[Get quality statistics]] - rationale - core\quality_scorer.py
+- [[Get quality trend over time          Args             hours Hours to analyze]] - rationale - core\quality_scorer.py
+- [[Get registry statistics]] - rationale - core\skill_loader.py
+- [[Get retriever statistics]] - rationale - memory\colbert_retriever.py
+- [[Get security audit log (admin only)]] - rationale - main.py
+- [[Get sleep consolidation statistics]] - rationale - core\memory_sleep.py
+- [[Get statistics for a component]] - rationale - core\profiler.py
+- [[Get success rate for recent actions]] - rationale - core\self_monitor.py
+- [[Get synthesizer statistics]] - rationale - core\workflow_synth.py
+- [[Get system configuration (admin only)]] - rationale - main.py
+- [[Get system health status (requires authentication)]] - rationale - main.py
+- [[Get system statistics (requires authentication)]] - rationale - main.py
+- [[Get system statistics (requires authentication)_1]] - rationale - main.py
+- [[Get verification statistics]] - rationale - core\neuro_symbolic_verifier.py
+- [[Get workflow information for display]] - rationale - core\workflow_synth.py
+- [[GoalManager]] - code - core\goal_manager.py
+- [[GoalPriority]] - code - core\goal_manager.py
+- [[Granular permissions for fine-grained access control]] - rationale - main.py
+- [[Granular permissions for fine-grained access control_1]] - rationale - core\security_system.py
+- [[GraphRAG]] - code - memory\graph_rag.py
+- [[GraphRAG implementation for JARVIS v9.0     - Extracts entities and relationship]] - rationale - memory\graph_rag.py
+- [[Group skills that can run in parallel]] - rationale - core\skill_graph.py
+- [[Group steps that can run in parallel]] - rationale - core\workflow_synth.py
+- [[Handle WhatsApp message]] - rationale - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[Handle incoming WhatsApp message]] - rationale - archive\old_modules\main_genesis.py
+- [[Handle incoming WhatsApp message         PhD-Level Enhancement With tracing and]] - rationale - archive\old_modules\main_genesis.py
+- [[Hash password using bcrypt]] - rationale - main.py
+- [[Health check endpoint (public)]] - rationale - main.py
+- [[Helper method to decrypt a result if it's encrypted]] - rationale - memory\memory_controller.py
+- [[Honest Execution Policy — risk classification with approval gating.]] - rationale - core\honest_execution_policy.py
+- [[HonestExecutionPolicy]] - code - core\honest_execution_policy.py
+- [[Hybrid LLM manager with automatic fallback     - Primary Groq (fast, cloud)]] - rationale - core\local_llm_fallback.py
+- [[HybridLLMManager]] - code - core\local_llm_fallback.py
+- [[Hyper-automation engine for JARVIS v9.0     - Monitor user patterns     - Detect]] - rationale - core\hyper_automation.py
+- [[HyperAutomation]] - code - core\hyper_automation.py
+- [[INTEGRATION_COMPLETE.py]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[Identify hidden assumptions in the problem]] - rationale - core\first_principles.py
+- [[Identify patterns in failures          Returns             List of failure patt]] - rationale - core\self_monitor.py
+- [[Identify real constraints (not artificial limitations)]] - rationale - core\first_principles.py
+- [[Identify system weaknesses based on metrics          Returns             List o]] - rationale - core\self_monitor.py
+- [[Implement rate limiting per user and permission]] - rationale - main.py
+- [[Implementation of process_message with full v9.0 capabilities          Args]] - rationale - main.py
+- [[Infinite Horizon Swarm Planning for JARVIS v11.0     - 10,000+ parallel agent sw]] - rationale - core\infinite_swarm.py
+- [[InfiniteHorizonSwarm]] - code - core\infinite_swarm.py
+- [[Initialize ColBERT model]] - rationale - memory\colbert_retriever.py
+- [[Initialize ColBERT retriever]] - rationale - memory\memory_controller.py
+- [[Initialize Redis cache (optional)]] - rationale - memory\memory_controller.py
+- [[Initialize TF-IDF fallback]] - rationale - memory\colbert_retriever.py
+- [[Initialize default agent teams based on Claude Code patterns]] - rationale - enhanced_autonomy.py
+- [[Initialize symbolic reasoning engines]] - rationale - core\neuro_symbolic_verifier.py
+- [[Input source channel.]] - rationale - core\intent_envelope.py
+- [[Input validation endpoint]] - rationale - main.py
+- [[InputValidator]] - code - main.py
+- [[JARVIS v11.0 GENESIS - COMPLETE INTEGRATION      Connects ALL 24 core modules +]] - rationale - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[JARVIS v11.0 GENESIS - Master Orchestrator      The ultimate AI assistant that c]] - rationale - archive\old_modules\main_genesis.py
+- [[JARVIS v9.0 - Encryption Utilities Phase 5 Memory & Data Protection]] - rationale - core\encryption_utils.py
+- [[JARVIS v9.0 ULTRA Main Orchestrator     - Integrates all PhD-level systems     -]] - rationale - main.py
+- [[JarvisCompleteIntegration]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[JarvisGenesisOrchestrator]] - code - archive\old_modules\main_genesis.py
+- [[JarvisV9Orchestrator]] - code - main.py
+- [[Knowledge graph of skills with     - Dependency tracking     - Composition vali]] - rationale - core\skill_graph.py
+- [[Learn from decision outcome]] - rationale - core\autonomous_decision.py
+- [[Learn from rejected suggestions]] - rationale - core\proactive_agent.py
+- [[List all available skills]] - rationale - core\skill_loader.py
+- [[Load goals from storage]] - rationale - core\goal_manager.py
+- [[Local LLM fallback using llama.cpp     - 4-bit quantized Llama-3-8B (~4GB)     -]] - rationale - core\local_llm_fallback.py
+- [[LocalLLMFallback]] - code - core\local_llm_fallback.py
+- [[Log a task for pattern detection          Args             task Task descripti]] - rationale - core\hyper_automation.py
+- [[Log access to contexts for leak detection]] - rationale - core\encryption_utils.py
+- [[Log security events for audit trail]] - rationale - main.py
+- [[Log tenant-specific access for audit and security monitoring]] - rationale - memory\memory_controller.py
+- [[Logout user and invalidate tokens]] - rationale - main.py
+- [[Main CLI interface for testing]] - rationale - enhanced_autonomy.py
+- [[Main entry point from WhatsApp Bridge         Processes message through complete]] - rationale - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[Make autonomous decision (requires high-level authentication)]] - rationale - main.py
+- [[Make autonomous decision with risk assessment]] - rationale - main.py
+- [[Manage per-tenant namespaces for memory isolation]] - rationale - core\encryption_utils.py
+- [[Mark goal as completed          Args             goal_id Goal ID             s]] - rationale - core\goal_manager.py
+- [[Match skills by query]] - rationale - core\skill_loader.py
+- [[Match skills to a goal description]] - rationale - core\skill_graph.py
+- [[Memory Sleep Consolidation for JARVIS v11.0     - Nightly memory pruning     - G]] - rationale - core\memory_sleep.py
+- [[MemoryController]] - code - memory\memory_controller.py
+- [[MemorySleepConsolidator]] - code - core\memory_sleep.py
+- [[MessageRequest]] - code - main.py
+- [[Neuro-Symbolic Verification for JARVIS v11.0     - Z3 theorem prover integration]] - rationale - core\neuro_symbolic_verifier.py
+- [[NeuroSymbolicVerifier]] - code - core\neuro_symbolic_verifier.py
+- [[OptimizationEngine]] - code - core\optimization_engine.py
+- [[Optimize SQLite and other databases]] - rationale - core\memory_sleep.py
+- [[Parse goal into intent categories]] - rationale - core\workflow_synth.py
+- [[Performance profiler for JARVIS v9.0     - Bottleneck detection     - Latency pr]] - rationale - core\profiler.py
+- [[Permission]] - code - main.py
+- [[Permission_1]] - code - core\security_system.py
+- [[Persistent goal management system     - Store goals across sessions     - Track]] - rationale - core\goal_manager.py
+- [[Pin important context to prevent it from being evicted         - context_id Uni]] - rationale - memory\memory_controller.py
+- [[PlannerAgent]] - code - core\swarm_coordinator.py
+- [[PolicyDecision]] - code - core\honest_execution_policy.py
+- [[Proactive intelligence system     - Anticipates user needs     - Suggests improv]] - rationale - core\proactive_agent.py
+- [[ProactiveAgent]] - code - core\proactive_agent.py
+- [[Process Reward Model Evaluate quality of reasoning         Returns Score betwe]] - rationale - core\system2_thinking.py
+- [[Process incoming message with full v9.0 capabilities          Args]] - rationale - main.py
+- [[Process user message (requires authentication)]] - rationale - main.py
+- [[Profile function execution          Args             func Function to profile]] - rationale - core\optimization_engine.py
+- [[Profiler]] - code - core\profiler.py
+- [[Prune redundant vectors from vector database]] - rationale - core\memory_sleep.py
+- [[Quality scoring system for JARVIS responses     - Multi-signal quality assessmen]] - rationale - core\quality_scorer.py
+- [[QualityScorer]] - code - core\quality_scorer.py
+- [[Query knowledge graph for global questions with tenant isolation         Example]] - rationale - memory\memory_controller.py
+- [[Query memory for similar past actions and return a bias score.         score  0]] - rationale - core\experience_replay.py
+- [[Rapid iteration engine for JARVIS v9.0     - Track every decision outcome     -]] - rationale - core\rapid_iteration.py
+- [[RapidIteration]] - code - core\rapid_iteration.py
+- [[Rebuild solution from axioms, respecting only real constraints]] - rationale - core\first_principles.py
+- [[Record a benchmark measurement]] - rationale - core\profiler.py
+- [[Record a metric value          Args             metric_type Type of metric]] - rationale - core\self_monitor.py
+- [[Record an action and its outcome          Args             action Action descr]] - rationale - core\self_monitor.py
+- [[Record decision outcome for learning          Args             action Action t]] - rationale - core\autonomous_decision.py
+- [[Recursive why analysis (5 Whys technique)          Args             question]] - rationale - core\first_principles.py
+- [[Register an agent with the swarm]] - rationale - core\swarm_coordinator.py
+- [[Reject a suggestion and learn from it          Args             suggestion_id]] - rationale - core\proactive_agent.py
+- [[Remove expired pinned contexts]] - rationale - memory\memory_controller.py
+- [[Report progress to user]] - rationale - core\autonomous_executor.py
+- [[Represents a skill in the graph]] - rationale - core\skill_graph.py
+- [[Request user input for blocked task]] - rationale - core\autonomous_executor.py
+- [[ResearchAgent]] - code - agent_teams_demo.py
+- [[Reset budget at start of new month]] - rationale - core\economic_agency.py
+- [[Resume from previous session automatically]] - rationale - core\autonomous_startup.py
+- [[Resume work from previous session          Returns             Resume status an]] - rationale - enhanced_autonomy.py
+- [[Retrieve most relevant documents for query         Returns List of {text, score]] - rationale - memory\colbert_retriever.py
+- [[Retrieve pinned context by ID with tenant isolation and decryption]] - rationale - memory\memory_controller.py
+- [[Retrieve relevant memories with decryption and RBAC enforcement         Uses Col]] - rationale - memory\memory_controller.py
+- [[Retrieve using ColBERT late interaction]] - rationale - memory\colbert_retriever.py
+- [[Retrieve using TF-IDF fallback]] - rationale - memory\colbert_retriever.py
+- [[RiskClass]] - code - core\honest_execution_policy.py
+- [[Robustly extract numeric score from LLM response with multiple fallback strategi]] - rationale - core\system2_thinking.py
+- [[Role-based access control roles]] - rationale - main.py
+- [[Run Python garbage collection]] - rationale - core\memory_sleep.py
+- [[Run a simple demo mode showing core functionality]] - rationale - jarvis_runner.py
+- [[Run autonomous startup sequence         This runs automatically when JARVIS star]] - rationale - core\autonomous_startup.py
+- [[Run nightly maintenance (sleep cycle)]] - rationale - archive\old_modules\main_genesis.py
+- [[Run system optimization]] - rationale - main.py
+- [[Run system optimization (requires authentication)]] - rationale - main.py
+- [[SEAController]] - code - core\self_evolving_architecture.py
+- [[SQLite-backed immutable receipt storage.]] - rationale - core\action_receipt_store.py
+- [[Sanitize all string values in request data]] - rationale - main.py
+- [[Sanitize input string]] - rationale - main.py
+- [[Save all memory subsystems to disk with encryption]] - rationale - memory\memory_controller.py
+- [[Save all system state]] - rationale - main.py
+- [[Save automation state]] - rationale - core\hyper_automation.py
+- [[Save goals to storage]] - rationale - core\goal_manager.py
+- [[Save optimization state]] - rationale - core\optimization_engine.py
+- [[Saves checkpoint to disk]] - rationale - jarvis_brain.py
+- [[Scan all SKILL.md files and build registry]] - rationale - core\skill_loader.py
+- [[Schedule nightly sleep cycle          Args             hour Hour to run sleep]] - rationale - core\memory_sleep.py
+- [[Security middleware for request processing]] - rationale - main.py
+- [[Security system health check]] - rationale - main.py
+- [[SecurityManager]] - code - main.py
+- [[SecurityMiddleware]] - code - main.py
+- [[Self-monitoring and performance tracking system     - Track actions and outcomes]] - rationale - core\self_monitor.py
+- [[SelfMonitor]] - code - core\self_monitor.py
+- [[Set baseline performance for comparison]] - rationale - core\optimization_engine.py
+- [[Simulate multiple future scenarios (Monte Carlo style)          Args]] - rationale - core\infinite_swarm.py
+- [[Simulate reasoning from node and evaluate with PRM - async with resource limits]] - rationale - core\system2_thinking.py
+- [[SkillGraph]] - code - core\skill_graph.py
+- [[SkillLoader]] - code - core\skill_loader.py
+- [[SkillNode]] - code - core\skill_graph.py
+- [[SpanKind]] - code - core\distributed_tracing.py
+- [[Spawn a hierarchical swarm for a task          Args             task Main task]] - rationale - core\infinite_swarm.py
+- [[Speculative decoding for JARVIS v9.0     - 8B generates draft tokens (fast)]] - rationale - core\speculative_decoder.py
+- [[SpeculativeDecoder]] - code - core\speculative_decoder.py
+- [[Start proactive monitoring and suggestions]] - rationale - core\autonomous_startup.py
+- [[Store memory across all subsystems with encryption and RBAC enforcement]] - rationale - memory\memory_controller.py
+- [[Store the result of an agent's execution for learning and reference with encrypt]] - rationale - memory\memory_controller.py
+- [[Stream response tokens as they become available          Args             messa]] - rationale - main.py
+- [[Stream response tokens as they become available          Args             messa_1]] - rationale - main.py
+- [[Suggest improvements based on identified weaknesses          Returns]] - rationale - core\self_monitor.py
+- [[Suggest increasing autonomy if performance is good]] - rationale - core\autonomous_decision.py
+- [[Suggest radical optimizations for bottleneck]] - rationale - core\optimization_engine.py
+- [[Swarm coordinator for JARVIS v9.0     - Agents communicate via shared state]] - rationale - core\swarm_coordinator.py
+- [[SwarmAgent]] - code
+- [[SwarmAgent_2]] - code - core\swarm_coordinator.py
+- [[SwarmCoordinator]] - code - core\swarm_coordinator.py
+- [[Synthesize a workflow from a goal]] - rationale - core\workflow_synth.py
+- [[Synthesize a workflow from a goal (requires authentication)]] - rationale - main.py
+- [[Synthesize and execute a workflow (requires authentication)]] - rationale - main.py
+- [[SynthesizedWorkflow]] - code - core\workflow_synth.py
+- [[Synthesizes workflows from user goals by     1. Parsing goal intent     2. Quer]] - rationale - core\workflow_synth.py
+- [[System 2 thinking for complex reasoning     - Uses MCTS to explore solution spac]] - rationale - core\system2_thinking.py
+- [[System2Thinking]] - code - core\system2_thinking.py
+- [[Take a performance snapshot]] - rationale - core\self_monitor.py
+- [[TaskRequest]] - code - archive\old_modules\main_genesis.py
+- [[TaskStatus]] - code - core\autonomous_executor.py
+- [[TenantNamespaceManager]] - code - core\encryption_utils.py
+- [[Test JARVIS Antigravity Skills Integration]] - rationale - archive\test_skills.py
+- [[Test comprehensive input validation in process_message method]] - rationale - test_input_validation.py
+- [[Test context pinning functionality]] - rationale - test_context_pinning.py
+- [[Test enhanced state management structure without API calls]] - rationale - test_enhanced_state_management_simple.py
+- [[Test input validation logic by examining the source code structure]] - rationale - test_input_validation_simple.py
+- [[Test robust JSON parsing functionality]] - rationale - test_robust_json_parsing.py
+- [[TesterAgent]] - code - agent_teams_demo.py
+- [[Token validation endpoint]] - rationale - main.py
+- [[Track performance metrics over time          Args             metrics Performa]] - rationale - core\rapid_iteration.py
+- [[Unified memory controller for JARVIS v9.0     - GraphRAG for knowledge graph and]] - rationale - memory\memory_controller.py
+- [[Unpin context to allow eviction]] - rationale - memory\memory_controller.py
+- [[Update goal progress          Args             goal_id Goal ID             tas]] - rationale - core\goal_manager.py
+- [[Update metrics based on action record]] - rationale - core\self_monitor.py
+- [[Updates the internal model of the user's current state.]] - rationale - core\cognitive_emotional_sync.py
+- [[User authentication endpoint]] - rationale - main.py
+- [[UserRole]] - code - main.py
+- [[Validate JWT token and return payload]] - rationale - main.py
+- [[Validate file paths to prevent directory traversal]] - rationale - main.py
+- [[Validate input against known attack patterns]] - rationale - main.py
+- [[Validate that skills can be composed in order]] - rationale - core\skill_graph.py
+- [[VerifierAgent]] - code - core\swarm_coordinator.py
+- [[Verify password against hash]] - rationale - main.py
+- [[Voice-first JARVIS runtime entrypoint.  Boots VoiceBridge + AudioManager and kee]] - rationale - voice_jarvis.py
+- [[VoiceJarvisRuntime]] - code - voice_jarvis.py
+- [[WhatsAppMessage]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[WhatsAppMessage_1]] - code - archive\old_modules\main_genesis.py
+- [[WorkflowStep]] - code - core\workflow_synth.py
+- [[WorkflowSynthesizer]] - code - core\workflow_synth.py
+- [[_process_message_impl()]] - code - main.py
+- [[_system2_response()]] - code - main.py
+- [[agent_teams_demo.py]] - code - agent_teams_demo.py
+- [[analyze_with_first_principles()]] - code - main.py
+- [[autonomous_decision.py]] - code - core\autonomous_decision.py
+- [[autonomous_executor.py]] - code - core\autonomous_executor.py
+- [[autonomous_startup.py]] - code - core\autonomous_startup.py
+- [[autonomous_startup_sequence()]] - code - core\autonomous_startup.py
+- [[cognitive_emotional_sync.py]] - code - core\cognitive_emotional_sync.py
+- [[colbert_retriever.py]] - code - memory\colbert_retriever.py
+- [[decrypt_data()]] - code - core\encryption_utils.py
+- [[demo_agent_teams()]] - code - agent_teams_demo.py
+- [[disable_autonomous()]] - code - main.py
+- [[enable_autonomous()]] - code - main.py
+- [[encrypt_data()]] - code - core\encryption_utils.py
+- [[encryption_utils.py]] - code - core\encryption_utils.py
+- [[enhanced_autonomy.py]] - code - enhanced_autonomy.py
+- [[execute_agent_team()]] - code - main.py
+- [[execute_task()]] - code - archive\old_modules\main_genesis.py
+- [[execute_workflow()]] - code - main.py
+- [[experience_replay.py]] - code - core\experience_replay.py
+- [[first_principles.py]] - code - core\first_principles.py
+- [[first_principles_analysis()]] - code - main.py
+- [[get_audit_log()]] - code - main.py
+- [[get_automations()]] - code - main.py
+- [[get_autonomous_status()]] - code - main.py
+- [[get_config()]] - code - main.py
+- [[get_health_status()]] - code - main.py
+- [[get_health_status_endpoint()]] - code - main.py
+- [[get_permissions()]] - code - main.py
+- [[get_skill_graph()]] - code - main.py
+- [[get_stats()]] - code - main.py
+- [[get_status()]] - code - archive\old_modules\main_genesis.py
+- [[get_system_stats()]] - code - main.py
+- [[get_user_info()]] - code - main.py
+- [[graph_rag.py]] - code - memory\graph_rag.py
+- [[handle_message()]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[handle_whatsapp()]] - code - archive\old_modules\main_genesis.py
+- [[health()]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[health()_1]] - code - archive\old_modules\main_genesis.py
+- [[health_check()]] - code - main.py
+- [[honest_execution_policy.py]] - code - core\honest_execution_policy.py
+- [[hyper_automation.py]] - code - core\hyper_automation.py
+- [[infinite_swarm.py]] - code - core\infinite_swarm.py
+- [[initialize_experience_replay()]] - code - core\experience_replay.py
+- [[jarvis_autonomous.py]] - code - jarvis_autonomous.py
+- [[lifespan()]] - code - main.py
+- [[local_llm_fallback.py]] - code - core\local_llm_fallback.py
+- [[log_context_access()]] - code - core\encryption_utils.py
+- [[login()]] - code - main.py
+- [[logout()]] - code - main.py
+- [[main()]] - code - enhanced_autonomy.py
+- [[main()_1]] - code - jarvis_autonomous.py
+- [[main()_5]] - code - test_input_validation.py
+- [[main()_7]] - code - voice_jarvis.py
+- [[main.py]] - code - main.py
+- [[main_genesis.py]] - code - archive\old_modules\main_genesis.py
+- [[make_autonomous_decision()]] - code - main.py
+- [[make_decision()]] - code - main.py
+- [[memory_controller.py]] - code - memory\memory_controller.py
+- [[memory_sleep.py]] - code - core\memory_sleep.py
+- [[modules()]] - code - archive\old_modules\INTEGRATION_COMPLETE.py
+- [[optimize()]] - code - main.py
+- [[optimize_system()]] - code - main.py
+- [[proactive_agent.py]] - code - core\proactive_agent.py
+- [[process_message()]] - code - main.py
+- [[profile()]] - code - core\profiler.py
+- [[profiler.py]] - code - core\profiler.py
+- [[quality_scorer.py]] - code - core\quality_scorer.py
+- [[rapid_iteration.py]] - code - core\rapid_iteration.py
+- [[register_tenant()]] - code - core\encryption_utils.py
+- [[security_health()]] - code - main.py
+- [[skill_graph.py]] - code - core\skill_graph.py
+- [[skill_loader.py]] - code - core\skill_loader.py
+- [[speculative_decoder.py]] - code - core\speculative_decoder.py
+- [[startup()]] - code - archive\old_modules\main_genesis.py
+- [[stream_response()]] - code - main.py
+- [[suggest_automations()]] - code - main.py
+- [[swarm_coordinator.py]] - code - core\swarm_coordinator.py
+- [[sweep_context_leaks()]] - code - core\encryption_utils.py
+- [[synthesize_workflow()]] - code - main.py
+- [[test()_6]] - code - core\autonomous_startup.py
+- [[test_context_pinning()]] - code - test_context_pinning.py
+- [[test_context_pinning.py]] - code - test_context_pinning.py
+- [[test_enhanced_state_management_simple()]] - code - test_enhanced_state_management_simple.py
+- [[test_enhanced_state_management_simple.py]] - code - test_enhanced_state_management_simple.py
+- [[test_executor()]] - code - core\autonomous_executor.py
+- [[test_input_validation()]] - code - test_input_validation.py
+- [[test_input_validation.py]] - code - test_input_validation.py
+- [[test_input_validation_simple()]] - code - test_input_validation_simple.py
+- [[test_input_validation_simple.py]] - code - test_input_validation_simple.py
+- [[test_proactive_agent()]] - code - core\proactive_agent.py
+- [[test_robust_json_parsing()]] - code - test_robust_json_parsing.py
+- [[test_robust_json_parsing.py]] - code - test_robust_json_parsing.py
+- [[test_skills.py]] - code - archive\test_skills.py
+- [[test_sleep()]] - code - core\memory_sleep.py
+- [[test_swarm()]] - code - core\infinite_swarm.py
+- [[test_swarm()_1]] - code - core\swarm_coordinator.py
+- [[traced_span]] - code - core\distributed_tracing.py
+- [[validate_input_api()]] - code - main.py
+- [[validate_token()]] - code - main.py
+- [[voice_jarvis.py]] - code - voice_jarvis.py
+- [[workflow_synth.py]] - code - core\workflow_synth.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_0
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 210 edges to [[_COMMUNITY_Community 1]]
+- 122 edges to [[_COMMUNITY_Community 3]]
+- 77 edges to [[_COMMUNITY_Community 2]]
+- 57 edges to [[_COMMUNITY_Community 12]]
+- 29 edges to [[_COMMUNITY_Community 18]]
+- 27 edges to [[_COMMUNITY_Community 16]]
+- 27 edges to [[_COMMUNITY_Community 21]]
+- 26 edges to [[_COMMUNITY_Community 15]]
+- 24 edges to [[_COMMUNITY_Community 11]]
+- 20 edges to [[_COMMUNITY_Community 7]]
+- 19 edges to [[_COMMUNITY_Community 32]]
+- 19 edges to [[_COMMUNITY_Community 25]]
+- 19 edges to [[_COMMUNITY_Community 65]]
+- 9 edges to [[_COMMUNITY_Community 19]]
+- 9 edges to [[_COMMUNITY_Community 56]]
+- 8 edges to [[_COMMUNITY_Community 23]]
+- 8 edges to [[_COMMUNITY_Community 54]]
+- 6 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 13]]
+- 5 edges to [[_COMMUNITY_Community 51]]
+- 5 edges to [[_COMMUNITY_Community 10]]
+- 4 edges to [[_COMMUNITY_Community 29]]
+- 3 edges to [[_COMMUNITY_Community 57]]
+- 3 edges to [[_COMMUNITY_Community 42]]
+- 3 edges to [[_COMMUNITY_Community 31]]
+- 2 edges to [[_COMMUNITY_Community 66]]
+- 2 edges to [[_COMMUNITY_Community 14]]
+- 2 edges to [[_COMMUNITY_Community 264]]
+- 2 edges to [[_COMMUNITY_Community 17]]
+- 2 edges to [[_COMMUNITY_Community 178]]
+- 2 edges to [[_COMMUNITY_Community 41]]
+- 2 edges to [[_COMMUNITY_Community 52]]
+- 1 edge to [[_COMMUNITY_Community 236]]
+- 1 edge to [[_COMMUNITY_Community 4]]
+- 1 edge to [[_COMMUNITY_Community 43]]
+- 1 edge to [[_COMMUNITY_Community 8]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 48]]
+- 1 edge to [[_COMMUNITY_Community 231]]
+
+## Top bridge nodes
+- [[.load()_3]] - degree 30, connects to 15 communities
+- [[JarvisV9Orchestrator]] - degree 54, connects to 6 communities
+- [[lifespan()]] - degree 12, connects to 6 communities
+- [[Permission_1]] - degree 269, connects to 5 communities
+- [[SEAController]] - degree 134, connects to 4 communities

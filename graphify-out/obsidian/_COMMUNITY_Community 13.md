@@ -1,0 +1,208 @@
+---
+type: community
+members: 163
+---
+
+# Community 13
+
+**Members:** 163 nodes
+
+## Members
+- [[.__init__()_151]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[.__init__()_158]] - code - skills\mobile-design\scripts\mobile_audit.py
+- [[.__init__()_181]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[.__init__()_182]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[._analyze_file()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[._apply_reasoning()]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[._cc_risk_label()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[._cognitive_complexity()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[._count_nullable_params()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[._count_parameters()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[._cyclomatic_complexity()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[._detect_module()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[._extract_function_body()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[._extract_functions()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[._extract_results()]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[._find_reasoning_rule()]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[._load_reasoning()]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[._multi_domain_search()]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[._select_best_match()]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[.analyze()_3]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[.analyze_coupling()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[.audit_directory()]] - code - skills\mobile-design\scripts\mobile_audit.py
+- [[.audit_file()]] - code - skills\mobile-design\scripts\mobile_audit.py
+- [[.fit()]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[.generate()_3]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[.generate_report()_2]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[.get_report()]] - code - skills\mobile-design\scripts\mobile_audit.py
+- [[.print_report()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[.score()]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[.tokenize()]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[Analisa acoplamento entre módulos.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Analisa complexidade de código Kotlin com rigor matemático.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Analisa governanca de uma skill. Retorna (score, findings).]] - rationale - skills\skill-sentinel\scripts\analyzers\governance_audit.py
+- [[Analisa performance de uma skill. Retorna (score, findings).]] - rationale - skills\skill-sentinel\scripts\analyzers\performance.py
+- [[Analisa seguranca de uma skill. Retorna (score, findings).]] - rationale - skills\skill-sentinel\scripts\analyzers\security.py
+- [[Analisa todos os arquivos Kotlin no projeto.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Analisa um arquivo Kotlin.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Analyze dependencies for issues.]] - rationale - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[Analyze import patterns in source files.]] - rationale - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[Analyzer de governanca.  Avalia maturidade de governanca logging, rate limits]] - rationale - skills\skill-sentinel\scripts\analyzers\governance_audit.py
+- [[Analyzer de performance.  Verifica chamadas API sequenciais, caching, N+1 que]] - rationale - skills\skill-sentinel\scripts\analyzers\performance.py
+- [[Analyzer de seguranca.  Verifica secrets hardcoded, SQL injection, validacao]] - rationale - skills\skill-sentinel\scripts\analyzers\security.py
+- [[Apply reasoning rules to search results.]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Auto-detect the most relevant domain from query]] - rationale - skills\ui-ux-pro-max\scripts\core.py
+- [[BM25]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[BM25 ranking algorithm for text search]] - rationale - skills\ui-ux-pro-max\scripts\core.py
+- [[Basic validation of a skill]] - rationale - skills\skill-creator\scripts\quick_validate.py
+- [[Build BM25 index from documents]] - rationale - skills\ui-ux-pro-max\scripts\core.py
+- [[Calcula CC de McCabe.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Calcula complexidade cognitiva (aproximação).]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Calculate bundle health score.]] - rationale - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[Check Next.js configuration for optimizations.]] - rationale - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[Check if a file should be included in the ZIP.]] - rationale - skills\skill-installer\scripts\package_skill.py
+- [[Conta parâmetros de uma função.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Conta parâmetros nullable (tipo).]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Core search function using BM25]] - rationale - skills\ui-ux-pro-max\scripts\core.py
+- [[DesignSystemGenerator]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Detecta nivel de maturidade de governanca.]] - rationale - skills\skill-sentinel\scripts\analyzers\governance_audit.py
+- [[Detecta qual módulo um arquivo pertence.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Execute searches across multiple domains.]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Execute security validation scans.]] - rationale - skills\vulnerability-scanner\scripts\security_scan.py
+- [[Extract YAML frontmatter from a SKILL.md file._2]] - rationale - skills\skill-installer\scripts\package_skill.py
+- [[Extract results list from search result dict.]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Extrai e analisa todas as funções do arquivo.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Extrai o corpo de uma função por contagem de chaves.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[FileMetrics]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Find matching reasoning rule for a category.]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Format design system as ASCII box with emojis (MCP-style).]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Format design system as markdown.]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[FunctionMetrics]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Generate complete design system recommendation.]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Generates design system recommendations from aggregated searches.]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Gera relatório completo com análise matemática.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Imprime relatório formatado.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[KotlinComplexityAnalyzer]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Load CSV and return list of dicts]] - rationale - skills\ui-ux-pro-max\scripts\core.py
+- [[Load and parse package.json.]] - rationale - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[Load reasoning rules from CSV.]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Lowercase, split, remove punctuation, filter short words]] - rationale - skills\ui-ux-pro-max\scripts\core.py
+- [[Main entry point for design system generation.      Args         query Sear]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Main search function with auto-domain detection]] - rationale - skills\ui-ux-pro-max\scripts\core.py
+- [[MobileAuditor]] - code - skills\mobile-design\scripts\mobile_audit.py
+- [[ModuleCoupling]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Package a skill directory into a ZIP file for Claude.ai upload.      The ZIP f]] - rationale - skills\skill-installer\scripts\package_skill.py
+- [[Package a skill folder into a zip file.      Args         skill_path Path t]] - rationale - skills\skill-creator\scripts\package_skill.py
+- [[Package all installed skills.]] - rationale - skills\skill-installer\scripts\package_skill.py
+- [[Print human-readable report.]] - rationale - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[Salva relatório em formato Markdown.]] - rationale - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[Score all documents against query]] - rationale - skills\ui-ux-pro-max\scripts\core.py
+- [[Search stack-specific guidelines]] - rationale - skills\ui-ux-pro-max\scripts\core.py
+- [[Select best matching result based on priority keywords.]] - rationale - skills\ui-ux-pro-max\scripts\design_system.py
+- [[Validate dangerous code patterns (OWASP A05).     Checks Injection risks, XSS,]] - rationale - skills\vulnerability-scanner\scripts\security_scan.py
+- [[Validate no hardcoded secrets (OWASP A04).     Checks API keys, tokens, passwo]] - rationale - skills\vulnerability-scanner\scripts\security_scan.py
+- [[Validate security configuration (OWASP A02).     Checks Security headers, CORS]] - rationale - skills\vulnerability-scanner\scripts\security_scan.py
+- [[Validate skill meets Claude.ai web upload requirements.]] - rationale - skills\skill-installer\scripts\package_skill.py
+- [[Validate supply chain security (OWASP A03).     Checks npm audit, lock file pr]] - rationale - skills\vulnerability-scanner\scripts\security_scan.py
+- [[Verifica patterns de secrets hardcoded.]] - rationale - skills\skill-sentinel\scripts\analyzers\security.py
+- [[Verifica se URLs usam HTTP em vez de HTTPS.]] - rationale - skills\skill-sentinel\scripts\analyzers\security.py
+- [[Verifica se argumentos CLI sao validados.]] - rationale - skills\skill-sentinel\scripts\analyzers\security.py
+- [[Verifica se tokenssecrets aparecem em printlogging.]] - rationale - skills\skill-sentinel\scripts\analyzers\security.py
+- [[Verifica uso de f-stringsformat em queries SQL.]] - rationale - skills\skill-sentinel\scripts\analyzers\security.py
+- [[Verify all existing skill ZIPs for integrity.      Checks     - ZIP is valid]] - rationale - skills\skill-installer\scripts\package_skill.py
+- [[_check_https()]] - code - skills\skill-sentinel\scripts\analyzers\security.py
+- [[_check_input_validation()]] - code - skills\skill-sentinel\scripts\analyzers\security.py
+- [[_check_secrets()]] - code - skills\skill-sentinel\scripts\analyzers\security.py
+- [[_check_sql_injection()]] - code - skills\skill-sentinel\scripts\analyzers\security.py
+- [[_check_token_in_logs()]] - code - skills\skill-sentinel\scripts\analyzers\security.py
+- [[_detect_governance_level()]] - code - skills\skill-sentinel\scripts\analyzers\governance_audit.py
+- [[_load_csv()]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[_search_csv()]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[analyze()_4]] - code - skills\skill-sentinel\scripts\analyzers\governance_audit.py
+- [[analyze()_5]] - code - skills\skill-sentinel\scripts\analyzers\performance.py
+- [[analyze()_6]] - code - skills\skill-sentinel\scripts\analyzers\security.py
+- [[analyze_dependencies()]] - code - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[analyze_imports()]] - code - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[avg_cyclomatic()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[bundle_analyzer.py]] - code - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[calculate_score()]] - code - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[check_nextjs_config()]] - code - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[code_lines()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[complexity_analyzer.py]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[core.py]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[design_system.py]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[detect_domain()]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[format_ascii_box()]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[format_markdown()]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[generate_design_system()]] - code - skills\ui-ux-pro-max\scripts\design_system.py
+- [[governance_audit.py]] - code - skills\skill-sentinel\scripts\analyzers\governance_audit.py
+- [[instability()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[load_package_json()]] - code - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[main()_51]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[main()_54]] - code - skills\mobile-design\scripts\mobile_audit.py
+- [[main()_67]] - code - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[main()_77]] - code - skills\skill-installer\scripts\package_skill.py
+- [[main()_90]] - code - skills\vulnerability-scanner\scripts\security_scan.py
+- [[max_cognitive()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[max_cyclomatic()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[mobile_audit.py]] - code - skills\mobile-design\scripts\mobile_audit.py
+- [[package_all()]] - code - skills\skill-installer\scripts\package_skill.py
+- [[package_skill()]] - code - skills\skill-installer\scripts\package_skill.py
+- [[package_skill.py]] - code - skills\skill-creator\scripts\package_skill.py
+- [[package_skill.py_1]] - code - skills\skill-installer\scripts\package_skill.py
+- [[parse_yaml_frontmatter()_2]] - code - skills\skill-installer\scripts\package_skill.py
+- [[performance.py]] - code - skills\skill-sentinel\scripts\analyzers\performance.py
+- [[print_report()]] - code - skills\senior-frontend\scripts\bundle_analyzer.py
+- [[quick_validate.py]] - code - skills\skill-creator\scripts\quick_validate.py
+- [[run_full_scan()]] - code - skills\vulnerability-scanner\scripts\security_scan.py
+- [[save_as_markdown()]] - code - skills\matematico-tao\scripts\complexity_analyzer.py
+- [[scan_code_patterns()]] - code - skills\vulnerability-scanner\scripts\security_scan.py
+- [[scan_configuration()]] - code - skills\vulnerability-scanner\scripts\security_scan.py
+- [[scan_dependencies()]] - code - skills\vulnerability-scanner\scripts\security_scan.py
+- [[scan_secrets()]] - code - skills\vulnerability-scanner\scripts\security_scan.py
+- [[search()_2]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[search_stack()]] - code - skills\ui-ux-pro-max\scripts\core.py
+- [[security.py]] - code - skills\skill-sentinel\scripts\analyzers\security.py
+- [[security_scan.py]] - code - skills\vulnerability-scanner\scripts\security_scan.py
+- [[should_include()]] - code - skills\skill-installer\scripts\package_skill.py
+- [[test_llm_features.py]] - code - tests\test_llm_features.py
+- [[test_llm_provider_fallback()]] - code - tests\test_llm_features.py
+- [[test_speculative_decoder_adaptive()]] - code - tests\test_llm_features.py
+- [[validate_for_web()]] - code - skills\skill-installer\scripts\package_skill.py
+- [[validate_skill()]] - code - skills\skill-creator\scripts\quick_validate.py
+- [[verify_zips()]] - code - skills\skill-installer\scripts\package_skill.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_13
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 43 edges to [[_COMMUNITY_Community 1]]
+- 27 edges to [[_COMMUNITY_Community 2]]
+- 17 edges to [[_COMMUNITY_Community 8]]
+- 12 edges to [[_COMMUNITY_Community 11]]
+- 6 edges to [[_COMMUNITY_Community 16]]
+- 5 edges to [[_COMMUNITY_Community 0]]
+- 4 edges to [[_COMMUNITY_Community 25]]
+- 3 edges to [[_COMMUNITY_Community 9]]
+- 2 edges to [[_COMMUNITY_Community 20]]
+- 2 edges to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 4]]
+- 1 edge to [[_COMMUNITY_Community 21]]
+- 1 edge to [[_COMMUNITY_Community 42]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 10]]
+- 1 edge to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 17]]
+
+## Top bridge nodes
+- [[search()_2]] - degree 85, connects to 11 communities
+- [[._extract_functions()]] - degree 14, connects to 4 communities
+- [[.generate()_3]] - degree 14, connects to 3 communities
+- [[analyze()_6]] - degree 11, connects to 3 communities
+- [[.fit()]] - degree 7, connects to 3 communities

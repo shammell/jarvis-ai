@@ -1,0 +1,244 @@
+---
+type: community
+members: 201
+---
+
+# Community 9
+
+**Members:** 201 nodes
+
+## Members
+- [[.__init__()_161]] - code - skills\notebooklm\scripts\cleanup_manager.py
+- [[.__init__()_162]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.__init__()_165]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[.__init__()_167]] - code - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[.__init__()_168]] - code - skills\senior-architect\scripts\dependency_analyzer.py
+- [[.__init__()_169]] - code - skills\senior-architect\scripts\project_architect.py
+- [[.__init__()_170]] - code - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[.__init__()_171]] - code - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[.__init__()_172]] - code - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[._format_size()]] - code - skills\notebooklm\scripts\cleanup_manager.py
+- [[._get_size()]] - code - skills\notebooklm\scripts\cleanup_manager.py
+- [[._load_library()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[._save_library()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.add_notebook()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.analyze()_5]] - code - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[.analyze()_6]] - code - skills\senior-architect\scripts\dependency_analyzer.py
+- [[.analyze()_7]] - code - skills\senior-architect\scripts\project_architect.py
+- [[.analyze()_8]] - code - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[.analyze()_9]] - code - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[.analyze()_10]] - code - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[.analyze_portfolio()]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[.calculate_rice()]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[.generate_report()_3]] - code - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[.generate_report()_4]] - code - skills\senior-architect\scripts\dependency_analyzer.py
+- [[.generate_report()_5]] - code - skills\senior-architect\scripts\project_architect.py
+- [[.generate_report()_6]] - code - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[.generate_report()_7]] - code - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[.generate_report()_8]] - code - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[.generate_roadmap()]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[.get_active_notebook()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.get_cleanup_paths()]] - code - skills\notebooklm\scripts\cleanup_manager.py
+- [[.get_notebook()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.get_stats()_20]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.increment_use_count()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.list_notebooks()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.perform_cleanup()]] - code - skills\notebooklm\scripts\cleanup_manager.py
+- [[.print_cleanup_preview()]] - code - skills\notebooklm\scripts\cleanup_manager.py
+- [[.prioritize_features()]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[.remove_notebook()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.run()_4]] - code - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[.run()_5]] - code - skills\senior-architect\scripts\dependency_analyzer.py
+- [[.run()_6]] - code - skills\senior-architect\scripts\project_architect.py
+- [[.run()_7]] - code - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[.run()_8]] - code - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[.run()_9]] - code - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[.search_notebooks()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.select_notebook()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.update_notebook()]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[.validate_target()]] - code - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[.validate_target()_1]] - code - skills\senior-architect\scripts\dependency_analyzer.py
+- [[.validate_target()_2]] - code - skills\senior-architect\scripts\project_architect.py
+- [[.validate_target()_3]] - code - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[.validate_target()_4]] - code - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[.validate_target()_5]] - code - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[Add a new notebook to the library          Args             url NotebookLM]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Analyze the feature portfolio for balance and insights]] - rationale - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[ArchitectureDiagramGenerator]] - code - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[Calculate RICE score                  Args             reach Number of user]] - rationale - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[Calculate RICE scores and rank features                  Args             fe]] - rationale - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[Calculate RICE scores for feature prioritization]] - rationale - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[Check if all required environment variables are set.]] - rationale - skills\whatsapp-cloud-api\scripts\validate_config.py
+- [[CleanupManager]] - code - skills\notebooklm\scripts\cleanup_manager.py
+- [[CodeQualityAnalyzer]] - code - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[Command-line interface for cleanup management]] - rationale - skills\notebooklm\scripts\cleanup_manager.py
+- [[Command-line interface for notebook management]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Convert PascalCase to kebab-case.]] - rationale - skills\senior-frontend\scripts\component_generator.py
+- [[Convert string to PascalCase.]] - rationale - skills\senior-frontend\scripts\component_generator.py
+- [[Copy boilerplate and configure a new WhatsApp project.]] - rationale - skills\whatsapp-cloud-api\scripts\setup_project.py
+- [[Create a sample CSV file for testing]] - rationale - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[DependencyAnalyzer]] - code - skills\senior-architect\scripts\dependency_analyzer.py
+- [[Execute the main functionality]] - rationale - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[Execute the main functionality_1]] - rationale - skills\senior-architect\scripts\dependency_analyzer.py
+- [[Execute the main functionality_2]] - rationale - skills\senior-architect\scripts\project_architect.py
+- [[Execute the main functionality_3]] - rationale - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[Execute the main functionality_4]] - rationale - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[Execute the main functionality_5]] - rationale - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[Format size in human-readable form]] - rationale - skills\notebooklm\scripts\cleanup_manager.py
+- [[Format the results for display]] - rationale - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[FullstackScaffolder]] - code - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[Generate a quarterly roadmap based on team capacity                  Args]] - rationale - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[Generate and display the report]] - rationale - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[Generate and display the report_1]] - rationale - skills\senior-architect\scripts\dependency_analyzer.py
+- [[Generate and display the report_2]] - rationale - skills\senior-architect\scripts\project_architect.py
+- [[Generate and display the report_3]] - rationale - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[Generate and display the report_4]] - rationale - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[Generate and display the report_5]] - rationale - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[Generate component files.]] - rationale - skills\senior-frontend\scripts\component_generator.py
+- [[Generate configuration files.]] - rationale - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[Generate directory structure recursively.]] - rationale - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[Get a specific notebook by ID]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Get configuration file contents.]] - rationale - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[Get library statistics]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Get paths that would be cleaned up          Args             preserve_librar]] - rationale - skills\notebooklm\scripts\cleanup_manager.py
+- [[Get size of file or directory in bytes]] - rationale - skills\notebooklm\scripts\cleanup_manager.py
+- [[Get the currently active notebook]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Get the skill directory (parent of scripts).]] - rationale - skills\whatsapp-cloud-api\scripts\setup_project.py
+- [[Increment usage counter for a notebook          Args             notebook_id]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Initialize the cleanup manager]] - rationale - skills\notebooklm\scripts\cleanup_manager.py
+- [[Initialize the notebook library]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[List all notebooks in the library]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Load features from CSV file]] - rationale - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[Load library from disk]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Main class for architecture diagram generator functionality]] - rationale - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[Main class for code quality analyzer functionality]] - rationale - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[Main class for dependency analyzer functionality]] - rationale - skills\senior-architect\scripts\dependency_analyzer.py
+- [[Main class for fullstack scaffolder functionality]] - rationale - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[Main class for project architect functionality]] - rationale - skills\senior-architect\scripts\project_architect.py
+- [[Main class for project scaffolder functionality]] - rationale - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[Manages a collection of NotebookLM notebooks with metadata]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Manages cleanup of NotebookLM skill data      Features     - Preview what wi]] - rationale - skills\notebooklm\scripts\cleanup_manager.py
+- [[NotebookLibrary]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[Perform the actual cleanup          Args             preserve_library Keep]] - rationale - skills\notebooklm\scripts\cleanup_manager.py
+- [[Perform the main analysis or operation]] - rationale - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[Perform the main analysis or operation_1]] - rationale - skills\senior-architect\scripts\dependency_analyzer.py
+- [[Perform the main analysis or operation_2]] - rationale - skills\senior-architect\scripts\project_architect.py
+- [[Perform the main analysis or operation_3]] - rationale - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[Perform the main analysis or operation_4]] - rationale - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[Perform the main analysis or operation_5]] - rationale - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[Print a preview of what will be cleaned]] - rationale - skills\notebooklm\scripts\cleanup_manager.py
+- [[Print generation result.]] - rationale - skills\senior-frontend\scripts\component_generator.py
+- [[Print scaffolding result.]] - rationale - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[ProjectArchitect]] - code - skills\senior-architect\scripts\project_architect.py
+- [[ProjectScaffolder]] - code - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[RICECalculator]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[Remove a notebook from the library          Args             notebook_id ID]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Return a masked version of a secret for safe logging.]] - rationale - skills\whatsapp-cloud-api\scripts\send_test_message.py
+- [[Return a masked version of a secret for safe logging._1]] - rationale - skills\whatsapp-cloud-api\scripts\validate_config.py
+- [[Return a masked version of the token for safe logging._1]] - rationale - skills\telegram\scripts\test_bot.py
+- [[Scaffold a complete frontend project.]] - rationale - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[Search notebooks by query          Args             query Search query (sea]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Send a test text message.]] - rationale - skills\whatsapp-cloud-api\scripts\send_test_message.py
+- [[Set a notebook as active          Args             notebook_id ID of notebo]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Setup Python project.]] - rationale - skills\telegram\scripts\setup_project.py
+- [[Test access to WhatsApp Business Account.]] - rationale - skills\whatsapp-cloud-api\scripts\validate_config.py
+- [[Test bot token and return bot info.]] - rationale - skills\telegram\scripts\test_bot.py
+- [[Test connection to WhatsApp Cloud API.]] - rationale - skills\whatsapp-cloud-api\scripts\validate_config.py
+- [[Update notebook metadata          Args             notebook_id ID of notebo]] - rationale - skills\notebooklm\scripts\notebook_manager.py
+- [[Validate the target path exists and is accessible]] - rationale - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[Validate the target path exists and is accessible_1]] - rationale - skills\senior-architect\scripts\dependency_analyzer.py
+- [[Validate the target path exists and is accessible_2]] - rationale - skills\senior-architect\scripts\project_architect.py
+- [[Validate the target path exists and is accessible_3]] - rationale - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[Validate the target path exists and is accessible_4]] - rationale - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[Validate the target path exists and is accessible_5]] - rationale - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[_mask_secret()]] - code - skills\whatsapp-cloud-api\scripts\send_test_message.py
+- [[_mask_secret()_1]] - code - skills\whatsapp-cloud-api\scripts\validate_config.py
+- [[_mask_token()_1]] - code - skills\telegram\scripts\test_bot.py
+- [[architecture_diagram_generator.py]] - code - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[ask_question.py]] - code - skills\notebooklm\scripts\ask_question.py
+- [[check_env_vars()]] - code - skills\whatsapp-cloud-api\scripts\validate_config.py
+- [[cleanup_manager.py]] - code - skills\notebooklm\scripts\cleanup_manager.py
+- [[code_quality_analyzer.py]] - code - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[component_generator.py]] - code - skills\senior-frontend\scripts\component_generator.py
+- [[create_sample_csv()]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[dependency_analyzer.py]] - code - skills\senior-architect\scripts\dependency_analyzer.py
+- [[format_output()]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[frontend_scaffolder.py]] - code - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[fullstack_scaffolder.py]] - code - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[generate_component()]] - code - skills\senior-frontend\scripts\component_generator.py
+- [[generate_config_files()]] - code - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[generate_structure()]] - code - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[get_config_templates()]] - code - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[get_skill_dir()]] - code - skills\whatsapp-cloud-api\scripts\setup_project.py
+- [[load_features_from_csv()]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[main()_55]] - code - skills\notebooklm\scripts\ask_question.py
+- [[main()_57]] - code - skills\notebooklm\scripts\cleanup_manager.py
+- [[main()_58]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[main()_62]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[main()_64]] - code - skills\senior-architect\scripts\architecture_diagram_generator.py
+- [[main()_65]] - code - skills\senior-architect\scripts\dependency_analyzer.py
+- [[main()_66]] - code - skills\senior-architect\scripts\project_architect.py
+- [[main()_68]] - code - skills\senior-frontend\scripts\component_generator.py
+- [[main()_69]] - code - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[main()_70]] - code - skills\senior-fullstack\scripts\code_quality_analyzer.py
+- [[main()_71]] - code - skills\senior-fullstack\scripts\fullstack_scaffolder.py
+- [[main()_72]] - code - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[main()_85]] - code - skills\whatsapp-cloud-api\scripts\setup_project.py
+- [[main()_86]] - code - skills\telegram\scripts\test_bot.py
+- [[main()_92]] - code - skills\whatsapp-cloud-api\scripts\send_test_message.py
+- [[main()_93]] - code - skills\whatsapp-cloud-api\scripts\validate_config.py
+- [[notebook_manager.py]] - code - skills\notebooklm\scripts\notebook_manager.py
+- [[parse_args()]] - code - skills\videodb\scripts\ws_listener.py
+- [[print_result()]] - code - skills\senior-frontend\scripts\component_generator.py
+- [[print_result()_1]] - code - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[project_architect.py]] - code - skills\senior-architect\scripts\project_architect.py
+- [[project_scaffolder.py]] - code - skills\senior-fullstack\scripts\project_scaffolder.py
+- [[rice_prioritizer.py]] - code - skills\product-manager-toolkit\scripts\rice_prioritizer.py
+- [[scaffold_project()]] - code - skills\senior-frontend\scripts\frontend_scaffolder.py
+- [[send_test()]] - code - skills\whatsapp-cloud-api\scripts\send_test_message.py
+- [[send_test_message.py]] - code - skills\whatsapp-cloud-api\scripts\send_test_message.py
+- [[setup_nodejs()]] - code - skills\telegram\scripts\setup_project.py
+- [[setup_project()]] - code - skills\whatsapp-cloud-api\scripts\setup_project.py
+- [[setup_project.py]] - code - skills\telegram\scripts\setup_project.py
+- [[setup_project.py_1]] - code - skills\whatsapp-cloud-api\scripts\setup_project.py
+- [[setup_python()]] - code - skills\telegram\scripts\setup_project.py
+- [[test_api_connection()]] - code - skills\whatsapp-cloud-api\scripts\validate_config.py
+- [[test_bot()]] - code - skills\telegram\scripts\test_bot.py
+- [[test_bot.py]] - code - skills\telegram\scripts\test_bot.py
+- [[test_waba_access()]] - code - skills\whatsapp-cloud-api\scripts\validate_config.py
+- [[to_kebab_case()]] - code - skills\senior-frontend\scripts\component_generator.py
+- [[to_pascal_case()]] - code - skills\senior-frontend\scripts\component_generator.py
+- [[validate_config.py]] - code - skills\whatsapp-cloud-api\scripts\validate_config.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_9
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 51 edges to [[_COMMUNITY_Community 2]]
+- 28 edges to [[_COMMUNITY_Community 1]]
+- 5 edges to [[_COMMUNITY_Community 10]]
+- 4 edges to [[_COMMUNITY_Community 16]]
+- 3 edges to [[_COMMUNITY_Community 8]]
+- 3 edges to [[_COMMUNITY_Community 13]]
+- 2 edges to [[_COMMUNITY_Community 23]]
+- 2 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 14]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 20]]
+- 1 edge to [[_COMMUNITY_Community 5]]
+- 1 edge to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 36]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 17]]
+
+## Top bridge nodes
+- [[parse_args()]] - degree 56, connects to 15 communities
+- [[test_bot()]] - degree 8, connects to 4 communities
+- [[send_test()]] - degree 7, connects to 3 communities
+- [[main()_62]] - degree 11, connects to 2 communities
+- [[main()_55]] - degree 8, connects to 2 communities

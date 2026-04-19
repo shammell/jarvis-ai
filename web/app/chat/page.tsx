@@ -48,8 +48,11 @@ export default function ChatPage() {
       } else {
         await handleNewChat()
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error('Failed to load chats:', error)
+      if (error?.response?.status === 401) {
+        router.push('/login')
+      }
     }
   }
 
@@ -68,8 +71,11 @@ export default function ChatPage() {
       setChats([newChat, ...chats])
       setActiveChat(newChat)
       setMessages([])
-    } catch (error) {
+    } catch (error: any) {
       console.error('Failed to create chat:', error)
+      if (error?.response?.status === 401) {
+        router.push('/login')
+      }
     }
   }
 

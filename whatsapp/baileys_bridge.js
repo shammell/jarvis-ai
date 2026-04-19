@@ -10,13 +10,34 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 const rateLimit = require('express-rate-limit');
 const pino = require('pino');
+const fs = require('fs');
+const path = require('path');
+
+// Load .env manually to avoid extra dependencies
+const envPath = path.join(__dirname, '../.env');
+if (fs.existsSync(envPath)) {
+    const envContent = fs.readFileSync(envPath, 'utf8');
+    envContent.split('\n').forEach(line => {
+        // Remove comments
+        const cleanLine = line.split('#')[0].trim();
+        const match = cleanLine.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
+        if (match) {
+            const key = match[1];
+            let value = match[2] || '';
+            if (value.length > 0 && value.startsWith('"') && value.endsWith('"')) {
+                value = value.substring(1, value.length - 1);
+            }
+            process.env[key] = value;
+        }
+    });
+}
 
 const qrcode = require('qrcode-terminal');
 
 // ==========================================================
 // PhD-Level Enhancement: gRPC Integration with Circuit Breaker
 // ==========================================================
-const JarvisGRPCClient = require('../grpc/node_client.js');
+const JarvisGRPCClient = require('../grpc_service/node_client.js');
 
 // Circuit Breaker State Machine
 class CircuitBreaker {
@@ -67,8 +88,8 @@ class CircuitBreaker {
 
 // Initialize gRPC client with circuit breaker
 let grpcClient = null;
-let circuitBreaker = new CircuitBreaker(5, 60000);
 let grpcHealthy = false;
+let circuitBreaker = new CircuitBreaker(10, 30000); // More lenient for local dev
 let grpcAuth = {
     accessToken: null,
     refreshToken: null,
@@ -127,7 +148,7 @@ async function ensureGRPCAuth() {
 
 async function initGRPCClient() {
     try {
-        grpcClient = new JarvisGRPCClient('localhost:50051');
+        grpcClient = new JarvisGRPCClient(CONFIG.GRPC_HOST);
 
         const authenticated = await authenticateGRPCClient();
         if (!authenticated) {
@@ -149,6 +170,7 @@ async function initGRPCClient() {
 const CONFIG = {
     PORT: process.env.WHATSAPP_PORT || 3000,
     JWT_SECRET: process.env.JWT_SECRET,
+    GRPC_HOST: '127.0.0.1:50051', // Force IPv4 to avoid ::1 issues
     AUTH_DIR: './whatsapp_session',
     RATE_LIMIT_WINDOW: 60000, // 1 minute
     RATE_LIMIT_MAX: 30, // 30 requests per minute
@@ -261,6 +283,18 @@ async function connectToWhatsApp() {
             logger.info('WhatsApp connection established');
             isConnected = true;
             processMessageQueue();
+
+            // Auto-greeting on connection
+            const adminPhone = process.env.ADMIN_PHONE || '923301366598';
+            const jid = adminPhone.includes('@') ? adminPhone : `${adminPhone.replace('+', '')}@s.whatsapp.net`;
+            setTimeout(async () => {
+                try {
+                    await sendMessageDirect(jid, '🤖 JARVIS v9.0 ULTRA is now ONLINE and CONNECTED to your WhatsApp.');
+                    logger.info({ to: jid }, '✅ Startup greeting sent');
+                } catch (e) {
+                    logger.warn('⚠️ Could not send startup greeting: ' + e.message);
+                }
+            }, 3000);
         }
     });
 
@@ -270,17 +304,27 @@ async function connectToWhatsApp() {
     // Incoming messages
     sock.ev.on('messages.upsert', async ({ messages, type }) => {
         logger.info({ type, messageCount: messages.length }, '📨 Messages event received');
+        console.log('DEBUG: ' + JSON.stringify({messages, type}, null, 2));
 
-        if (type !== 'notify') {
-            logger.info({ type }, '⏭️ Skipping non-notify message type');
+        if (type !== 'notify' && type !== 'append') {
+            logger.info({ type }, '⏭️ Skipping non-processable message type');
             return;
         }
 
         for (const msg of messages) {
-            logger.info({ fromMe: msg.key.fromMe, hasMessage: !!msg.message }, '🔍 Checking message');
+            // NEVER process messages sent by the bridge itself (fromMe)
+            if (msg.key.fromMe) {
+                logger.debug('⏭️ Skipping message from self');
+                continue;
+            }
 
-            if (!msg.message || msg.key.fromMe) {
-                logger.info('⏭️ Skipping message (no content or from self)');
+            const remoteJid = msg.key.remoteJid || '';
+            const adminPhone = process.env.ADMIN_PHONE || '923301366598';
+            const cleanAdmin = adminPhone.replace(/[^0-9]/g, '');
+            const isAdmin = remoteJid.includes(cleanAdmin);
+
+            if (!msg.message) {
+                logger.debug('⏭️ Skipping message with no content');
                 continue;
             }
 
@@ -680,12 +724,13 @@ async function start() {
                 try {
                     await grpcClient.healthCheck();
                     grpcHealthy = true;
+                    logger.debug('✅ gRPC health check succeeded');
                 } catch (error) {
                     grpcHealthy = false;
                     logger.warn('⚠️ gRPC health check failed');
                 }
             }
-        }, 30000); // Every 30 seconds
+        }, 10000); // Check every 10 seconds for faster recovery
 
     } catch (error) {
         logger.error({ error }, 'Failed to start bridge');

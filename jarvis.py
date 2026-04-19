@@ -5,13 +5,219 @@ import glob
 import asyncio
 import socket
 import datetime
-from typing import Optional
+import subprocess
+import time
+import signal
+import sys
+import webbrowser
+from typing import Optional, List
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
+from rich.progress import Progress, SpinnerColumn, TextColumn
+
+# Fix Windows console encoding for emoji and special character support
+if sys.platform == 'win32':
+    try:
+        import codecs
+        if sys.stdout.encoding != 'utf-8':
+            sys.stdout.reconfigure(encoding='utf-8')
+        if sys.stderr.encoding != 'utf-8':
+            sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
 
 app = typer.Typer(help="JARVIS Unified CLI")
-console = Console()
+# PhD-Level Fix: Use force_terminal=True and safe characters for legacy Windows consoles
+console = Console(force_terminal=True)
+
+# Global list to track subprocesses for shutdown
+processes: List[subprocess.Popen] = []
+
+def wait_for_port(port: int, host: str = "127.0.0.1", timeout: int = 60):
+    """Wait for a port to become active."""
+    start_time = time.time()
+    while time.time() - start_time < timeout:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(1)
+            try:
+                s.connect((host, port))
+                return True
+            except (ConnectionRefusedError, socket.timeout):
+                time.sleep(1)
+    return False
+
+def shutdown_processes():
+    """Stop all tracked subprocesses."""
+    if not processes:
+        return
+
+    console.print("\n[bold yellow]Shutting down JARVIS components...[/bold yellow]")
+
+    # Kill Chrome if it was launched in kiosk mode (Windows)
+    if os.name == 'nt':
+        try:
+            subprocess.run(["taskkill", "/F", "/IM", "chrome.exe", "/T"], capture_output=True)
+        except Exception:
+            pass
+
+    for p in processes:
+        try:
+            # Try graceful terminate first
+            p.terminate()
+            try:
+                p.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                p.kill() # Force kill if terminate fails
+        except Exception as e:
+            console.print(f"[red]Error killing process {p.pid}: {e}[/red]")
+
+    console.print("[bold green]All systems stopped.[/bold green]")
+
+@app.command()
+def bootstrap():
+    """Launch Backend, Frontend, and Voice systems in parallel."""
+    root_dir = os.path.dirname(os.path.abspath(__file__))
+    log_dir = os.path.join(root_dir, "logs")
+    os.makedirs(log_dir, exist_ok=True)
+
+    bootstrap_log_path = os.path.join(log_dir, "bootstrap.log")
+
+    console.print(Panel("Omni-Start Orchestrator", title="[bold cyan]Bootstrap[/bold cyan]", subtitle="v1.0"))
+
+    python_exe = shutil.which("python") or sys.executable
+    npm_exe = shutil.which("npm")
+
+    if not npm_exe:
+        # Try common windows path for npm if not in PATH
+        npm_exe = shutil.which("npm.cmd")
+
+    if not npm_exe:
+        console.print("[red]Error: npm not found in PATH.[/red]")
+        raise typer.Exit(code=1)
+
+    # PhD-Level Fix: Clear proxy environment variables to prevent Groq SDK TypeError
+    # Client.__init__() got an unexpected keyword argument 'proxies'
+    env = os.environ.copy()
+    env.pop("HTTP_PROXY", None)
+    env.pop("HTTPS_PROXY", None)
+    env.pop("http_proxy", None)
+    env.pop("https_proxy", None)
+    env.pop("ALL_PROXY", None)
+    env.pop("all_proxy", None)
+
+    try:
+        with open(bootstrap_log_path, "a", encoding="utf-8") as log_file:
+            log_file.write(f"\n--- Bootstrap session started at {datetime.datetime.now()} ---\n")
+
+            # 1. Start Backend
+            console.print("[yellow]Starting Backend (main.py)...[/yellow]")
+            backend_proc = subprocess.Popen(
+                [python_exe, "main.py"],
+                cwd=root_dir,
+                stdout=log_file,
+                stderr=log_file,
+                text=True,
+                env=env
+            )
+            processes.append(backend_proc)
+
+            # 2. Start Frontend
+            console.print("[yellow]Starting Frontend (npm run dev)...[/yellow]")
+            frontend_dir = os.path.join(root_dir, "web")
+            frontend_proc = subprocess.Popen(
+                [npm_exe, "run", "dev"],
+                cwd=frontend_dir,
+                stdout=log_file,
+                stderr=log_file,
+                text=True,
+                shell=True if os.name == 'nt' else False,
+                env=env
+            )
+            processes.append(frontend_proc)
+
+            # 3. Start Voice
+            console.print("[yellow]Starting Voice (voice_jarvis.py)...[/yellow]")
+            voice_proc = subprocess.Popen(
+                [python_exe, "voice_jarvis.py"],
+                cwd=root_dir,
+                stdout=log_file,
+                stderr=log_file,
+                text=True,
+                env=env
+            )
+            processes.append(voice_proc)
+
+            with Progress(
+                SpinnerColumn("dots" if os.name != 'nt' else "simpleDots"),
+                TextColumn("[progress.description]{task.description}"),
+                console=console,
+                transient=True
+            ) as progress:
+                # Wait for Backend (typically 8080 or 8000, let's check common JARVIS ports)
+                progress.add_task(description="Waiting for Backend (8080)...", total=None)
+                if wait_for_port(8080):
+                    console.print("[green]Backend is READY on port 8080.[/green]")
+                else:
+                    console.print("[red]Backend failed to start or port 8080 is blocked.[/red]")
+
+                # Wait for Frontend (Next.js typically 3000 or 3001)
+                progress.add_task(description="Waiting for Frontend (3000/3001)...", total=None)
+                frontend_port = 3000
+                if wait_for_port(3000):
+                    console.print("[green]Frontend is READY on port 3000.[/green]")
+                elif wait_for_port(3001):
+                    frontend_port = 3001
+                    console.print("[green]Frontend is READY on port 3001.[/green]")
+                else:
+                    console.print("[red]Frontend failed to start or ports 3000/3001 are blocked.[/red]")
+
+            console.print(Panel.fit(
+                "[bold green]JARVIS is fully operational![/bold green]\n"
+                "Backend: http://localhost:8080\n"
+                f"Frontend: http://localhost:{frontend_port}\n"
+                "Voice: Active\n\n"
+                "Press Ctrl+C to shut down all systems.",
+                title="System Ready"
+            ))
+
+            # --- Final Polish: Greeting & Kiosk Mode ---
+            try:
+                # 1. TTS Greeting
+                greeting = "System online. All modules initialized. Good morning, AK."
+                console.print(f"[bold cyan]JARVIS:[/bold cyan] {greeting}")
+
+                # Trigger via bridge
+                temp_speak_script = os.path.join(root_dir, "temp_greeting.py")
+                subprocess.Popen([python_exe, temp_speak_script], cwd=root_dir, env=env)
+
+                # 2. Kiosk Launch
+                console.print("[yellow]Launching Kiosk Mode...[/yellow]")
+                dashboard_url = f"http://localhost:{frontend_port}/dashboard"
+                if os.name == 'nt':
+                    subprocess.Popen(["start", "chrome", "--kiosk", dashboard_url], shell=True)
+                else:
+                    webbrowser.open(dashboard_url)
+
+            except Exception as e:
+                console.print(f"[dim]Note: Final polish (TTS/Kiosk) had an issue: {e}[/dim]")
+
+            # Keep the script running to manage processes
+            try:
+                while True:
+                    # Check if any process has died unexpectedly
+                    for p in processes:
+                        if p.poll() is not None:
+                            console.print(f"[red]Process {p.pid} exited unexpectedly with code {p.returncode}[/red]")
+                            # We could restart or shutdown here
+                    time.sleep(5)
+            except KeyboardInterrupt:
+                shutdown_processes()
+
+    except Exception as e:
+        console.print(f"[red]Bootstrap failed: {e}[/red]")
+        shutdown_processes()
+        raise typer.Exit(code=1)
 
 def is_cluttered(root_dir: str) -> int:
     """Count files in root directory that are not in the safelist or hidden."""
@@ -53,7 +259,7 @@ def clean_root(root_dir: str):
     safelist = {
         ".env", "config.json", ".gitignore", "jarvis.py", "main.py",
         "jarvis_autonomous.py", "README.md", "requirements.txt", "package.json",
-        "CLAUDE.md"
+        "CLAUDE.md", "temp_greeting.py"
     }
 
     console.print(f"Scanning [bold blue]{root_dir}[/bold blue] for cleanup...")

@@ -1,0 +1,17 @@
+---
+source_file: "skills\last30days\scripts\lib\ui.py"
+type: "code"
+community: "Community 5"
+location: "L14"
+tags:
+  - graphify/code
+  - graphify/EXTRACTED
+  - community/Community_5
+---
+
+# Colors
+
+## Connections
+- [[ui.py]] - `contains` [EXTRACTED]
+
+#graphify/code #graphify/EXTRACTED #community/Community_5

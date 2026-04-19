@@ -1,0 +1,204 @@
+---
+type: community
+members: 159
+---
+
+# Community 14
+
+**Members:** 159 nodes
+
+## Members
+- [[.__init__()_163]] - code - skills\notebooklm\scripts\setup_environment.py
+- [[.__init__()_174]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.activate_instructions()]] - code - skills\notebooklm\scripts\setup_environment.py
+- [[.check_cli_installed()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.create_app_config()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.create_extension_config()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.create_readme()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.ensure_venv()]] - code - skills\notebooklm\scripts\setup_environment.py
+- [[.get_python_executable()]] - code - skills\notebooklm\scripts\setup_environment.py
+- [[.init_app()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.init_extension()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.init_theme()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.is_in_skill_venv()]] - code - skills\notebooklm\scripts\setup_environment.py
+- [[.prompt()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.run()_10]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.run_script()]] - code - skills\notebooklm\scripts\setup_environment.py
+- [[.select_option()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[.test_check_cli_installed_failure()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_check_cli_installed_success()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_create_app_config()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_create_extension_config()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_create_extension_config_admin_action()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_create_readme()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_env_config_defaults()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_env_config_with_values()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_get_env_paths()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_load_config_no_files()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_load_config_priority()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_load_env_file_invalid_format()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_load_env_file_nonexistent()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_load_env_file_success()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_load_env_file_with_quotes()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_prompt_with_default()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_prompt_with_input()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_select_option_invalid_then_valid()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[.test_select_option_valid()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[========================================================== JARVIS v9.0+ - Servi]] - rationale - tests\test_services.py
+- [[Check if Shopify CLI is installed.          Returns             True if inst]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Check if a port is already in use]] - rationale - tests\test_services.py
+- [[Check if we're already running in the skill's venv]] - rationale - skills\notebooklm\scripts\setup_environment.py
+- [[Check if yt-dlp is installed, install if not.]] - rationale - skills\video-downloader\scripts\download_video.py
+- [[Comprehensive test of JARVIS system components]] - rationale - tests\test_system_validation.py
+- [[Create README.md file.          Args             project_dir Project direct]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Create initializer instance.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Create shopify.app.toml configuration file.          Args             projec]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Create shopify.extension.toml configuration file.          Args]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Download a YouTube video.          Args         url YouTube video URL]] - rationale - skills\video-downloader\scripts\download_video.py
+- [[Ensure virtual environment exists and is set up]] - rationale - skills\notebooklm\scripts\setup_environment.py
+- [[Ensure virtual environment exists and run the requested script.     This is cal]] - rationale - skills\notebooklm\scripts\__init__.py
+- [[EnvConfig]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[EnvLoader]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[Environment configuration container.]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Generate summary based on scores.]] - rationale - skills\performance-profiling\scripts\lighthouse_audit.py
+- [[Get information about the video without downloading.]] - rationale - skills\video-downloader\scripts\download_video.py
+- [[Get instructions for manual activation]] - rationale - skills\notebooklm\scripts\setup_environment.py
+- [[Get the correct Python executable to use]] - rationale - skills\notebooklm\scripts\setup_environment.py
+- [[Initialize Shopify app project.]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Initialize Shopify extension project.]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Initialize Shopify projects.]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Initialize Shopify theme project.]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Initialize ShopifyInitializer.          Args             config Environment]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Load environment variables from multiple sources in priority order.]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Main entry point for environment setup]] - rationale - skills\notebooklm\scripts\setup_environment.py
+- [[Manages skill-specific virtual environment]] - rationale - skills\notebooklm\scripts\setup_environment.py
+- [[Prompt user for input.          Args             message Prompt message]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Prompt user to select from options.          Args             message Promp]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Recalculate formulas in Excel file and report any errors          Args]] - rationale - skills\xlsx-official\recalc.py
+- [[Run Lighthouse audit on URL.]] - rationale - skills\performance-profiling\scripts\lighthouse_audit.py
+- [[Run a script with the virtual environment]] - rationale - skills\notebooklm\scripts\setup_environment.py
+- [[Run all service tests]] - rationale - tests\test_services.py
+- [[Run interactive initialization.]] - rationale - skills\shopify-development\scripts\shopify_init.py
+- [[Setup LibreOffice macro for recalculation if not already configured]] - rationale - skills\xlsx-official\recalc.py
+- [[ShopifyInitializer]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[SkillEnvironment]] - code - skills\notebooklm\scripts\setup_environment.py
+- [[Test CLI installed check - failure.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test CLI installed check - success.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test EnvConfig dataclass.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test EnvConfig default values.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test EnvConfig with values.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test EnvLoader class.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test ShopifyInitializer class.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test WhatsApp bridge startup]] - rationale - tests\test_services.py
+- [[Test app initialization.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test configuration loading priority across different AI tool directories.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test configuration loading with no .env files.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test creating README file.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test creating admin action extension config.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test creating app configuration file.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test creating extension configuration file.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test extension initialization.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test gRPC server startup]] - rationale - tests\test_services.py
+- [[Test getting .env file paths from universal directory structure.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test loading .env file with invalid lines.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test loading .env file with quoted values.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test loading non-existent .env file.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test loading valid .env file.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test main function success path.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test main function with exception.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test main function with keyboard interrupt.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test main orchestrator startup]] - rationale - tests\test_services.py
+- [[Test prompt with default value.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test prompt with user input.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test run when CLI not installed.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test run with app selection.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test run with extension selection.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test select option with invalid then valid choice.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test select option with valid choice.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Test theme initialization.]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[TestEnvConfig]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[TestEnvLoader]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[TestMain]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[TestShopifyInitializer]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Tests for shopify_init.py  Run with pytest test_shopify_init.py -v --cov=shop]] - rationale - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[Verify basic command stubs respond.]] - rationale - tests\test_cli_scaffold.py
+- [[Verify the CLI responds to --help.]] - rationale - tests\test_cli_scaffold.py
+- [[__init__.py_16]] - code - skills\notebooklm\scripts\__init__.py
+- [[check_yt_dlp()]] - code - skills\video-downloader\scripts\download_video.py
+- [[config()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[download_video()]] - code - skills\video-downloader\scripts\download_video.py
+- [[download_video.py]] - code - skills\video-downloader\scripts\download_video.py
+- [[ensure_venv_and_run()]] - code - skills\notebooklm\scripts\__init__.py
+- [[get_env_paths()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[get_summary()]] - code - skills\performance-profiling\scripts\lighthouse_audit.py
+- [[get_video_info()]] - code - skills\video-downloader\scripts\download_video.py
+- [[initializer()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[is_port_in_use()]] - code - tests\test_services.py
+- [[lighthouse_audit.py]] - code - skills\performance-profiling\scripts\lighthouse_audit.py
+- [[load_config()]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[load_env_file()_1]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[main()_60]] - code - skills\notebooklm\scripts\setup_environment.py
+- [[main()_75]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[main()_88]] - code - skills\video-downloader\scripts\download_video.py
+- [[main()_95]] - code - skills\xlsx-official\recalc.py
+- [[main()_96]] - code - tests\test_services.py
+- [[recalc()]] - code - skills\xlsx-official\recalc.py
+- [[recalc.py]] - code - skills\xlsx-official\recalc.py
+- [[run_lighthouse()]] - code - skills\performance-profiling\scripts\lighthouse_audit.py
+- [[setup_environment.py]] - code - skills\notebooklm\scripts\setup_environment.py
+- [[setup_libreoffice_macro()]] - code - skills\xlsx-official\recalc.py
+- [[shopify_init.py]] - code - skills\shopify-development\scripts\shopify_init.py
+- [[test_cli_commands()]] - code - tests\test_cli_scaffold.py
+- [[test_cli_help()]] - code - tests\test_cli_scaffold.py
+- [[test_cli_scaffold.py]] - code - tests\test_cli_scaffold.py
+- [[test_grpc_server()]] - code - tests\test_services.py
+- [[test_init_app()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_init_extension()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_init_theme()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_jarvis_system()]] - code - tests\test_system_validation.py
+- [[test_main_exception()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_main_keyboard_interrupt()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_main_orchestrator()]] - code - tests\test_services.py
+- [[test_main_success()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_run_app_selected()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_run_extension_selected()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_run_no_cli()]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_services.py]] - code - tests\test_services.py
+- [[test_shopify_init.py]] - code - skills\shopify-development\scripts\tests\test_shopify_init.py
+- [[test_system_validation.py]] - code - tests\test_system_validation.py
+- [[test_whatsapp_bridge()]] - code - tests\test_services.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_14
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 20 edges to [[_COMMUNITY_Community 2]]
+- 13 edges to [[_COMMUNITY_Community 16]]
+- 8 edges to [[_COMMUNITY_Community 1]]
+- 6 edges to [[_COMMUNITY_Community 26]]
+- 4 edges to [[_COMMUNITY_Community 17]]
+- 4 edges to [[_COMMUNITY_Community 3]]
+- 2 edges to [[_COMMUNITY_Community 0]]
+- 2 edges to [[_COMMUNITY_Community 4]]
+- 2 edges to [[_COMMUNITY_Community 8]]
+- 2 edges to [[_COMMUNITY_Community 10]]
+- 2 edges to [[_COMMUNITY_Community 9]]
+- 1 edge to [[_COMMUNITY_Community 15]]
+- 1 edge to [[_COMMUNITY_Community 18]]
+- 1 edge to [[_COMMUNITY_Community 45]]
+- 1 edge to [[_COMMUNITY_Community 24]]
+- 1 edge to [[_COMMUNITY_Community 52]]
+- 1 edge to [[_COMMUNITY_Community 13]]
+- 1 edge to [[_COMMUNITY_Community 53]]
+- 1 edge to [[_COMMUNITY_Community 11]]
+
+## Top bridge nodes
+- [[.run()_10]] - degree 71, connects to 17 communities
+- [[recalc()]] - degree 7, connects to 2 communities
+- [[run_lighthouse()]] - degree 6, connects to 2 communities
+- [[setup_libreoffice_macro()]] - degree 6, connects to 2 communities
+- [[test_jarvis_system()]] - degree 5, connects to 2 communities

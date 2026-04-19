@@ -20,11 +20,37 @@ class SkillLoader:
 
     def load_skills(self):
         """Scan all SKILL.md files and build registry"""
-        for skill_dir in self.skills_path.iterdir():
-            if skill_dir.is_dir():
-                skill_md = skill_dir / "SKILL.md"
-                if skill_md.exists():
-                    self.parse_skill(skill_md, skill_dir)
+        search_paths = []
+
+        if self.skills_path.exists() and self.skills_path.is_dir():
+            search_paths.append(self.skills_path)
+        else:
+            fallback = Path("./skills")
+            if fallback.exists() and fallback.is_dir():
+                search_paths.append(fallback)
+
+        if not search_paths:
+            return
+
+        for base_path in search_paths:
+            for skill_dir in base_path.iterdir():
+                if skill_dir.is_dir():
+                    skill_md = skill_dir / "SKILL.md"
+                    if skill_md.exists():
+                        self.parse_skill(skill_md, skill_dir)
+
+        # Normalize configured path to the first valid path used
+        if search_paths:
+            self.skills_path = search_paths[0]
+
+        # Deduplicate by skill name while preserving latest parsed entry
+        if self.registry:
+            self.registry = dict(self.registry)
+
+        # No exception raised for missing external skill packs; system can boot
+        # with built-in skills only.
+
+        return
 
     def parse_skill(self, skill_md_path, skill_dir):
         """Parse SKILL.md frontmatter"""

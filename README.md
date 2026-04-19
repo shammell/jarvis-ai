@@ -86,10 +86,10 @@ cd ..
 
 ```bash
 # Generate Python gRPC code
-python -m grpc_tools.protoc -I./grpc --python_out=./grpc --grpc_python_out=./grpc ./grpc/jarvis.proto
+python -m grpc_tools.protoc -I./grpc_service --python_out=./grpc_service --grpc_python_out=./grpc_service ./grpc_service/jarvis.proto
 
 # Generate Node.js gRPC code (if needed)
-cd grpc
+cd grpc_service
 npx grpc_tools_node_protoc --js_out=import_style=commonjs,binary:. --grpc_out=grpc_js:. jarvis.proto
 cd ..
 ```
@@ -175,17 +175,17 @@ pip install dspy-ai
 - ChatGPT/Claude-like interface
 
 **Documentation:**
-- [WEB_APP_README.md](WEB_APP_README.md) - Complete setup guide
-- [WEB_APP_QUICKREF.md](WEB_APP_QUICKREF.md) - Quick reference
-- [WEB_APP_ARCHITECTURE.md](WEB_APP_ARCHITECTURE.md) - System architecture
-- [WEB_APP_TESTING.md](WEB_APP_TESTING.md) - Testing guide
-- [WEB_APP_DEPLOYMENT.md](WEB_APP_DEPLOYMENT.md) - Production deployment
+- [docs/guides/WEB_APP_README.md](docs/guides/WEB_APP_README.md) - Complete setup guide
+- [docs/guides/WEB_APP_QUICKREF.md](docs/guides/WEB_APP_QUICKREF.md) - Quick reference
+- [docs/guides/WEB_APP_ARCHITECTURE.md](docs/guides/WEB_APP_ARCHITECTURE.md) - System architecture
+- [docs/guides/WEB_APP_TESTING.md](docs/guides/WEB_APP_TESTING.md) - Testing guide
+- [docs/guides/WEB_APP_DEPLOYMENT.md](docs/guides/WEB_APP_DEPLOYMENT.md) - Production deployment
 
 ### Option 2: Full Stack (WhatsApp + gRPC)
 
 ```bash
 # Terminal 1: Start gRPC server
-python grpc/python_server.py
+python grpc_service/python_server.py
 
 # Terminal 2: Start WhatsApp bridge
 npm run start:bridge
@@ -287,10 +287,10 @@ python core/hyper_automation.py
 
 ```bash
 # Terminal 1: Start server
-python grpc/python_server.py
+python grpc_service/python_server.py
 
 # Terminal 2: Test client
-node grpc/node_client.js
+node grpc_service/node_client.js
 ```
 
 ## Performance Targets
@@ -328,7 +328,7 @@ npm run start:bridge
 python -c "from grpc import insecure_channel; channel = insecure_channel('localhost:50051'); print('Connected' if channel else 'Failed')"
 
 # Regenerate proto files
-python -m grpc_tools.protoc -I./grpc --python_out=./grpc --grpc_python_out=./grpc ./grpc/jarvis.proto
+python -m grpc_tools.protoc -I./grpc_service --python_out=./grpc_service --grpc_python_out=./grpc_service ./grpc_service/jarvis.proto
 ```
 
 ### Memory Issues

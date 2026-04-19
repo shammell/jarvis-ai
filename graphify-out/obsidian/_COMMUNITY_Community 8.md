@@ -1,0 +1,250 @@
+---
+type: community
+members: 204
+---
+
+# Community 8
+
+**Members:** 204 nodes
+
+## Members
+- [[.__init__()_148]] - code - skills\last30days\scripts\lib\http.py
+- [[._extract_dd_field()]] - code - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[._fetch_api()]] - code - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[._fetch_get_all()]] - code - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[._fetch_post()]] - code - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[._fetch_with_session()]] - code - skills\junta-leiloeiros\scripts\scraper\jucesp.py
+- [[._parse_alfabetica()]] - code - skills\junta-leiloeiros\scripts\scraper\jucemg.py
+- [[._parse_antiguidade()]] - code - skills\junta-leiloeiros\scripts\scraper\jucemg.py
+- [[._parse_cms_content()]] - code - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[._parse_dl_structure()]] - code - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[._parse_hr_blocks()]] - code - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[._parse_lista()]] - code - skills\junta-leiloeiros\scripts\scraper\jucerja.py
+- [[._parse_plain_html()]] - code - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[._parse_table()]] - code - skills\junta-leiloeiros\scripts\scraper\jucesp.py
+- [[._parse_text_block()]] - code - skills\junta-leiloeiros\scripts\scraper\jucetins.py
+- [[._playwright_ssl_bypass()]] - code - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[.fetch_insecure()]] - code - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[.fetch_page()]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[.fetch_page_js()]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[.make_leiloeiro()]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[.parse_leiloeiros()]] - code - skills\junta-leiloeiros\scripts\scraper\generic_scraper.py
+- [[.parse_leiloeiros()_1]] - code - skills\junta-leiloeiros\scripts\scraper\jucap.py
+- [[.parse_leiloeiros()_2]] - code - skills\junta-leiloeiros\scripts\scraper\juceac.py
+- [[.parse_leiloeiros()_3]] - code - skills\junta-leiloeiros\scripts\scraper\juceal.py
+- [[.parse_leiloeiros()_4]] - code - skills\junta-leiloeiros\scripts\scraper\juceb.py
+- [[.parse_leiloeiros()_5]] - code - skills\junta-leiloeiros\scripts\scraper\jucec.py
+- [[.parse_leiloeiros()_6]] - code - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[.parse_leiloeiros()_7]] - code - skills\junta-leiloeiros\scripts\scraper\jucemg.py
+- [[.parse_leiloeiros()_8]] - code - skills\junta-leiloeiros\scripts\scraper\jucep.py
+- [[.parse_leiloeiros()_9]] - code - skills\junta-leiloeiros\scripts\scraper\jucepa.py
+- [[.parse_leiloeiros()_10]] - code - skills\junta-leiloeiros\scripts\scraper\jucepar.py
+- [[.parse_leiloeiros()_11]] - code - skills\junta-leiloeiros\scripts\scraper\jucepe.py
+- [[.parse_leiloeiros()_12]] - code - skills\junta-leiloeiros\scripts\scraper\jucepi.py
+- [[.parse_leiloeiros()_13]] - code - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[.parse_leiloeiros()_14]] - code - skills\junta-leiloeiros\scripts\scraper\jucerja.py
+- [[.parse_leiloeiros()_15]] - code - skills\junta-leiloeiros\scripts\scraper\jucern.py
+- [[.parse_leiloeiros()_16]] - code - skills\junta-leiloeiros\scripts\scraper\jucesc.py
+- [[.parse_leiloeiros()_17]] - code - skills\junta-leiloeiros\scripts\scraper\jucesp.py
+- [[.parse_leiloeiros()_18]] - code - skills\junta-leiloeiros\scripts\scraper\jucetins.py
+- [[.parse_leiloeiros()_19]] - code - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[.parse_leiloeiros()_20]] - code - skills\junta-leiloeiros\scripts\scraper\jucis_df.py
+- [[.scrape()_1]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[.search()_1]] - code - skills\junta-leiloeiros\scripts\db.py
+- [[.to_dict()_6]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[AbstractJuntaScraper]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[AbstractJuntaScraper_1]] - code
+- [[Aciona o web-scraper via subprocess (skill web-scraper) para um estado específic]] - rationale - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[Base abstrata para scrapers de leiloeiros das Juntas Comerciais do Brasil. Cada]] - rationale - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[Busca dados do post de leiloeiros via API REST do CMS.         GET apipublic]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[Busca full-text por nome, matrícula ou município.]] - rationale - skills\junta-leiloeiros\scripts\db.py
+- [[Check a single web page for GEO elements.]] - rationale - skills\geo-fundamentals\scripts\geo_checker.py
+- [[Check if URL is from an excluded domain (RedditX).      Args         url U]] - rationale - skills\last30days\scripts\lib\websearch.py
+- [[Check if this file is likely a public-facing page.]] - rationale - skills\geo-fundamentals\scripts\geo_checker.py
+- [[Classe base para todos os scrapers de Juntas Comerciais.]] - rationale - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[Coleta todos os leiloeiros via endpoint AJAX de paginacao.         GET Auxilia]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucerja.py
+- [[Convert parsed dicts to WebSearchItem objects.      Args         items List]] - rationale - skills\last30days\scripts\lib\websearch.py
+- [[Cria dinamicamente uma classe de scraper genérico para o estado.]] - rationale - skills\junta-leiloeiros\scripts\scraper\states.py
+- [[Estrategia alternativa coleta conteudo entre tags hr.         Cada bloco ent]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[Executa o fallback de web-scraper para os estados indicados.     Salva resultad]] - rationale - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[Extract date from any available signal.      Tries URL first (most reliable),]] - rationale - skills\last30days\scripts\lib\websearch.py
+- [[Extract the domain from a URL.      Args         url Full URL      Return]] - rationale - skills\last30days\scripts\lib\websearch.py
+- [[Extrai campos de uma linha de texto e popula o record.]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[Extrai leiloeiros da lista HTML.         Estrutura ul class=ats-listaLnks]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucerja.py
+- [[Extração direta como fallback quando web-scraper não está disponível.]] - rationale - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[Factory que preenche estadojuntaurl_fonte automaticamente.]] - rationale - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[Fallback GET simples na URL principal com verify=False.         Pode retornar]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[Faz o request HTTP com retry e retorna BeautifulSoup ou None.]] - rationale - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[Fetch Reddit thread JSON.      Args         path Reddit path (e.g., rsubr]] - rationale - skills\last30days\scripts\lib\http.py
+- [[Fetch com verify=False para sites com SSL problematico.]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[Find public-facing web pages only.]] - rationale - skills\geo-fundamentals\scripts\geo_checker.py
+- [[Fluxo         1. GET relatorioConsultasLeiloeiroTradutor  - extrai token CS]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucesp.py
+- [[GET + POST dentro do mesmo AsyncClient.         O servidor ASP.NET emite um coo]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucesp.py
+- [[GenericJuntaScraper]] - code - skills\junta-leiloeiros\scripts\scraper\generic_scraper.py
+- [[HTTP request error with status code.]] - rationale - skills\last30days\scripts\lib\http.py
+- [[HTTP utilities for last30days skill (stdlib only).]] - rationale - skills\last30days\scripts\lib\http.py
+- [[HTTPError]] - code - skills\last30days\scripts\lib\http.py
+- [[Integração com a skill web-scraper para extração inteligente de fallback.  Qua]] - rationale - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[JucapScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucap.py
+- [[JuceacScraper]] - code - skills\junta-leiloeiros\scripts\scraper\juceac.py
+- [[JucealScraper]] - code - skills\junta-leiloeiros\scripts\scraper\juceal.py
+- [[JucebScraper]] - code - skills\junta-leiloeiros\scripts\scraper\juceb.py
+- [[JucecScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucec.py
+- [[JucemaScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[JucemgScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucemg.py
+- [[JucepScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucep.py
+- [[JucepaScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucepa.py
+- [[JuceparScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucepar.py
+- [[JucepeScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucepe.py
+- [[JucepiScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucepi.py
+- [[JucerScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[JucerjaScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucerja.py
+- [[JucernScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucern.py
+- [[JucescScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucesc.py
+- [[JucespScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucesp.py
+- [[JucetinsScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucetins.py
+- [[JucisDfScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucis_df.py
+- [[JucisrsScraper]] - code - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[Leiloeiro]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[Log debug message to stderr.]] - rationale - skills\last30days\scripts\lib\http.py
+- [[Make a POST request with JSON body.]] - rationale - skills\last30days\scripts\lib\http.py
+- [[Make an HTTP request and return JSON response.      Args         method HTT]] - rationale - skills\last30days\scripts\lib\http.py
+- [[POST para leiloeirosbuscalistar com Nome=Todos.         Retorna todos os 376]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[Parse WebSearch results into normalized format.      This function expects res]] - rationale - skills\last30days\scripts\lib\websearch.py
+- [[Parse xAI response to extract X items.      Args         response Raw API r]] - rationale - skills\last30days\scripts\lib\xai_x.py
+- [[Parseia a pagina pagina140 (ordem alfabetica).         Cada leiloeiro e um bl]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucemg.py
+- [[Parseia a tabela id=example retornada pelo POST.          Colunas (índice 0-]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucesp.py
+- [[Parseia conteudo HTML do CMS da JUCEMA.         Formato dos paragrafos]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[Parseia estrutura DLDTDD do WordPress com anotacao malformada.         Estrat]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[Parseia o formato plano HTML da JUCISRS.         Toda a lista esta dentro de um]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[Parseia tabela pagina141 (antiguidade).         Tabela com 2 colunas Ordem]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucemg.py
+- [[Playwright com SSL completamente desabilitado para cert autoassinado.]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[Ponto de entrada principal — respeita rate limit e loga resultado.]] - rationale - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[Registro de todos os 27 scrapers das Juntas Comerciais do Brasil. Cada entrada]] - rationale - skills\junta-leiloeiros\scripts\scraper\states.py
+- [[Remove duplicate WebSearch items.      Deduplication is based on URL.      A]] - rationale - skills\last30days\scripts\lib\websearch.py
+- [[Renderiza página com JavaScript usando Playwright. Retorna BeautifulSoup ou None]] - rationale - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[Retorna instâncias de todos os scrapers.]] - rationale - skills\junta-leiloeiros\scripts\scraper\states.py
+- [[Retorna lista de estados com status VAZIO na última coleta.]] - rationale - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[Retorna o scraper para um estado específico (UF).]] - rationale - skills\junta-leiloeiros\scripts\scraper\states.py
+- [[Scraper JUCAP — Junta Comercial do Amapa URL httpsjucap.portal.ap.gov.brpa]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucap.py
+- [[Scraper JUCEAC — Junta Comercial do Estado do Acre URL httpsjuceac.ac.gov.b]] - rationale - skills\junta-leiloeiros\scripts\scraper\juceac.py
+- [[Scraper JUCEAL — Junta Comercial do Estado de Alagoas URL httpwww.juceal.al]] - rationale - skills\junta-leiloeiros\scripts\scraper\juceal.py
+- [[Scraper JUCEB — Junta Comercial do Estado da Bahia URL httpswww.ba.gov.brj]] - rationale - skills\junta-leiloeiros\scripts\scraper\juceb.py
+- [[Scraper JUCEC — Junta Comercial do Estado do Ceará URL httpswww.jucec.ce.go]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucec.py
+- [[Scraper JUCEMA — Junta Comercial do Estado do Maranhao URL httpsportal.juce]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[Scraper JUCEMG — Junta Comercial do Estado de Minas Gerais URLs descobertas em]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucemg.py
+- [[Scraper JUCEP — Junta Comercial do Estado da Paraíba URL httpsjucep.pb.gov.]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucep.py
+- [[Scraper JUCEPA — Junta Comercial do Estado do Pará URL httpswww.jucepa.pa.g]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucepa.py
+- [[Scraper JUCEPAR — Junta Comercial do Paraná URL httpswww.juntacomercial.pr.]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucepar.py
+- [[Scraper JUCEPE — Junta Comercial do Estado de Pernambuco URL httpsportal.ju]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucepe.py
+- [[Scraper JUCEPI — Junta Comercial do Estado do Piauí URL httpsportal.pi.gov.]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucepi.py
+- [[Scraper JUCER — Junta Comercial do Estado de Rondonia URL httpsrondonia.ro.]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[Scraper JUCERJA — Junta Comercial do Estado do Rio de Janeiro URL httpswww.]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucerja.py
+- [[Scraper JUCERN — Junta Comercial do Estado do Rio Grande do Norte URL httpw]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucern.py
+- [[Scraper JUCESC — Junta Comercial do Estado de Santa Catarina URL httpsleilo]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucesc.py
+- [[Scraper JUCESP — Junta Comercial do Estado de São Paulo  MECANISMO REAL (desco]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucesp.py
+- [[Scraper JUCETINS — Junta Comercial do Estado do Tocantins URL httpswww.to.g]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucetins.py
+- [[Scraper JUCIS-DF — Junta Comercial, Industrial e Serviços do Distrito Federal U]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucis_df.py
+- [[Scraper JUCISRS — Junta Comercial, Industrial e Servicos do Rio Grande do Sul U]] - rationale - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[Scraper genérico para juntas com tabela HTML padrão.     Subclasses definem ape]] - rationale - skills\junta-leiloeiros\scripts\scraper\generic_scraper.py
+- [[Scraper genérico para juntas que usam formato padrão de tabela HTML. Estados se]] - rationale - skills\junta-leiloeiros\scripts\scraper\generic_scraper.py
+- [[Search Reddit for relevant threads using OpenAI Responses API.      Args]] - rationale - skills\last30days\scripts\lib\openai_reddit.py
+- [[Search X for relevant posts using xAI API with live search.      Args]] - rationale - skills\last30days\scripts\lib\xai_x.py
+- [[Try to extract a date from URL path.      Many sites embed dates in URLs like]] - rationale - skills\last30days\scripts\lib\websearch.py
+- [[Try to extract a date from text snippet or title.      Looks for patterns like]] - rationale - skills\last30days\scripts\lib\websearch.py
+- [[WebSearch module for last30days skill.  NOTE WebSearch uses Claude's built-in]] - rationale - skills\last30days\scripts\lib\websearch.py
+- [[_direct_extract()]] - code - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[_log_error()_1]] - code - skills\last30days\scripts\lib\xai_x.py
+- [[_make()]] - code - skills\junta-leiloeiros\scripts\scraper\states.py
+- [[base_scraper.py]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[check_page()]] - code - skills\geo-fundamentals\scripts\geo_checker.py
+- [[clean()_1]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[dedupe_websearch()]] - code - skills\last30days\scripts\lib\websearch.py
+- [[extract_date_from_snippet()]] - code - skills\last30days\scripts\lib\websearch.py
+- [[extract_date_from_url()]] - code - skills\last30days\scripts\lib\websearch.py
+- [[extract_date_signals()]] - code - skills\last30days\scripts\lib\websearch.py
+- [[extract_domain()]] - code - skills\last30days\scripts\lib\websearch.py
+- [[find_web_pages()]] - code - skills\geo-fundamentals\scripts\geo_checker.py
+- [[generic_scraper.py]] - code - skills\junta-leiloeiros\scripts\scraper\generic_scraper.py
+- [[geo_checker.py]] - code - skills\geo-fundamentals\scripts\geo_checker.py
+- [[get_all_scrapers()]] - code - skills\junta-leiloeiros\scripts\scraper\states.py
+- [[get_estados_vazios_do_log()]] - code - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[get_reddit_json()]] - code - skills\last30days\scripts\lib\http.py
+- [[http.py]] - code - skills\last30days\scripts\lib\http.py
+- [[is_excluded_domain()]] - code - skills\last30days\scripts\lib\websearch.py
+- [[is_page_file()]] - code - skills\geo-fundamentals\scripts\geo_checker.py
+- [[jucap.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucap.py
+- [[juceac.py]] - code - skills\junta-leiloeiros\scripts\scraper\juceac.py
+- [[juceal.py]] - code - skills\junta-leiloeiros\scripts\scraper\juceal.py
+- [[juceb.py]] - code - skills\junta-leiloeiros\scripts\scraper\juceb.py
+- [[jucec.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucec.py
+- [[jucema.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucema.py
+- [[jucemg.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucemg.py
+- [[jucep.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucep.py
+- [[jucepa.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucepa.py
+- [[jucepar.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucepar.py
+- [[jucepe.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucepe.py
+- [[jucepi.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucepi.py
+- [[jucer.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucer.py
+- [[jucerja.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucerja.py
+- [[jucern.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucern.py
+- [[jucesc.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucesc.py
+- [[jucesp.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucesp.py
+- [[jucetins.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucetins.py
+- [[jucis_df.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucis_df.py
+- [[jucisrs.py]] - code - skills\junta-leiloeiros\scripts\scraper\jucisrs.py
+- [[log()]] - code - skills\last30days\scripts\lib\http.py
+- [[main()_27]] - code - skills\geo-fundamentals\scripts\geo_checker.py
+- [[main()_47]] - code - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[normalize_situacao()]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[normalize_websearch_items()]] - code - skills\last30days\scripts\lib\websearch.py
+- [[parse_leiloeiros()]] - code - skills\junta-leiloeiros\scripts\scraper\base_scraper.py
+- [[parse_websearch_results()]] - code - skills\last30days\scripts\lib\websearch.py
+- [[parse_x_response()]] - code - skills\last30days\scripts\lib\xai_x.py
+- [[post()]] - code - skills\last30days\scripts\lib\http.py
+- [[request()]] - code - skills\last30days\scripts\lib\http.py
+- [[run_fallback()]] - code - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[run_web_scraper_for_state()]] - code - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[search_reddit()]] - code - skills\last30days\scripts\lib\openai_reddit.py
+- [[search_x()]] - code - skills\last30days\scripts\lib\xai_x.py
+- [[states.py]] - code - skills\junta-leiloeiros\scripts\scraper\states.py
+- [[web_scraper_fallback.py]] - code - skills\junta-leiloeiros\scripts\web_scraper_fallback.py
+- [[websearch.py]] - code - skills\last30days\scripts\lib\websearch.py
+- [[xAI API client for X (Twitter) discovery.]] - rationale - skills\last30days\scripts\lib\xai_x.py
+- [[xai_x.py]] - code - skills\last30days\scripts\lib\xai_x.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_8
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 46 edges to [[_COMMUNITY_Community 2]]
+- 27 edges to [[_COMMUNITY_Community 1]]
+- 27 edges to [[_COMMUNITY_Community 18]]
+- 17 edges to [[_COMMUNITY_Community 13]]
+- 11 edges to [[_COMMUNITY_Community 5]]
+- 5 edges to [[_COMMUNITY_Community 7]]
+- 4 edges to [[_COMMUNITY_Community 11]]
+- 4 edges to [[_COMMUNITY_Community 17]]
+- 3 edges to [[_COMMUNITY_Community 4]]
+- 3 edges to [[_COMMUNITY_Community 9]]
+- 3 edges to [[_COMMUNITY_Community 10]]
+- 3 edges to [[_COMMUNITY_Community 23]]
+- 3 edges to [[_COMMUNITY_Community 49]]
+- 3 edges to [[_COMMUNITY_Community 64]]
+- 2 edges to [[_COMMUNITY_Community 36]]
+- 2 edges to [[_COMMUNITY_Community 14]]
+- 2 edges to [[_COMMUNITY_Community 25]]
+- 1 edge to [[_COMMUNITY_Community 16]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 31]]
+
+## Top bridge nodes
+- [[post()]] - degree 27, connects to 7 communities
+- [[request()]] - degree 14, connects to 6 communities
+- [[.search()_1]] - degree 25, connects to 4 communities
+- [[run_fallback()]] - degree 11, connects to 4 communities
+- [[.parse_leiloeiros()_1]] - degree 10, connects to 4 communities

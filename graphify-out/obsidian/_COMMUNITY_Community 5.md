@@ -1,0 +1,324 @@
+---
+type: community
+members: 286
+---
+
+# Community 5
+
+**Members:** 286 nodes
+
+## Members
+- [[.__init__()_149]] - code - skills\last30days\scripts\lib\ui.py
+- [[.__init__()_150]] - code - skills\last30days\scripts\lib\ui.py
+- [[._show_banner()]] - code - skills\last30days\scripts\lib\ui.py
+- [[._spin()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.end_processing()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.end_reddit()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.end_reddit_enrich()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.end_web_only()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.end_x()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.show_cached()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.show_complete()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.show_error()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.show_promo()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.show_web_only_complete()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.start()_4]] - code - skills\last30days\scripts\lib\ui.py
+- [[.start_processing()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.start_reddit()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.start_reddit_enrich()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.start_web_only()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.start_x()]] - code - skills\last30days\scripts\lib\ui.py
+- [[.stop()_3]] - code - skills\last30days\scripts\lib\ui.py
+- [[.test_15_days_ago_is_50()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_30_days_ago_is_0()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_collapses_whitespace()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_converts_items()]] - code - skills\last30days\tests\test_normalize.py
+- [[.test_date_format()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_disjoint_sets()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_empty_engagement()]] - code - skills\last30days\tests\test_score.py
+- [[.test_empty_list()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_empty_list()_1]] - code - skills\last30days\tests\test_score.py
+- [[.test_empty_sets()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_finds_duplicates()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_handles_engagement()]] - code - skills\last30days\tests\test_normalize.py
+- [[.test_handles_none()]] - code - skills\last30days\tests\test_score.py
+- [[.test_handles_x_engagement()]] - code - skills\last30days\tests\test_normalize.py
+- [[.test_high_confidence_in_range()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_identical_sets()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_keeps_all_unique()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_keeps_higher_scored()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_low_confidence_before_range()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_low_confidence_no_date()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_lowercase()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_negative()]] - code - skills\last30days\tests\test_score.py
+- [[.test_no_duplicates()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_none()]] - code - skills\last30days\tests\test_score.py
+- [[.test_none_date()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_none_date_is_0()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_none_timestamp()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_normal_text()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_normalizes_basic_item()]] - code - skills\last30days\tests\test_normalize.py
+- [[.test_normalizes_basic_item()_1]] - code - skills\last30days\tests\test_normalize.py
+- [[.test_normalizes_values()]] - code - skills\last30days\tests\test_score.py
+- [[.test_parse_empty_string()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_parse_iso_date()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_parse_none()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_parse_timestamp()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_partial_overlap()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_positive_value()]] - code - skills\last30days\tests\test_score.py
+- [[.test_range_is_correct_days()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_removes_punctuation()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_renders_basic_report()]] - code - skills\last30days\tests\test_render.py
+- [[.test_renders_full_report()]] - code - skills\last30days\tests\test_render.py
+- [[.test_renders_reddit_items()]] - code - skills\last30days\tests\test_render.py
+- [[.test_renders_snippet()]] - code - skills\last30days\tests\test_render.py
+- [[.test_returns_path_string()]] - code - skills\last30days\tests\test_render.py
+- [[.test_returns_tuple_of_two_strings()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_scores_items()]] - code - skills\last30days\tests\test_score.py
+- [[.test_scores_items()_1]] - code - skills\last30days\tests\test_score.py
+- [[.test_sets_low_confidence_for_old_date()]] - code - skills\last30days\tests\test_normalize.py
+- [[.test_short_text()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_shows_coverage_tip_for_reddit_only()]] - code - skills\last30days\tests\test_render.py
+- [[.test_single_item()]] - code - skills\last30days\tests\test_dedupe.py
+- [[.test_single_value()]] - code - skills\last30days\tests\test_score.py
+- [[.test_sorts_by_score_descending()]] - code - skills\last30days\tests\test_score.py
+- [[.test_stable_sort()]] - code - skills\last30days\tests\test_score.py
+- [[.test_today()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_today_is_100()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_valid_timestamp()]] - code - skills\last30days\tests\test_dates.py
+- [[.test_with_engagement()]] - code - skills\last30days\tests\test_score.py
+- [[.test_with_engagement()_1]] - code - skills\last30days\tests\test_score.py
+- [[.test_without_engagement()]] - code - skills\last30days\tests\test_score.py
+- [[.test_without_engagement()_1]] - code - skills\last30days\tests\test_score.py
+- [[.test_zero()]] - code - skills\last30days\tests\test_score.py
+- [[.to_dict()_7]] - code - skills\last30days\scripts\lib\schema.py
+- [[.to_dict()_8]] - code - skills\last30days\scripts\lib\schema.py
+- [[.to_dict()_9]] - code - skills\last30days\scripts\lib\schema.py
+- [[.to_dict()_10]] - code - skills\last30days\scripts\lib\schema.py
+- [[.to_dict()_11]] - code - skills\last30days\scripts\lib\schema.py
+- [[.to_dict()_12]] - code - skills\last30days\scripts\lib\schema.py
+- [[.to_dict()_13]] - code - skills\last30days\scripts\lib\schema.py
+- [[.update()_1]] - code - skills\last30days\scripts\lib\ui.py
+- [[.update_reddit_enrich()]] - code - skills\last30days\scripts\lib\ui.py
+- [[Animated spinner for long-running operations.]] - rationale - skills\last30days\scripts\lib\ui.py
+- [[Assess how much data is actually from the last 30 days.]] - rationale - skills\last30days\scripts\lib\render.py
+- [[Calculate how many days ago a date is.      Returns None if date is invalid or]] - rationale - skills\last30days\scripts\lib\dates.py
+- [[Calculate recency score (0-100).      0 days ago = 100, max_days ago = 0, clam]] - rationale - skills\last30days\scripts\lib\dates.py
+- [[Check for hardcoded strings in code files.]] - rationale - skills\i18n-localization\scripts\i18n_checker.py
+- [[Check if all locales have the same keys.]] - rationale - skills\i18n-localization\scripts\i18n_checker.py
+- [[Check if configuration file exists.]] - rationale - skills\last30days\scripts\lib\env.py
+- [[Colors]] - code - skills\last30days\scripts\lib\ui.py
+- [[Comment]] - code - skills\last30days\scripts\lib\schema.py
+- [[Compute Jaccard similarity between two sets.]] - rationale - skills\last30days\scripts\lib\dedupe.py
+- [[Compute raw engagement score for Reddit item.      Formula 0.55log1p(score)]] - rationale - skills\last30days\scripts\lib\score.py
+- [[Compute raw engagement score for X item.      Formula 0.55log1p(likes) + 0.2]] - rationale - skills\last30days\scripts\lib\score.py
+- [[Compute scores for Reddit items.      Args         items List of Reddit ite]] - rationale - skills\last30days\scripts\lib\score.py
+- [[Compute scores for WebSearch items WITHOUT engagement metrics.      Uses rewei]] - rationale - skills\last30days\scripts\lib\score.py
+- [[Compute scores for X items.      Args         items List of X items]] - rationale - skills\last30days\scripts\lib\score.py
+- [[Convert Unix timestamp to YYYY-MM-DD string.]] - rationale - skills\last30days\scripts\lib\dates.py
+- [[Convert schema items to dicts for JSON serialization.]] - rationale - skills\last30days\scripts\lib\normalize.py
+- [[Create a new report with metadata.]] - rationale - skills\last30days\scripts\lib\schema.py
+- [[Data schemas for last30days skill.]] - rationale - skills\last30days\scripts\lib\schema.py
+- [[Date utilities for last30days skill.]] - rationale - skills\last30days\scripts\lib\dates.py
+- [[Determine confidence level for a date.      Args         date_str The date]] - rationale - skills\last30days\scripts\lib\dates.py
+- [[Determine which API keys are missing.      Returns 'both', 'reddit', 'x', or]] - rationale - skills\last30days\scripts\lib\env.py
+- [[Determine which sources are available based on API keys.      Returns 'both',]] - rationale - skills\last30days\scripts\lib\env.py
+- [[End web-only spinner.]] - rationale - skills\last30days\scripts\lib\ui.py
+- [[Engagement]] - code - skills\last30days\scripts\lib\schema.py
+- [[Enrich a Reddit item with real engagement data.      Args         item Redd]] - rationale - skills\last30days\scripts\lib\reddit_enrich.py
+- [[Ensure output directory exists.]] - rationale - skills\last30days\scripts\lib\render.py
+- [[Environment and API key management for last30days skill.]] - rationale - skills\last30days\scripts\lib\env.py
+- [[Extract core subject from verbose query for retry.]] - rationale - skills\last30days\scripts\lib\openai_reddit.py
+- [[Extract key insights from top comments.      Uses simple heuristics to identif]] - rationale - skills\last30days\scripts\lib\reddit_enrich.py
+- [[Extract the path from a Reddit URL.      Args         url Reddit URL]] - rationale - skills\last30days\scripts\lib\reddit_enrich.py
+- [[Fetch Reddit thread JSON data.      Args         url Reddit thread URL]] - rationale - skills\last30days\scripts\lib\reddit_enrich.py
+- [[Find near-duplicate pairs in items.      Args         items List of items t]] - rationale - skills\last30days\scripts\lib\dedupe.py
+- [[Find translationlocale files.]] - rationale - skills\i18n-localization\scripts\i18n_checker.py
+- [[Flatten nested dict keys.]] - rationale - skills\i18n-localization\scripts\i18n_checker.py
+- [[Full research report.]] - rationale - skills\last30days\scripts\lib\schema.py
+- [[Get character n-grams from text.]] - rationale - skills\last30days\scripts\lib\dedupe.py
+- [[Get comparable text from an item.]] - rationale - skills\last30days\scripts\lib\dedupe.py
+- [[Get path to context file.]] - rationale - skills\last30days\scripts\lib\render.py
+- [[Get the date range for the last N days.      Returns         Tuple of (from_]] - rationale - skills\last30days\scripts\lib\dates.py
+- [[Get top comments sorted by score.      Args         comments List of commen]] - rationale - skills\last30days\scripts\lib\reddit_enrich.py
+- [[Hard filter Remove items outside the date range.      This is the safety net]] - rationale - skills\last30days\scripts\lib\normalize.py
+- [[Load configuration from ~.configlast30days.env and environment.]] - rationale - skills\last30days\scripts\lib\env.py
+- [[Load environment variables from a file.]] - rationale - skills\last30days\scripts\lib\env.py
+- [[Near-duplicate detection for last30days skill.]] - rationale - skills\last30days\scripts\lib\dedupe.py
+- [[Normalization of raw API data to canonical schema.]] - rationale - skills\last30days\scripts\lib\normalize.py
+- [[Normalize a list of values to 0-100 scale.      Args         values Raw val]] - rationale - skills\last30days\scripts\lib\score.py
+- [[Normalize raw Reddit items to schema.      Args         items Raw Reddit it]] - rationale - skills\last30days\scripts\lib\normalize.py
+- [[Normalize raw X items to schema.      Args         items Raw X items from A]] - rationale - skills\last30days\scripts\lib\normalize.py
+- [[Normalize text for comparison.      - Lowercase     - Remove punctuation]] - rationale - skills\last30days\scripts\lib\dedupe.py
+- [[Normalized Reddit item.]] - rationale - skills\last30days\scripts\lib\schema.py
+- [[Normalized web search item (no engagement metrics).]] - rationale - skills\last30days\scripts\lib\schema.py
+- [[OpenAI Responses API client for Reddit discovery.]] - rationale - skills\last30days\scripts\lib\openai_reddit.py
+- [[Output rendering for last30days skill.]] - rationale - skills\last30days\scripts\lib\render.py
+- [[Output the result based on emit mode.]] - rationale - skills\last30days\scripts\last30days.py
+- [[Parse OpenAI response to extract Reddit items.      Args         response R]] - rationale - skills\last30days\scripts\lib\openai_reddit.py
+- [[Parse Reddit thread JSON into structured data.      Args         data Raw R]] - rationale - skills\last30days\scripts\lib\reddit_enrich.py
+- [[Parse a date string in various formats.      Supports YYYY-MM-DD, ISO 8601, U]] - rationale - skills\last30days\scripts\lib\dates.py
+- [[Popularity-aware scoring for last30days skill.]] - rationale - skills\last30days\scripts\lib\score.py
+- [[Print a phase message.]] - rationale - skills\last30days\scripts\lib\ui.py
+- [[Progress display for research phases.]] - rationale - skills\last30days\scripts\lib\ui.py
+- [[ProgressDisplay]] - code - skills\last30days\scripts\lib\ui.py
+- [[Reddit thread enrichment with real engagement metrics.]] - rationale - skills\last30days\scripts\lib\reddit_enrich.py
+- [[RedditItem]] - code - skills\last30days\scripts\lib\schema.py
+- [[Remove near-duplicates, keeping highest-scored item.      Args         items]] - rationale - skills\last30days\scripts\lib\dedupe.py
+- [[Render compact output for Claude to synthesize.      Args         report Re]] - rationale - skills\last30days\scripts\lib\render.py
+- [[Render full markdown report.      Args         report Report data      Re]] - rationale - skills\last30days\scripts\lib\render.py
+- [[Render reusable context snippet.      Args         report Report data]] - rationale - skills\last30days\scripts\lib\render.py
+- [[Report]] - code - skills\last30days\scripts\lib\schema.py
+- [[Run the research pipeline.      Returns         Tuple of (reddit_items, x_it]] - rationale - skills\last30days\scripts\last30days.py
+- [[Safe log1p that handles None and negative values.]] - rationale - skills\last30days\scripts\lib\score.py
+- [[Search Reddit via OpenAI (runs in thread).      Returns         Tuple of (re]] - rationale - skills\last30days\scripts\last30days.py
+- [[Search X via xAI (runs in thread).      Returns         Tuple of (x_items, r]] - rationale - skills\last30days\scripts\last30days.py
+- [[Show completion for web-only mode.]] - rationale - skills\last30days\scripts\lib\ui.py
+- [[Show promotional message for missing API keys.          Args             mis]] - rationale - skills\last30days\scripts\lib\ui.py
+- [[Show web-only mode indicator.]] - rationale - skills\last30days\scripts\lib\ui.py
+- [[Sort items by score (descending), then date, then source priority.      Args]] - rationale - skills\last30days\scripts\lib\score.py
+- [[Spinner]] - code - skills\last30days\scripts\lib\ui.py
+- [[SubScores]] - code - skills\last30days\scripts\lib\schema.py
+- [[Terminal UI utilities for last30days skill.]] - rationale - skills\last30days\scripts\lib\ui.py
+- [[TestComputeRedditEngagementRaw]] - code - skills\last30days\tests\test_score.py
+- [[TestComputeXEngagementRaw]] - code - skills\last30days\tests\test_score.py
+- [[TestDaysAgo]] - code - skills\last30days\tests\test_dates.py
+- [[TestDedupeItems]] - code - skills\last30days\tests\test_dedupe.py
+- [[TestFindDuplicates]] - code - skills\last30days\tests\test_dedupe.py
+- [[TestGetContextPath]] - code - skills\last30days\tests\test_render.py
+- [[TestGetDateConfidence]] - code - skills\last30days\tests\test_dates.py
+- [[TestGetDateRange]] - code - skills\last30days\tests\test_dates.py
+- [[TestGetNgrams]] - code - skills\last30days\tests\test_dedupe.py
+- [[TestItemsToDicts]] - code - skills\last30days\tests\test_normalize.py
+- [[TestJaccardSimilarity]] - code - skills\last30days\tests\test_dedupe.py
+- [[TestLog1pSafe]] - code - skills\last30days\tests\test_score.py
+- [[TestNormalizeRedditItems]] - code - skills\last30days\tests\test_normalize.py
+- [[TestNormalizeText]] - code - skills\last30days\tests\test_dedupe.py
+- [[TestNormalizeTo100]] - code - skills\last30days\tests\test_score.py
+- [[TestNormalizeXItems]] - code - skills\last30days\tests\test_normalize.py
+- [[TestParseDate]] - code - skills\last30days\tests\test_dates.py
+- [[TestRecencyScore]] - code - skills\last30days\tests\test_dates.py
+- [[TestRenderCompact]] - code - skills\last30days\tests\test_render.py
+- [[TestRenderContextSnippet]] - code - skills\last30days\tests\test_render.py
+- [[TestRenderFullReport]] - code - skills\last30days\tests\test_render.py
+- [[TestScoreRedditItems]] - code - skills\last30days\tests\test_score.py
+- [[TestScoreXItems]] - code - skills\last30days\tests\test_score.py
+- [[TestSortItems]] - code - skills\last30days\tests\test_score.py
+- [[TestTimestampToDate]] - code - skills\last30days\tests\test_dates.py
+- [[Tests for dates module.]] - rationale - skills\last30days\tests\test_dates.py
+- [[Tests for dedupe module.]] - rationale - skills\last30days\tests\test_dedupe.py
+- [[Tests for normalize module.]] - rationale - skills\last30days\tests\test_normalize.py
+- [[Tests for render module.]] - rationale - skills\last30days\tests\test_render.py
+- [[Tests for score module.]] - rationale - skills\last30days\tests\test_score.py
+- [[Validate requested sources against available keys.      Args         request]] - rationale - skills\last30days\scripts\lib\env.py
+- [[WebSearchItem]] - code - skills\last30days\scripts\lib\schema.py
+- [[Write all output files.      Args         report Report data         raw_o]] - rationale - skills\last30days\scripts\lib\render.py
+- [[XItem]] - code - skills\last30days\scripts\lib\schema.py
+- [[__init__.py_14]] - code - skills\last30days\scripts\lib\__init__.py
+- [[_assess_data_freshness()]] - code - skills\last30days\scripts\lib\render.py
+- [[_extract_core_subject()]] - code - skills\last30days\scripts\lib\openai_reddit.py
+- [[_log_error()]] - code - skills\last30days\scripts\lib\openai_reddit.py
+- [[_search_reddit()]] - code - skills\last30days\scripts\last30days.py
+- [[_search_x()]] - code - skills\last30days\scripts\last30days.py
+- [[check_hardcoded_strings()]] - code - skills\i18n-localization\scripts\i18n_checker.py
+- [[check_locale_completeness()]] - code - skills\i18n-localization\scripts\i18n_checker.py
+- [[compute_reddit_engagement_raw()]] - code - skills\last30days\scripts\lib\score.py
+- [[compute_x_engagement_raw()]] - code - skills\last30days\scripts\lib\score.py
+- [[config_exists()]] - code - skills\last30days\scripts\lib\env.py
+- [[create_report()]] - code - skills\last30days\scripts\lib\schema.py
+- [[dates.py]] - code - skills\last30days\scripts\lib\dates.py
+- [[days_ago()]] - code - skills\last30days\scripts\lib\dates.py
+- [[dedupe.py]] - code - skills\last30days\scripts\lib\dedupe.py
+- [[dedupe_items()]] - code - skills\last30days\scripts\lib\dedupe.py
+- [[dedupe_reddit()]] - code - skills\last30days\scripts\lib\dedupe.py
+- [[dedupe_x()]] - code - skills\last30days\scripts\lib\dedupe.py
+- [[enrich_reddit_item()]] - code - skills\last30days\scripts\lib\reddit_enrich.py
+- [[ensure_output_dir()]] - code - skills\last30days\scripts\lib\render.py
+- [[env.py]] - code - skills\last30days\scripts\lib\env.py
+- [[extract_comment_insights()]] - code - skills\last30days\scripts\lib\reddit_enrich.py
+- [[extract_reddit_path()]] - code - skills\last30days\scripts\lib\reddit_enrich.py
+- [[fetch_thread_data()]] - code - skills\last30days\scripts\lib\reddit_enrich.py
+- [[filter_by_date_range()]] - code - skills\last30days\scripts\lib\normalize.py
+- [[find_duplicates()]] - code - skills\last30days\scripts\lib\dedupe.py
+- [[find_locale_files()]] - code - skills\i18n-localization\scripts\i18n_checker.py
+- [[flatten_keys()]] - code - skills\i18n-localization\scripts\i18n_checker.py
+- [[from_dict()]] - code - skills\last30days\scripts\lib\schema.py
+- [[get_available_sources()]] - code - skills\last30days\scripts\lib\env.py
+- [[get_config()_1]] - code - skills\last30days\scripts\lib\env.py
+- [[get_context_path()]] - code - skills\last30days\scripts\lib\render.py
+- [[get_date_confidence()]] - code - skills\last30days\scripts\lib\dates.py
+- [[get_date_range()]] - code - skills\last30days\scripts\lib\dates.py
+- [[get_item_text()]] - code - skills\last30days\scripts\lib\dedupe.py
+- [[get_missing_keys()]] - code - skills\last30days\scripts\lib\env.py
+- [[get_ngrams()]] - code - skills\last30days\scripts\lib\dedupe.py
+- [[get_top_comments()]] - code - skills\last30days\scripts\lib\reddit_enrich.py
+- [[i18n_checker.py]] - code - skills\i18n-localization\scripts\i18n_checker.py
+- [[items_to_dicts()]] - code - skills\last30days\scripts\lib\normalize.py
+- [[jaccard_similarity()]] - code - skills\last30days\scripts\lib\dedupe.py
+- [[last30days.py]] - code - skills\last30days\scripts\last30days.py
+- [[load_env_file()]] - code - skills\last30days\scripts\lib\env.py
+- [[load_fixture()]] - code - skills\last30days\scripts\last30days.py
+- [[log1p_safe()]] - code - skills\last30days\scripts\lib\score.py
+- [[main()_32]] - code - skills\i18n-localization\scripts\i18n_checker.py
+- [[main()_48]] - code - skills\last30days\scripts\last30days.py
+- [[normalize.py]] - code - skills\last30days\scripts\lib\normalize.py
+- [[normalize_reddit_items()]] - code - skills\last30days\scripts\lib\normalize.py
+- [[normalize_text()]] - code - skills\last30days\scripts\lib\dedupe.py
+- [[normalize_to_100()]] - code - skills\last30days\scripts\lib\score.py
+- [[normalize_x_items()]] - code - skills\last30days\scripts\lib\normalize.py
+- [[openai_reddit.py]] - code - skills\last30days\scripts\lib\openai_reddit.py
+- [[output_result()]] - code - skills\last30days\scripts\last30days.py
+- [[parse_date()]] - code - skills\last30days\scripts\lib\dates.py
+- [[parse_reddit_response()]] - code - skills\last30days\scripts\lib\openai_reddit.py
+- [[parse_thread_data()]] - code - skills\last30days\scripts\lib\reddit_enrich.py
+- [[print_phase()]] - code - skills\last30days\scripts\lib\ui.py
+- [[recency_score()]] - code - skills\last30days\scripts\lib\dates.py
+- [[reddit_enrich.py]] - code - skills\last30days\scripts\lib\reddit_enrich.py
+- [[render.py]] - code - skills\last30days\scripts\lib\render.py
+- [[render_compact()]] - code - skills\last30days\scripts\lib\render.py
+- [[render_context_snippet()]] - code - skills\last30days\scripts\lib\render.py
+- [[render_full_report()]] - code - skills\last30days\scripts\lib\render.py
+- [[run_research()]] - code - skills\last30days\scripts\last30days.py
+- [[schema.py]] - code - skills\last30days\scripts\lib\schema.py
+- [[score.py]] - code - skills\last30days\scripts\lib\score.py
+- [[score_reddit_items()]] - code - skills\last30days\scripts\lib\score.py
+- [[score_websearch_items()]] - code - skills\last30days\scripts\lib\score.py
+- [[score_x_items()]] - code - skills\last30days\scripts\lib\score.py
+- [[sort_items()]] - code - skills\last30days\scripts\lib\score.py
+- [[test_dates.py]] - code - skills\last30days\tests\test_dates.py
+- [[test_dedupe.py]] - code - skills\last30days\tests\test_dedupe.py
+- [[test_normalize.py]] - code - skills\last30days\tests\test_normalize.py
+- [[test_render.py]] - code - skills\last30days\tests\test_render.py
+- [[test_score.py]] - code - skills\last30days\tests\test_score.py
+- [[timestamp_to_date()]] - code - skills\last30days\scripts\lib\dates.py
+- [[ui.py]] - code - skills\last30days\scripts\lib\ui.py
+- [[validate_sources()]] - code - skills\last30days\scripts\lib\env.py
+- [[write_outputs()_1]] - code - skills\last30days\scripts\lib\render.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_5
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 21 edges to [[_COMMUNITY_Community 1]]
+- 19 edges to [[_COMMUNITY_Community 2]]
+- 11 edges to [[_COMMUNITY_Community 8]]
+- 4 edges to [[_COMMUNITY_Community 11]]
+- 2 edges to [[_COMMUNITY_Community 27]]
+- 2 edges to [[_COMMUNITY_Community 25]]
+- 2 edges to [[_COMMUNITY_Community 13]]
+- 2 edges to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 0]]
+- 1 edge to [[_COMMUNITY_Community 7]]
+- 1 edge to [[_COMMUNITY_Community 6]]
+- 1 edge to [[_COMMUNITY_Community 9]]
+
+## Top bridge nodes
+- [[parse_reddit_response()]] - degree 9, connects to 4 communities
+- [[check_hardcoded_strings()]] - degree 7, connects to 4 communities
+- [[main()_48]] - degree 29, connects to 3 communities
+- [[_search_reddit()]] - degree 8, connects to 3 communities
+- [[run_research()]] - degree 17, connects to 2 communities

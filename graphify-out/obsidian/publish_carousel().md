@@ -1,0 +1,30 @@
+---
+source_file: "skills\instagram\scripts\publish.py"
+type: "code"
+community: "Community 2"
+location: "L252"
+tags:
+  - graphify/code
+  - graphify/INFERRED
+  - community/Community_2
+---
+
+# publish_carousel()
+
+## Connections
+- [[.create_confirmation_request()]] - `calls` [INFERRED]
+- [[.create_media_container()]] - `calls` [INFERRED]
+- [[.get_media_details()]] - `calls` [INFERRED]
+- [[.insert_post()]] - `calls` [INFERRED]
+- [[.log_action()_2]] - `calls` [INFERRED]
+- [[.publish_media()]] - `calls` [INFERRED]
+- [[.update_post_status()]] - `calls` [INFERRED]
+- [[Publica carrossel de imagens.]] - `rationale_for` [EXTRACTED]
+- [[get()]] - `calls` [INFERRED]
+- [[log_action()]] - `calls` [INFERRED]
+- [[publish.py]] - `contains` [EXTRACTED]
+- [[requires_confirmation()]] - `calls` [INFERRED]
+- [[run()_5]] - `calls` [EXTRACTED]
+- [[upload_if_local()]] - `calls` [EXTRACTED]
+
+#graphify/code #graphify/INFERRED #community/Community_2

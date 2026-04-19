@@ -13,6 +13,7 @@ import random
 from typing import Callable, Any, Optional, Dict, List, Awaitable
 from functools import wraps
 from threading import Lock
+from .registry import register_module
 
 from .resilience_base import (
     CircuitState,
@@ -126,6 +127,7 @@ class ResilienceDecorator:
 
         return wrapper
 
+@register_module(name="resilience_manager", metadata={"tier": "core", "critical": True})
 class ResilienceManager(BaseResilienceManager):
     """
     Enhanced ResilienceManager with JARVIS specific integration

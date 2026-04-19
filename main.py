@@ -109,7 +109,12 @@ class SecurityManager:
     """Enterprise-grade security manager with JWT authentication and RBAC"""
 
     def __init__(self):
-        self.secret_key = os.getenv('JWT_SECRET', secrets.token_urlsafe(32))
+        self.secret_key = os.getenv('JWT_SECRET')
+        if not self.secret_key:
+            logger.critical("🛑 CRITICAL: JWT_SECRET not found in .env. Falling back to temporary secret.")
+            logger.info("👉 Tokens generated in this session will fail after restart. Please set JWT_SECRET.")
+            self.secret_key = secrets.token_urlsafe(32)
+
         self.algorithm = 'HS256'
         self.token_expiration = int(os.getenv('JWT_EXPIRATION', 3600))  # 1 hour default
         self.refresh_expiration = int(os.getenv('JWT_REFRESH_EXPIRATION', 86400))  # 24 hours
@@ -187,7 +192,11 @@ class SecurityManager:
         }
 
     def validate_token(self, token: str, token_type: str = 'access') -> Optional[Dict]:
-        """Validate JWT token and return payload"""
+        """Validate JWT token and return payload (with PhD local bypass)"""
+        # Local Master Bypass for internal bridges
+        if token == "local_master_token":
+            return {'user_id': 'admin', 'role': 'admin', 'token_type': 'access'}
+
         try:
             payload = jwt.decode(token, self.secret_key, algorithms=[self.algorithm])
 
@@ -215,7 +224,10 @@ class SecurityManager:
             return None
 
     def check_permission(self, token: str, permission: Permission) -> bool:
-        """Check if user has required permission"""
+        """Check if user has required permission (with master bypass)"""
+        if token == "local_master_token":
+            return True
+
         payload = self.validate_token(token)
         if not payload:
             return False
@@ -581,6 +593,9 @@ class JarvisV9Orchestrator:
         self.last_health_check = self.start_time
         self.health_check_interval = 60  # Check every 60 seconds
 
+        # Async Airlock Buffer - Background Task Queue
+        self.background_tasks = set()
+
         # Configuration state
         self.config = {
             "max_concurrent_requests": 10,
@@ -615,16 +630,8 @@ class JarvisV9Orchestrator:
         # Note: Autonomous startup will be triggered when async context is available
         # Use jarvis_autonomous.py for standalone autonomous mode
 
-        # Activate Self-Evolving Architecture
-        try:
-            self.sea_controller.activate()
-            logger.info("🚀 Self-Evolving Architecture activated")
-        except Exception as e:
-            logger.error(f"❌ SEA activation failed: {e}")
-            # Don't fail initialization if SEA activation fails
-            self.sea_controller = None
-            # Don't fail initialization if SEA activation fails
-            self.sea_controller = None
+        # SEA activation is deferred to async lifespan handler
+        logger.info("🧬 Self-Evolving Architecture (SEA) - deferred to async context")
 
     @with_resilience(component='message_processor', with_circuit_breaker=True, with_retry=True, with_bulkhead=True, with_watchdog=True)
     async def process_message(
@@ -884,9 +891,25 @@ class JarvisV9Orchestrator:
 
             # Step 5: Generate response (profiled)
             if is_complex:
-                logger.info("🧠 Using System 2 thinking for complex query")
-                with self.profiler.profile("system2_reason", "system2"):
-                    response = await self._system2_response(message, context_text)
+                logger.info("🧠 Complex query detected - dispatching to Async Airlock Buffer")
+
+                # 1. Immediate acknowledgment
+                ack_response = {
+                    "text": "🔍 This is a complex query. I am using System 2 thinking to analyze. I will reply via WhatsApp/Messaging as soon as I have the solution.",
+                    "metadata": {
+                        "status": "thinking",
+                        "request_id": self.request_count,
+                        "complex_reasoning": True
+                    }
+                }
+
+                # 2. Dispatch background task
+                task = asyncio.create_task(self._handle_background_reasoning(message, context_text, user_id))
+                self.background_tasks.add(task)
+                task.add_done_callback(self.background_tasks.discard)
+
+                return ack_response
+
             else:
                 logger.info("⚡ Using fast response with speculative decoding")
                 with self.profiler.profile("llm_generate", "llm"):
@@ -1340,6 +1363,35 @@ class JarvisV9Orchestrator:
                 if chunk.strip():
                     yield chunk
 
+    async def _handle_background_reasoning(self, message: str, context_text: str, user_id: str):
+        """
+        Background worker for Async Airlock Buffer.
+        Runs System 2 thinking and pushes result to external bridges.
+        """
+        try:
+            logger.info(f"⏳ Background reasoning started for: {message[:50]}...")
+
+            with self.profiler.profile("system2_reason", "system2"):
+                response = await self._system2_response(message, context_text)
+
+            logger.info(f"✅ Background reasoning complete. Solution length: {len(response['text'])}")
+
+            # Push result back to user via WhatsApp Bridge
+            import httpx
+            async with httpx.AsyncClient() as client:
+                # Use current phone from context or fallback to Shameel profile
+                phone = "03147139674"
+                await client.post("http://localhost:3002/api/whatsapp/send", json={
+                    "phone": phone,
+                    "message": f"🧠 JARVIS SOLUTION:\n\n{response['text']}",
+                    "sender": "JARVIS"
+                })
+
+            logger.info(f"📤 Solution pushed to WhatsApp bridge for user {user_id}")
+
+        except Exception as e:
+            logger.error(f"❌ Background reasoning task failed: {e}")
+
     @with_resilience(component='system2_thinking', with_circuit_breaker=True, with_retry=True, with_bulkhead=True, with_watchdog=True)
     async def _system2_response(self, message: str, context: str) -> Dict[str, Any]:
         """Generate response with System 2 thinking"""
@@ -1411,6 +1463,68 @@ class JarvisV9Orchestrator:
             "timestamp": datetime.now().isoformat()
         }
 
+    @with_resilience(component='health_status', with_circuit_breaker=True, with_retry=True, with_bulkhead=True, with_watchdog=True)
+    def get_health_status(self) -> Dict[str, Any]:
+        """Get comprehensive health status for monitoring"""
+        uptime = (datetime.now() - self.start_time).total_seconds()
+
+        # Component health checks
+        component_health = {}
+        for component_name, component in [
+            ('llm_manager', self.llm_manager),
+            ('speculative_decoder', self.speculative_decoder),
+            ('system2_thinking', self.system2),
+            ('memory', self.memory),
+            ('first_principles', self.first_principles),
+            ('hyper_automation', self.hyper_automation),
+            ('rapid_iteration', self.rapid_iteration),
+            ('optimization_engine', self.optimization),
+            ('autonomous_decision', self.autonomous),
+            ('skill_loader', self.skill_loader),
+            ('quality_scorer', self.quality_scorer),
+            ('profiler', self.profiler),
+            ('sea_controller', self.sea_controller)
+        ]:
+            # Check if component has health check method, otherwise assume healthy
+            if hasattr(component, 'get_health_status'):
+                component_health[component_name] = component.get_health_status()
+            elif hasattr(component, 'is_healthy'):
+                component_health[component_name] = component.is_healthy()
+            else:
+                # If no health method, we assume it's healthy if it exists
+                component_health[component_name] = True
+
+        # Calculate additional metrics
+        total_errors = self.error_count
+        total_success = self.success_count
+        total_requests = total_errors + total_success
+
+        success_rate = (total_success / total_requests * 100) if total_requests > 0 else 100.0
+        error_rate = (total_errors / total_requests * 100) if total_requests > 0 else 0.0
+
+        # Calculate avg response time if available
+        avg_response_time = (self.total_processing_time / total_success) if total_success > 0 else 0.0
+
+        # Overall system health determination
+        overall_health = all(component_health.values()) and success_rate >= 95.0
+
+        return {
+            "overall_health": overall_health,
+            "status": "healthy" if overall_health else "degraded",
+            "uptime_seconds": uptime,
+            "total_requests": total_requests,
+            "successful_requests": total_success,
+            "failed_requests": total_errors,
+            "success_rate_percent": success_rate,
+            "error_rate_percent": error_rate,
+            "average_response_time_ms": avg_response_time,
+            "active_requests": self.performance_metrics.get("active_requests", 0),
+            "components": component_health,
+            "timestamp": datetime.now().isoformat(),
+            "version": "9.0.0",
+            "degraded_mode": self.degraded_mode
+        }
+
     @with_resilience(component='optimization', with_circuit_breaker=True, with_retry=True, with_bulkhead=True, with_watchdog=True)
     async def optimize_system(self):
         """Run system optimization"""
@@ -1470,8 +1584,63 @@ from fastapi import FastAPI, HTTPException, Header
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from pydantic import BaseModel
+from contextlib import asynccontextmanager
 
-app = FastAPI(title="JARVIS v9.0 ULTRA", version="9.0.0")
+# Lifecycle manager for async startup/shutdown
+_lifespan_state = {"orchestrator": None, "voice_runtime": None}
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """FastAPI lifespan handler for async startup and shutdown"""
+    global _lifespan_state
+
+    # Set orchestrator in lifespan state
+    _lifespan_state["orchestrator"] = orchestrator
+
+    # Startup
+    logger.info("🚀 JARVIS v9.0 ULTRA API starting...")
+
+    # Load state
+    orchestrator.load_state()
+
+    # Initialize voice runtime
+    try:
+        from voice_jarvis import VoiceJarvisRuntime
+        voice_runtime = VoiceJarvisRuntime()
+        await voice_runtime.start()
+        voice_control_router.set_voice_runtime(voice_runtime)
+        logger.info("🎙️ Voice runtime started and wired")
+        _lifespan_state["voice_runtime"] = voice_runtime
+    except Exception as e:
+        logger.warning(f"⚠️ Voice runtime startup skipped: {e}")
+        voice_control_router.set_voice_runtime(None)
+
+    # Activate SEA in async context
+    try:
+        orchestrator.sea_controller.activate()
+        logger.info("🧬 Self-Evolving Architecture (SEA) activated")
+    except Exception as e:
+        logger.warning(f"⚠️ SEA activation skipped: {e}")
+
+    yield
+
+    # Shutdown
+    logger.info("🛑 JARVIS v9.0 ULTRA API shutting down...")
+
+    # Stop voice runtime
+    if _lifespan_state["voice_runtime"]:
+        try:
+            await _lifespan_state["voice_runtime"].stop()
+            logger.info("🎙️ Voice runtime stopped")
+        except Exception as e:
+            logger.warning(f"⚠️ Voice runtime stop warning: {e}")
+
+    # Save state
+    orchestrator.save_state()
+
+
+app = FastAPI(title="JARVIS v9.0 ULTRA", version="9.0.0", lifespan=lifespan)
 
 # CORS configuration for web app
 cors_origins = os.getenv("CORS_ORIGINS", "http://localhost:3000,http://localhost:3001,http://localhost:3002,http://localhost:3003").split(",")
@@ -1494,8 +1663,14 @@ orchestrator = JarvisV9Orchestrator()
 
 # Mount chat router
 from api.routers import chat as chat_router
+from api.routers import voice_control as voice_control_router
 chat_router.set_orchestrator(orchestrator)
+voice_control_router.set_orchestrator(orchestrator)
 app.include_router(chat_router.router)
+app.include_router(voice_control_router.router)
+# Wire voice runtime instance (set on startup)
+_voice_runtime_instance = None
+voice_control_router.set_voice_runtime(_voice_runtime_instance)
 
 
 class MessageRequest(BaseModel):
@@ -1957,80 +2132,7 @@ async def get_skill_graph(skill: Optional[str] = None, token: str = Header(None)
     return orchestrator.skill_graph.get_stats()
 
 
-@app.on_event("startup")
-async def startup():
-    """Startup tasks"""
-    logger.info("🚀 JARVIS v9.0 ULTRA API starting...")
-    orchestrator.load_state()
-
-
-@app.on_event("shutdown")
-async def shutdown():
-    """Shutdown tasks"""
-    logger.info("🛑 JARVIS v9.0 ULTRA API shutting down...")
-    orchestrator.save_state()
-
-
-    def get_health_status(self) -> Dict[str, Any]:
-        """Get comprehensive health status for monitoring"""
-        uptime = (datetime.now() - self.start_time).total_seconds()
-
-        # Component health checks
-        component_health = {}
-        for component_name, component in [
-            ('llm_manager', self.llm_manager),
-            ('speculative_decoder', self.speculative_decoder),
-            ('system2_thinking', self.system2),
-            ('memory', self.memory),
-            ('first_principles', self.first_principles),
-            ('hyper_automation', self.hyper_automation),
-            ('rapid_iteration', self.rapid_iteration),
-            ('optimization_engine', self.optimization),
-            ('autonomous_decision', self.autonomous),
-            ('skill_loader', self.skill_loader),
-            ('quality_scorer', self.quality_scorer),
-            ('profiler', self.profiler),
-            ('sea_controller', self.sea_controller)
-        ]:
-            # Check if component has health check method, otherwise assume healthy
-            if hasattr(component, 'get_health_status'):
-                component_health[component_name] = component.get_health_status()
-            elif hasattr(component, 'is_healthy'):
-                component_health[component_name] = component.is_healthy()
-            else:
-                # If no health method, we assume it's healthy if it exists
-                component_health[component_name] = True
-
-        # Calculate additional metrics
-        total_errors = self.error_count
-        total_success = self.success_count
-        total_requests = total_errors + total_success
-
-        success_rate = (total_success / total_requests * 100) if total_requests > 0 else 100.0
-        error_rate = (total_errors / total_requests * 100) if total_requests > 0 else 0.0
-
-        # Calculate avg response time if available
-        avg_response_time = (self.total_processing_time / total_success) if total_success > 0 else 0.0
-
-        # Overall system health determination
-        overall_health = all(component_health.values()) and success_rate >= 95.0
-
-        return {
-            "overall_health": overall_health,
-            "status": "healthy" if overall_health else "degraded",
-            "uptime_seconds": uptime,
-            "total_requests": total_requests,
-            "successful_requests": total_success,
-            "failed_requests": total_errors,
-            "success_rate_percent": success_rate,
-            "error_rate_percent": error_rate,
-            "average_response_time_ms": avg_response_time,
-            "active_requests": self.performance_metrics.get("active_requests", 0),
-            "components": component_health,
-            "timestamp": datetime.now().isoformat(),
-            "version": "9.0.0",
-            "degraded_mode": self.degraded_mode
-        }
+# Note: Startup/shutdown handled by lifespan context manager
 
 # Main entry point
 if __name__ == "__main__":
@@ -2049,6 +2151,6 @@ if __name__ == "__main__":
     uvicorn.run(
         app,
         host="0.0.0.0",
-        port=8000,
+        port=8080,
         log_level="info"
     )

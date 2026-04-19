@@ -1,0 +1,772 @@
+---
+type: community
+members: 670
+---
+
+# Community 1
+
+**Members:** 670 nodes
+
+## Members
+- [[TODO Implement actual logic]] - rationale - core\tool_synthesizer.py
+- [[.ExecuteAgent()_1]] - code - grpc_service\python_server.py
+- [[.HealthCheck()_1]] - code - grpc_service\python_server.py
+- [[.ProcessMessage()_1]] - code - grpc_service\python_server.py
+- [[.RetrieveMemory()_1]] - code - grpc_service\python_server.py
+- [[.StoreMemory()_1]] - code - grpc_service\python_server.py
+- [[.StreamEvents()_1]] - code - grpc_service\python_server.py
+- [[.ValidateToken()_1]] - code - grpc_service\python_server.py
+- [[.__init__()_17]] - code - test_security_phd.py
+- [[.__init__()_34]] - code - control\advanced_chrome_controller.py
+- [[.__init__()_35]] - code - control\advanced_control_module.py
+- [[.__init__()_36]] - code - control\computer_control_agent.py
+- [[.__init__()_54]] - code - core\digital_twin.py
+- [[.__init__()_77]] - code - core\messaging_airlock.py
+- [[.__init__()_85]] - code - core\project_goal_compiler.py
+- [[.__init__()_121]] - code - grpc_service\python_server.py
+- [[.__init__()_122]] - code - grpc_service\python_server.py
+- [[.__init__()_201]] - code - vision\visual_intelligence.py
+- [[._analyze_communication()]] - code - core\digital_twin.py
+- [[._calculate_balance()]] - code - core\digital_twin.py
+- [[._calculate_confidence()]] - code - core\project_goal_compiler.py
+- [[._calculate_priority()]] - code - core\project_goal_compiler.py
+- [[._check_experiment_conclusion()]] - code - core\rapid_iteration.py
+- [[._create_verification_checklist()]] - code - core\project_goal_compiler.py
+- [[._deploy_winner()]] - code - core\rapid_iteration.py
+- [[._determine_architecture()]] - code - core\project_goal_compiler.py
+- [[._determine_winner()]] - code - core\rapid_iteration.py
+- [[._estimate_milestone_hours()]] - code - core\project_goal_compiler.py
+- [[._estimate_task_time()]] - code - core\project_goal_compiler.py
+- [[._execute_intelligent_action()]] - code - control\quantum_control.py
+- [[._extract_dependencies()]] - code - core\skill_graph.py
+- [[._extract_effects()]] - code - core\skill_graph.py
+- [[._extract_preconditions()]] - code - core\skill_graph.py
+- [[._extract_profile()]] - code - control\advanced_chrome_controller.py
+- [[._extract_requirements()]] - code - core\project_goal_compiler.py
+- [[._generate_evolutionary_variants()]] - code - core\self_evolving_architecture.py
+- [[._generate_milestones()]] - code - core\project_goal_compiler.py
+- [[._generate_predictions()]] - code - core\digital_twin.py
+- [[._generate_task_description()]] - code - core\project_goal_compiler.py
+- [[._generate_template_code()]] - code - core\tool_synthesizer.py
+- [[._generate_tool_code()]] - code - core\tool_synthesizer.py
+- [[._generate_tool_name()]] - code - core\tool_synthesizer.py
+- [[._generate_tool_steps()]] - code - core\project_goal_compiler.py
+- [[._get_best_variant()]] - code - core\rapid_iteration.py
+- [[._get_milestone_deliverables()]] - code - core\project_goal_compiler.py
+- [[._get_milestone_name()]] - code - core\project_goal_compiler.py
+- [[._get_milestone_tasks()]] - code - core\project_goal_compiler.py
+- [[._get_peak_hours()]] - code - core\digital_twin.py
+- [[._get_phase_by_task()]] - code - core\project_goal_compiler.py
+- [[._get_success_criteria()]] - code - core\project_goal_compiler.py
+- [[._get_tools_for_task()]] - code - core\project_goal_compiler.py
+- [[._handle_compound_requirements()]] - code - core\project_goal_compiler.py
+- [[._identify_stress_triggers()]] - code - core\digital_twin.py
+- [[._infer_type_signature()]] - code - core\skill_graph.py
+- [[._is_task_parallelizable()]] - code - core\project_goal_compiler.py
+- [[._load_orchestrator()]] - code - grpc_service\python_server.py
+- [[._messages_to_prompt()]] - code - core\local_llm_fallback.py
+- [[._parse_skill()]] - code - core\skill_graph.py
+- [[._select_agent()]] - code - core\swarm_coordinator.py
+- [[._select_agent_from_team()]] - code - core\swarm_coordinator.py
+- [[._test_tool()]] - code - core\tool_synthesizer.py
+- [[._validate_code()]] - code - core\tool_synthesizer.py
+- [[.add()]] - code - jarvis_brain.py
+- [[.analyze_colors()]] - code - vision\visual_intelligence.py
+- [[.analyze_screen()]] - code - control\advanced_control_module.py
+- [[.auto_distill_for_batch()]] - code - core\ephemeral_distillation.py
+- [[.build_user_model()]] - code - core\digital_twin.py
+- [[.can_handle()_8]] - code - core\swarm_coordinator.py
+- [[.capture_screen()]] - code - control\computer_control_agent.py
+- [[.cleanup_all()]] - code - core\ephemeral_distillation.py
+- [[.cleanup_model()]] - code - core\ephemeral_distillation.py
+- [[.click()_1]] - code - control\computer_control_agent.py
+- [[.close_current_tab()]] - code - control\advanced_chrome_controller.py
+- [[.compare_screenshots()]] - code - vision\visual_intelligence.py
+- [[.compile()]] - code - core\project_goal_compiler.py
+- [[.create_mcp_server()]] - code - core\tool_synthesizer.py
+- [[.deploy_full_stack_app()]] - code - core\compute_infrastructure.py
+- [[.detect_screen_change()]] - code - control\advanced_chrome_controller.py
+- [[.detect_ui_elements()]] - code - vision\visual_intelligence.py
+- [[.distill_model_for_task()]] - code - core\ephemeral_distillation.py
+- [[.drag()]] - code - control\computer_control_agent.py
+- [[.execute()]] - code - agent_teams_demo.py
+- [[.execute()_1]] - code - agent_teams_demo.py
+- [[.execute()_2]] - code - agent_teams_demo.py
+- [[.execute()_3]] - code - agent_teams_demo.py
+- [[.execute()_5]] - code - control\computer_control_agent.py
+- [[.execute()_8]] - code - core\swarm_coordinator.py
+- [[.execute()_9]] - code - core\swarm_coordinator.py
+- [[.execute()_10]] - code - core\swarm_coordinator.py
+- [[.execute()_11]] - code - core\swarm_coordinator.py
+- [[.execute_team()]] - code - core\swarm_coordinator.py
+- [[.execute_with_retry()_1]] - code - control\phd_computer_control.py
+- [[.execute_workflow()]] - code - control\advanced_chrome_controller.py
+- [[.execute_workflow()_1]] - code - control\advanced_control_module.py
+- [[.extract_text_from_image()]] - code - vision\visual_intelligence.py
+- [[.find_all_chrome_windows()]] - code - control\advanced_chrome_controller.py
+- [[.find_and_click_button()]] - code - control\advanced_control_module.py
+- [[.find_image_on_screen()]] - code - control\computer_control_agent.py
+- [[.find_profile()]] - code - control\advanced_chrome_controller.py
+- [[.find_text_on_screen()]] - code - vision\visual_intelligence.py
+- [[.generate()]] - code - core\local_llm_fallback.py
+- [[.generate_terraform()]] - code - core\compute_infrastructure.py
+- [[.get()]] - code - grpc_service\python_server.py
+- [[.get_action_history()]] - code - control\advanced_chrome_controller.py
+- [[.get_deployment_status()]] - code - core\compute_infrastructure.py
+- [[.get_goal()]] - code - core\goal_manager.py
+- [[.get_mouse_position()]] - code - control\computer_control_agent.py
+- [[.get_performance_trend()]] - code - core\rapid_iteration.py
+- [[.get_pixel_color()]] - code - control\computer_control_agent.py
+- [[.get_skill()]] - code - core\skill_loader.py
+- [[.get_system_stats()]] - code - control\advanced_chrome_controller.py
+- [[.get_tool_registry()]] - code - core\tool_synthesizer.py
+- [[.get_twin_stats()]] - code - core\digital_twin.py
+- [[.get_variant()]] - code - core\rapid_iteration.py
+- [[.hotkey()]] - code - control\computer_control_agent.py
+- [[.list_all()]] - code - core\action_receipt_store.py
+- [[.list_by_status()]] - code - core\action_receipt_store.py
+- [[.load()]] - code - core\autonomous_decision.py
+- [[.load()_1]] - code - core\hyper_automation.py
+- [[.lookup()]] - code - core\action_receipt_store.py
+- [[.monitor_screen_changes()]] - code - control\advanced_control_module.py
+- [[.move_mouse()]] - code - control\computer_control_agent.py
+- [[.mutate_function()]] - code - core\code_mutator.py
+- [[.navigate_to_url()]] - code - control\advanced_chrome_controller.py
+- [[.open_new_tab()]] - code - control\advanced_chrome_controller.py
+- [[.parse_skill()]] - code - core\skill_loader.py
+- [[.press_key()]] - code - control\computer_control_agent.py
+- [[.print_summary()]] - code - test_security_phd.py
+- [[.provision_database()]] - code - core\compute_infrastructure.py
+- [[.read_screen()]] - code - control\advanced_control_module.py
+- [[.record_result()]] - code - core\rapid_iteration.py
+- [[.record_user_feedback()]] - code - core\quality_scorer.py
+- [[.run_all_tests()]] - code - test_security_phd.py
+- [[.scroll()]] - code - control\computer_control_agent.py
+- [[.setup_ssl_certificate()]] - code - core\compute_infrastructure.py
+- [[.smart_chrome_control()]] - code - control\real_quantum_system.py
+- [[.smart_click()]] - code - control\advanced_control_module.py
+- [[.smart_type()]] - code - control\advanced_control_module.py
+- [[.start()_3]] - code - launchers\unified_launcher.py
+- [[.start_mcp_server()]] - code - core\tool_synthesizer.py
+- [[.switch_to_tab()]] - code - control\advanced_chrome_controller.py
+- [[.switch_to_window()]] - code - control\advanced_chrome_controller.py
+- [[.sync_browser_history()]] - code - core\digital_twin.py
+- [[.sync_calendar()]] - code - core\digital_twin.py
+- [[.sync_email()]] - code - core\digital_twin.py
+- [[.sync_smartwatch()]] - code - core\digital_twin.py
+- [[.synthesize_tool()]] - code - core\tool_synthesizer.py
+- [[.take_predictive_action()]] - code - core\digital_twin.py
+- [[.take_screenshot()_1]] - code - control\advanced_chrome_controller.py
+- [[.test_api_security()]] - code - test_security_phd.py
+- [[.test_authentication_system()]] - code - test_security_phd.py
+- [[.test_authorization_rbac()]] - code - test_security_phd.py
+- [[.test_input_validation()]] - code - test_security_phd.py
+- [[.test_jwt_security()]] - code - test_security_phd.py
+- [[.test_permission_escalation()]] - code - test_security_phd.py
+- [[.test_rate_limiting()]] - code - test_security_phd.py
+- [[.test_security_headers()]] - code - test_security_phd.py
+- [[.test_security_monitoring()]] - code - test_security_phd.py
+- [[.test_session_management()]] - code - test_security_phd.py
+- [[.type_text()]] - code - control\computer_control_agent.py
+- [[.update()]] - code - skills\algorithmic-art\templates\generator_template.js
+- [[.use_distilled_model()]] - code - core\ephemeral_distillation.py
+- [[.validate_input()_1]] - code - core\security_system.py
+- [[.validate_message()]] - code - core\messaging_airlock.py
+- [[.verify_logic_statement()]] - code - core\neuro_symbolic_verifier.py
+- [[.write()_1]] - code - core\action_receipt_store.py
+- [[007 Dependency Scanner -- Supply chain and dependency security analyzer.  Anal]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[007 Full Audit -- Comprehensive 6-phase security audit orchestrator.  Executes]] - rationale - skills\007\scripts\full_audit.py
+- [[007 Injection Scanner -- Specialized scanner for injection vulnerabilities.  D]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[007 Quick Scan -- Fast automated security scan of a target directory.  Recursi]] - rationale - skills\007\scripts\quick_scan.py
+- [[007 Score Calculator -- Unified security scoring engine.  Aggregates results f]] - rationale - skills\007\scripts\score_calculator.py
+- [[========================================================== JARVIS - Messaging Ai]] - rationale - core\messaging_airlock.py
+- [[AI Studio Image — Motor de Humanizacao de Prompts (v2 — Enhanced)  Transforma]] - rationale - skills\ai-studio-image\scripts\prompt_engine.py
+- [[Action Receipt Store — immutable execution receipt persistence via SQLite.]] - rationale - core\action_receipt_store.py
+- [[Advanced Chrome Controller with real capabilities     - Multi-profile detection]] - rationale - control\advanced_chrome_controller.py
+- [[Advanced visual intelligence for screen analysis     - OCR text extraction     -]] - rationale - vision\visual_intelligence.py
+- [[AdvancedChromeController]] - code - control\advanced_chrome_controller.py
+- [[AdvancedControlModule]] - code - control\advanced_control_module.py
+- [[Analisa o prompt do usuario e sugere configuracoes ideais para cada parametro.]] - rationale - skills\ai-studio-image\scripts\prompt_engine.py
+- [[Analyze a Dockerfile for supply chain security issues.      Returns]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Analyze a Pipfile for dependency information (best-effort INI-like parsing).]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Analyze a Python requirements.txt file.      Returns         Dict with keys]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Analyze a docker-compose.yml for supply chain issues (best-effort YAML parsing).]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Analyze a package.json for dependency security.      Returns         Dict wi]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Analyze a pyproject.toml for dependency information.      Performs best-effort]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Analyze communication style]] - rationale - core\digital_twin.py
+- [[Analyze dominant colors on screen          Returns             {]] - rationale - vision\visual_intelligence.py
+- [[Append a score entry to the score history JSON file.]] - rationale - skills\007\scripts\score_calculator.py
+- [[Append an audit event to the JSON audit log.      Each event is a JSON object]] - rationale - skills\007\scripts\config.py
+- [[Auto-manutenção arquivar, comprimir, sincronizar.]] - rationale - skills\context-agent\scripts\context_manager.py
+- [[Automatically distill model if batch is large enough          Args]] - rationale - core\ephemeral_distillation.py
+- [[Build a human-readable score report.]] - rationale - skills\007\scripts\score_calculator.py
+- [[Build a human-readable text report grouped by injection type.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Build a human-readable text report.]] - rationale - skills\007\scripts\quick_scan.py
+- [[Build a human-readable text report._1]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Build a registry entry from a SKILL.md file.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Build a structured JSON report.]] - rationale - skills\007\scripts\score_calculator.py
+- [[Build a structured JSON-serializable report dict.]] - rationale - skills\007\scripts\quick_scan.py
+- [[Build a structured JSON-serializable report dict._1]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Build a structured JSON-serializable report dict._2]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Build comprehensive user behavioral model          Returns             User mod]] - rationale - core\digital_twin.py
+- [[Busca full-text no histórico.]] - rationale - skills\context-agent\scripts\search.py
+- [[Busca full-text via SQLite FTS5 no histórico de sessões.]] - rationale - skills\context-agent\scripts\search.py
+- [[Calculate matching confidence score.]] - rationale - core\project_goal_compiler.py
+- [[Calculate priority based on task type and context.]] - rationale - core\project_goal_compiler.py
+- [[Calculate work-life balance score (0-1)]] - rationale - core\digital_twin.py
+- [[Capture screen and return base64 encoded image          Args             region]] - rationale - control\computer_control_agent.py
+- [[Causal Digital Twin Sync for JARVIS v11.0     - EmailSlackCalendar integration]] - rationale - core\digital_twin.py
+- [[CausalDigitalTwin]] - code - core\digital_twin.py
+- [[Check API code for common issues.]] - rationale - skills\api-patterns\scripts\api_validator.py
+- [[Check OpenAPISwagger specification.]] - rationale - skills\api-patterns\scripts\api_validator.py
+- [[Check for overly permissive file modes on Unix-like systems.      Returns a fi]] - rationale - skills\007\scripts\quick_scan.py
+- [[Check if experiment has enough data to conclude]] - rationale - core\rapid_iteration.py
+- [[Check if skill is complete (active) or incomplete.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Check if skill is in .claudeskills.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Chrome window information]] - rationale - control\advanced_chrome_controller.py
+- [[ChromeWindow]] - code - control\advanced_chrome_controller.py
+- [[Cleanup all ephemeral models]] - rationale - core\ephemeral_distillation.py
+- [[Cleanup ephemeral model after task completion          Args             model_i]] - rationale - core\ephemeral_distillation.py
+- [[Click at position          Args             x, y Position (None = current posi]] - rationale - control\computer_control_agent.py
+- [[Collect source files for positive-signal pattern scanning.]] - rationale - skills\007\scripts\score_calculator.py
+- [[Compare two screenshots and find differences          Returns             {]] - rationale - vision\visual_intelligence.py
+- [[Compile a natural language command into a structured execution plan.          Ar]] - rationale - core\project_goal_compiler.py
+- [[CompiledGoal]] - code - core\project_goal_compiler.py
+- [[Comprehensive security testing suite for JARVIS v9.0]] - rationale - test_security_phd.py
+- [[Compute MD5 hash of a file.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Compute a 0-100 score from findings.  Fewer findings = higher score.      Dedu]] - rationale - skills\007\scripts\score_calculator.py
+- [[Compute a quick score starting at 100, deducting by severity.      Returns an]] - rationale - skills\007\scripts\quick_scan.py
+- [[Compute injection security score starting at 100, deducting by severity.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Compute per-domain security scores (0-100).      Returns         Dict mappin]] - rationale - skills\007\scripts\score_calculator.py
+- [[Compute the supply chain security score (0-100).      Combines finding-based d]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Compute the weighted final security score.      Args         domain_scores]] - rationale - skills\007\scripts\config.py
+- [[ComputerControlAgent]] - code - control\computer_control_agent.py
+- [[Configure and return a logger for 007 scripts.      The logger writes to stder]] - rationale - skills\007\scripts\config.py
+- [[Convenience function to compile a goal.      Args         command Natural lang]] - rationale - core\project_goal_compiler.py
+- [[Convert OpenAI-style messages to Llama prompt format]] - rationale - core\local_llm_fallback.py
+- [[Count findings per injection type.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Count findings per pattern name.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Count findings per pattern type.]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Count findings per severity level.]] - rationale - skills\007\scripts\quick_scan.py
+- [[Count findings per severity level._1]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Count findings per severity level._2]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Count how many files contain at least one match for any of the patterns.]] - rationale - skills\007\scripts\score_calculator.py
+- [[Create a standardized finding dict.      Args         file           Absolu]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Create data directories if they do not already exist.]] - rationale - skills\007\scripts\config.py
+- [[Create verification checklist for the completed project.          Args]] - rationale - core\project_goal_compiler.py
+- [[Cria cliente Google GenAI.]] - rationale - skills\ai-studio-image\scripts\generate.py
+- [[Cria tabela FTS5 se não existir.]] - rationale - skills\context-agent\scripts\search.py
+- [[Decide if a file should be included for injection scanning.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Deploy a complete full-stack application          Args             app_name Ap]] - rationale - core\compute_infrastructure.py
+- [[Deploy winning variant]] - rationale - core\rapid_iteration.py
+- [[Detect UI elements (buttons, text fields, etc) on screen          Returns]] - rationale - vision\visual_intelligence.py
+- [[Detect buttons on screen and click the most prominent one          Returns]] - rationale - control\advanced_control_module.py
+- [[Detect if screen changed significantly]] - rationale - control\advanced_chrome_controller.py
+- [[Detect primary language from scripts directory.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Detecta o tipo de enquadramento ideal baseado no prompt.]] - rationale - skills\ai-studio-image\scripts\prompt_engine.py
+- [[Detecta quais projetos foram tocados numa sessão via paths.]] - rationale - skills\context-agent\scripts\project_registry.py
+- [[Determine appropriate architecture based on requirements.          Args]] - rationale - core\project_goal_compiler.py
+- [[Determine experiment winner using statistical test]] - rationale - core\rapid_iteration.py
+- [[Determine if a skill is primarily a producer, consumer, or hybrid.      Uses w]] - rationale - skills\agent-orchestrator\scripts\orchestrate.py
+- [[Determine if task can be parallelized.]] - rationale - core\project_goal_compiler.py
+- [[Determine the orchestration pattern based on skill roles and query.      Rules]] - rationale - skills\agent-orchestrator\scripts\orchestrate.py
+- [[Distill a small model for specific task          Args             task_type Ty]] - rationale - core\ephemeral_distillation.py
+- [[Drag from (x1, y1) to (x2, y2)]] - rationale - control\computer_control_agent.py
+- [[Estimate hours for milestone.]] - rationale - core\project_goal_compiler.py
+- [[Estimate time for task in hours.]] - rationale - core\project_goal_compiler.py
+- [[EvolutionaryVariant]] - code - core\self_evolving_architecture.py
+- [[Execute a task using a team of agents          Args             team_name Name]] - rationale - core\swarm_coordinator.py
+- [[Execute a workflow of actions]] - rationale - control\advanced_chrome_controller.py
+- [[Execute action with automatic retry on failure          Args             action]] - rationale - control\phd_computer_control.py
+- [[Execute all scanners, aggregate results, compute unified score.      Args]] - rationale - skills\007\scripts\score_calculator.py
+- [[Execute computer control command          Commands             - screenshot Ca]] - rationale - control\computer_control_agent.py
+- [[Execute multi-step automation workflow          Args             steps List of]] - rationale - control\advanced_control_module.py
+- [[Execute single action with intelligence]] - rationale - control\quantum_control.py
+- [[Execute task using swarm of agents          Args             task Task descrip]] - rationale - core\swarm_coordinator.py
+- [[Execute the dependency scan and return the report dict.      Also prints the r]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Execute the full 6-phase security audit.      Args         target_path    P]] - rationale - skills\007\scripts\full_audit.py
+- [[Execute the injection vulnerability scan and return the report dict.      Args]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Execute the quick scan and return the JSON-style report dict.      Also prints]] - rationale - skills\007\scripts\quick_scan.py
+- [[ExecutionReceipt]] - code - core\action_receipt_store.py
+- [[Extract YAML frontmatter from a SKILL.md file.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Extract a short redacted snippet around the match position.]] - rationale - skills\007\scripts\quick_scan.py
+- [[Extract a short snippet around the match position.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Extract all text from screenshot using OCR          Returns             {]] - rationale - vision\visual_intelligence.py
+- [[Extract effectsoutcomes from skill content]] - rationale - core\skill_graph.py
+- [[Extract preconditions from skill content]] - rationale - core\skill_graph.py
+- [[Extract profile name from window title]] - rationale - control\advanced_chrome_controller.py
+- [[Extract skill dependencies from content]] - rationale - core\skill_graph.py
+- [[Extract structured requirements from natural language command.          Args]] - rationale - core\project_goal_compiler.py
+- [[Extract trigger keywords from description text using word boundary matching.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Find API-related files.]] - rationale - skills\api-patterns\scripts\api_validator.py
+- [[Find Chrome window by profile name]] - rationale - control\advanced_chrome_controller.py
+- [[Find Shameel's Chrome window]] - rationale - archive\old_modules\demo_real_control.py
+- [[Find all Chrome windows with detailed info]] - rationale - control\advanced_chrome_controller.py
+- [[Find all SKILL.md files in the ecosystem.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Find database schema files.]] - rationale - skills\database-design\scripts\schema_validator.py
+- [[Find image on screen using template matching          Args             template]] - rationale - control\computer_control_agent.py
+- [[Find specific text on screen and return its center position          Args]] - rationale - vision\visual_intelligence.py
+- [[Find text field and type into it          Args             field_name Namelab]] - rationale - control\advanced_control_module.py
+- [[Find textbutton on screen and click it          Args             target Text]] - rationale - control\advanced_control_module.py
+- [[Formata resultados para exibição.]] - rationale - skills\claude-monitor\scripts\api_bench.py
+- [[Full screen analysis text, colors, UI elements          Returns             Co]] - rationale - control\advanced_control_module.py
+- [[Funcao principal de geracao de imagens.      Fluxo     1. Valida e tenta API]] - rationale - skills\ai-studio-image\scripts\generate.py
+- [[Generate Python code for the tool using LLM]] - rationale - core\tool_synthesizer.py
+- [[Generate Terraform Infrastructure as Code          Args             project_nam]] - rationale - core\compute_infrastructure.py
+- [[Generate a comprehensive Markdown audit report.]] - rationale - skills\007\scripts\full_audit.py
+- [[Generate a concise text summary for stdout.]] - rationale - skills\007\scripts\full_audit.py
+- [[Generate a valid Python function name from task description]] - rationale - core\tool_synthesizer.py
+- [[Generate an execution plan based on the pattern.]] - rationale - skills\agent-orchestrator\scripts\orchestrate.py
+- [[Generate an optimized version of a function.         Returns the source code of]] - rationale - core\code_mutator.py
+- [[Generate detailed tool execution steps.          Args             requirements]] - rationale - core\project_goal_compiler.py
+- [[Generate evolutionary variants based on bottlenecks with real mutation]] - rationale - core\self_evolving_architecture.py
+- [[Generate execution milestones from requirements.          Args             requ]] - rationale - core\project_goal_compiler.py
+- [[Generate human-readable task description.]] - rationale - core\project_goal_compiler.py
+- [[Generate predictive actions]] - rationale - core\digital_twin.py
+- [[Generate template code when LLM is unavailable]] - rationale - core\tool_synthesizer.py
+- [[Generate text using local LLM          Args             messages Chat messages]] - rationale - core\local_llm_fallback.py
+- [[Gera imagens usando Gemini (generateContent com modalidade IMAGE).]] - rationale - skills\ai-studio-image\scripts\generate.py
+- [[Gera imagens usando Imagen 4.]] - rationale - skills\ai-studio-image\scripts\generate.py
+- [[Get Pakistan news from Dawn.com RSS.]] - rationale - agents\pk_news_skill.py
+- [[Get RGB color of pixel at position]] - rationale - control\computer_control_agent.py
+- [[Get all synthesized tools]] - rationale - core\tool_synthesizer.py
+- [[Get assigned tools for a task.]] - rationale - core\project_goal_compiler.py
+- [[Get best performing variant based on metric]] - rationale - core\rapid_iteration.py
+- [[Get crypto prices from CoinGecko (free, no key).]] - rationale - agents\price_skill.py
+- [[Get current mouse position]] - rationale - control\computer_control_agent.py
+- [[Get deliverables for milestone.]] - rationale - core\project_goal_compiler.py
+- [[Get digital twin statistics]] - rationale - core\digital_twin.py
+- [[Get info about Chrome tabs]] - rationale - archive\old_modules\demo_real_control.py
+- [[Get live exchange rates — free, no API key.]] - rationale - agents\currency_skill.py
+- [[Get performance trend for a metric          Args             metric Metric nam]] - rationale - core\rapid_iteration.py
+- [[Get phase category for milestone.]] - rationale - core\project_goal_compiler.py
+- [[Get prayer times via Aladhan API (free, no key).]] - rationale - agents\prayer_skill.py
+- [[Get recent action history]] - rationale - control\advanced_chrome_controller.py
+- [[Get set of skill names assigned to a project.]] - rationale - skills\agent-orchestrator\scripts\match_skills.py
+- [[Get specific tasks for a milestone.]] - rationale - core\project_goal_compiler.py
+- [[Get status of all deployments]] - rationale - core\compute_infrastructure.py
+- [[Get success criteria for task.]] - rationale - core\project_goal_compiler.py
+- [[Get system statistics]] - rationale - control\advanced_chrome_controller.py
+- [[Get user-friendly milestone name.]] - rationale - core\project_goal_compiler.py
+- [[Get variant to use (epsilon-greedy selection)          Args             experim]] - rationale - core\rapid_iteration.py
+- [[Get weather via wttr.in (always free, no API key).]] - rationale - agents\weather_skill.py
+- [[Handle compound requirements (e.g., frontend + backend).         Adds implicit]] - rationale - core\project_goal_compiler.py
+- [[Heuristic return True if the dangerous call appears to use only literals.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[INTERMEDIATE LEVEL Computer Control     - AI-powered visual recognition     - OC]] - rationale - control\computer_control_agent.py
+- [[INTERMEDIATE LEVEL Control System     - Smart click (find and click textbuttons]] - rationale - control\advanced_control_module.py
+- [[Identify peak productivity hours]] - rationale - core\digital_twin.py
+- [[Identify what causes stress]] - rationale - core\digital_twin.py
+- [[Indexa conteúdo de uma sessão.     sections {topics texto, decisions]] - rationale - skills\context-agent\scripts\search.py
+- [[Infer inputoutput types from skill name]] - rationale - core\skill_graph.py
+- [[Initialize the compiler with pattern rules.]] - rationale - core\project_goal_compiler.py
+- [[JARVIS v9.0 - gRPC Python Server Secure gRPC bridge with JWTRBAC enforcement.]] - rationale - grpc_service\python_server.py
+- [[JarvisServicer]] - code - grpc_service\python_server.py
+- [[Lazy-loading proxy for main orchestrator.]] - rationale - grpc_service\python_server.py
+- [[Load automation state]] - rationale - core\hyper_automation.py
+- [[Load existing registry.json.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Load project assignments.]] - rationale - skills\agent-orchestrator\scripts\match_skills.py
+- [[Load registry as name-skill dict.]] - rationale - skills\agent-orchestrator\scripts\orchestrate.py
+- [[Load skills from registry.json.]] - rationale - skills\agent-orchestrator\scripts\match_skills.py
+- [[Load stored hashes from registry_hashes.json.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Main scan function.      With hash caching     1. Find all SKILL.md files]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Map a query to capability categories using word boundary matching.]] - rationale - skills\agent-orchestrator\scripts\match_skills.py
+- [[Map description keywords to capability tags using word boundary matching.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Match a query against all registered skills.      Returns top N skills with sc]] - rationale - skills\agent-orchestrator\scripts\match_skills.py
+- [[MessagingAirlock]] - code - core\messaging_airlock.py
+- [[Monitor screen for changes over duration          Args             duration Se]] - rationale - control\advanced_control_module.py
+- [[Move mouse to position]] - rationale - control\computer_control_agent.py
+- [[Navigate to URL with verification]] - rationale - control\advanced_chrome_controller.py
+- [[Normalize text to a set of lowercase words.]] - rationale - skills\agent-orchestrator\scripts\match_skills.py
+- [[Open new tab with verification]] - rationale - control\advanced_chrome_controller.py
+- [[OrchestratorProxy]] - code - grpc_service\python_server.py
+- [[Parse SKILL.md frontmatter]] - rationale - core\skill_loader.py
+- [[Parse skill file with enhanced extraction]] - rationale - core\skill_graph.py
+- [[Phase 1 Surface Mapping -- inventory files, entry points, dependencies.]] - rationale - skills\007\scripts\full_audit.py
+- [[Phase 2 Threat Modeling Hints -- identify components for STRIDE analysis.]] - rationale - skills\007\scripts\full_audit.py
+- [[Phase 3 Security Checklist -- compile all scanner results.]] - rationale - skills\007\scripts\full_audit.py
+- [[Phase 4 Red Team Scenarios -- generate attack scenarios from findings.]] - rationale - skills\007\scripts\full_audit.py
+- [[Phase 5 Blue Team Recommendations -- hardening advice per finding type.]] - rationale - skills\007\scripts\full_audit.py
+- [[Phase 6 Verdict -- compute score and emit final verdict.]] - rationale - skills\007\scripts\full_audit.py
+- [[Press a key (e.g., 'enter', 'esc', 'tab')]] - rationale - control\computer_control_agent.py
+- [[Press hotkey combination (e.g., 'ctrl', 'c')]] - rationale - control\computer_control_agent.py
+- [[Print a formatted status table.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Print comprehensive test summary]] - rationale - test_security_phd.py
+- [[Project Goal Compiler Module v2 Transforms voice commands and natural language i]] - rationale - core\project_goal_compiler.py
+- [[ProjectGoalCompiler]] - code - core\project_goal_compiler.py
+- [[Provision a database          Args             db_type postgres, mysql, mongod]] - rationale - core\compute_infrastructure.py
+- [[Read all text currently visible on screen          Returns             {]] - rationale - control\advanced_control_module.py
+- [[ReceiptStatus]] - code - core\action_receipt_store.py
+- [[Reconstrói índice a partir dos arquivos de sessão.]] - rationale - skills\context-agent\scripts\search.py
+- [[Record experiment result          Args             experiment_id Experiment ID]] - rationale - core\rapid_iteration.py
+- [[Record explicit user feedback          Args             request_id Request ide]] - rationale - core\quality_scorer.py
+- [[Recursively find all dependency files under the target directory.      Respect]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Remove duplicate findings by (file, line, pattern) tuple.]] - rationale - skills\007\scripts\score_calculator.py
+- [[Remove skill directories that don't have valid parseable skills]] - rationale - scripts\cleanup_skills.py
+- [[Render a simple ASCII progress bar.]] - rationale - skills\007\scripts\score_calculator.py
+- [[Resolve alias de formato para o nome canonico.]] - rationale - skills\ai-studio-image\scripts\prompt_engine.py
+- [[Resultado de busca no histórico de sessões.]] - rationale - skills\context-agent\scripts\models.py
+- [[Retorna conexão SQLite com FTS5.]] - rationale - skills\context-agent\scripts\search.py
+- [[Return True if filepath looks like a test or fixture file.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Return True if line contains f-string braces, .format(), or % formatting.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Return True if line references a known user-input source.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Return True if directory name should be skipped.]] - rationale - skills\007\scripts\quick_scan.py
+- [[Return True if the file extension is in the SCANNABLE_EXTENSIONS set.]] - rationale - skills\007\scripts\quick_scan.py
+- [[Return True if the line is a single-line comment.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Return a redacted version of text, keeping only the first few chars.]] - rationale - skills\007\scripts\quick_scan.py
+- [[Return current UTC timestamp in ISO 8601 format.      Example         '2026-]] - rationale - skills\007\scripts\config.py
+- [[Return the next-lower severity level.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Return the top n most critical findings, sorted by severity weight.]] - rationale - skills\007\scripts\quick_scan.py
+- [[Return the verdict dict that matches the given score (0-100).      Args]] - rationale - skills\007\scripts\config.py
+- [[Roda o benchmark completo.]] - rationale - skills\claude-monitor\scripts\api_bench.py
+- [[Rough heuristic check if line_idx falls inside a Python docstring.      Count]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Route a dependency file to its appropriate analyzer.      Returns         An]] - rationale - skills\007\scripts\scanners\dependency_scanner.py
+- [[Run comprehensive security test suite]] - rationale - test_security_phd.py
+- [[Run scan if registry doesn't exist.]] - rationale - skills\agent-orchestrator\scripts\match_skills.py
+- [[Salva imagem e metadados no disco.]] - rationale - skills\ai-studio-image\scripts\generate.py
+- [[Save hashes to registry_hashes.json.]] - rationale - skills\agent-orchestrator\scripts\scan_registry.py
+- [[Scan a single file for injection vulnerabilities.      Returns a list of findi]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Scan a single file for secrets and dangerous patterns.      Returns a list of]] - rationale - skills\007\scripts\quick_scan.py
+- [[Score a skill's relevance to a query.      Returns dict with score, reasons, a]] - rationale - skills\agent-orchestrator\scripts\match_skills.py
+- [[Score based on presence of positive patterns.      If no source files exist, r]] - rationale - skills\007\scripts\score_calculator.py
+- [[Scroll mouse wheel          Args             clicks Positive = up, negative =]] - rationale - control\computer_control_agent.py
+- [[SearchResult]] - code - skills\context-agent\scripts\models.py
+- [[SecurityTestSuite]] - code - test_security_phd.py
+- [[Seleciona modificadores de camada baseado no nivel de humanizacao.]] - rationale - skills\ai-studio-image\scripts\prompt_engine.py
+- [[Select next agent based on state]] - rationale - core\swarm_coordinator.py
+- [[Select next agent based on state from a specific team]] - rationale - core\swarm_coordinator.py
+- [[Setup SSL certificate using Let's Encrypt          Args             domain Dom]] - rationale - core\compute_infrastructure.py
+- [[Smart Chrome control with user profile awareness]] - rationale - control\real_quantum_system.py
+- [[Structured representation of a compiled project goal.]] - rationale - core\project_goal_compiler.py
+- [[Switch to Chrome and perform action]] - rationale - archive\old_modules\demo_real_control.py
+- [[Switch to Chrome window]] - rationale - control\advanced_chrome_controller.py
+- [[Switch to specific tab (1-8)]] - rationale - control\advanced_chrome_controller.py
+- [[Sync browser history          Returns             Sync result]] - rationale - core\digital_twin.py
+- [[Sync calendar data          Args             calendar_provider google, outlook]] - rationale - core\digital_twin.py
+- [[Sync email data          Args             email_provider gmail, outlook, etc.]] - rationale - core\digital_twin.py
+- [[Sync smartwatch data          Args             watch_type fitbit, apple_watch,]] - rationale - core\digital_twin.py
+- [[Synthesize a new tool for a specific task          Args             task_descri]] - rationale - core\tool_synthesizer.py
+- [[Tab information extracted from screen]] - rationale - control\advanced_chrome_controller.py
+- [[TabInfo]] - code - control\advanced_chrome_controller.py
+- [[Take action based on prediction          Args             prediction Predictio]] - rationale - core\digital_twin.py
+- [[Take screenshot and convert to OpenCV format]] - rationale - control\advanced_chrome_controller.py
+- [[Test API security measures]] - rationale - test_security_phd.py
+- [[Test JWT authentication system]] - rationale - test_security_phd.py
+- [[Test JWT security features]] - rationale - test_security_phd.py
+- [[Test Role-Based Access Control]] - rationale - test_security_phd.py
+- [[Test comprehensive input validation]] - rationale - test_security_phd.py
+- [[Test comprehensive state management in main.py __init__ method]] - rationale - test_enhanced_state_management.py
+- [[Test for permission escalation vulnerabilities]] - rationale - test_security_phd.py
+- [[Test rate limiting implementation]] - rationale - test_security_phd.py
+- [[Test security headers]] - rationale - test_security_phd.py
+- [[Test security monitoring and logging]] - rationale - test_security_phd.py
+- [[Test session management and logout]] - rationale - test_security_phd.py
+- [[Test the generated tool with sample input]] - rationale - core\tool_synthesizer.py
+- [[Testa latência TCP para um hostport.]] - rationale - skills\claude-monitor\scripts\api_bench.py
+- [[Testa tempo do handshake TLS.]] - rationale - skills\claude-monitor\scripts\api_bench.py
+- [[Transforma o prompt do usuario em um prompt humanizado completo.      Usa a ab]] - rationale - skills\ai-studio-image\scripts\prompt_engine.py
+- [[Transforms natural language commands into structured execution plans.      Input]] - rationale - core\project_goal_compiler.py
+- [[Type text with keyboard]] - rationale - control\computer_control_agent.py
+- [[Use a distilled model for inference          Args             model_id Distill]] - rationale - core\ephemeral_distillation.py
+- [[Validate Prisma schema file.]] - rationale - skills\database-design\scripts\schema_validator.py
+- [[Validate Python code syntax]] - rationale - core\tool_synthesizer.py
+- [[Validate incoming message.         Returns { 'allowed' bool, 'risk_score' int]] - rationale - core\messaging_airlock.py
+- [[Validate input against known attack patterns_1]] - rationale - core\security_system.py
+- [[Verifica dependencias necessarias.]] - rationale - skills\ai-studio-image\scripts\generate.py
+- [[Verifica interfaces de rede ativas.]] - rationale - skills\claude-monitor\scripts\api_bench.py
+- [[Verify logical statement using Z3          Args             statement Logic st]] - rationale - core\neuro_symbolic_verifier.py
+- [[VisualIntelligence]] - code - vision\visual_intelligence.py
+- [[Walk target recursively and return files for injection scanning.]] - rationale - skills\007\scripts\scanners\injection_scanner.py
+- [[Walk target recursively and return scannable file paths.      Respects SKIP_]] - rationale - skills\007\scripts\quick_scan.py
+- [[Wrap a synthesized tool in an MCP server          Args             tool_id ID]] - rationale - core\tool_synthesizer.py
+- [[_bar()]] - code - skills\007\scripts\score_calculator.py
+- [[_check_dependencies()]] - code - skills\ai-studio-image\scripts\generate.py
+- [[_check_permissions()]] - code - skills\007\scripts\quick_scan.py
+- [[_collect_source_files()]] - code - skills\007\scripts\score_calculator.py
+- [[_count_pattern_matches()]] - code - skills\007\scripts\score_calculator.py
+- [[_deduplicate_findings()]] - code - skills\007\scripts\score_calculator.py
+- [[_detect_shot_type()]] - code - skills\ai-studio-image\scripts\prompt_engine.py
+- [[_execute_function_in_subprocess()]] - code - core\tool_synthesizer.py
+- [[_execute_function_with_guard()]] - code - core\tool_synthesizer.py
+- [[_fast_response()]] - code - main.py
+- [[_generate_markdown_report()]] - code - skills\007\scripts\full_audit.py
+- [[_generate_text_summary()]] - code - skills\007\scripts\full_audit.py
+- [[_get_client()]] - code - skills\ai-studio-image\scripts\generate.py
+- [[_get_connection()]] - code - skills\context-agent\scripts\search.py
+- [[_get_layers_for_level()]] - code - skills\ai-studio-image\scripts\prompt_engine.py
+- [[_has_user_input()]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[_has_variable_interpolation()]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[_is_ast_safe()]] - code - core\tool_synthesizer.py
+- [[_is_comment_line()]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[_is_in_docstring()]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[_is_scannable()]] - code - skills\007\scripts\quick_scan.py
+- [[_is_test_file()]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[_lower_severity()]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[_make_finding()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[_only_hardcoded_string()]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[_phase1_surface_mapping()]] - code - skills\007\scripts\full_audit.py
+- [[_phase2_threat_modeling_hints()]] - code - skills\007\scripts\full_audit.py
+- [[_phase3_security_checklist()]] - code - skills\007\scripts\full_audit.py
+- [[_phase4_red_team_scenarios()]] - code - skills\007\scripts\full_audit.py
+- [[_phase5_blue_team_recommendations()]] - code - skills\007\scripts\full_audit.py
+- [[_phase6_verdict()]] - code - skills\007\scripts\full_audit.py
+- [[_redact()]] - code - skills\007\scripts\quick_scan.py
+- [[_row_to_receipt()]] - code - core\action_receipt_store.py
+- [[_save_score_history()]] - code - skills\007\scripts\score_calculator.py
+- [[_score_from_findings()]] - code - skills\007\scripts\score_calculator.py
+- [[_score_from_positive_signals()]] - code - skills\007\scripts\score_calculator.py
+- [[_should_scan_file()]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[_should_skip_dir()]] - code - skills\007\scripts\quick_scan.py
+- [[_snippet()]] - code - skills\007\scripts\quick_scan.py
+- [[_snippet()_1]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[action_receipt_store.py]] - code - core\action_receipt_store.py
+- [[add_type_signatures.py]] - code - add_type_signatures.py
+- [[advanced_chrome_controller.py]] - code - control\advanced_chrome_controller.py
+- [[advanced_control_module.py]] - code - control\advanced_control_module.py
+- [[aggregate_by_injection_type()]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[aggregate_by_pattern()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[aggregate_by_pattern()_1]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[aggregate_by_severity()]] - code - skills\007\scripts\quick_scan.py
+- [[aggregate_by_severity()_1]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[aggregate_by_severity()_2]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[analyze_docker_compose()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[analyze_dockerfile()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[analyze_package_json()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[analyze_pipfile()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[analyze_prompt()]] - code - skills\ai-studio-image\scripts\prompt_engine.py
+- [[analyze_pyproject_toml()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[analyze_requirements_txt()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[api_bench.py]] - code - skills\claude-monitor\scripts\api_bench.py
+- [[api_validator.py]] - code - skills\api-patterns\scripts\api_validator.py
+- [[assess_status()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[build_json_report()]] - code - skills\007\scripts\quick_scan.py
+- [[build_json_report()_1]] - code - skills\007\scripts\score_calculator.py
+- [[build_json_report()_2]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[build_json_report()_3]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[build_skill_entry()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[calculate_weighted_score()]] - code - skills\007\scripts\config.py
+- [[check_api_code()]] - code - skills\api-patterns\scripts\api_validator.py
+- [[check_network_interfaces()]] - code - skills\claude-monitor\scripts\api_bench.py
+- [[check_openapi_spec()]] - code - skills\api-patterns\scripts\api_validator.py
+- [[classify_pattern()]] - code - skills\agent-orchestrator\scripts\orchestrate.py
+- [[cleanup_non_working_skills()]] - code - scripts\cleanup_skills.py
+- [[cleanup_skills.py]] - code - scripts\cleanup_skills.py
+- [[cmd_maintain()]] - code - skills\context-agent\scripts\context_manager.py
+- [[collect_files()]] - code - skills\007\scripts\quick_scan.py
+- [[collect_files()_1]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[compile_goal()]] - code - core\project_goal_compiler.py
+- [[compute_domain_scores()]] - code - skills\007\scripts\score_calculator.py
+- [[compute_infrastructure.py]] - code - core\compute_infrastructure.py
+- [[compute_score()]] - code - skills\007\scripts\quick_scan.py
+- [[compute_score()_1]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[compute_supply_chain_score()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[computer_control_agent.py]] - code - control\computer_control_agent.py
+- [[config.py]] - code - skills\007\scripts\config.py
+- [[currency_skill.py]] - code - agents\currency_skill.py
+- [[demo_real_control.py]] - code - archive\old_modules\demo_real_control.py
+- [[dependency_scanner.py]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[detect_language()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[detect_projects_from_session()]] - code - skills\context-agent\scripts\project_registry.py
+- [[digital_twin.py]] - code - core\digital_twin.py
+- [[discover_dependency_files()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[ensure_directories()]] - code - skills\007\scripts\config.py
+- [[ensure_registry()]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[ephemeral_distillation.py]] - code - core\ephemeral_distillation.py
+- [[extract_capabilities()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[extract_triggers()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[find_api_files()]] - code - skills\api-patterns\scripts\api_validator.py
+- [[find_schema_files()]] - code - skills\database-design\scripts\schema_validator.py
+- [[find_shameel_chrome()]] - code - archive\old_modules\demo_real_control.py
+- [[find_skill_files()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[format_results()]] - code - skills\claude-monitor\scripts\api_bench.py
+- [[format_text_report()]] - code - skills\007\scripts\quick_scan.py
+- [[format_text_report()_1]] - code - skills\007\scripts\score_calculator.py
+- [[format_text_report()_2]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[format_text_report()_3]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[full_audit.py]] - code - skills\007\scripts\full_audit.py
+- [[generate()_1]] - code - skills\ai-studio-image\scripts\generate.py
+- [[generate.py]] - code - skills\ai-studio-image\scripts\generate.py
+- [[generate_plan()]] - code - skills\agent-orchestrator\scripts\orchestrate.py
+- [[generate_with_gemini()]] - code - skills\ai-studio-image\scripts\generate.py
+- [[generate_with_imagen()]] - code - skills\ai-studio-image\scripts\generate.py
+- [[get_chrome_tabs_info()]] - code - archive\old_modules\demo_real_control.py
+- [[get_project_skills()]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[get_skill_role()]] - code - skills\agent-orchestrator\scripts\orchestrate.py
+- [[get_timestamp()]] - code - skills\007\scripts\config.py
+- [[get_verdict()]] - code - skills\007\scripts\config.py
+- [[humanize_prompt()]] - code - skills\ai-studio-image\scripts\prompt_engine.py
+- [[index_session()]] - code - skills\context-agent\scripts\search.py
+- [[init_search_db()]] - code - skills\context-agent\scripts\search.py
+- [[injection_scanner.py]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[is_registered()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[load_hashes()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[load_projects()]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[load_registry()]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[load_registry()_1]] - code - skills\agent-orchestrator\scripts\orchestrate.py
+- [[load_registry()_2]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[log_audit_event()]] - code - skills\007\scripts\config.py
+- [[main()_4]] - code - test_enhanced_state_management.py
+- [[main()_6]] - code - test_security_phd.py
+- [[main()_10]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[main()_11]] - code - skills\agent-orchestrator\scripts\orchestrate.py
+- [[main()_12]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[main()_13]] - code - skills\stability-ai\scripts\generate.py
+- [[main()_14]] - code - skills\ai-studio-image\scripts\prompt_engine.py
+- [[main()_16]] - code - skills\api-patterns\scripts\api_validator.py
+- [[main()_19]] - code - skills\claude-monitor\scripts\api_bench.py
+- [[main()_24]] - code - skills\database-design\scripts\schema_validator.py
+- [[match()]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[match_skills.py]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[md5_file()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[messaging_airlock.py]] - code - core\messaging_airlock.py
+- [[normalize()]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[orchestrate.py]] - code - skills\agent-orchestrator\scripts\orchestrate.py
+- [[parse_yaml_frontmatter()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[pk_news_skill.py]] - code - agents\pk_news_skill.py
+- [[prayer_skill.py]] - code - agents\prayer_skill.py
+- [[price_skill.py]] - code - agents\price_skill.py
+- [[print_status()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[project_goal_compiler.py]] - code - core\project_goal_compiler.py
+- [[prompt_engine.py]] - code - skills\ai-studio-image\scripts\prompt_engine.py
+- [[python_server.py]] - code - grpc_service\python_server.py
+- [[query_to_capabilities()]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[quick_scan.py]] - code - skills\007\scripts\quick_scan.py
+- [[reindex_all()]] - code - skills\context-agent\scripts\search.py
+- [[resolve_format()]] - code - skills\ai-studio-image\scripts\prompt_engine.py
+- [[run()]] - code - agents\currency_skill.py
+- [[run()_1]] - code - agents\pk_news_skill.py
+- [[run()_2]] - code - agents\prayer_skill.py
+- [[run()_3]] - code - agents\price_skill.py
+- [[run()_4]] - code - agents\weather_skill.py
+- [[run_audit()]] - code - skills\007\scripts\full_audit.py
+- [[run_benchmark()]] - code - skills\claude-monitor\scripts\api_bench.py
+- [[run_scan()]] - code - skills\007\scripts\quick_scan.py
+- [[run_scan()_1]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[run_scan()_2]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[run_score()]] - code - skills\007\scripts\score_calculator.py
+- [[sanitize_request_data()]] - code - grpc_service\python_server.py
+- [[save_hashes()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[save_image()]] - code - skills\ai-studio-image\scripts\generate.py
+- [[save_registry()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[scan()]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[scan_dependency_file()]] - code - skills\007\scripts\scanners\dependency_scanner.py
+- [[scan_file()]] - code - skills\007\scripts\quick_scan.py
+- [[scan_file()_1]] - code - skills\007\scripts\scanners\injection_scanner.py
+- [[scan_registry.py]] - code - skills\agent-orchestrator\scripts\scan_registry.py
+- [[schema_validator.py]] - code - skills\database-design\scripts\schema_validator.py
+- [[score_calculator.py]] - code - skills\007\scripts\score_calculator.py
+- [[score_skill()]] - code - skills\agent-orchestrator\scripts\match_skills.py
+- [[search()]] - code - skills\context-agent\scripts\search.py
+- [[search.py]] - code - skills\context-agent\scripts\search.py
+- [[serve()]] - code - grpc_service\python_server.py
+- [[setup_logging()]] - code - skills\007\scripts\config.py
+- [[str]] - code
+- [[switch_and_control()]] - code - archive\old_modules\demo_real_control.py
+- [[test_digital_twin()]] - code - core\digital_twin.py
+- [[test_dns()]] - code - skills\claude-monitor\scripts\api_bench.py
+- [[test_emd()]] - code - core\ephemeral_distillation.py
+- [[test_enhanced_state_management()]] - code - test_enhanced_state_management.py
+- [[test_enhanced_state_management.py]] - code - test_enhanced_state_management.py
+- [[test_gci()]] - code - core\compute_infrastructure.py
+- [[test_security_phd.py]] - code - test_security_phd.py
+- [[test_tcp_latency()]] - code - skills\claude-monitor\scripts\api_bench.py
+- [[test_tls_handshake()]] - code - skills\claude-monitor\scripts\api_bench.py
+- [[test_tool_synthesizer()]] - code - core\tool_synthesizer.py
+- [[tool_synthesizer.py]] - code - core\tool_synthesizer.py
+- [[top_critical_findings()]] - code - skills\007\scripts\quick_scan.py
+- [[update_skill()]] - code - add_type_signatures.py
+- [[validate_auth_token()]] - code - grpc_service\python_server.py
+- [[validate_prisma_schema()]] - code - skills\database-design\scripts\schema_validator.py
+- [[visual_intelligence.py]] - code - vision\visual_intelligence.py
+- [[weather_skill.py]] - code - agents\weather_skill.py
+
+## Live Query (requires Dataview plugin)
+
+```dataview
+TABLE source_file, type FROM #community/Community_1
+SORT file.name ASC
+```
+
+## Connections to other communities
+- 210 edges to [[_COMMUNITY_Community 0]]
+- 147 edges to [[_COMMUNITY_Community 2]]
+- 82 edges to [[_COMMUNITY_Community 28]]
+- 44 edges to [[_COMMUNITY_Community 7]]
+- 43 edges to [[_COMMUNITY_Community 13]]
+- 39 edges to [[_COMMUNITY_Community 16]]
+- 38 edges to [[_COMMUNITY_Community 4]]
+- 28 edges to [[_COMMUNITY_Community 9]]
+- 27 edges to [[_COMMUNITY_Community 8]]
+- 27 edges to [[_COMMUNITY_Community 11]]
+- 25 edges to [[_COMMUNITY_Community 18]]
+- 25 edges to [[_COMMUNITY_Community 20]]
+- 25 edges to [[_COMMUNITY_Community 24]]
+- 22 edges to [[_COMMUNITY_Community 54]]
+- 21 edges to [[_COMMUNITY_Community 5]]
+- 21 edges to [[_COMMUNITY_Community 23]]
+- 19 edges to [[_COMMUNITY_Community 32]]
+- 19 edges to [[_COMMUNITY_Community 19]]
+- 17 edges to [[_COMMUNITY_Community 15]]
+- 17 edges to [[_COMMUNITY_Community 25]]
+- 15 edges to [[_COMMUNITY_Community 10]]
+- 15 edges to [[_COMMUNITY_Community 3]]
+- 10 edges to [[_COMMUNITY_Community 12]]
+- 9 edges to [[_COMMUNITY_Community 17]]
+- 9 edges to [[_COMMUNITY_Community 37]]
+- 8 edges to [[_COMMUNITY_Community 21]]
+- 8 edges to [[_COMMUNITY_Community 14]]
+- 6 edges to [[_COMMUNITY_Community 43]]
+- 5 edges to [[_COMMUNITY_Community 6]]
+- 5 edges to [[_COMMUNITY_Community 40]]
+- 5 edges to [[_COMMUNITY_Community 34]]
+- 4 edges to [[_COMMUNITY_Community 38]]
+- 4 edges to [[_COMMUNITY_Community 56]]
+- 4 edges to [[_COMMUNITY_Community 47]]
+- 3 edges to [[_COMMUNITY_Community 42]]
+- 3 edges to [[_COMMUNITY_Community 33]]
+- 3 edges to [[_COMMUNITY_Community 29]]
+- 3 edges to [[_COMMUNITY_Community 63]]
+- 3 edges to [[_COMMUNITY_Community 55]]
+- 3 edges to [[_COMMUNITY_Community 36]]
+- 2 edges to [[_COMMUNITY_Community 66]]
+- 2 edges to [[_COMMUNITY_Community 231]]
+- 2 edges to [[_COMMUNITY_Community 59]]
+- 2 edges to [[_COMMUNITY_Community 35]]
+- 2 edges to [[_COMMUNITY_Community 44]]
+- 2 edges to [[_COMMUNITY_Community 82]]
+- 2 edges to [[_COMMUNITY_Community 73]]
+- 2 edges to [[_COMMUNITY_Community 53]]
+- 1 edge to [[_COMMUNITY_Community 57]]
+- 1 edge to [[_COMMUNITY_Community 242]]
+- 1 edge to [[_COMMUNITY_Community 261]]
+- 1 edge to [[_COMMUNITY_Community 45]]
+- 1 edge to [[_COMMUNITY_Community 72]]
+- 1 edge to [[_COMMUNITY_Community 46]]
+- 1 edge to [[_COMMUNITY_Community 31]]
+- 1 edge to [[_COMMUNITY_Community 26]]
+- 1 edge to [[_COMMUNITY_Community 94]]
+- 1 edge to [[_COMMUNITY_Community 95]]
+- 1 edge to [[_COMMUNITY_Community 100]]
+- 1 edge to [[_COMMUNITY_Community 117]]
+- 1 edge to [[_COMMUNITY_Community 131]]
+- 1 edge to [[_COMMUNITY_Community 135]]
+- 1 edge to [[_COMMUNITY_Community 141]]
+- 1 edge to [[_COMMUNITY_Community 147]]
+- 1 edge to [[_COMMUNITY_Community 169]]
+- 1 edge to [[_COMMUNITY_Community 175]]
+- 1 edge to [[_COMMUNITY_Community 196]]
+- 1 edge to [[_COMMUNITY_Community 216]]
+- 1 edge to [[_COMMUNITY_Community 41]]
+- 1 edge to [[_COMMUNITY_Community 91]]
+- 1 edge to [[_COMMUNITY_Community 74]]
+- 1 edge to [[_COMMUNITY_Community 69]]
+- 1 edge to [[_COMMUNITY_Community 52]]
+- 1 edge to [[_COMMUNITY_Community 248]]
+- 1 edge to [[_COMMUNITY_Community 235]]
+- 1 edge to [[_COMMUNITY_Community 249]]
+
+## Top bridge nodes
+- [[str]] - degree 341, connects to 56 communities
+- [[.get()]] - degree 314, connects to 26 communities
+- [[.write()_1]] - degree 68, connects to 19 communities
+- [[match()]] - degree 46, connects to 12 communities
+- [[.add()]] - degree 26, connects to 8 communities

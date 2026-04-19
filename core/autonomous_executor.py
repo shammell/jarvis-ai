@@ -11,6 +11,12 @@ from datetime import datetime
 from enum import Enum
 import json
 
+from core.honest_execution_policy import HonestExecutionPolicy, RiskClass
+from core.action_receipt_store import ActionReceiptStore
+from core.project_goal_compiler import ProjectGoalCompiler
+from core.coding_execution_router import CodingExecutionRouter
+from core.intent_envelope import create_envelope, Channel
+
 logger = logging.getLogger(__name__)
 
 
@@ -35,6 +41,10 @@ class AutonomousExecutor:
     def __init__(self, autonomous_decision, skill_loader=None):
         self.autonomous_decision = autonomous_decision
         self.skill_loader = skill_loader
+        self.honest_policy = HonestExecutionPolicy()
+        self.receipt_store = ActionReceiptStore()
+        self.goal_compiler = ProjectGoalCompiler()
+        self.execution_router = CodingExecutionRouter()
 
         # Task tracking
         self.current_goal = None
@@ -72,11 +82,124 @@ class AutonomousExecutor:
         """
         logger.info(f"🎯 Starting autonomous execution: {goal}")
 
+        envelope = create_envelope(goal, channel=Channel.VOICE, context=context or {})
+        policy_decision = self.honest_policy.evaluate(goal, context or {})
+
+        if policy_decision.risk_class == RiskClass.BLOCKED:
+            blocked_receipt = self.receipt_store.write(
+                action=envelope.original_text,
+                interpreted_plan="",
+                executed_steps=[],
+                actor="autonomous_executor",
+                channel=envelope.channel.value,
+                provider=None,
+                blocked=True,
+                blocked_reason=policy_decision.reason,
+            )
+            return {
+                "success": False,
+                "goal": goal,
+                "error": "blocked_by_honest_policy",
+                "reason": policy_decision.reason,
+                "request_id": blocked_receipt.request_id,
+            }
+
+        compiled_goal = self.goal_compiler.compile(goal)
+        routed_plan = self.execution_router.route_plan({
+            "original_command": goal,
+            "intent": "autonomous_goal",
+            "requirements": compiled_goal.requirements,
+            "architecture": compiled_goal.architecture,
+            "milestones": compiled_goal.milestones,
+            "tool_steps": compiled_goal.tool_steps,
+            "verification_checklist": compiled_goal.verification_checklist,
+        })
+
         self.current_goal = {
             "description": goal,
             "context": context or {},
             "started_at": datetime.now().isoformat(),
-            "status": TaskStatus.IN_PROGRESS.value
+            "status": TaskStatus.IN_PROGRESS.value,
+            "policy": {
+                "risk_class": policy_decision.risk_class.value,
+                "risk_score": policy_decision.risk_score,
+                "requires_approval": policy_decision.requires_approval,
+            },
+            "routing_summary": {
+                "milestones": list(routed_plan.keys()),
+                "total_route_decisions": sum(len(v) for v in routed_plan.values()),
+            },
+            "request_id": envelope.request_id,
+            "correlation_id": envelope.correlation_id,
+        }
+        executed_steps: List[str] = []
+        if compiled_goal and getattr(compiled_goal, "tool_steps", None):
+            executed_steps = [str(step.get("task", "")) for step in compiled_goal.tool_steps if isinstance(step, dict)]
+        if not executed_steps:
+            executed_steps = [f"goal:{goal}"]
+
+        start_receipt = self.receipt_store.write(
+            action=envelope.original_text,
+            interpreted_plan=f"compiled:{len(executed_steps)}_steps",
+            executed_steps=executed_steps,
+            actor="autonomous_executor",
+            channel=envelope.channel.value,
+            provider="claude-code",
+            blocked=False,
+        )
+
+        if policy_decision.requires_approval and not self.on_need_approval:
+            blocked_receipt = self.receipt_store.write(
+                action=envelope.original_text,
+                interpreted_plan="approval-required",
+                executed_steps=[],
+                actor="autonomous_executor",
+                channel=envelope.channel.value,
+                provider="claude-code",
+                blocked=True,
+                blocked_reason="Approval required but no approval callback configured",
+            )
+            return {
+                "success": False,
+                "goal": goal,
+                "error": "approval_required",
+                "reason": "Approval callback not configured",
+                "request_id": blocked_receipt.request_id,
+            }
+
+        if policy_decision.requires_approval and self.on_need_approval:
+            approved = await self.on_need_approval(
+                {"description": goal, "type": "goal_execution", "context": context or {}},
+                {
+                    "decision": "ask_user",
+                    "reasoning": policy_decision.reason,
+                    "risk_score": policy_decision.risk_score,
+                    "policy_reference": policy_decision.policy_reference,
+                },
+            )
+            if not approved:
+                blocked_receipt = self.receipt_store.write(
+                    action=envelope.original_text,
+                    interpreted_plan="approval-rejected",
+                    executed_steps=[],
+                    actor="autonomous_executor",
+                    channel=envelope.channel.value,
+                    provider="claude-code",
+                    blocked=True,
+                    blocked_reason="User rejected approval request",
+                )
+                return {
+                    "success": False,
+                    "goal": goal,
+                    "error": "approval_rejected",
+                    "reason": "User rejected approval request",
+                    "request_id": blocked_receipt.request_id,
+                }
+        entry_receipt_id = start_receipt.request_id
+
+        self._current_receipt_context = {
+            "request_id": entry_receipt_id,
+            "correlation_id": envelope.correlation_id,
         }
 
         self.is_executing = True
@@ -149,11 +272,31 @@ class AutonomousExecutor:
 
             logger.info(f"✅ Goal execution complete: {result['completed_tasks']} tasks completed")
 
+            self.receipt_store.write(
+                action=goal,
+                interpreted_plan=f"completed:{result['steps_taken']}_steps",
+                executed_steps=result.get("outcomes", []) or [goal],
+                actor="autonomous_executor",
+                channel="voice",
+                provider="claude-code",
+                blocked=False,
+            )
+
             return result
 
         except Exception as e:
             logger.error(f"❌ Goal execution failed: {e}")
             self.current_goal["status"] = TaskStatus.FAILED.value
+            self.receipt_store.write(
+                action=goal,
+                interpreted_plan="goal_execution_failed",
+                executed_steps=[str(t.get("description", "")) for t in self.failed_tasks if isinstance(t, dict)],
+                actor="autonomous_executor",
+                channel="voice",
+                provider="claude-code",
+                blocked=True,
+                blocked_reason=str(e),
+            )
             return {
                 "success": False,
                 "error": str(e),

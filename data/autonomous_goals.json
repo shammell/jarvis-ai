@@ -1,0 +1,24 @@
+{
+  "goals": [
+    {
+      "id": "g-startup-001",
+      "description": "Initialize full enterprise system",
+      "status": "active",
+      "priority": 4,
+      "progress": 0.0,
+      "steps": [
+        {
+          "description": "Start FastAPI backend",
+          "status": "pending"
+        },
+        {
+          "description": "Verify memory subsystems",
+          "status": "pending"
+        }
+      ],
+      "context": {
+        "environment": "production"
+      }
+    }
+  ]
+}

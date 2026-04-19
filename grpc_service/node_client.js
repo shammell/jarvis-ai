@@ -166,7 +166,7 @@ class JarvisGRPCClient {
      */
     async healthCheck() {
         return new Promise((resolve, reject) => {
-            const request = { service: 'jarvis', auth_token: this.ensureAuthToken() };
+            const request = { service: 'jarvis', auth_token: this.authToken || '' };
 
             this.client.HealthCheck(request, (error, response) => {
                 if (error) {

@@ -8,7 +8,7 @@ setlocal enableextensions enabledelayedexpansion
 cd /d %~dp0
 
 REM Start Python gRPC server
-start "JARVIS gRPC" cmd /k "python grpc\python_server.py"
+start "JARVIS gRPC" cmd /k "python grpc_service\python_server.py"
 
 REM Wait a bit
 ping 127.0.0.1 -n 4 >nul

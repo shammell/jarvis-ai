@@ -41,6 +41,15 @@ class AutonomousDecision:
         }
         self.autonomy_level = 0.3  # Start at 30% autonomy
         self.learning_rate = 0.05  # How fast to increase autonomy
+        self.risk_factors = {
+            "file_deletion": 8.0,
+            "external_api": 5.0,
+            "file_write": 4.0,
+            "file_read": 1.0,
+            "system_modification": 7.0,
+            "financial_transaction": 9.0,
+            "user_data_access": 3.0,
+        }
 
         # Immutable security configuration
         self._security_signing_key = os.getenv("AUTONOMY_SECURITY_KEY") or os.getenv("JWT_SECRET") or "jarvis-autonomy-default"
