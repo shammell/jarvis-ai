@@ -171,23 +171,6 @@ class AutonomousDecision:
             }
         return None
 
-
-        # Risk factors
-        self.risk_factors = {
-            "data_loss": 10.0,
-            "external_api": 5.0,
-            "file_deletion": 8.0,
-            "system_modification": 7.0,
-            "financial_transaction": 10.0,
-            "user_data_access": 6.0,
-            "network_request": 4.0,
-            "file_read": 2.0,
-            "file_write": 3.0,
-            "computation": 1.0
-        }
-
-        logger.info("🤖 Autonomous Decision Engine initialized")
-
     def evaluate_decision(
         self,
         action: str,

@@ -22,6 +22,10 @@ from dataclasses import dataclass
 from threading import Lock
 import json
 
+# Load environment variables before accessing them
+from dotenv import load_dotenv
+load_dotenv()
+
 # Setup logging with UTF-8 encoding
 if sys.platform == 'win32':
     import codecs
