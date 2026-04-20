@@ -1,0 +1,83 @@
+{
+  "audit_metadata": {
+    "timestamp": "2026-04-20T14:01:19.005Z",
+    "auditor": "Claude Code (Sonnet 4)",
+    "scope": "~/jarvis_project/core/ critical autonomous modules",
+    "files_audited": 5,
+    "lines_audited": 2393
+  },
+  "findings": [
+    {
+      "id": "JARVIS-CRIT-001",
+      "severity": "CRITICAL",
+      "file": "core/autonomous_decision.py",
+      "lines": "173-189",
+      "issue": "Dead code - Orphaned code block",
+      "fix": "Remove lines 175-189"
+    },
+    {
+      "id": "JARVIS-CRIT-002",
+      "severity": "CRITICAL",
+      "file": "core/autonomous_decision.py",
+      "lines": "44-52, 176-187",
+      "issue": "Duplicate risk_factors definition",
+      "fix": "Remove orphaned definition at line 176"
+    },
+    {
+      "id": "JARVIS-HIGH-001",
+      "severity": "HIGH",
+      "file": "core/security_system.py",
+      "lines": "79, 193",
+      "issue": "Missing JWT_SECRET environment variable",
+      "fix": "Set JWT_SECRET in .env file"
+    },
+    {
+      "id": "JARVIS-HIGH-002",
+      "severity": "HIGH",
+      "file": "core/autonomous_executor.py",
+      "lines": "293",
+      "issue": "Potential runtime error in list comprehension",
+      "fix": "Already has isinstance check, ensure type safety"
+    },
+    {
+      "id": "JARVIS-MED-001",
+      "severity": "MEDIUM",
+      "file": "core/proactive_agent.py",
+      "lines": "282-284",
+      "issue": "Relative imports in test code",
+      "fix": "Use absolute imports"
+    },
+    {
+      "id": "JARVIS-MED-002",
+      "severity": "MEDIUM",
+      "file": "core/goal_manager.py",
+      "lines": "42-44",
+      "issue": "Hardcoded storage path",
+      "fix": "Remove hardcoded username"
+    },
+    {
+      "id": "JARVIS-MED-003",
+      "severity": "MEDIUM",
+      "file": "core/self_monitor.py",
+      "lines": "38-40",
+      "issue": "Hardcoded storage path",
+      "fix": "Remove hardcoded username"
+    },
+    {
+      "id": "JARVIS-MED-004",
+      "severity": "MEDIUM",
+      "file": "Multiple files",
+      "lines": "Various",
+      "issue": "Excessive print() in test code",
+      "fix": "Replace with logger"
+    }
+  ],
+  "summary": {
+    "total_issues": 12,
+    "critical": 2,
+    "high": 2,
+    "medium": 4,
+    "low": 4,
+    "verdict": "WARNING - 2 CRITICAL and 2 HIGH issues must be resolved"
+  }
+}

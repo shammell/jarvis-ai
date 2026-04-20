@@ -1,55 +1,66 @@
-# Ralph generated files (inside .ralph/ subfolder)
-.ralph/.call_count
-.ralph/.last_reset
-.ralph/.exit_signals
-.ralph/status.json
-.ralph/.ralph_session
-.ralph/.ralph_session_history
-.ralph/.claude_session_id
-.ralph/.response_analysis
-.ralph/.circuit_breaker_state
-.ralph/.circuit_breaker_history
-
-# Ralph logs and generated docs
-.ralph/logs/*
-!.ralph/logs/.gitkeep
-.ralph/docs/generated/*
-!.ralph/docs/generated/.gitkeep
-
-# General logs
-*.log
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Temporary files
-*.tmp
-.temp/
-
-# Node modules (if using Node.js projects)
-node_modules/
-
-# Python cache (if using Python projects)
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Rust build (if using Rust projects)
-target/
+# Virtual Environment
+venv/
+ENV/
+env/
 
-# IDE files
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# Claude generated worktrees and temp artifacts
-.claude/worktrees/
-
-# Runtime state and local data
-memory/*.db
-memory_storage/*.json
-
-# Ralph backup directories (created by migration)
-.ralph_backup_*
+# Environment
 .env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+compile.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+main_old.py
+*.backup
+graphify-out/
+.graphify_*
