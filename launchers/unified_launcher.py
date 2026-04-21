@@ -1,3 +1,7 @@
+# [LEGACY ENTRYPOINT: NON-CANONICAL]
+# Canonical runtime entrypoint is `jarvis_autonomous.py`.
+# This file remains for compatibility during Wave B consolidation.
+
 """
 ==========================================================
 JARVIS UNIFIED LAUNCHER - PhD-Level System Orchestration
@@ -399,5 +403,9 @@ class UnifiedLauncher:
 
 
 if __name__ == "__main__":
+    if os.getenv("JARVIS_ALLOW_LEGACY_UNIFIED_LAUNCHER", "0") != "1":
+        logger.warning("Legacy unified launcher invoked. Redirecting to canonical jarvis_autonomous.py")
+        raise SystemExit(subprocess.call([sys.executable, "jarvis_autonomous.py"]))
+
     launcher = UnifiedLauncher()
     sys.exit(launcher.run())

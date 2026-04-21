@@ -1,3 +1,7 @@
+# [LEGACY ENTRYPOINT: NON-CANONICAL]
+# Canonical runtime entrypoint is `jarvis_autonomous.py`.
+# This file remains for compatibility during Wave B consolidation.
+
 # ==========================================================
 # JARVIS
 # Features: Self-Healing DAG • Persistent Venv • Crash Recovery
@@ -584,6 +588,10 @@ def events():
 
 # ================= ENTRY POINT =================
 if __name__ == "__main__":
+    if os.getenv("JARVIS_ALLOW_LEGACY_BRAIN_ENTRYPOINT", "0") != "1":
+        EVENTS.emit("⚠ Legacy jarvis_brain.py entrypoint invoked. Redirecting to canonical jarvis_autonomous.py")
+        raise SystemExit(subprocess.call([sys.executable, "jarvis_autonomous.py"]))
+
     async def main():
         CORE.loop = asyncio.get_running_loop()
         

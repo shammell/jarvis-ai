@@ -58,17 +58,21 @@ class MemoryEncryption:
         return self._derive_key_from_password(password)
 
     def _derive_key_from_password(self, password: bytes) -> bytes:
-        """Derive 256-bit key from password using PBKDF2"""
+        """Derive 256-bit key from password using PBKDF2."""
         salt = b'jarvis_v9_memory_salt'  # Fixed salt for consistent key derivation
 
-        kdf = PBKDF2HMAC(
-            algorithm=hashes.SHA256(),
-            length=32,  # 256 bits
-            salt=salt,
-            iterations=100000,
-        )
-        key = kdf.derive(password)
-        return key
+        try:
+            kdf = PBKDF2HMAC(
+                algorithm=hashes.SHA256(),
+                length=32,  # 256 bits
+                salt=salt,
+                iterations=100000,
+            )
+            key = kdf.derive(password)
+            return key
+        except Exception as exc:
+            logger.warning("⚠ PBKDF2-SHA256 unavailable (%s). Falling back to deterministic SHA-256 key derivation.", exc)
+            return hashlib.sha256(password + salt).digest()[:32]
 
     def _generate_default_key(self) -> bytes:
         """Generate a default encryption key"""

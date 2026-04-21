@@ -55,5 +55,46 @@ class JarvisSettings(BaseSettings):
         extra = "ignore"  # Ignore extra fields in .env
 
 
-# Global settings instance
-settings = JarvisSettings()
+# Global settings instance (lazy-safe to avoid import-time hard fail)
+try:
+    settings = JarvisSettings()
+except Exception:
+    settings = None
+
+
+def get_settings() -> JarvisSettings:
+    """Load settings with explicit validation when needed."""
+    return JarvisSettings()
+
+REQUIRED_ENV_KEYS = ("JWT_SECRET",)
+OPTIONAL_ENV_KEYS = (
+    "GROQ_API_KEY",
+    "REDIS_HOST",
+    "REDIS_PORT",
+    "GRPC_PORT",
+    "WHATSAPP_PORT",
+)
+
+
+def validate_env_contract() -> dict:
+    """Return missing required/optional environment keys."""
+    missing_required = [k for k in REQUIRED_ENV_KEYS if not os.getenv(k)]
+    missing_optional = [k for k in OPTIONAL_ENV_KEYS if not os.getenv(k)]
+    return {
+        "missing_required": missing_required,
+        "missing_optional": missing_optional,
+    }
+
+
+def env_contract_summary() -> str:
+    result = validate_env_contract()
+    required = result["missing_required"]
+    optional = result["missing_optional"]
+    if not required and not optional:
+        return "Environment contract satisfied"
+    parts = []
+    if required:
+        parts.append(f"missing_required={','.join(required)}")
+    if optional:
+        parts.append(f"missing_optional={','.join(optional)}")
+    return "Environment contract warning: " + " | ".join(parts)

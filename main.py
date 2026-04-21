@@ -1,3 +1,7 @@
+# [LEGACY ENTRYPOINT: NON-CANONICAL]
+# Canonical runtime entrypoint is `jarvis_autonomous.py`.
+# This file remains for compatibility during Wave B consolidation.
+
 # ==========================================================
 # JARVIS v9.0 - Main Entry Point (Refactored)
 # PhD-Level Architecture - Modular Design
@@ -81,6 +85,11 @@ app = FastAPI(
 
 # Main entry point
 if __name__ == "__main__":
+    if os.getenv("JARVIS_ALLOW_LEGACY_MAIN", "0") != "1":
+        logger.warning("Legacy main.py entrypoint invoked. Redirecting to canonical jarvis_autonomous.py")
+        import subprocess
+        raise SystemExit(subprocess.call([sys.executable, "jarvis_autonomous.py"]))
+
     import uvicorn
 
     # Create required directories
