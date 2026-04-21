@@ -7,8 +7,12 @@
 
 import asyncio
 import logging
+from pathlib import Path
 from enhanced_autonomy import EnhancedAutonomySystem
 from core.autonomous_startup import AutonomousStartup
+from core.config import env_contract_summary, validate_env_contract
+
+Path("logs").mkdir(parents=True, exist_ok=True)
 
 # Setup logging
 logging.basicConfig(
@@ -21,6 +25,11 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger(__name__)
+
+env_contract = validate_env_contract()
+logger.info(env_contract_summary())
+if env_contract["missing_required"]:
+    logger.critical("Missing required env keys: %s", ", ".join(env_contract["missing_required"]))
 
 
 async def main():

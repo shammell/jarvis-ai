@@ -1,0 +1,86 @@
+[
+  {
+    "entrypoint": "jarvis_brain.py",
+    "imports": [
+      "aiofiles",
+      "ast",
+      "asyncio",
+      "chromadb",
+      "chromadb.utils",
+      "codecs",
+      "core.autonomy_guard",
+      "core.closed_feedback_loop",
+      "core.registry",
+      "core.security_system",
+      "core.self_evolving_architecture",
+      "core.self_monitor",
+      "datetime",
+      "docker",
+      "fastapi",
+      "fastapi.responses",
+      "groq",
+      "hashlib",
+      "json",
+      "logging",
+      "os",
+      "platform",
+      "re",
+      "shlex",
+      "signal",
+      "subprocess",
+      "sys",
+      "threading",
+      "time",
+      "typing",
+      "uuid",
+      "uvicorn",
+      "watchdog.events",
+      "watchdog.observers"
+    ]
+  },
+  {
+    "entrypoint": "enhanced_autonomy.py",
+    "imports": [
+      "asyncio",
+      "core.autonomous_decision",
+      "core.autonomous_executor",
+      "core.goal_manager",
+      "core.hyper_automation",
+      "core.proactive_agent",
+      "core.registry",
+      "core.security_system",
+      "core.self_evolving_architecture",
+      "core.self_monitor",
+      "core.skill_loader",
+      "core.swarm_coordinator",
+      "datetime",
+      "json",
+      "logging",
+      "typing"
+    ]
+  },
+  {
+    "entrypoint": "jarvis_autonomous.py",
+    "imports": [
+      "asyncio",
+      "core.autonomous_startup",
+      "enhanced_autonomy",
+      "logging"
+    ]
+  },
+  {
+    "entrypoint": "main.py",
+    "imports": [
+      "codecs",
+      "contextlib",
+      "core.api.routes",
+      "core.orchestrator",
+      "dotenv",
+      "fastapi",
+      "logging",
+      "os",
+      "sys",
+      "uvicorn"
+    ]
+  }
+]

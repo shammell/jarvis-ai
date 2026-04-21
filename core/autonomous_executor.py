@@ -16,6 +16,8 @@ from core.action_receipt_store import ActionReceiptStore
 from core.project_goal_compiler import ProjectGoalCompiler
 from core.coding_execution_router import CodingExecutionRouter
 from core.intent_envelope import create_envelope, Channel
+from core.distributed_tracing import tracer, traced_span, SpanKind
+import uuid
 
 logger = logging.getLogger(__name__)
 
@@ -67,7 +69,8 @@ class AutonomousExecutor:
         self,
         goal: str,
         context: Dict[str, Any] = None,
-        max_steps: int = 50
+        max_steps: int = 50,
+        simulate: bool = False,
     ) -> Dict[str, Any]:
         """
         Execute a high-level goal autonomously
@@ -82,8 +85,23 @@ class AutonomousExecutor:
         """
         logger.info(f"🎯 Starting autonomous execution: {goal}")
 
-        envelope = create_envelope(goal, channel=Channel.VOICE, context=context or {})
-        policy_decision = self.honest_policy.evaluate(goal, context or {})
+        execution_context = {
+            **(context or {}),
+            "simulate": simulate,
+            "trace_component": "autonomous_executor",
+        }
+        trace_id = str(execution_context.get("trace_id") or uuid.uuid4().hex[:16])
+        trace = tracer.start_trace("autonomous_goal_execution", trace_id=trace_id)
+
+        envelope = create_envelope(goal, channel=Channel.VOICE, context=execution_context)
+
+        with traced_span(
+            "autonomous_executor.policy_evaluation",
+            trace.trace_id,
+            kind=SpanKind.INTERNAL,
+            attributes={"goal": goal, "simulate": simulate},
+        ):
+            policy_decision = self.honest_policy.evaluate(goal, execution_context)
 
         if policy_decision.risk_class == RiskClass.BLOCKED:
             blocked_receipt = self.receipt_store.write(
@@ -220,7 +238,7 @@ class AutonomousExecutor:
                     break
 
                 task = self.task_queue.pop(0)
-                result = await self._execute_task(task)
+                result = await self._execute_task(task, trace.trace_id, simulate=simulate)
 
                 if result["status"] == TaskStatus.COMPLETED.value:
                     self.completed_tasks.append(result)
@@ -306,6 +324,21 @@ class AutonomousExecutor:
 
         finally:
             self.is_executing = False
+            tracer.end_trace(trace.trace_id)
+
+    async def simulate_goal(
+        self,
+        goal: str,
+        context: Dict[str, Any] = None,
+        max_steps: int = 50,
+    ) -> Dict[str, Any]:
+        """Run goal execution in simulation mode (no side effects)."""
+        return await self.execute_goal(
+            goal=goal,
+            context=context or {},
+            max_steps=max_steps,
+            simulate=True,
+        )
 
     async def _decompose_goal(
         self,
@@ -427,7 +460,7 @@ class AutonomousExecutor:
 
         return tasks
 
-    async def _execute_task(self, task: Dict[str, Any]) -> Dict[str, Any]:
+    async def _execute_task(self, task: Dict[str, Any], trace_id: str, simulate: bool = False) -> Dict[str, Any]:
         """
         Execute a single task
 
@@ -440,11 +473,40 @@ class AutonomousExecutor:
         logger.info(f"🔧 Executing task: {task['description']}")
 
         # Evaluate decision autonomously
-        decision = self.autonomous_decision.evaluate_decision(
+        with traced_span(
+            "autonomous_executor.task_decision",
+            trace_id,
+            kind=SpanKind.INTERNAL,
+            attributes={"task": task.get("description", ""), "simulate": simulate},
+        ):
+            decision = self.autonomous_decision.evaluate_decision(
+                action=task["description"],
+                context={**task.get("context", {}), "simulate": simulate, "trace_id": trace_id},
+                confidence=task.get("confidence", 0.5)
+            )
+
+        decision_summary = f"decision={decision.get('decision','')} risk={decision.get('risk_score','n/a')}"
+        self.receipt_store.write(
             action=task["description"],
-            context=task.get("context", {}),
-            confidence=task.get("confidence", 0.5)
+            interpreted_plan=decision_summary,
+            executed_steps=["decision_evaluated", f"simulate={simulate}"],
+            actor="autonomous_executor",
+            channel="voice",
+            provider="claude-code",
+            blocked=decision.get("decision") == "block",
+            blocked_reason=decision.get("reasoning") if decision.get("decision") == "block" else None,
         )
+
+        if simulate:
+            logger.info(f"🧪 Simulated task execution: {task['description']}")
+            return {
+                "task": task,
+                "status": TaskStatus.COMPLETED.value,
+                "decision": decision,
+                "outcome": "Task simulated successfully",
+                "simulated": True,
+                "completed_at": datetime.now().isoformat()
+            }
 
         # If blocked, return blocked status
         if decision["decision"] == "block":
@@ -481,8 +543,14 @@ class AutonomousExecutor:
 
         # Execute task
         try:
-            # Simulate task execution (replace with actual execution)
-            await asyncio.sleep(0.1)  # Simulate work
+            with traced_span(
+                "autonomous_executor.task_execution",
+                trace_id,
+                kind=SpanKind.INTERNAL,
+                attributes={"task": task.get("description", "")},
+            ):
+                # Simulate task execution (replace with actual execution)
+                await asyncio.sleep(0.1)  # Simulate work
 
             # Record successful outcome
             self.autonomous_decision.record_outcome(
