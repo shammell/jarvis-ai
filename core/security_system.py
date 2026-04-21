@@ -120,9 +120,8 @@ SECURITY_CONFIG = {
 
     # Security patterns
     "sql_injection_patterns": [
-        r"(?i)(union|select|insert|update|delete|drop|create|alter|exec|execute)",
-        r"(?i)(script|javascript|vbscript|onload|onerror|onclick)",
-        r"(?i)(\bselect\b|\bunion\b|\binsert\b|\bdrop\b)"
+        r"(?i)(\bunion\b\s+\bselect\b|\bselect\b\s+.+\s+\bfrom\b|\binsert\b\s+\binto\b|\bupdate\b\s+\w+\s+\bset\b|\bdelete\b\s+\bfrom\b|\bdrop\b\s+\btable\b|\bcreate\b\s+\btable\b|\balter\b\s+\btable\b|\bexec(?:ute)?\b\s+\w+)",
+        r"(?i)(script|javascript|vbscript|onload|onerror|onclick)"
     ],
     "xss_patterns": [
         r"<script[^>]*>.*?</script>",
@@ -131,8 +130,8 @@ SECURITY_CONFIG = {
         r"<iframe[^>]*>.*?</iframe>"
     ],
     "command_injection_patterns": [
-        r"[;&|`$(){}[\]\\]",
-        r"(?i)(rm\s+|cat\s+|ls\s+|cd\s+|pwd\s+|whoami\s+|id\s+)",
+        r"(;|&&|\|\||`|\$\()",
+        r"(?i)(\brm\b\s+|\bcat\b\s+|\bls\b\s+|\bcd\b\s+|\bpwd\b\s+|\bwhoami\b\s+|\bid\b\s+)",
         r"(\.\.\/|\.\.\\)",
         r"(%2e%2e%2f|%2e%2e%5c)"
     ]
@@ -304,6 +303,7 @@ class SecurityManager:
 
             self.sessions[session_id] = session
             self.active_tokens.add(access_token)
+            self.active_tokens.add(refresh_token)
 
         # Log security event
         self._log_security_event(
@@ -935,13 +935,26 @@ class InputValidator:
         if ".." in normalized or normalized.startswith("/"):
             return False
 
-        # Check for absolute paths
+        # Check for absolute paths (Unix + Windows)
         if os.path.isabs(normalized):
+            return False
+        if re.match(r'^[a-zA-Z]:', normalized):
             return False
 
         # Check for suspicious characters
         suspicious_chars = ['<', '>', ':', '"', '|', '?', '*']
         if any(char in normalized for char in suspicious_chars):
+            return False
+
+        # Block Windows reserved device names
+        reserved_names = {
+            'con', 'prn', 'aux', 'nul',
+            'com1', 'com2', 'com3', 'com4', 'com5', 'com6', 'com7', 'com8', 'com9',
+            'lpt1', 'lpt2', 'lpt3', 'lpt4', 'lpt5', 'lpt6', 'lpt7', 'lpt8', 'lpt9'
+        }
+        basename = os.path.basename(normalized)
+        stem = basename.split('.')[0].lower() if basename else ''
+        if stem in reserved_names:
             return False
 
         return True
