@@ -19,8 +19,23 @@ if sys.platform == 'win32':
 import asyncio
 import httpx
 import pytest
+import time
 
 BASE_URL = "http://localhost:8000"
+
+
+@pytest.fixture(scope="session", autouse=True)
+def require_e2e_server():
+    deadline = time.time() + 8
+    while time.time() < deadline:
+        try:
+            resp = httpx.get(f"{BASE_URL}/health", timeout=1.5)
+            if resp.status_code == 200:
+                return
+        except Exception:
+            pass
+        time.sleep(1)
+    pytest.skip("E2E requires running API server on localhost:8000")
 
 @pytest.mark.asyncio
 async def test_health_check():
