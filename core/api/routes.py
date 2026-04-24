@@ -6,6 +6,7 @@
 from fastapi import FastAPI, Header, HTTPException
 from pydantic import BaseModel
 from typing import Dict, Any, Optional, List
+from datetime import datetime
 import logging
 
 from core.security_system import Permission
@@ -176,5 +177,51 @@ def setup_routes(app: FastAPI, orchestrator):
             "jwt_configured": orchestrator.config.get("jwt_secret_set", False),
             "security_enabled": orchestrator.config.get("security_enabled", True)
         }
+
+    # Web contract stubs (Phase 5) - /api/v1/chats/*
+    @app.get("/api/v1/chats")
+    async def list_chats_v1(token: str = Header(None)):
+        """List chats (stub)"""
+        if not token:
+            raise HTTPException(status_code=401, detail="Authentication required")
+        return {"chats": [], "total": 0}
+
+    @app.post("/api/v1/chats")
+    async def create_chat_v1(request: Dict[str, str], token: str = Header(None)):
+        """Create chat (stub)"""
+        if not token:
+            raise HTTPException(status_code=401, detail="Authentication required")
+        return {"id": "stub-chat-id", "user_id": "stub", "title": request.get("title"), "created_at": datetime.now().isoformat(), "updated_at": datetime.now().isoformat(), "archived": False}
+
+    @app.get("/api/v1/chats/{chat_id}/messages")
+    async def get_messages_v1(chat_id: str, token: str = Header(None), limit: int = 50, offset: int = 0):
+        """Get chat messages (stub)"""
+        if not token:
+            raise HTTPException(status_code=401, detail="Authentication required")
+        return {"messages": [], "total": 0, "has_more": False}
+
+    @app.post("/api/v1/chats/{chat_id}/messages")
+    async def send_message_v1(chat_id: str, request: Dict[str, str], token: str = Header(None)):
+        """Send message (stub)"""
+        if not token:
+            raise HTTPException(status_code=401, detail="Authentication required")
+        return {
+            "user_message": {"id": "u1", "chat_id": chat_id, "user_id": "stub", "role": "user", "content": request.get("content", ""), "created_at": datetime.now().isoformat()},
+            "assistant_message": {"id": "a1", "chat_id": chat_id, "user_id": "system", "role": "assistant", "content": "Stub response", "created_at": datetime.now().isoformat()}
+        }
+
+    @app.delete("/api/v1/chats/{chat_id}")
+    async def delete_chat_v1(chat_id: str, token: str = Header(None)):
+        """Delete chat (stub)"""
+        if not token:
+            raise HTTPException(status_code=401, detail="Authentication required")
+        return {"deleted": True}
+
+    @app.post("/api/v1/chats/{chat_id}/stream")
+    async def stream_message_v1(chat_id: str, request: Dict[str, str], token: str = Header(None)):
+        """Stream message (stub - returns plain response)"""
+        if not token:
+            raise HTTPException(status_code=401, detail="Authentication required")
+        return {"stream_stub": True, "chat_id": chat_id}
 
     logger.info("✅ API routes configured")
