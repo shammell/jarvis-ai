@@ -142,7 +142,7 @@ SECURITY_CONFIG = {
     ],
     "command_injection_patterns": [
         r"(;|&&|\|\||`|\$\()",
-        r"(?i)(\brm\b\s+|\bcat\b\s+|\bls\b\s+|\bcd\b\s+|\bpwd\b\s+|\bwhoami\b\s+|\bid\b\s+)",
+        r"(?i)(\brm\b(?:\s+|$)|\bcat\b(?:\s+|$)|\bls\b\s+|\bcd\b(?:\s+|$)|\bpwd\b(?:\s+|$)|\bwhoami\b(?:\s+|$)|\bid\b(?:\s+|$))",
         r"(\.\.\/|\.\.\\)",
         r"(%2e%2e%2f|%2e%2e%5c)"
     ]
@@ -1102,10 +1102,6 @@ class InputValidator:
         for pattern in patterns:
             if pattern.search(input_str):
                 return False
-
-        # Extra hardening for command input type
-        if input_type == 'command' and re.search(r'(?i)\b(rm|cat|ls|cd|pwd|whoami|id)\b', input_str):
-            return False
 
         return True
 
