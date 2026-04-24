@@ -93,10 +93,13 @@ def setup_routes(app: FastAPI, orchestrator):
         if not payload:
             raise HTTPException(status_code=401, detail="Invalid token")
 
-        result = await orchestrator.autonomy_system.swarm_coordinator.coordinate(
-            request.goal,
-            request.agents,
-            request.context or {}
+        context = request.context or {}
+        team_name = context.get("team_name") or "standard_workflow"
+
+        result = await orchestrator.autonomy_system.execute_with_agent_team(
+            task_description=request.goal,
+            team_name=team_name,
+            context={**context, "requested_agents": request.agents}
         )
         return result
 
@@ -145,18 +148,24 @@ def setup_routes(app: FastAPI, orchestrator):
         if not username or not password:
             raise HTTPException(status_code=400, detail="Username and password required")
 
-        token = orchestrator.security_manager.authenticate(username, password)
-        if not token:
+        tokens = orchestrator.security_manager.authenticate_user(username, password)
+        if not tokens:
             raise HTTPException(status_code=401, detail="Invalid credentials")
 
-        return {"token": token}
+        return tokens
 
     @app.post("/api/auth/logout")
     async def logout(request: Dict[str, str]):
         """User logout"""
         token = request.get("token")
         if token:
-            orchestrator.security_manager.revoke_token(token)
+            payload = orchestrator.security_manager.validate_token(token)
+            if not payload:
+                raise HTTPException(status_code=401, detail="Invalid token")
+            orchestrator.security_manager.logout_user(
+                user_id=payload.get("user_id"),
+                session_id=payload.get("session_id")
+            )
         return {"message": "Logged out successfully"}
 
     @app.get("/api/security/health")

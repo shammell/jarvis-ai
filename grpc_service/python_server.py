@@ -227,9 +227,11 @@ class JarvisServicer(jarvis_pb2_grpc.JarvisServiceServicer):
             response = loop.run_until_complete(
                 orchestrator.process_message(
                     data['text'],
-                    {'source': 'whatsapp', 'metadata': data['metadata']},
-                    payload.get('user_id'),
-                    request.auth_token
+                    {
+                        'source': 'whatsapp',
+                        'metadata': data['metadata'],
+                        'user_id': payload.get('user_id')
+                    }
                 )
             )
             loop.close()

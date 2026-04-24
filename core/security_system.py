@@ -938,6 +938,19 @@ class SecurityManager:
         else:
             logger.info(f"{log_msg} - {json.dumps(details)}")
 
+    def log_security_event(self, event_type: str, user_id: Optional[str], details: Dict[str, Any],
+                           risk_level: SecurityLevel = SecurityLevel.MEDIUM, blocked: bool = False,
+                           ip_address: Optional[str] = None):
+        """Public compatibility logger used by autonomy/memory call sites."""
+        self._log_security_event(
+            event_type=event_type,
+            user_id=user_id,
+            ip_address=ip_address,
+            details=details or {},
+            risk_level=risk_level,
+            blocked=blocked
+        )
+
     def get_security_stats(self) -> Dict[str, Any]:
         """Get security system statistics"""
         now = datetime.utcnow()
