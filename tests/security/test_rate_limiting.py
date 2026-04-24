@@ -99,12 +99,7 @@ class TestRateLimiting(unittest.TestCase):
                 result = self.security_manager._check_rate_limit(self.test_user, permission)
                 self.assertFalse(result)
 
-                # But other permissions should still work
-                for other_perm in permissions:
-                    if other_perm != permission:
-                        result = self.security_manager._check_rate_limit(self.test_user, other_perm)
-                        # This might be blocked if we hit limits, but shouldn't be blocked due to other permission
-                        # We can't easily test this without knowing exact limits, so we just verify no exception
+                # Cross-permission independence is covered by dedicated tests; avoid consuming quota here.
 
     def test_rate_limit_user_isolation(self):
         """Test that rate limits are isolated per user"""
